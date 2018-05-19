@@ -59,9 +59,7 @@
 \usepackage{LocalF}
 \usepackage{ads}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \raggedbottom %http://tex.stackexchange.com/questions/102084/annoying-paragraph-spacing-issue-with-memoir
-
 %% CAption subcaption figure %%% captionsetup
 %\captionsetup[subfigure]{labelformat}
     \makeatletter
@@ -79,118 +77,48 @@
       }
     \makeatother
 %%%%
-
 %%% SOlve page pre chapter at begginning page without number%@ps
-
 \chapterstyle{plain}
 %%%
-
-
 \makeatletter
 \newcommand{\titolo}{\@title}
 \makeatother
-
 \author{ }
 \title{Studio delle oscillazioni solari}
 \date{\today}
-
 %%%
 %\outputonly{1}% output in pdf only page number
-
-
 \begin{document}
-
-
-%%frontespizio
-
-\begingroup
-
-\thispagestyle{empty}
-\begin{center}
-\Huge Universit\'a di Pisa\\ \vspace{1cm}\textbf{\huge Facolt\'a di Scienze Matematiche Fisiche e Naturali}\\ \vspace{2cm} \textbf{\LARGE Corso di Laurea in Fisica}\\\Large Anno Accademico 2016/2017\\ \vspace{5cm} \LARGE Elaborato Finale\\ \vspace{1cm} \Huge\titolo
-\vspace{9cm}
-
-
-{
-\centering
-%\hspace*{\fill}
-\begin{minipage}[c]{0.5\textwidth}\centering\Large Candidato\\ \Large Rossi Filippo\end{minipage}\hfill \begin{minipage}[c]{0.5\textwidth}\centering\Large Relatore \\ \Large Prof.sa Scilla Degl'Innocenti\end{minipage}
-%\hspace*{\fill}
-}
-
-
-\end{center}
-
-
-
-%\hspace
-
-%\frontmatter
-
-\endgroup
-
-\cleartorecto
-
 \pagenumbering{roman}
-
 \tableofcontents*
-
-%\clearpage %%% SOMMARIO
-%\thispagestyle{empty}
-%\subfile{sommario}
-
-%\cleardoublepage
-
 \mainmatter
-
 \pagenumbering{arabic}
 \aliaspagestyle{chapter}{plain}
-
 \cleartorecto
-
 %%Intro
-
-La scienza che studia i modi normali della struttura solare si chiama.
-
-Nella prima parte di questa tesina si descrivono i principi di base del modello solare standard (MSS), gli input fisici necessari per risolvere le equazioni della struttura solare e i vincoli osservativi.
-
-Nella seconda parte si introducono i modi normali della struttura solare dovuti a onde in cui la forza di richiamo \'e la gravit\'a o il gradiente della pressione e si confrontano le caratteristiche dei modi solari con quelle predette dal MSS. I modi osservati hanno natura essenzialmente acustica e periodo intorno a \SI{5}{\minute}
-
-Nella terza parte si mostrano le tecniche che permettono di determinare il profilo radiale delle grandezze di equilibrio, in particolare la velocit\'a del suono. Inoltre si mostra come l'eliosismologia imponga vincoli stringenti alle caratteristiche del MSS.
+Il crescente numero di esopianeti osservati ha stimolato lo studio dei processi di formazione dei sistemi planetari tramite modelli di formazione globale:
 
 {\let\clearpage\relax\let\cleardoublepage\relax
-\part{Il modello solare standard. Importanza osservabili sismologiche.}
+\part{Formazione evoluzione sistemi planetari}
 }
-
-\subfile{SSM}
-
+\subfile{physprotopla}
 \cleartorecto
-\part{Oscillazioni della fotosfera con grande coerenza spaziale e temporale: modi normali di cavit\'a risonanti dell'interno solare.}
 
-\subfile{oscillation}
-
+\part{Propriet\'a dei sistemi planetari osservati}
+\subfile{plaobs}
 \cleartorecto
-%\part{Problema inverso e accuratezza parametri del modello solare.}
-\part{Accuratezza del modello solare tramite confronto con osservabili sismologiche.}
 
-\subfile{inversion}
-
+\part{Modelli di formazione globali}
+\subfile{GFM}
 \cleartorecto
+
 {\let\clearpage\relax\let\cleardoublepage\relax
 \part{Conclusioni}
 }
-
-Ho mostrato che il gran numero di modi di oscillazione osservabili, per la maggior parte acustici, e la grande accuratezza nella misura delle frequenze permettono di costruire modelli solari pi\'u accurati sia per quanto riguarda i processi fisici rilevanti nel Sole sia per quanto riguarda la modellizzazione del plasma solare.
-
-Ho illustrato alcune tecniche che sono state usate per ottenere informazioni sulla struttura interna del Sole, in particolare le tecniche di inversione non asintotica permettono di ricavare correzioni al modello solare sulla base delle differenze tra frequenze dei modi solari e calcolate sulla base del modello.
-
-Tramite queste ultime si determina che modelli costruiti usando una composizione fotosferica attuale pi\'u accurata (AGSS09) danno un peggior accordo con il profilo radiale della velocit\'a del suono solare: questo pu\'o indicare che l'opacit\'a del modello \'e deficitaria.
-
-
+Cosa penso di PPS.
 {\let\clearpage\relax\let\cleardoublepage\relax
 \backmatter
 }
-
 %\newgeometry{margin=60px,tmargin=20px}%%APPENDICE
 %\appendix
 %\part{Appendice}
@@ -198,11 +126,8 @@ Tramite queste ultime si determina che modelli costruiti usando una composizione
 %\restoregeometry
 \printbibliography
 %\listoffigures
-
-
 \ifx\versione\bozza
 \woc
 \erratac
 \fi
-
 \end{document}

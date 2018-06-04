@@ -1,0 +1,262 @@
+\chapter{Accretion disk model}
+
+\begin{workout}[Accretion disk sources]
+o218, 296: disk formation, constrains from solar system
+the alpha disk pg 18: theory of turbulent accretion disk
+\end{workout}
+
+\begin{workout}[Isothermal cloud collapse!]
+
+\end{workout}
+
+
+\begin{workout}[Intro a disco accrescimento]
+Nei modelli globali la formazione planetaria \'e simulata partendo dalla fase finale di accrescimento di massa sulla stella centrale (per semplicit\'a considero stelle di $1\msun{}$ singole): il collasso di nube molecolare produce strutture appiattite la cui evoluzione \'e determinata dal trasporto di momento angolare verso l'esterno, l'interazione con l'oggetto centrale (campi magnetici vento stellare) e con l'ambiente circostante.
+L'ipotesi su cui si basano le simulazioni considerata \'e che la componente polverosa formi corpi pi\u massicci fino a masse di frazioni di masse terrestri  ed infine accrescere gas: lo scenario di core accretion (CA).
+\end{workout}
+
+\begin{workout}[Modelli 1D disco accrescimento: struttura verticale]
+auto gravitazione trascurabile quindi la struttura verticale \'e determinata dalla componente lungo z dell'attrazione del corpo centrale, profilo termico determinato da equilibrio.
+\end{workout}
+
+\begin{workout}[Descrizione trasporto momento angolare tramite parametrizzazione viscosit\'a]
+Mass conservation + momentum conservation in viscous flow: angular momentum evolution. Phenomena: Shear viscosity - turbulence - MRI.
+Nei modelli 1D per disco di accrescimento si parametrizza viscosit\'a tramite $\nu=\frac{\eta}{\rho}\to\alpha c_s H$: la viscosit\'a molecolare \'e troppo bassa  per trasportare all'esterno il momento angolare sui tempi-scala osservati.
+
+Theory of turbulent accretion disk: pg 18, 8.
+Flusso di x-momentum lungo y $\rho\exv{u_xu_y}$, dove considero la velocit\'a dell'elemento di fluido $(v_x+u_x,u_y)$ dove le $u$ rappresentano fluttuazioni della velocit\'a: $\sigma_{xy}=-\rho\exv{u_xu_y}$.
+Ricordando la definizione di tensore degli stress e con $\vec{v}=v_x(y)\hat{x}$
+
+\begin{equation}
+\sigma_{ij}=\eta(\partial_jv_i+\partial_iv_j-\frac{2}{3}\delta_{ij}\partial_kv_k+\zeta\delta_{ij}\partial_kv_k \to \eta\TDy{y}{v_x}
+\end{equation}
+
+\begin{equation}
+\PDof{t}(\rho v_i)+\PDof{x_i}(\rho v_iv_j+T_{ij})=F_i
+\end{equation}
+Fluttuazioni: $\sigma_{ij}=-\rho\exv{u_iu_j}$.
+Viscosit\'a molecolare: $\exv{u_iu_j}=-\nu\TDy{x_j}{v_i}$.
+Turbulence: Reynpold stress $\tau_{ij}=-\rho\exv{v_jv_i}$, $\exv{u_iu_j}=-\nu_T\TDy{x_j}{v_i}$
+\begin{equation}
+\PDy{t}{\Sigma}=3\frac{1}{r}\PDof{r}[r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]\label{eq:sigmaevol}
+\end{equation}
+\end{workout}
+
+\begin{workout}[Photoievaporation: X-EUV-FUV (Alexander13: The Dispersal of Protoplanetary Disks)]
+Protoplanetary disc evolution and dispersal: the implications of X-ray photoevaporation
+\end{workout}
+
+\begin{workout}[alpha prescription]
+$\vec{v}=(u_r,r\Omega)$, stress tensor $\sigma_{r\phi}=-\Sigma\exv{u_ru_{\phi}}$.
+Enhanced turbulent viscosity: $-\Sigma\exv{u_ru_{\phi}}=\Sigma\nu r\TDy{r}{\Omega}$, $\nu=v_TH$, $\alpha=v_T/c_s$
+\end{workout}
+
+\begin{workout}[Modello di disco di accrescimento - (Mordasini18: 4) - Introduzione descrizione fenomeni grazie a PPS]
+Un modello di disco  di accrescimento usato nelle simulazioni considera l'evoluzione della densit\'a superficiale tramite l'equazione \eqref{eq:diskaccrphev-m18}
+
+\begin{align}
+&\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_p(r)\label{eq:diskaccrphev-m18}\\
+&\dot{\Sigma}_w(a)=\left\{\begin{array}{c}0\\\frac{\dot{M}_w}{2\pi(a_{max}-R_g)a}\\\end{array}\right.
+\end{align}
+
+Densit\'a superficiale iniziale:
+\begin{equation}
+\Sigma(a,t=0)=\Sigma_0(\frac{r}{1AU})\expy{p_g}\Exp{[-(\frac{r}{R_o})\expy{2+p_g}]}(1-\sqrt{\frac{r}{R_i}})
+\end{equation}
+4-Mordasini18 (Hayashi81). $p_g\approx1$ (Andrews10).
+\end{workout}
+
+
+\begin{workout}[Foto-evaporazione]
+(Photoevaporation: veras armitage 2003, Alexander13, Mordasini12. Internal/External).
+EUV($E\approx13.6eV$): ionization, FUV($E\approx6-13.6eV$): dissociation, X-ray
+\end{workout}
+
+\section{Formazione planetesimi}
+
+Protoplanetary disk and their evolution pg 29
+Protoplanetary dust: Apai Lauretta - particles dynamics pg 100
+
+Assumendo conversione completa di polvere in planetesimi, la densit\'a superficiale di planetesimi \'e
+\begin{equation}
+\Sigma_p(t=0,r)=f_{dg}\eta_{ice}\Sigma_g(t=0,r)
+\end{equation}
+
+\begin{workout}[Particle-gas dynamics. dust midplane sedimantation]
+Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
+Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
+\end{workout}
+
+\begin{workout}[Effectsof protplanets atmosphere]
+Enhanced collisional growth of a protoplanet that has an atmosphere (Inaba Ikoma 03)
+\end{workout}
+
+\section{Accrescimento pianetsemi: formazione proto-pianeti.}
+
+La massa dei core varia secondo
+\begin{align}
+&\dot{M}_c=\Omega\Sigma_pR^2_{capt}F_G\\
+&\dot{\Sigma}_p(r)=-\frac{1}{2\pi aB_LR_H}\dot{M}_c
+\end{align}
+
+\begin{workout}[feeding zone]
+$B_LR_H$
+\end{workout}
+
+\begin{workout}[runaway to oligarchic]
+ NEW CONDITION FOR THE TRANSITION FROM RUNAWAY TO OLIGARCHIC GROWTH (Ormel 10)
+ \end{workout}
+
+\begin{workout}[Accrescimento pianetesimi: orderly, runaway, oligarchic]
+The growth of planetary embryos:  orderly, runaway, or oligarchic? (Rafikov 2002)
+\begin{align}
+\TDy{t}{M_e}\approx\pi R_e^2\Omega mN\frac{v}{v_z}[1+\frac{2GM_e}{R_ev^2}]
+\end{align}
+Accrescimento ordinato: $\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{-1/3}$. Accrescimento runaway: $\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{1/3}$. Accrescimento oligarchico: $\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{-1/3}$.
+\end{workout}
+
+\begin{workout}[Timescale of oligarchic growth]
+kokubo ida 02 (ida lin 04)
+\begin{align}
+&\dot{M}_c=\frac{M_c}{\tau_c}\\
+&\tau_c=\SI{1.2e5}{\year}(\frac{\Sigma_p}{\SI{10}{\gram\per\cubic\cm}})\expy{-1}(\frac{a_p}{\SI{1}{\astronomicalunit}})\expy{1/2}(\frac{M_p}{\mearth{}})\expy{1/3}(\frac{M_*}{\msun{}})\expy{-1/6}[(\frac{\Sigma_g}{\SI{2400}{\gram\per\cubic\cm}})\expy{-1/5}(\frac{a_p}{\SI{1}{\astronomicalunit}})\expy{1/20}(\frac{m}{\SI{e18}{\gram}})\expy{1/15}]^2
+\end{align}
+\end{workout}
+
+\begin{workout}[Protoplanets accretion of solids]
+Other refs: Planet formation coagulation: focus on U,N (Goldreich 04), Final stages of planets formation (Goldreich 04), Formation of giant planets core: evaluating key processes (levison 09).
+Safronov69: $\dot{M}_c=\Omega\Sigma_pR^2_{capture}F_G$, $R_{capture}$ larger than core radius due to gas drag, $F_G(e,i)$ gravitational focus (give rise to different growth regimes: runaway, oligarchic, orderly).
+Runaway growth until protoplanets $100-1000km$ (dep on position).
+Oligarchic growth: velocity of planetesimal raised by viscous stirring (gravitational scattering)/ damped by gas (until disk present).
+Enhanced radius by atmospheric drag.
+\end{workout}
+
+\begin{workout}[Planetesimal dynamics: viscous stirring]
+The origin of anisotropic velocity dispersion of particles in a disc potential (Ida, Makino 93, Stewart-Wetherill 1988 Ida1990)
+\end{workout}
+ 
+\chapter{Accrescimento gas}
+
+Refs: Planet formation models: the interplay with the planetesimal disc (Fortier 2013), Characterization of exoplanets from their formation I. Models of combined planet formation and evolution (Mordasini 12)
+
+Si risolvono numericamente le equazioni di conservazione di massa, equilibrio idrostatico, conservazione/trasporto energia 1D
+
+\begin{workout}[Attached phase: boundary conditions]
+\begin{align}
+&P_{pl}=P_{Neb}\\
+T_{Pl}=T_{Neb}\\
+R_{Pl}=Min(R_H,R_H)
+\end{align}
+\end{workout}
+
+
+\begin{workout}[Detached phase: transition condition and boundary condition]
+Transition attached/detched phase $\approx10\mearth{}$.
+Accretion shock for free-falling materials from Hill radius (more realistic circumplanetary disk: Papailoizou Nelson 05)
+\begin{align}
+&\dot{M}_{XY}^{max}\\
+&v_{ff}^2=2GM(\frac{1}{R}-\frac{1}{R_H})\\
+&P=P_{neb}+\frac{\dot{M}_{XY}}{4\pi R^2}v_{ff}+\frac{2g}{3\kappa}\\
+&\tau=max(\rho_{neb}\kappa_{neb}R,2/3)\\
+&T^4_{int}=\frac{3\tau L_{int}}{8\pi\sigma R^2},\ T^4=(1-A)T_{neb}^4+T_{int}^4
+\end{align}
+$R\approx1.5-5\rjupiter{}$ depending on entropy: THE PLANETARY ACCRETION SHOCK:I. FRAMEWORK FOR RADIATION-HYDRODYNAMICAL SIMULATIONS AND FIRST RESULTS (m17), Characterization of exoplanets from their formation III: The statistics of planetary luminosities (m17)
+Bondi accretion rate: $\dot{M}_{e, Bondi}\approx\frac{\Sigma}{H}(R_H/3)^3\Omega$ or viscous accretion rate $\dot{M}_{e, visc}\approx f_{lub}3\pi\nu\Sigma_g$
+\end{workout}
+
+\begin{workout}[Higher mass gap formation reduces accretion rate]
+\begin{equation}
+f_{va04}=1.668(\frac{M_p}{\mjupiter{}})\expy{1/3}\exp{-\frac{M_p}{1.5\mjupiter{}}}+0.04
+\end{equation}
+\end{workout}
+
+\begin{workout}[Planet-Disk exchange in hydrodynamic manner]
+Ormel 15/ Cimerman 17
+\end{workout}
+
+
+\chapter{Migrazione}
+Refs: \cite{ward1997protoplanet}, \cite{terquem2000disks}, \cite{menou2004low}, (kley Nelson 2012, Baruteau 2016), crida06: On width and shape of gaps in PPD,crida phd.
+
+Il disco di accrescimento esercita momento torcente sul pianeta che produce un trasferimento di momento angolare dal pianeta al disco $\Lambda(a,R)$
+\begin{align*}
+&J=M_p\sqrt{GM_*a_p}\\
+&\TDy{t}{a}=2a_p\frac{\Gamma_t}{J}=-(\frac{a}{GM_*})(\frac{4\pi}{M_P})\int_{r_{int}}^{r_{out}}r\Lambda\Sigma\,dr
+\end{align*}
+$r_{int}, r_{out}$ inner/outer disk radius (rif to disk ar planet)
+
+\begin{workout}[Migration/resonance]
+N-body, resonanceand migration
+The dynamics of two massive planets on inclined orbits (Veras Armitage 04)
+\end{workout}
+
+\subsection{Migrazione tipo I: regime lineare}
+
+Unperturbed disk: axisymmetric, keplerian rotation $\Omega(r)=\sqrt{GM_*/r^3}$, vanishing radial velocity. Planet potential, periodic in $\phi$, $\phi_p=\Omega_pt$:
+\begin{align*}
+&\psi_p(r,\phi,t)=-\frac{Gm_p}{|\vec{r}_p(t)-\vec{r}|}=\sum_{m=0}^{\infty}\psi_m(r)\cos{m[\phi-\phi_p(t)]}
+\end{align*}
+Total torque excertes by disk on planet
+\begin{equation*}
+\Gamma_t=-\int_{disk}\Sigma(\vecp{r}{F})\,df=\int_{disk}\Sigma(\vecp{r}\wedge\nabla\psi_p)\,df=\int_{disk}\Sigma\PDy{\phi}{\psi_p}\,df
+\end{equation*}
+$\Sigma$ surface density,  $\vec{F}$ specific force, $df$ surface element.
+Whenever frequency of individual potential component as seen by fluid particle in disk $\omega=m(\Omega(r)-\Omega_p)$, matches a natural  oscillation frequency of the disk we have resonant condition: torques are calculated at resonant locations.
+
+
+Lindblad (due to m-component of planet potential) and corotation torques:
+\begin{align*}
+&\Gamma_m^L=\left.\sign{(\Omega-\Omega_p)}\frac{\pi^2\Sigma}{3\Omega\Omega_p}(r\TDy{r}{\psi_m}+\frac{2m^2(\Omega-\Omega_p)}{\Omega}\psi_m)^2\right|_{r=r_L}\\
+&\Gamma_m^C=\left.\frac{m\pi^2}{2}\frac{\psi_m}{r\TDy{r}{\Omega}}\TDof{r}(\frac{\Sigma}{B})\right|_{r=r_C}
+\end{align*}
+
+Differnetial Lindblad torque
+$B=\frac{\kappa^2}{4\Omega}$ is the second Oort constant and represents z component of flow vorticity $\nabla\wedge\vec{v}|_z$
+
+\begin{workout}[Migration I in isothermal disk: pressure. Adiabatic, irradiated?]
+Low mass planet in isothermal disk: linear analysis of perturbed flow.
+When pressure can't be neglected the resonance condition becomes $m(\Omega(r)-\Omega_p=\sqrt{\kappa^2(r)(1+\xi^2)}$ where $\xi=\frac{mc_s}{\Omega r}$ where we used isothermal sound speed and let $c_s=H\Omega$: for $m\to\infty$ L. res position becomes $r_L=r_p+\frac{2H}{3}$ (torque cutoff).
+
+Linear. Occur if $R_H$ is smaller then H, disk scale heigth, and if viscous torque are dominant compared to gravitational torque.
+Subtypes: locally isothermal, adiabatic, un/satured-corotation torque: cooling behaviour of gas (Baruteau masset08, Casoli masset 08, paardekooper10,kley 09); timescales: dittkrist 14.
+Migration timescale in isothermal approx (ida lin 08 a:):
+\begin{align*}
+&\tau_I=\frac{1}{2.728+1.082p_{\Sigma}}(\frac{c_s}{a_p\Omega})^2\frac{M_*}{M_p}\frac{M_*}{a_p^2\Sigma_g}\Omega\expy{-1}\\
+s&\dot{a}_p=-\frac{a_p}{\tau_I}
+\end{align*}
+Paardekooper10, Dittkrist14: total torque $\Gamma_t=\frac{1}{\gamma}(C_0+C_1p_{\Sigma}+C_2p_T)\Gamma_0$ where $C_i$ depends upon sub-regime.
+Benitez Llambay 15: heating torque, Paardekooper14 Pierens 15: dynamic corotation torque.
+\end{workout}
+
+\subsection{Massive enough planet to open gap: migration II}
+Refs: On the tidal interaction between protoplanets and the primordial solar nebula. II - Self-consistent nonlinear interaction (1986)
+Non-linear. For larger planet mass, when disk density distro is changed cons., the linear hteory is no more adeguate. If angular momentum isdeposited locally (viscous dissipation/shock waves)  the disk receeds from planets
+Ida-lin04: angular momentum trasport in viscous accretion disk without planets that in type II migration act as relays that transmit angular momentum at that rateacross their gap via tidal torques.
+Alibert05: the planet follow the gas except when massive than local disk.
+Duffell14, Durmann kley 15: questioning that migration II follows viscous evolution of the disk but due to torque??
+
+
+Planet-disk interactions: exchange of angular momentum. Low mass planet-linear theory.(''Planet-disk interactions and orbital evolution'')
+Low mass planets: Lindblad and corotation torque. Rapid migration of intermediate mass planets. Gap forming massive planets: slower migration determined by viscous evolution of disk. (Role of disk self-gravity and MHD turbulence as function of planet mass).
+
+
+    \begin{frame}[allowframebreaks]{Planet-disk interactions: exchange of angular momentum. Type III migration: planet of intermediate mass. (‘’Planet-disk interactions and orbital evolution’’)}
+\begin{align*}
+&\dot{a}_p=\frac{2\Gamma^L}{\Omega_pa_p(m_p’-\delta m)}
+\end{align*}
+\end{frame}
+
+\subsection{Eccentricity and inclination evolution}
+Planet-disk interactions: normal, tangential, radial forces. eccentricity and inclination evolution. (‘’Planet-disk interactions and orbital evolution’’)
+Decomposition of planet’s potential: non-circular orbit
+\begin{align*}
+&\psi_p(r,\phi,t)=-\frac{Gm_p}{|\vec{r}_p(t)-\vec{r}|}=\sum_{m=0}^{\infty}\sum_{n=-m}^m\psi_{m,n}(r)\cos{m\phi+(n-m)\Omega_pt]}
+\end{align*}
+
+Eccentricity damping.
+For each m,n there are 3 resonant locations: external L resonance act to increase, corotation res. to damp (if unsaturted), and coorbital L res damp $e_p$. Linear analysis for low mass planets indicates rapid exponential damping of $e_p$:
+\begin{align*}
+&\TDy{t}{e_p}\propto-e_p,\ \tau_e\approx(\frac{H}{r})^2\tau_{mig}\\
+&e_P>\frac{H}{r}: \TDy{t}{e_p}\propto-e_p\expy{-2}
+\end{align*}
+Risultati analoghi per inclinazione.

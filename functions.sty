@@ -71,8 +71,8 @@
  \newcommand{\ER}{E_{\text{RYD}}} %% E_ryd
 \newcommand{\Evar}[1]{#1'} %%% Variazione Euleriana
 \newcommand{\expy}[1]{^{#1}} %%  Esponente >1 char
-\newcommand{\mearth}{M_{\oplus}} %% massa terra
-\newcommand{\rearth}{R_{\oplus}} %% massa terra
+%\newcommand{\mearth}{M_{\oplus}} %% massa terra
+%\newcommand{\rearth}{R_{\oplus}} %% massa terra
 
 %%%%% FFFFFFFF
 
@@ -108,8 +108,8 @@
 
 %%%%%%%%%%%JJJJJJJJJJJJJJJJJJ
 \newcommand{\jp}{J^{\Pi}}
-\newcommand{\mjupiter}{M_{\jupiter}} %% massa giove
-\newcommand{\rjupiter}{R_{\jupiter}} %% radius of giove
+%\newcommand{\mjupiter}{M_{\jupiter}} %% massa giove
+%\newcommand{\rjupiter}{R_{\jupiter}} %% radius of giove
 
 %%% KKKKKKK
 
@@ -129,7 +129,8 @@
 \newcommand{\Mcs}{\frac{MeV}{c^2}} %% massa solare
 \newcommand{\Mif}{M_{if}}
 \newcommand{\mblock}[1]{ \allowbreak ${#1}$ }
-
+\newcommand{\mearth}{M_{\oplus}} %% massa terra
+\newcommand{\mjupiter}{M_{\jupiter}} %% massa giove
 
 %%%%% NNNNNNNNNNNNNNNN
 \newcommand{\nad}{\nabla_{Ad}}
@@ -163,6 +164,8 @@
 %%%%RRRRRRRRRRRRRR
 \let\oldref\ref
 \renewcommand{\ref}[1]{(\oldref{#1})}
+\newcommand{\rjupiter}{R_{\jupiter}} %% raggio giove
+\newcommand{\rearth}{R_{\oplus}} %% raggio terra
 
 \newcommand{\rbt}[2]{$\left.\begin{array}{l}#1\\#2\\ \end{array}\right\}$} % parentesi grafa a destra 2 linee
 \newcommand{\req}[1]{~\ref{eq:#1}} %% ~\ref{eq:ref}

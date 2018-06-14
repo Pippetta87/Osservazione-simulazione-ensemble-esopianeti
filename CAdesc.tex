@@ -1,29 +1,62 @@
 {\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Modello formazione planetaria nello schema di core accretion}
+\chapter{Disco protoplanetario}
 }
 
-\section{Core accretion o instabilit\'a gravitazionale?}
-
-\begin{workout}[Refs GI vs CA]
-planetesimal hypoithesis: chamberlin 05, Safronov 69, Hayashi 77. Formation on dynamical scale via GI: Kuiper 51, Cameron 62.
-\end{workout}
-
-
-Il modello di formazione planetaria da me considerato, core accretion (CA) vedi \ref{part:CAdesc}, si basa sulla sedimentazione della componente polverosa nel disco protoplanetario in embrioni planetari che, se abbastanza massicci sono in grado di accrescere il gas presente nel disco protoplanetario.
-
-L'altro schema di formazione considera l'instabilit\'a gravitazionale del disco. 
-
-Esistono alcuni dati osservativi in favore del primo modello, considerando il sistema solare: arricchimento dei pianeti del sistema solare rispetto a composizione solare di metalli (la composizione di Urano/Nettuno contiene $1\%$ di $H_2$, $He$ contenuto in pianeta di composizione solare con pari massa di metalli), ipotizzando una rimozione della parte gassosa il pianeta deve avere il tempo di sedimentare la componente metllica, \'e necessario un disco di massa solare e i pianeti si formerebbero a distanza maggiore, non spiega la formazione dei corpi minori.
-
-\chapter{Modello disco di accrescimento}
+Il materiale presente nella regione instabile di una nube molecolare \'e dotato di momento angolare quindi accresce s la massa della protostella centrale formando un disco ortogonale al momento totale della nube che trascurando l'effetto della pressione del gas, ruota con velocit\'a angolare kepleriana.
 
 \begin{workout}[Refs dischi protoplanetari]
-Ciesla Dullemond10 
+Chronology of  early stages: apai lauretta 10 (book)
 \end{workout}
 
-\begin{workout}[Classificazione YSO: convenzioni]
-Sorgenti con SED declinante in mid infrared ($2.5-10\si{\micro\meter}$): $1.5<\alpha_{IR}=<0$. Active/passive: mass infall convert G into thermalradiation/reprocessed starlight.
-\end{workout}
+\section{Modello disco di accrescimento}
+
+Nei modelli unidimensionali per disco di accrescimento si parametrizza viscosit\'a tramite $\nu=\frac{\eta}{\rho}\to\alpha c_s H$: giustifico euristicamente la parametrizzazione della viscosit\'a del disco di accrescimento in analogia alla viscosit\'a molecolare (\cite{bouvier2002theory}).
+
+L'equazione del moto per un elemento di fluido
+\begin{align}
+&\PDof{t}(\rho v_i)+\PDof{x_i}(\rho v_iv_j+T_{ij})=F_i\\
+&T_{ij}=P\delta_{ij}-\sigma_{ij}\\
+&\sigma_{ij}=\eta(\partial_jv_i+\partial_iv_j-\frac{2}{3}\delta_{ij}\partial_kv_k+\zeta\delta_{ij}\partial_kv_k
+\end{align}
+dove $\eta$, $\zeta$ sono le shear and bulk viscosity, quest'ultima legata ai gradi di libert\'a interni della molecola \'e trascurabile se i tempi di equipartizione interni sono molto minori del tempo fra due collisioni.
+%-$\sigma_{ij}$ \'e flusso di componente i di momento in direzione j
+Considero la velocit\'a istantanea di una molecola nel piano xy $(v_x+u_x,u_y)$, dove u \'e la componente casuale e $\exv{}$ rappresenta valore mediato su grande numero di particelle/tempo (agitazione termica: $\exv{u}=0$) quindi
+\begin{equation}
+\sigma_{xy}=-\rho\exv{u_xu_y}
+\end{equation}
+dove ho preso la media temporale.
+D'altra parte la forza viscosa agente sulla molecola \'e
+\begin{equation}
+F_{visc,x}=\TDy{y}{\sigma_{xy}}\approx\TDof{y}(\eta\TDy{y}{v_x})
+\end{equation}
+con $\eta=\rho\nu$.
+%PRIM'ORDINE IN \lambda/L
+Dalle equazioni precedenti si ha che
+\begin{equation}
+\exv{u_iu_j}=-\nu\TDy{x_j}{v_i}
+\end{equation}
+
+Per un disco di densit\'a superficiale $\Sigma(r,t)$, dotato del campo di velocit\'a $(u_r,r\Omega+u_{\phi})$, scrivo le equazioni di conservazione di massa e la componente azimutale dell'equazione del moto
+\begin{align}
+&\PDy{t}{\Sigma}+\frac{1}{r}\PDof{r}(r\Sigma v_r)=0\\
+\Sigma(\PDy{t}{v_{\phi}}+v_r\PDy{r}{v_{\phi}}\frac{v_rv_{\phi}}{r})=0
+\end{align}
+da cui segue l'equazione del momento angolare
+\begin{equation}
+\PDof{t}[r\Sigma(r\Omega+u_{\phi})]+\frac{1}{r}\PDof{r}[r^2\Sigma(r\Omega+u_{\phi})u_r]=0
+\end{equation}
+infine, mediando le fluttuazioni su scala spaziale opportuna e trascurando la fluttuazione azimutale nel termine di derivata temporale, ottengo l'equazione
+\begin{equation}
+\PDof{t}r^2\Sigma\Omega+\frac{1}{r}\PDof{r}[r^3\Sigma\Omega\exv{u_r}+\Sigma r^2\exv{u_ru_{\phi}}]=0
+\end{equation}
+che rappresenta un fluido viscoso di velocit\'a $\vec{v}=(u_r,\Omega r)$ tensore degli stress $\sigma_{r\phi}=-\Sigma\exv{u_ru_{\phi}}$.
+
+Per semplicit\'a si parametrizza il trasporto di momento angolare ponendo $\nu=\alpha c_s H$ dove $\alpha$ \'e parametro da fissare, $c_s$ la velocit\'a del suono e H lo spessore del disco:
+\begin{equation}
+\PDy{t}{\Sigma}=3\frac{1}{r}\PDof{r}[r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]\label{eq:sigmaevol}
+\end{equation}
+
+Nella popolazione planetaria simulata $\alpha$ \'e fissato sulla base delle osservazioni  ed \'e omogeneo e costante.
 
 \begin{workout}[Viscous/turbulent disk]
 laminar (high momentum diffusion)
@@ -108,6 +141,46 @@ Densit\'a superficiale iniziale:
 (Photoevaporation: veras armitage 2003, Alexander13, Mordasini12. Internal/External).
 EUV($E\approx13.6eV$): ionization, FUV($E\approx6-13.6eV$): dissociation, X-ray
 \end{workout}
+
+\section{YSO: distribuzione propriet\'a dischi protoplanetari}
+
+Perryman ch 10
+\begin{workout}[YSO: classificazione SED]
+
+\end{workout}
+
+\begin{workout}[YSO properties distro]
+Refs: ''Protoplanetary Disk Structures in Ophiuchus''
+da dove sono ricavete nei PPS?
+mass: MMSN, andrews 10, manara 16
+lifetime: IR/UV excess: haisch 01, mamajek 09
+initial embryo starting position: relative spacing of few hill radii (kokubo ida 00), fill disk thinking of asyntituc isolation mass (Ida Lin 10), trapped (hasegawa pudritz 11, cridland 16)
+\end{workout}
+
+\begin{workout}[Refs dischi protoplanetari]
+Ciesla Dullemond10 
+\end{workout}
+
+\begin{workout}[Classificazione YSO: convenzioni]
+Sorgenti con SED declinante in mid infrared ($2.5-10\si{\micro\meter}$): $1.5<\alpha_{IR}=<0$. Active/passive: mass infall convert G into thermalradiation/reprocessed starlight.
+\end{workout}
+
+{\let\clearpage\relax\let\cleardoublepage\relax
+\chapter{Schema di formazione planetaria per core accretion}
+}
+
+\section{Core accretion o instabilit\'a gravitazionale?}
+
+\begin{workout}[Refs GI vs CA]
+planetesimal hypoithesis: chamberlin 05, Safronov 69, Hayashi 77. Formation on dynamical scale via GI: Kuiper 51, Cameron 62.
+\end{workout}
+
+
+Il modello di formazione planetaria da me considerato, core accretion (CA) vedi \ref{part:CAdesc}, si basa sulla sedimentazione della componente polverosa nel disco protoplanetario in embrioni planetari che, se abbastanza massicci sono in grado di accrescere il gas presente nel disco protoplanetario.
+
+L'altro schema di formazione considera l'instabilit\'a gravitazionale del disco. 
+
+Esistono alcuni dati osservativi in favore del primo modello, considerando il sistema solare: arricchimento dei pianeti del sistema solare rispetto a composizione solare di metalli (la composizione di Urano/Nettuno contiene $1\%$ di $H_2$, $He$ contenuto in pianeta di composizione solare con pari massa di metalli), ipotizzando una rimozione della parte gassosa il pianeta deve avere il tempo di sedimentare la componente metllica, \'e necessario un disco di massa solare e i pianeti si formerebbero a distanza maggiore, non spiega la formazione dei corpi minori.
 
 \section{Formazione planetesimi}
 

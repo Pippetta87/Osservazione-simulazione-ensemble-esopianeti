@@ -190,6 +190,7 @@ Perryman ch 10
 williams cieza 11
 Andrews 09-10
 mamajek 2009 - Initial conditions of planet formation: lifetimes of primordial disks
+infrared excess: gail hoppe10
 \end{workout}
 
 \begin{workout}[Classificazione YSO: convenzioni]
@@ -205,36 +206,94 @@ Formation: disk quickly forms as more distant material with high angular momentu
 \chapter{Schema di formazione planetaria per core accretion}
 }
 
-\section{Core accretion o instabilit\'a gravitazionale?}
-
 \begin{workout}[Refs GI vs CA]
 planetesimal hypoithesis: chamberlin 05, Safronov 69, Hayashi 77. Formation on dynamical scale via GI: Kuiper 51, Cameron 62.
+Core accretion o instabilit\'a gravitazionale?
+La correlazione tra metallicit\'a del disco protoplanetario e il numero di pianeti (giganti) \'e in accordocon osservazioni?
 \end{workout}
 
 
-Il modello di formazione planetaria da me considerato, core accretion (CA) vedi \ref{part:CAdesc}, si basa sulla sedimentazione della componente polverosa nel disco protoplanetario in embrioni planetari che, se abbastanza massicci sono in grado di accrescere il gas presente nel disco protoplanetario.
+Il modello di formazione planetaria da me considerato, si basa sulla sedimentazione della componente polverosa nel disco protoplanetario in embrioni planetari che, se abbastanza massicci sono in grado di accrescere il gas presente nel disco protoplanetario.
 
 L'altro schema di formazione considera l'instabilit\'a gravitazionale del disco. 
 
 Esistono alcuni dati osservativi in favore del primo modello, considerando il sistema solare: arricchimento dei pianeti del sistema solare rispetto a composizione solare di metalli (la composizione di Urano/Nettuno contiene $1\%$ di $H_2$, $He$ contenuto in pianeta di composizione solare con pari massa di metalli), ipotizzando una rimozione della parte gassosa il pianeta deve avere il tempo di sedimentare la componente metllica, \'e necessario un disco di massa solare e i pianeti si formerebbero a distanza maggiore, non spiega la formazione dei corpi minori.
 
-\section{Formazione planetesimi}
+\section{Sedimentazione polvere e formazione planetesimi}
 
+Si ha la condensazione della polvere in corpi dominati da autogravitazione, in \SIrange{e4}{e5}{\year}.
+
+L'equazione del moto per particella di polvere \'e
+\begin{equation}
+m_p\TDy{t}{v_z}=F_D-m_p\Omega^2z
+\end{equation}
+$F_D$ \'e la forza esercitata dal gas sulla particella di polvere
+\begin{equation}
+F_D=-\frac{1}{2}C_D\pi s^2\rho_gv^2
+\end{equation}
+nel caso cammino libero medio delle molecole di gas sia maggiore delle dimensioni della particella $C_D=\frac{8}{3}\frac{v_{th}}{v}$ (Epstein drag).
+Grani piccoli raggiungono rapidamente la velocit\'a stazionaria di regime
+\begin{equation}
+v_{set}=\frac{\Omega^2}{v_{th}}\frac{\rho_d}{\rho_g(z)}sz
+\end{equation}
+La formula precedente prevede sedimentazione per particella mm in 100: risultano evidenze contrarie dalle osservezioni.
+
+Inoltre l'eventuale scambio di momento tra gas e polvere dovuto alla velocit\'a di rotazione minore di quella kepleriana del gas:
+\begin{equation}
+g_{eff}=-\frac{GM_*}{r^2}-(\frac{1}{\rho_g}\TDy{r}{P}=r\Omega_g^2
+\end{equation}
+$\Omega_g$ \'e $\approx0.5\%$ di quella kepleriana.
+
+Per passare a corpi di dimensioni kilometriche si ipotizzano 2 scenarii:
+\begin{itemize}
+\item La componente solida del disco di accrescimento sedimenta rapidamente in disco sottile: secondo il modello di Goldreich-Ward il disco di polvere \'e instabile e le condensazioni generano i planetesimi.
+\item In assenza di sedimentazione la formazione procede tramite urti a 2 corpi e la turbolenza creando addensamenti, pu\'o accelerare la formazione di planetesimi.
+\end{itemize}
+
+Perryman pg 226
+
+\begin{workout}[orbital elements distribution: raylegh distro]
+\begin{equation}
+f(e,i)=4\frac{\sigma}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{[-\frac{e^2}{\exv{e^2}}-\frac{}{\exv{i^2}}]}
+\end{equation}
+Lissauer pg 142-143
+\end{workout}
+
+\begin{workout}[orderly growth]
+lissauer pg 144: equapartition effect saturation
+\begin{equation}
+\frac{1}{m_p}\TDy{t}{m_p}\propto m_p\expy{-1/3}
+\end{equation}
+\end{workout}
+
+\begin{workout}[runaway growth]
+\begin{equation}
+\frac{1}{m_p}\TDy{t}{m_p}\propto m_p\expy{1/3}
+\end{equation}
+\end{workout}
+
+\begin{workout}[Dust settling model]
+Furlan 06: Effects of dust growth and settling in T Tauri disks
+Nomura 06: Dust Size Growth and Settling in a Protoplanetary Disk
+\cite{lissauer1993planet}
+ \end{workout}
+
+
+
+\begin{workout}[Dust dynamics refs]
+Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
 Protoplanetary disk and their evolution pg 29
 Protoplanetary dust: Apai Lauretta - particles dynamics pg 100
-
-Assumendo conversione completa di polvere in planetesimi, la densit\'a superficiale di planetesimi \'e
-\begin{equation}
-\Sigma_p(t=0,r)=f_{dg}\eta_{ice}\Sigma_g(t=0,r)
-\end{equation}
+\end{workout}
 
 \begin{workout}[Particle-gas dynamics. dust midplane sedimantation]
 Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
 Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
 \end{workout}
 
-\begin{workout}[Effectsof protplanets atmosphere]
-Enhanced collisional growth of a protoplanet that has an atmosphere (Inaba Ikoma 03)
+\begin{workout}[Formazione planetesimi: meccanismo Goldreich-Ward]
+Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
+Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
 \end{workout}
 
 \section{Accrescimento pianetsemi: formazione proto-pianeti.}
@@ -247,6 +306,10 @@ La massa dei core varia secondo
 
 \begin{workout}[feeding zone]
 $B_LR_H$
+\end{workout}
+
+\begin{workout}[Effectsof protplanets atmosphere]
+Enhanced collisional growth of a protoplanet that has an atmosphere (Inaba Ikoma 03)
 \end{workout}
 
 \begin{workout}[runaway to oligarchic]

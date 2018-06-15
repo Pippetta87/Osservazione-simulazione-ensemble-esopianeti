@@ -250,35 +250,11 @@ Per passare a corpi di dimensioni kilometriche si ipotizzano 2 scenarii:
 \item In assenza di sedimentazione la formazione procede tramite urti a 2 corpi e la turbolenza creando addensamenti, pu\'o accelerare la formazione di planetesimi.
 \end{itemize}
 
-Perryman pg 226
-
-\begin{workout}[orbital elements distribution: raylegh distro]
-\begin{equation}
-f(e,i)=4\frac{\sigma}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{[-\frac{e^2}{\exv{e^2}}-\frac{}{\exv{i^2}}]}
-\end{equation}
-Lissauer pg 142-143
-\end{workout}
-
-\begin{workout}[orderly growth]
-lissauer pg 144: equapartition effect saturation
-\begin{equation}
-\frac{1}{m_p}\TDy{t}{m_p}\propto m_p\expy{-1/3}
-\end{equation}
-\end{workout}
-
-\begin{workout}[runaway growth]
-\begin{equation}
-\frac{1}{m_p}\TDy{t}{m_p}\propto m_p\expy{1/3}
-\end{equation}
-\end{workout}
-
 \begin{workout}[Dust settling model]
 Furlan 06: Effects of dust growth and settling in T Tauri disks
 Nomura 06: Dust Size Growth and Settling in a Protoplanetary Disk
 \cite{lissauer1993planet}
  \end{workout}
-
-
 
 \begin{workout}[Dust dynamics refs]
 Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
@@ -296,16 +272,64 @@ Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Laur
 Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
 \end{workout}
 
-\section{Accrescimento pianetsemi: formazione proto-pianeti.}
+\section{Accrescimento planetsemi: formazione proto-pianeti.}
 
-La massa dei core varia secondo
-\begin{align}
-&\dot{M}_c=\Omega\Sigma_pR^2_{capt}F_G\\
-&\dot{\Sigma}_p(r)=-\frac{1}{2\pi aB_LR_H}\dot{M}_c
-\end{align}
+\begin{workout}[Dynamical evolution of planetesimal swarm: refs]
+Accretional evolution of planetesimal swarm (weidenschilling 97)
+\end{workout}
+
+
+\subsection{Distribuzione planetesimi}
+
+La popolazione dei planetesimi evolve attraverso interazione con gas e scattering/collisioni con planetesimi: l'interazione tra planetesimi trasforma il moto kepleriano in casuale e si ha equipartizione di energia tra pianetesimi di diversa massa; i planetesimi di massa minore hanno maggiore dispersione di velocit\'a, l'interazione col gas smorza eccentricit\'a e inclinazione inoltre due planetesimi hanno stessa velocit\'a relativa primo e dopo interazione ma aumenta la velocit\'a relativa al moto kepleriano in maniera casuale.
+
+\subsection{Regimi accrescimento dei protopianeti}
+
+
+
+\begin{workout}[Gravitational stirring: Viscous stirring and dynamical friction]
+\begin{itemize}
+\item Viscous stirring increses i,e
+\item Dynamical stirring: tends to equalize energy of random motion among bodies having different masses and velocities
+\end{itemize}
+\end{workout}
+
+
+\begin{workout}[10m-10km, 100km-1000km, 1000km-10000km: refs]
+Lissauer pg 142-143
+Perryman pg 226
+\end{workout}
+
+\begin{workout}[orbital elements distribution: raylegh distro]
+
+\begin{equation}
+I planetesimi hanno distribuzione di velocit\'a casuale, localmente equivalente a
+f(e,i)=4\frac{\sigma}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{[-\frac{e^2}{\exv{e^2}}-\frac{}{\exv{i^2}}]}
+\end{equation}
+\'e una distro gaussiana triassiale in coordinate cilindriche (Lissauer Stewart 93)
+Lissauer pg 142-143
+\end{workout}
+
+\begin{workout}[orderly growth]
+lissauer pg 144: equapartition effect saturation
+\begin{equation}
+\frac{1}{m_p}\TDy{t}{m_p}\propto m_p\expy{-1/3}
+\end{equation}
+\end{workout}
+
+\begin{workout}[runaway growth]
+\begin{equation}
+\frac{1}{m_p}\TDy{t}{m_p}\propto m_p\expy{1/3}
+\end{equation}
+\end{workout}
 
 \begin{workout}[feeding zone]
-$B_LR_H$
+Jacobi integral:
+\begin{align}
+&E_J=\frac{1}{2}(e^2+i^2)a^2\Omega^2-\frac{3}{8}b^2\Omega^2+\frac{9}{2}R_H^2\Omega^2\\
+&\tilde{E}_J=\frac{E_J}{a^2h^2\Omega^2},\ h=R_H/a
+\end{align}
+Planetesimi con $\tilde{E}_J>0$ possono accrescere il protopianeta  cio\'e entro $w_{feed}=B_LR_H$, per orbite circolari $B_L=2\sqrt{3 }$.
 \end{workout}
 
 \begin{workout}[Effectsof protplanets atmosphere]

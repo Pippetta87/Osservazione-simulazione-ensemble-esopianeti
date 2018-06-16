@@ -274,18 +274,29 @@ Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinam
 
 \section{Accrescimento planetsemi: formazione proto-pianeti.}
 
+
+\begin{figure}[!t]
+\includegraphics[width=0.9\textwidth]{accretiontimeline}
+\end{figure}
+
 \begin{workout}[Dynamical evolution of planetesimal swarm: refs]
 Accretional evolution of planetesimal swarm (weidenschilling 97)
 \end{workout}
 
+\begin{workout}[10m-10km, 100km-1000km, 1000km-10000km: refs]
+Lissauer pg 142-143
+Perryman pg 226
+\end{workout}
 
 \subsection{Distribuzione planetesimi}
 
 La popolazione dei planetesimi evolve attraverso interazione con gas e scattering/collisioni con planetesimi: l'interazione tra planetesimi trasforma il moto kepleriano in casuale e si ha equipartizione di energia tra pianetesimi di diversa massa; i planetesimi di massa minore hanno maggiore dispersione di velocit\'a, l'interazione col gas smorza eccentricit\'a e inclinazione inoltre due planetesimi hanno stessa velocit\'a relativa primo e dopo interazione ma aumenta la velocit\'a relativa al moto kepleriano in maniera casuale.
 
-\subsection{Regimi accrescimento dei protopianeti}
+\'E ragionevole supporre che si arrivi rapidamente alla condizione $v>\Omega R_H$.
 
-
+\begin{workout}[Planetesimal dynamics: viscous stirring]
+The origin of anisotropic velocity dispersion of particles in a disc potential (Ida, Makino 93, Stewart-Wetherill 1988 Ida1990)
+\end{workout}
 
 \begin{workout}[Gravitational stirring: Viscous stirring and dynamical friction]
 \begin{itemize}
@@ -294,14 +305,7 @@ La popolazione dei planetesimi evolve attraverso interazione con gas e scatterin
 \end{itemize}
 \end{workout}
 
-
-\begin{workout}[10m-10km, 100km-1000km, 1000km-10000km: refs]
-Lissauer pg 142-143
-Perryman pg 226
-\end{workout}
-
 \begin{workout}[orbital elements distribution: raylegh distro]
-
 \begin{equation}
 I planetesimi hanno distribuzione di velocit\'a casuale, localmente equivalente a
 f(e,i)=4\frac{\sigma}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{[-\frac{e^2}{\exv{e^2}}-\frac{}{\exv{i^2}}]}
@@ -310,8 +314,24 @@ f(e,i)=4\frac{\sigma}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{[-\frac{e^2}{\exv{e^2}
 Lissauer pg 142-143
 \end{workout}
 
+\subsection{Regimi accrescimento dei protopianeti}
+
+L'accrescimento di massa del protopianeta procede secondo
+\begin{equation}
+\TDy{t}{M_e}=\pi R_c\Sigma_p\Omega F_g
+\end{equation}
+$F_g$ \'e determinato dalla velocit\'a relativa tra proto-pianeta e planetesimi.
+
+\begin{workout}[Protoplanets accretion of solids]
+Other refs: Planet formation coagulation: focus on U,N (Goldreich 04), Final stages of planets formation (Goldreich 04), Formation of giant planets core: evaluating key processes (levison 09).
+Safronov69: $\dot{M}_c=\Omega\Sigma_pR^2_{capture}F_G$, $R_{capture}$ larger than core radius due to gas drag, $F_G(e,i)$ gravitational focus (give rise to different growth regimes: runaway, oligarchic, orderly).
+Runaway growth until protoplanets $100-1000km$ (dep on position).
+Oligarchic growth: velocity of planetesimal raised by viscous stirring (gravitational scattering)/ damped by gas (until disk present).
+Enhanced radius by atmospheric drag: Enhanced collisional growth of a protoplanet that has an atmosphere (Inaba Ikoma 03)
+\end{workout}
+
 \begin{workout}[orderly growth]
-lissauer pg 144: equapartition effect saturation
+lissauer pg 144: equapartition effect saturation. This regime is never observed in simulations.
 \begin{equation}
 \frac{1}{m_p}\TDy{t}{m_p}\propto m_p\expy{-1/3}
 \end{equation}
@@ -332,14 +352,14 @@ Jacobi integral:
 Planetesimi con $\tilde{E}_J>0$ possono accrescere il protopianeta  cio\'e entro $w_{feed}=B_LR_H$, per orbite circolari $B_L=2\sqrt{3 }$.
 \end{workout}
 
-\begin{workout}[Effectsof protplanets atmosphere]
-Enhanced collisional growth of a protoplanet that has an atmosphere (Inaba Ikoma 03)
-\end{workout}
-
-\begin{workout}[runaway to oligarchic]
+\begin{workout}[runaway to oligarchic. Isolation mass]
  NEW CONDITION FOR THE TRANSITION FROM RUNAWAY TO OLIGARCHIC GROWTH (Ormel 10)
- \end{workout}
-
+ \begin{equation}
+M_{iso}\propto M_*\expy{-1/2}\Sigma_p\expy{3/2}r^3
+\end{equation}
+$0.07\mearth{}$ 1AU, $9\mearth{}$ 5 AU.
+\end{workout}
+  
 \begin{workout}[Accrescimento pianetesimi: orderly, runaway, oligarchic]
 The growth of planetary embryos:  orderly, runaway, or oligarchic? (Rafikov 2002)
 \begin{align}
@@ -356,18 +376,11 @@ kokubo ida 02 (ida lin 04)
 \end{align}
 \end{workout}
 
-\begin{workout}[Protoplanets accretion of solids]
-Other refs: Planet formation coagulation: focus on U,N (Goldreich 04), Final stages of planets formation (Goldreich 04), Formation of giant planets core: evaluating key processes (levison 09).
-Safronov69: $\dot{M}_c=\Omega\Sigma_pR^2_{capture}F_G$, $R_{capture}$ larger than core radius due to gas drag, $F_G(e,i)$ gravitational focus (give rise to different growth regimes: runaway, oligarchic, orderly).
-Runaway growth until protoplanets $100-1000km$ (dep on position).
-Oligarchic growth: velocity of planetesimal raised by viscous stirring (gravitational scattering)/ damped by gas (until disk present).
-Enhanced radius by atmospheric drag.
+\begin{workout}[Post-oligarchic growth: 1000km-10000km]
+Chaotic growth until stable configuration is reached.
+Factors determning orbital spacing: pg 229, earth formation (chambers 01, raymond 05, o'brian 06)
 \end{workout}
 
-\begin{workout}[Planetesimal dynamics: viscous stirring]
-The origin of anisotropic velocity dispersion of particles in a disc potential (Ida, Makino 93, Stewart-Wetherill 1988 Ida1990)
-\end{workout}
- 
 \chapter{Accrescimento gas}
 
 Refs: Planet formation models: the interplay with the planetesimal disc (Fortier 2013), Characterization of exoplanets from their formation I. Models of combined planet formation and evolution (Mordasini 12)
@@ -377,8 +390,8 @@ Si risolvono numericamente le equazioni di conservazione di massa, equilibrio id
 \begin{workout}[Attached phase: boundary conditions]
 \begin{align}
 &P_{pl}=P_{Neb}\\
-T_{Pl}=T_{Neb}\\
-R_{Pl}=Min(R_H,R_H)
+&T_{Pl}=T_{Neb}\\
+&R_{Pl}=Min(R_H,R_H)
 \end{align}
 \end{workout}
 
@@ -470,6 +483,7 @@ Benitez Llambay 15: heating torque, Paardekooper14 Pierens 15: dynamic corotatio
 \end{workout}
 
 \section{Massive enough planet to open gap: migration II}
+
 Refs: On the tidal interaction between protoplanets and the primordial solar nebula. II - Self-consistent nonlinear interaction (1986)
 Non-linear. For larger planet mass, when disk density distro is changed cons., the linear hteory is no more adeguate. If angular momentum isdeposited locally (viscous dissipation/shock waves)  the disk receeds from planets
 Ida-lin04: angular momentum trasport in viscous accretion disk without planets that in type II migration act as relays that transmit angular momentum at that rateacross their gap via tidal torques.

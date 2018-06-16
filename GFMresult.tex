@@ -17,13 +17,45 @@ Dust converted early everywhere fully-efficient (mordasini18: pg 12),Thommes pg8
 Icelines Mordasini 1141: inside where T exceeds sublimation
 \end{workout}
 
-\section{Accrescimento dei protopianeti}
+\section{Accrescimento dei protopianeti e gas}
 
 La massa dei core varia secondo
 \begin{align}
 &\dot{M}_c=\Omega\Sigma_pR^2_{capt}F_G\\
 &\dot{\Sigma}_p(r)=-\frac{1}{2\pi aB_LR_H}\dot{M}_c
 \end{align}
+
+Si risolvono numericamente le equazioni di conservazione di massa, equilibrio idrostatico, conservazione/trasporto energia 1D
+
+\begin{workout}[Attached phase: boundary conditions]
+\begin{align}
+&P_{pl}=P_{Neb}\\
+&T_{Pl}=T_{Neb}\\
+&R_{Pl}=Min(R_H,R_H)
+\end{align}
+\end{workout}
+
+
+\begin{workout}[Detached phase: transition condition and boundary condition]
+Transition attached/detched phase $\approx10\mearth{}$.
+Accretion shock for free-falling materials from Hill radius (more realistic circumplanetary disk: Papailoizou Nelson 05)
+\begin{align}
+&\dot{M}_{XY}^{max}\\
+&v_{ff}^2=2GM(\frac{1}{R}-\frac{1}{R_H})\\
+&P=P_{neb}+\frac{\dot{M}_{XY}}{4\pi R^2}v_{ff}+\frac{2g}{3\kappa}\\
+&\tau=max(\rho_{neb}\kappa_{neb}R,2/3)\\
+&T^4_{int}=\frac{3\tau L_{int}}{8\pi\sigma R^2},\ T^4=(1-A)T_{neb}^4+T_{int}^4
+\end{align}
+$R\approx1.5-5\rjupiter{}$ depending on entropy: THE PLANETARY ACCRETION SHOCK:I. FRAMEWORK FOR RADIATION-HYDRODYNAMICAL SIMULATIONS AND FIRST RESULTS (m17), Characterization of exoplanets from their formation III: The statistics of planetary luminosities (m17)
+Bondi accretion rate: $\dot{M}_{e, Bondi}\approx\frac{\Sigma}{H}(R_H/3)^3\Omega$ or viscous accretion rate $\dot{M}_{e, visc}\approx f_{lub}3\pi\nu\Sigma_g$
+\end{workout}
+
+\begin{workout}[Higher mass gap formation reduces accretion rate]
+\begin{equation}
+f_{va04}=1.668(\frac{M_p}{\mjupiter{}})\expy{1/3}\exp{-\frac{M_p}{1.5\mjupiter{}}}+0.04
+\end{equation}
+\end{workout}
+
 
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Funzione di massa sistemi planetari}

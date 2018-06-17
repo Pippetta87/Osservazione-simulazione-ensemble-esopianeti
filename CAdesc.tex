@@ -396,7 +396,49 @@ Factors determning orbital spacing: pg 229, earth formation (chambers 01, raymon
 \chapter{Accrescimento gas}
 }
 
+Se il core \'e sufficientemente massiccio lega il gas presente nelle disco: 
 Seguendo \cite{rafikov2006atmospheres}.
+
+Indico la massa di gas legata al core con
+\begin{equation}
+M_e=4\pi\int_{R_c}^{R_B}\rho(r')r'^2\,dr'
+\end{equation}
+
+dove $R_C$ \'e il raggio del core e il raggio di Bondi
+\begin{equation}
+R_B=G\frac{M_c}{c_0^2}\approx\SI{4e10}{\cm}a(AU)\expy{1/2}\frac{M_c}{\mearth{}}
+\end{equation}
+definito come raggio in cui energia termica e potenziale gravitazionale si equivalgono: il core perturba la pressione del gas del disco.
+
+
+
+\section{Accrescimento idrostatico}
+
+\begin{workout}[Wien displacement]
+$\lambda_{max}T\approx \SI{3e-3}{\meter\kelvin}$
+\end{workout}
+
+\begin{workout}[Gas accretion: characterization of exoplanets from their formation]
+\begin{align}
+&E_t=E_g+E_i=\int_0^M\frac{Gm}{r}\,dm+\int_{M_z}^Mu\,dm=-\xi\frac{GM^2}{2R}\\
+&-\TDof{t}E_t=L=L_M+L_R+L_{\xi}=\xi\frac{GM}{R}\dot{M}-\xi\frac{GM^2}{2R^2}\dot{R}+\frac{GM^2}{2R}\xi\\
+\dot{M}=\dot{M}_Z+\dot{M}_{XY}
+\end{align}
+Mass conservation, hydrostatic equilibrium and energy transfer:
+\begin{align}
+&\TDy{r}{m}=4\pi r^2\rho\\
+&\TDy{r}{l}=0\\
+&\TDy{r}{P}=-\frac{Gm}{r^2}\rho\\
+&\TDy{r}{T}=\frac{T}{P}&\TDy{r}{P}\nabla(T,P)\\
+&\nabla(T,P)=\TDly{P}{T}=\min{(\nad{},\nrad{})}
+\end{align}
+\end{workout}
+
+
+
+\section{Instaurarsi instabilit\'a gravitazionale}
+
+
 
 \begin{workout}[gas accretion refs]
 Rafikov 10: ''Constraint on giant planet production by core accretion''
@@ -404,14 +446,13 @@ Rafikov 04 Atmospheres of protoplanetary cores: critical mass for nucleated inst
 Refs: Planet formation models: the interplay with the planetesimal disc (Fortier 2013), Characterization of exoplanets from their formation I. Models of combined planet formation and evolution (Mordasini 12)
 \end{workoput}
 
-
-
 \begin{workout}[Planet-Disk exchange in hydrodynamic manner]
 Ormel 15/ Cimerman 17
 \end{workout}
 
-
+{\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Migrazione}
+}
 
 \begin{workout}[Migration refs]
 Refs: \cite{ward1997protoplanet}, \cite{terquem2000disks}, \cite{menou2004low}, (

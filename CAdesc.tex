@@ -393,7 +393,7 @@ Factors determning orbital spacing: pg 229, earth formation (chambers 01, raymon
 
 
 {\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Accrescimento gas}
+\chapter{Evoluzione struttura planetaria: accrescimento e fase isolata.}
 }
 
 Se il core \'e sufficientemente massiccio lega il gas presente nelle disco: 
@@ -414,9 +414,13 @@ definito come raggio in cui energia termica e potenziale gravitazionale si equiv
 
 \section{Accrescimento idrostatico}
 
+
+
 \begin{workout}[Wien displacement]
 $\lambda_{max}T\approx \SI{3e-3}{\meter\kelvin}$
 \end{workout}
+
+
 
 \begin{workout}[Gas accretion: characterization of exoplanets from their formation]
 \begin{align}
@@ -432,15 +436,36 @@ Mass conservation, hydrostatic equilibrium and energy transfer:
 &\TDy{r}{T}=\frac{T}{P}&\TDy{r}{P}\nabla(T,P)\\
 &\nabla(T,P)=\TDly{P}{T}=\min{(\nad{},\nrad{})}
 \end{align}
+
+Condizioni al bordo:
+\begin{align}
+&R=\frac{R_A}{1+R_A/(k_lR_H )},\ P=P_{neb}\\
+&\tau=\max{(\rho_{neb}\kappa_{neb}R),2/3)},\ T_i^4=\frac{3\tau L_{int}}{8\pi\sigma R^2}\\
+&T^4=T_{neb}^4+T_{int}^4,\ L(R)=L_{int}
+\end{align}
+$k_{liss}=3-4$, quindi $R_p\approx \min{(R_B,k_{liss}\expy{-1}R_H)}$.
 \end{workout}
 
+Rate di accrescimento limitato dalla velocit\'a di raffreddamento ($\tau\approx\tkh{}$):
+\begin{align}
+&\dot{M}_{XY}\propto,\ \frac{M_p}{M_*}<(H_P/R_p)^3/\sqrt{3}\\
+&\dot{M}_{XY}\propto M_p
+\end{align}
 
+quindi la massa di gas aumenta esponenzialmente a partire da $M_c\approx10\mearth{}$.
 
 \section{Instaurarsi instabilit\'a gravitazionale}
 
+Se $H_p\approx R_p$ il pianeta perturba in maniera non trascurabile il disco (il rate di accrescimento di gas \'e maggiore di quello fornito dal disco). Il raggio del pianeta \'e determinato dalle condizioni al bordo per materia accresciuta tramite free-fall da $R_H$ a $R_p$:
+\begin{align}
+&\dot{M}_{XY}=\dot{M}_{XY,max},\ v_{ff}^2=2GM(\frac{1}{R}-\frac{1}{R_H})\\
+&P=P_{neb}+\frac{\dot{M}_{XY}}{4\pi r^2}+\frac{2g}{3\kappa},\ \tau=\max{(\rho_{neb}\kappa_{neb}R,2/3)}\\
+&T_{int}^4=\frac{3\tau L_{int}}{8\pi\sigma R^2},\ T^4=(1-A)T_{neb}^4+T_{int}^4
+\end{align}
 
 
 \begin{workout}[gas accretion refs]
+Lissauer 09: Models of Jupiter’s growth incorporating thermal and hydrodynamic constraints
 Rafikov 10: ''Constraint on giant planet production by core accretion''
 Rafikov 04 Atmospheres of protoplanetary cores: critical mass for nucleated instability.
 Refs: Planet formation models: the interplay with the planetesimal disc (Fortier 2013), Characterization of exoplanets from their formation I. Models of combined planet formation and evolution (Mordasini 12)
@@ -449,6 +474,8 @@ Refs: Planet formation models: the interplay with the planetesimal disc (Fortier
 \begin{workout}[Planet-Disk exchange in hydrodynamic manner]
 Ormel 15/ Cimerman 17
 \end{workout}
+
+\section{Fase isolata}
 
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Migrazione}

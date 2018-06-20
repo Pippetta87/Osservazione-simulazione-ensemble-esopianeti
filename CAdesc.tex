@@ -15,6 +15,15 @@ appendix a pg 66 planet formation and migration vs crida PHD torque calculation 
 \end{workout}
 
 Nei modelli unidimensionali per disco di accrescimento si parametrizza viscosit\'a tramite $\nu=\frac{\eta}{\rho}\to\alpha c_s H$: giustifico euristicamente la parametrizzazione della viscosit\'a del disco di accrescimento in analogia alla viscosit\'a molecolare (\cite{bouvier2002theory}).
+cio\'e che:
+\begin{workout}[Stress tensor in keplerian disk: crida PHD]
+pg 26
+\begin{align}
+&\sigma_{ij}=d_{ij}-PI{ij}\\
+&d_{ij}=2\Sigma\nu(D_{ij}-\frac{1}{3}(\div{\vec{v}}I_{ij})+\Sigma\zeta(\div{\vec{v}})I_{ij}\\
+&D_{ij}=\frac{1}{2}(\partial_iv_k+\partial_kv_i)
+\end{align}
+\end{workout}
 
 L'equazione del moto per un elemento di fluido
 \begin{align}
@@ -125,22 +134,6 @@ $\vec{v}=(u_r,r\Omega)$, stress tensor $\sigma_{r\phi}=-\Sigma\exv{u_ru_{\phi}}$
 Enhanced turbulent viscosity: $-\Sigma\exv{u_ru_{\phi}}=\Sigma\nu r\TDy{r}{\Omega}$, $\nu=v_TH$, $\alpha=v_T/c_s$
 \end{workout}
 
-\begin{workout}[Modello di disco di accrescimento - (Mordasini18: 4) - Introduzione descrizione fenomeni grazie a PPS]
-Un modello di disco  di accrescimento usato nelle simulazioni considera l'evoluzione della densit\'a superficiale tramite l'equazione \eqref{eq:diskaccrphev-m18}
-
-\begin{align}
-&\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_p(r)\label{eq:diskaccrphev-m18}\\
-&\dot{\Sigma}_w(a)=\left\{\begin{array}{c}0\\\frac{\dot{M}_w}{2\pi(a_{max}-R_g)a}\\\end{array}\right.
-\end{align}
-
-Densit\'a superficiale iniziale:
-\begin{equation}
-\Sigma(a,t=0)=\Sigma_0(\frac{r}{1AU})\expy{p_g}\Exp{[-(\frac{r}{R_o})\expy{2+p_g}]}(1-\sqrt{\frac{r}{R_i}})
-\end{equation}
-4-Mordasini18 (Hayashi81). $p_g\approx1$ (Andrews10).
-\end{workout}
-
-
 \begin{workout}[Foto-evaporazione]
 (Photoevaporation: veras armitage 2003, Alexander13, Mordasini12. Internal/External).
 EUV($E\approx13.6eV$): ionization, FUV($E\approx6-13.6eV$): dissociation, X-ray
@@ -154,12 +147,26 @@ $S_{\nu}\propto B_{\nu}(1-\exp{-\tau})\approx B_{\nu}\tau$: emission produced ne
 Rayleigh-jeans: $B_{\nu}\propto T$ and, since $\tau=\kappa\Sigma$, $S_{\nu}\propto \kappa\Sigma T$.
 (SED: Andrews williams 07)
 Survey: 0.3'', 345Ghz(870$\micro m$) 1Myr old Ophiuchus stars forming region
+The absolute chronology and thermal processing of solids in the solar protoplanetary disk (Connelly Ivanova 12)
+\end{workout}
+
+\begin{workout}[Selfsimilar initial disk density solution]
+Refs: Lynden-bel pringle 74
 Se la viscosit\'a \'e statica e distribuita secondo $\nu\propto r\expy{\gamma}$:
 \begin{align}
 &R_c=R_1\mathcal{T}\expy{1/(2-\gamma)}\\
 &M_d=M_{d,0}\mathcal{T}\expy{-1/2(2-\gamma)}\\
 \end{align}
 \end{workout}
+
+\begin{workout}[Analitic disk model]
+Chambers 09: On analytical model for the evolution of a viscous, irradiated disk
+On location of snowline in protoplanetary disk (lecar chiang 06)
+On the snow line in dusty PPD (Sasselov lecar 99)
+Accretion disks around young object I: Detailed vertical structure (D'alessio Lizzano 98)
+\end{workout}
+
+
 
 \begin{workout}[YSO properties distro]
 Refs: ''Protoplanetary Disk Structures in Ophiuchus''
@@ -169,22 +176,12 @@ lifetime: IR/UV excess: haisch 01, mamajek 09
 initial embryo starting position: relative spacing of few hill radii (kokubo ida 00), fill disk thinking of asyntituc isolation mass (Ida Lin 10), trapped (hasegawa pudritz 11, cridland 16)
 Hueso 05: evolution of protoplanetary disk, meyer 06 Formation and evolution of planetary systems, Udry 07: statistical properties of exoplanets)
 Distribuzione di probabilit\'a per condizioni iniziali.
+
 Initial condition for planet formation (protoplanetry disk \cite{meyer2006formation}): disk metallicity, mass, lifetime, \ldots
 
 {Metallicity and Dust/Gas}
 $[M/H]$ distro modelled as normal: $\mu=-0.02$, $\sigma=0.22$ (photosphere of solar-like stars in solar neighborhood): Santos05.
 $f_{dg}=f_{dg,\odot}10\expy{[M/H]}$ with $f_{dg,\odot}=0.01-0.02$.
-
-Initial disk mass
-(infall phase end, no more self-gravitational instabilities) - stability(shu90), MMSN hayashi81/weidenshilling77, observations(Andrews10,Manara16) points to $(0.1-10)\%$ stellar mass, distro log-normal with mean $0.01M_*$.
-
-{Disk lifetime}
-$1-10My$ with mean $3My$ (Haisch01, Mamajek09)
-
-{Embryo starting position}
-Usually a distro uniform in log(a): relative spacing of few Hill spheres (Kokubo Ida 10)
-Ida, lin10: asymptotical isolation mass ''Toward a Deterministic Model of Planetary Formation VI'',
-Trapped evolution model: Hasegawa pudritz 11, Cridland 16
 
 \end{workout}
 
@@ -315,8 +312,8 @@ The origin of anisotropic velocity dispersion of particles in a disc potential (
 \end{workout}
 
 \begin{workout}[orbital elements distribution: rayleigh distro]
-\begin{equation}
 I planetesimi hanno distribuzione di velocit\'a casuale, localmente equivalente a
+\begin{equation}
 f(e,i)=4\frac{\sigma}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{[-\frac{e^2}{\exv{e^2}}-\frac{}{\exv{i^2}}]}
 \end{equation}
 \'e una distro gaussiana triassiale in coordinate cilindriche (Lissauer Stewart 93)
@@ -368,6 +365,8 @@ Planetesimi con $\tilde{E}_J>0$ possono accrescere il protopianeta  cio\'e entro
 M_{iso}\propto M_*\expy{-1/2}\Sigma_p\expy{3/2}r^3
 \end{equation}
 $0.07\mearth{}$ 1AU, $9\mearth{}$ 5 AU.
+Accretion among preplanetary bodies: runaway growth, summary of collision interactions
+Understanding how planets become massive
 \end{workout}
   
 \begin{workout}[Accrescimento pianetesimi: orderly, runaway, oligarchic]
@@ -414,17 +413,11 @@ R_B=G\frac{M_c}{c_0^2}\approx\SI{4e10}{\cm}a(AU)\expy{1/2}\frac{M_c}{\mearth{}}
 \end{equation}
 definito come raggio in cui energia termica e potenziale gravitazionale si equivalgono: il core perturba la pressione del gas del disco.
 
-
-
 \section{Accrescimento idrostatico}
-
-
 
 \begin{workout}[Wien displacement]
 $\lambda_{max}T\approx \SI{3e-3}{\meter\kelvin}$
 \end{workout}
-
-
 
 \begin{workout}[Gas accretion: characterization of exoplanets from their formation]
 \begin{align}
@@ -487,6 +480,9 @@ Ormel 15/ Cimerman 17
 Terquem papaloizou (planet formation and migration) pg 43
 Planet-disk interaction and orbital evolution
 
+\begin{equation}[Horseshoe drag]
+Horseshoe drag low-mas planet: migration in isothermal disk (casoli Masset 09): torque, width of corotation region
+\end{equation}
 
 \begin{workout}[Planetary torque: nonlinear regime, type II, gap formation]
 Lin papaloizou 79: at conjuction with planets a fluid element trajectory is deflected in frame centered with planet by angle
@@ -626,10 +622,6 @@ ward91, masset 01,02, masset papaloizou 03, paardekooper papaloizou 09.
 Linear analysis: corotation torque arise from anulus of radial extent H around corotation, launch of evanescent waves in coorbital region; horseshoe analysis consider horseshoe region.
 \end{workout}
 
-\begin{workout}[Effects of saturation, cooling and irradiation.]
-(Impact of planet migration models on planetary populations)
-\end{workout}
-
 \section{Migrazione tipo I: regime lineare}
 
 \begin{workout}[Lindblad/corotation torque: linear]
@@ -702,4 +694,8 @@ For each m,n there are 3 resonant locations: external L resonance act to increas
 &\TDy{t}{e_p}\propto-e_p,\ \tau_e\approx(\frac{H}{r})^2\tau_{mig}\\
 &e_P>\frac{H}{r}: \TDy{t}{e_p}\propto-e_p\expy{-2}
 \end{align*}
-Risultati analoghi per inclinazione.
+Risultati analoghi per inclinazione.	
+
+{\let\clearpage\relax\let\cleardoublepage\relax
+\chapter{N-body interactions inside proto disk}
+}

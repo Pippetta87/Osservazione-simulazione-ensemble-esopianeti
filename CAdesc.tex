@@ -475,78 +475,26 @@ Ormel 15/ Cimerman 17
 \section{Fase isolata}
 
 {\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Migrazione}
+\chapter{Migrazione (e N-body interactions??)}
 }
+
+\begin{workout}[Migration refs]
 Terquem papaloizou (planet formation and migration) pg 43
 Planet-disk interaction and orbital evolution
-
-\begin{equation}[Horseshoe drag]
-Horseshoe drag low-mas planet: migration in isothermal disk (casoli Masset 09): torque, width of corotation region
-\end{equation}
-
-\begin{workout}[Planetary torque: nonlinear regime, type II, gap formation]
-Lin papaloizou 79: at conjuction with planets a fluid element trajectory is deflected in frame centered with planet by angle
-\begin{equation}
-\beta=\arctan{\delta v/v}\arctan{(\frac{GM_p}{bv_0^2})}
-\end{equation}
-$v_0$ velocit\'a relativa fluido-pianeta; dopo l'interazione l'elemento di fluido \'e in orbita ellittica attorno alla stella
-\begin{figure}[!t]
-\includegraphics[width=0.9\textwidth]{impulseapprox}
-\end{figure}
-Qual \'e il trasferimento di momento angolare disco-pianeta associato a quest'interazione?
-Trasferimento di momento per unit\'a di massa:
-\begin{align}
-&\Delta u=u(1-\cos{\delta})\approx u\delta^2/2\\
-&\Delta J=au\delta
-\end{align}
-lungo direzione del originale di moto del protopianeta.
-Pe rmateria in orbita circolare interna/esterna al pianeta il trasferimento \'e positivo/negativo.
-(The interaction is frictional with interior speeding up protoplanet while exterior slowing down; viscous interaction with disk return mass element in circular orbit)
-Il calcolo esatto che tiene conto del fatto che siamo in SR rotante (LP93) introduce fattore correttivo $K_0=4/9[2K_0(2/3)*K_1(2/3)]^2$.
-La velocit\'a relativa \'e $u=a|\Omega_p-\Omega_g$ e dato che l'interazione avviene vicino al pianeta $|\Omega_p-\Omega_g|\approx3/2b\Omega_p/a$.
-Rate trasferimento momento angolare tra interno del disco e pianeta
-\begin{equation}
-\TDy{t}{J}=\int_{b_{min}}^{+\infty}a\Sigma\Delta J|\Omega_p-\Omega_g|\,db
-\end{equation}
-Per disco esterno all'orbita l'espressione \'e la stessa con segno invertito perch\'e il disco or a \'e pi\'u lento del protopianeta.
-Il parametro d'impatto minimo \'e l'assunzione implicita di un gap nel disco a assenza di materia nella regione di corotazione (discussione applicabilein regime non-lineare)
-Formazione gap: perch\'e il gap si stazionario il momento scambiato nell'interazione disco-pianeta deve essere almeno quello trasportato dal moto viscoso del disco:
-\begin{equation}
-\TDy{t}{J}|_{visc}=3\pi\nu\Sigma a^2\omega
-\end{equation}
-deve essere quindi $\TDy{t}{J}|_{visc}<\TDy{t}{J}$
-Cut-off: $b_{min}\approx H$, la pressione smorza effetti su scala pi\'u piccola; regime non-lneare, richiesto per gap formation, lunghezza-scala del flusso non minore di $r_H$: predndendo $b_m=2r_h$ si ha
-\begin{equation}
-\frac{M_p}{M_*}>\frac{40\nu}{a^2\omega}
-\end{equation}
-Formazione di gap per dischi tipici sopra massa di saturno.
-Migrazione tipo II: il pianeta prende momento dal disco esterno (dovuto al flusso viscoso) e cede quello richiesto al disco esterno dal trasporto viscoso: normalmente il bilancio \'e negativo quindi il pianeta migra verso l'interno.
-Quando la massa del pianetaa non eccede la massa locale del disco il tempo scale di migrazione \'e
-\begin{equation}
-t_{II}(yr)=\frac{1}{3\alpha}(\frac{a}{H})^2\Omega\expy{-1}=0.05/\alpha(a/H)^2(a/au)\expy{3/2}
-\end{equation}
-per $H/a\approx0.1$, $\alpha=\numrange{e-3}{e-2}$ a $a=1-5 au$ si ha $t_{}=10^3-10^4yr$.
-
-\end{workout}
-
-\begin{workout}[planet overlflowing roche lobe migrate outward]
-trilling 98:n During mass flow planet moves outward to conserve angular momentum
+Refs: \cite{ward1997protoplanet}, \cite{terquem2000disks}, \cite{menou2004low}, (
+Planet-disk interaction and orbital evolution (kley Nelson 2012), 
+Baruteau 2016)
+crida06: On width and shape of gaps in PPD,crida phd, 
+Trilling 98:Orbital evolution and migration of giant planet: modellingextrasolar planets (Angular momentum injection rate, torque from spinning star, Impact of planet migration models on planetary populations)
+Dittkrist 14: Impact of planetsmigration models n planetarypopulation (Migration II inward/outward: non equilibrium gas flow, problem of isothermal disk migration timescale: migration I regime, Fig 7,
 \end{workout}
 
 \begin{workout}[planet locked in resonances]
 as solar system satellites: goldreich 65.
+N-body, resonanceand migration: The dynamics of two massive planets on inclined orbits (Veras Armitage 04)
 orbital migration occurring at different rates due to disk parameters can produces convergent migration and locking into mean motion resonances.
 kley 04
 aligned absidal line: papaloizou 03
-\end{workout}
-
-\begin{workout}[type I: planets not massive enough to open a gap]
-Linear response of disk to orbiting planets - perturbazione del pianeta sul disco si propagano come onde di densit\'a fuori dalle risonanze e come onda evanescente fra le risonanze nella regione di corotazione. Il protopianeta esercita un momento torcente sulle onde di densit\'a cha assieme  a quello di corotazione \'e responsabiledello scambio di momento angolare tra disco mkoto orbitale del pianeta: la maggior parte del toque \'e esercitato vicino alle risonanze di L./corotazione dove la lunghezza d'onda della perturbazione \'e lunga (lontano la perturbazione ha lunghezza d'onda breve: contributo mediato a zero): terquem00.
-Il momento pu\'o essere calcolato facendo una analisi lineare delle onde eccitate in 2D/3D o sommando i momenti torcenti puntiformi esercitati alle risonanze di lindblad/corotazione.
-\begin{align}
-&t_I\propto J/\dot{J}\propto(H/a)^2\\
-&t_e\propto e/\dot{e}\propto(H/a)^4
-\end{align}
 \end{workout}
 
 \begin{workout}[type I: migration is too fast]
@@ -556,6 +504,46 @@ global magnetic fields terquem 03
 global distortion (non zero eccentricity): papaloizou 02
 opaciy transitionmenou goodman 04
 instabilities in inviscid gap enge: koller 03
+\end{workout}
+
+\begin{workout}[Width horseshoe region]
+mordasini dittkrist14
+\end{workout}
+
+\section{Classificazione migrazione: risposta del disco e velocit\'a}
+
+Il disco di accrescimento esercita momento torcente sul pianeta che produce un trasferimento di momento angolare dal pianeta al disco $\Lambda(a,R)$
+\begin{align*}
+&J=M_p\sqrt{GM_*a_p}\\
+&\TDy{t}{a}=2a_p\frac{\Gamma_t}{J}=-(\frac{a}{GM_*})(\frac{4\pi}{M_P})\int_{r_{int}}^{r_{out}}r\Lambda\Sigma\,dr
+\end{align*}
+$r_{int}, r_{out}$ inner/outer disk radius (rif to disk ar planet)
+
+
+\begin{workout}[M14:type I]
+below few tenth of $\mearth{}$.
+Linblad torque: inside/outside corotation region.
+corotation torque: depends on thermodynamics regime of interaction between planet/disk.
+\end{workout}
+
+\begin{workout}[Corotation torque: non-linear (except early stages) horseshoe drag.]
+(On horseshoe drag of low-mass planets)
+Jump in angular momentum of particles undergoing U turn, before/after planets (in librating orbit).
+ward91, masset 01,02, masset papaloizou 03, paardekooper papaloizou 09.
+Linear analysis: corotation torque arise from anulus of radial extent H around corotation, launch of evanescent waves in coorbital region; horseshoe analysis consider horseshoe region.
+\end{workout}
+
+\begin{workout}[Horseshoe drag]
+Horseshoe drag low-mas planet: migration in isothermal disk (casoli Masset 09): torque, width of corotation region
+\end{workout}
+
+\begin{workout}[type I: planets not massive enough to open a gap]
+Linear response of disk to orbiting planets - perturbazione del pianeta sul disco si propagano come onde di densit\'a fuori dalle risonanze e come onda evanescente fra le risonanze nella regione di corotazione. Il protopianeta esercita un momento torcente sulle onde di densit\'a cha assieme  a quello di corotazione \'e responsabiledello scambio di momento angolare tra disco mkoto orbitale del pianeta: la maggior parte del toque \'e esercitato vicino alle risonanze di L./corotazione dove la lunghezza d'onda della perturbazione \'e lunga (lontano la perturbazione ha lunghezza d'onda breve: contributo mediato a zero): terquem00.
+Il momento pu\'o essere calcolato facendo una analisi lineare delle onde eccitate in 2D/3D o sommando i momenti torcenti puntiformi esercitati alle risonanze di lindblad/corotazione.
+\begin{align}
+&t_I\propto J/\dot{J}\propto(H/a)^2\\
+&t_e\propto e/\dot{e}\propto(H/a)^4
+\end{align}
 \end{workout}
 
 \begin{workout}[type III and coorbital torque]
@@ -573,10 +561,6 @@ quazione del moto:
 \end{equation}
 \end{workout}
 
-\begin{workout}[Other (than?) types of migration]
-planet-planet scattering (rasio ford 96, kozai (nagasawa 08, tidal interactions with gas disk (goldreich tremaine 80, tanaka 02))
-\end{workout}
-
 \begin{workout}[M14:type II and outward migration]
 adiabatic and local isothermal disk: pardekooper 10/11
 Type II planet-dominated for mass $100\mearth{}$.
@@ -584,43 +568,6 @@ $\dot{a}_p\propto v_g$: ??
 Veras armitage 04 (exoplanets with $a>20au$): outward migration seldom important, radius velocity reversal when type II migration occure $R_{mvc}$ is outside them.
 \end{workout}
 
-\begin{workout}[M14:type I]
-below few tenth of $\mearth{}$.
-Linblad torque: inside/outside corotation region.
-corotation torque: depends on thermodynamics regime of interaction between planet/disk.
-\end{workout}
-
-\begin{workout}[Width horseshoe region (M14)]
-
-\end{workout}
-
-\begin{workout}[Migration refs]
-Refs: \cite{ward1997protoplanet}, \cite{terquem2000disks}, \cite{menou2004low}, (
-Planet-disk interaction and orbital evolution (kley Nelson 2012), 
-Baruteau 2016)
-crida06: On width and shape of gaps in PPD,crida phd, 
-Trilling 98:Orbital evolution and migration of giant planet: modellingextrasolar planets (Angular momentum injection rate, torque from spinning star, Impact of planet migration models on planetary populations)
-Dittkrist 14: Impact of planetsmigration models n planetarypopulation (Migration II inward/outward: non equilibrium gas flow, problem of isothermal disk migration timescale: migration I regime, Fig 7,
-\end{workout}
-
-Il disco di accrescimento esercita momento torcente sul pianeta che produce un trasferimento di momento angolare dal pianeta al disco $\Lambda(a,R)$
-\begin{align*}
-&J=M_p\sqrt{GM_*a_p}\\
-&\TDy{t}{a}=2a_p\frac{\Gamma_t}{J}=-(\frac{a}{GM_*})(\frac{4\pi}{M_P})\int_{r_{int}}^{r_{out}}r\Lambda\Sigma\,dr
-\end{align*}
-$r_{int}, r_{out}$ inner/outer disk radius (rif to disk ar planet)
-
-\begin{workout}[Migration/resonance]
-N-body, resonanceand migration
-The dynamics of two massive planets on inclined orbits (Veras Armitage 04)
-\end{workout}
-
-\begin{workout}[Corotation torque: non-linear (except early stages) horseshoe drag.]
-(On horseshoe drag of low-mass planets)
-Jump in angular momentum of particles undergoing U turn, before/after planets (in librating orbit).
-ward91, masset 01,02, masset papaloizou 03, paardekooper papaloizou 09.
-Linear analysis: corotation torque arise from anulus of radial extent H around corotation, launch of evanescent waves in coorbital region; horseshoe analysis consider horseshoe region.
-\end{workout}
 
 \section{Migrazione tipo I: regime lineare}
 
@@ -661,6 +608,51 @@ Benitez Llambay 15: heating torque, Paardekooper14 Pierens 15: dynamic corotatio
 
 \section{Massive enough planet to open gap: migration II}
 
+
+\begin{workout}[Planetary torque: nonlinear regime, type II, gap formation]
+Lin papaloizou 79: at conjuction with planets a fluid element trajectory is deflected in frame centered with planet by angle
+\begin{equation}
+\beta=\arctan{\delta v/v}=\arctan{(\frac{GM_p}{bv_0^2})}
+\end{equation}
+$v_0$ velocit\'a relativa fluido-pianeta; dopo l'interazione l'elemento di fluido \'e in orbita ellittica attorno alla stella
+\begin{figure}[!t]
+\includegraphics[width=0.9\textwidth]{impulseapprox}
+\end{figure}
+Qual \'e il trasferimento di momento angolare disco-pianeta associato a quest'interazione?
+Trasferimento di momento per unit\'a di massa:
+\begin{align}
+&\Delta u=u(1-\cos{\delta})\approx u\delta^2/2\\
+&\Delta J=au\delta
+\end{align}
+lungo direzione del originale di moto del protopianeta.
+Pe rmateria in orbita circolare interna/esterna al pianeta il trasferimento \'e positivo/negativo.
+(The interaction is frictional with interior speeding up protoplanet while exterior slowing down; viscous interaction with disk return mass element in circular orbit)
+Il calcolo esatto che tiene conto del fatto che siamo in SR rotante (LP93) introduce fattore correttivo $K_0=4/9[2K_0(2/3)*K_1(2/3)]^2$.
+La velocit\'a relativa \'e $u=a|\Omega_p-\Omega_g$ e dato che l'interazione avviene vicino al pianeta $|\Omega_p-\Omega_g|\approx3/2b\Omega_p/a$.
+Rate trasferimento momento angolare tra interno del disco e pianeta
+\begin{equation}
+\TDy{t}{J}=\int_{b_{min}}^{+\infty}a\Sigma\Delta J|\Omega_p-\Omega_g|\,db
+\end{equation}
+Per disco esterno all'orbita l'espressione \'e la stessa con segno invertito perch\'e il disco or a \'e pi\'u lento del protopianeta.
+Il parametro d'impatto minimo \'e l'assunzione implicita di un gap nel disco a assenza di materia nella regione di corotazione (discussione applicabilein regime non-lineare)
+Formazione gap: perch\'e il gap si stazionario il momento scambiato nell'interazione disco-pianeta deve essere almeno quello trasportato dal moto viscoso del disco:
+\begin{equation}
+\TDy{t}{J}|_{visc}=3\pi\nu\Sigma a^2\omega
+\end{equation}
+deve essere quindi $\TDy{t}{J}|_{visc}<\TDy{t}{J}$
+Cut-off: $b_{min}\approx H$, la pressione smorza effetti su scala pi\'u piccola; regime non-lneare, richiesto per gap formation, lunghezza-scala del flusso non minore di $r_H$: predndendo $b_m=2r_h$ si ha
+\begin{equation}
+\frac{M_p}{M_*}>\frac{40\nu}{a^2\omega}
+\end{equation}
+Formazione di gap per dischi tipici sopra massa di saturno.
+Migrazione tipo II: il pianeta prende momento dal disco esterno (dovuto al flusso viscoso) e cede quello richiesto al disco esterno dal trasporto viscoso: normalmente il bilancio \'e negativo quindi il pianeta migra verso l'interno.
+Quando la massa del pianetaa non eccede la massa locale del disco il tempo scale di migrazione \'e
+\begin{equation}
+t_{II}(yr)=\frac{1}{3\alpha}(\frac{a}{H})^2\Omega\expy{-1}=0.05/\alpha(a/H)^2(a/au)\expy{3/2}
+\end{equation}
+per $H/a\approx0.1$, $\alpha=\numrange{e-3}{e-2}$ a $a=1-5 au$ si ha $t_{}=10^3-10^4yr$.
+\end{workout}
+
 Refs: On the tidal interaction between protoplanets and the primordial solar nebula. II - Self-consistent nonlinear interaction (1986)
 Non-linear. For larger planet mass, when disk density distro is changed cons., the linear hteory is no more adeguate. If angular momentum isdeposited locally (viscous dissipation/shock waves)  the disk receeds from planets
 Ida-lin04: angular momentum trasport in viscous accretion disk without planets that in type II migration act as relays that transmit angular momentum at that rateacross their gap via tidal torques.
@@ -695,6 +687,17 @@ For each m,n there are 3 resonant locations: external L resonance act to increas
 &e_P>\frac{H}{r}: \TDy{t}{e_p}\propto-e_p\expy{-2}
 \end{align*}
 Risultati analoghi per inclinazione.	
+
+\section{Altre interazioni che producono migrazione}
+
+\begin{workout}[planet overlflowing roche lobe migrate outward]
+trilling 98:n During mass flow planet moves outward to conserve angular momentum
+\end{workout}
+
+\begin{workout}[Other (than?) types of migration]
+planet-planet scattering (rasio ford 96, kozai (nagasawa 08, tidal interactions with gas disk (goldreich tremaine 80, tanaka 02))
+\end{workout}
+
 
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{N-body interactions inside proto disk}

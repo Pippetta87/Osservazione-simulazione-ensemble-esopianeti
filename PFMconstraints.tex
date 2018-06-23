@@ -121,6 +121,11 @@ Effects of inhomogenous infall on obliquity (tremaine 91, bate 10)
 
 La popolazione degli esopianeti osservata riflette quella reale tramite gli effetti di selezione dovuti alla probabilit\'a di rivelamento della tecnica/strumento particolari. Le osservazioni pi\'u numerose sono basate sull'osservazione della velocit\'a lungo la linea di vista dovuto al moto della stella attorno al baricentro del sistema stella pianeta (RV) o differenza nella luminosit\'a dovuto al transito del pianeta tra stella e osservatore (T).
 
+\begin{workout}[frequenza sistemi planetarii:doppler + transito]
+tab.1 mayor11(RV)
+tab.1: occurrence and architecture exoplanetary system 
+\end{workout}
+
 \section{Popolazione esopianeti rilevati tramite RV}
 
 Se l'asse z \'e lungo la linea di vista la posizione della stella \'e $z=r(t)\sin{i}\sin{(\omega+\nu)}$ e per la velocit\'a radiale:
@@ -153,24 +158,23 @@ dove $\sigma$ tiene conto errori strumentali e rumore stellare.
 \end{subfigure}
 \end{figure}
 
-Alcune caratteristiche della distribuzione dei pianeti osservati (da \cite{mayor2011harps}):
+La distribuzione di massa (\ref{fig:Mdistro}) mostra un'abbondante popolazione di pianeti di massa piccola e una rapida diminuzione attorno a $10\mearth{}$; la distribuzione dei periodi mostra aumento dei pianeti giganti ($M>30\mearth{}$) a maggiore periodo orbitale e concentrazione pianeti piccola massa a $P=10-100\si{\day}$.
+
+Una comprensione pi\'u ampia si ha studiando la distribuzione dei pianeti nel diagramma massa-periodo (M-P): elenco alcune caratteristiche della distribuzione dei pianeti osservati (da \cite{mayor2011harps}).
 \begin{itemize}
 \item Il picco della densit\'a di super-terre si sposta da $6\mearth{}$ a $10\mearth{}$ per periodi da \SI{10}{\day} a \SI{100}{day}
 %\item Non sono osservati pianeti fino a $50\mearth{}$ con $P>\SI{1000}{\day}$
 \item il pianeta gassoso pi\'u massiccio aumenta da $1\mjupiter{}$ a $15\mjupiter{}$ passando da $P\approx\SI{1}{\day}$ a $P\approx\SI{15}{\year}$.
 \end{itemize}
 
-
+\begin{workout}[minimo in mass distro]
+\'e un minimo? ha un significato?
+\end{workout}
 
 \begin{workout}[dtectability and selection effects (pg 14)]
 Perrymann pg 34 fig 2.25 d
 fig 2.6,fig 2.18
 \end{workout}
-
-
-\begin{workout}[Distribuzioni elementi orbitali: periodo e massa]
-
-La distribuzione di $M_p\sin{i}$ osservata \'e mostrata in figura \ref{fig:RVmpdistro}, la distribuzione di periodo orbitale \ref{fig:PdistroM30}/\ref{fig:Pdistrom30} perpianeti di massa maggiore/minore di $30\mearth{}$, la distribuzione dei pianeti in funzione della metallicit\'a stellare in \ref{fig:freqZstar}.
 
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.47\textwidth}
@@ -187,40 +191,30 @@ La distribuzione di $M_p\sin{i}$ osservata \'e mostrata in figura \ref{fig:RVmpd
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.47\textwidth}
 \centering
-\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{freqvsPgiant}
-\caption{Da \cite{mayor2011harps}}\label{fig:PdistroM30}
+\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{exoresonance}
+\caption{Da \cite{winnfabrycky15}}\label{fig:exoresonance}
 \end{subfigure}
 ~
 \begin{subfigure}[b]{0.47\textwidth}
 \centering
-\includegraphics[trim={0cm 0 0 0},clip,width=0.9\textwidth]{freqvsPlowM}\label{fig:Pdistrom30}
-\caption{Da \cite{mayor2011harps}}
+\includegraphics[trim={0cm 0 0 0},clip,width=0.9\textwidth]{singlemulti}\label{fig:}
+\caption{Da \cite{wright09}}
 \end{subfigure}
 \end{figure}
 
-\end{workout}
+Per sistemi multipli consideriamo la sovrapposizione lineare di $n_p$ termini \eqref{eq:vrsignal}: viene sottratto il segnale Kepleriano dominante fino a che resta solo rumore.
 
-\begin{workout}[multplanet system: mean motion resonances, orbital spacing]
+\begin{workout}[multplanet system: mean motion resonances, orbital spacing,...]
+perryman pg 38
+Interazione n-body protopianeti vs evoluzione a lungo termine: i pianeti arrivano a risonanze attraverso migrazione
+Kepler: latham 11 (first comparison of kepler planet), burke 14
 wright09: ten multiplanet sysytem and systematic
 Winn, Fabricky 15
 fig 2.30 pg 39 Perrymann
+(ford rasio 08: dynamical outcomes of PP scattering)
+\begin{figure}[!ht]\includegraphics[keepaspectratio,width=\textwidth]{exoresonance}\end{figure}
+
 \end{workout}
-
-%\begin{figure}[]
-%\begin{subfigure}[b]{0.47\textwidth}
-%\centering
-%\includegraphics[keepaspectratio,width=0.95\textwidth]{midlmodes}
-%\caption{I picchi della densit\'a spettrale si dispongono su creste in cui \'e concentrata la potenza in accordo al modello. Determinata usando i primi 144 giorni di osservazione di MDI con $l\leq300$. Da \cite{chr02helioseismology}.}\label{fig:midlmodes}
-%\end{subfigure}
-%~
-%\begin{subfigure}[b]{0.5\textwidth}
-%\centering
-%\includegraphics[keepaspectratio,width=0.95\textwidth]{nrmodesLAWE}
-%\caption{Modi adiabatici calcolati sulla base di un modello solare. Da \cite{chr02helioseismology}.}\label{fig:nrmodesLAWE}
-%\end{subfigure}
-%\end{figure}
-
-Per sistemi multipli consideriamo la sovrapposizione lineare di $n_p$ termini \eqref{eq:vrsignal}: viene sottratto il segnale Kepleriano dominante fino a che resta solo rumore.
 
 \begin{workout}[eccentricity distro: occurrence and architecture]
 wright 09: multiplanet system tend to havelower eccentricity,

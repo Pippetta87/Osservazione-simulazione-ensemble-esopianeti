@@ -114,12 +114,12 @@ Effects of inhomogenous infall on obliquity (tremaine 91, bate 10)
 \chapter{Alcune caratteristiche della popolazione di esopianeti}
 }
 
-La popolazione degli esopianeti osservata riflette quella reale tramite gli effetti di selezione dovuti alla probabilit\'a di rivelamento della tecnica/strumento particolari. Le osservazioni pi\'u numerose sono basate sull'osservazione della velocit\'a lungo la linea di vista dovuto al moto della stella attorno al baricentro del sistema stella pianeta (RV) o differenza nella luminosit\'a dovuto al transito del pianeta tra stella e osservatore (T).
-
-\begin{figure}[!ht]
+\begin{wrapfigure}[13]{l}{0.45\textwidth}
 \includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{obsMa}\label{fig:Maplot}
-\caption{Diagramma massa-distanza degli esopianeti in ''The extrasolar planet encyclopedia''. Rasso, celeste, magenta e verde sono pianeti rivelati tramite RV, T, osservazione diretta e microlensing. Da \cite{mordasini2018}.}
-\end{figure}
+\caption{Diagramma massa-distanza degli esopianeti in ''The extrasolar planet encyclopedia''. Rosso, celeste, magenta e verde sono pianeti rivelati tramite RV, T, osservazione diretta e microlensing. Da \cite{mordasini2018}.}
+\end{wrapfigure}
+
+La popolazione degli esopianeti osservata riflette quella reale tramite gli effetti di selezione dovuti alla probabilit\'a di rivelamento della tecnica/strumento particolari. Le osservazioni pi\'u numerose sono basate sull'osservazione della velocit\'a lungo la linea di vista dovuto al moto della stella attorno al baricentro del sistema stella pianeta (RV) o differenza nella luminosit\'a dovuto al transito del pianeta tra stella e osservatore (T).
 
 \section{Popolazione esopianeti rilevati tramite RV}
 
@@ -135,6 +135,24 @@ Per probabilit\'a di rivelamento del $50\%$ la minima massa planetaria \'e
 M_{p,min}\approx4\mearth{}(\frac{N}{20})\expy{-1/2}(\frac{\sigma}{\SI{1}{\meter\per\second}})(\frac{P}{\SI{1}{\day}})\expy{1/3}(\frac{M_*}{\msun{}})\expy{2/3}
 \end{equation}
 dove $\sigma$ tiene conto errori strumentali e rumore stellare.
+
+\begin{figure}[!ht]
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{PMfreq-e23}
+\caption{Da \cite{mayor2011harps}.}\label{fig:PMfreq-e23}
+\end{subfigure}
+~
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{PMfreq-e12}\label{fig:PMfreq-e12}
+\caption{Da \cite{mayor2011harps}}
+\end{subfigure}
+~
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{PMfreq-short}\label{fig:PMfreq-short}
+\caption{Diagramma massa-periodo: frazione di stelle che ospitano pianeta con caratteristiche nella regione evidenziata. Da sinistra a destra: $P<10\si{\year}$ e $M>50\mearth{}$, $P<1\si{\year}$ e $M>3-100\mearth{}$, $P<50\si{\day}$ e $M=1-3/3-10/10-30/30-100/100-300/300-1000$. Da \cite{mayor2011harps}}
+\end{subfigure}
+\end{figure}
+
 
 \begin{workout}[dtectability and selection effects (pg 14)]
 Perrymann pg 34 fig 2.25 d
@@ -193,33 +211,6 @@ fig 2.30 pg 39 Perrymann
 %\caption{Modi adiabatici calcolati sulla base di un modello solare. Da \cite{chr02helioseismology}.}\label{fig:nrmodesLAWE}
 %\end{subfigure}
 %\end{figure}
-
-\begin{workout}[Radial velocity: keplerian observables (Appendice RV)]
-La coordinata z della stella $z=r(t)\sin{i}\sin{(\omega+\nu)}$ e per la velocit\'a radiale
-\begin{align}
-&v_r=\dot{z}=K[\cos{(\omega+\nu)}+e\cos{\omega}]\\
-&K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/1}}
-\end{align}
-Le osservabili $e$, $P$, $t_p$, $\omega$, $K=f(a,e,P,i)$ sono fittate per ogni pianeta.
-La velocit\'a radiale della stella \'e
-\begin{equation}
-v_r(t)=K[\cos{(\omega+\nu(t)}+e\cos{\omega}]+\gamma+d(t-t_0)
-\end{equation}
-Per sistemi multipli consideriamo la sovrapposizione lineare di $n_p$ termini \eqref{eq:vrsignal}: viene sottratto il segnale Kepleriano dominante fino a che resta solo rumore.
-\end{workout}
-
-\begin{workout}[Radial velocity: keplerian observables (Appendix RV)]
-La coordinata z della stella $z=r(t)\sin{i}\sin{(\omega+\nu)}$ e per la velocit\'a radiale
-\begin{align}
-&v_r=\dot{z}=K[\cos{(\omega+\nu)}+e\cos{\omega}]\\
-&K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/1}}
-\end{align}
-Le osservabili $e$, $P$, $t_p$, $\omega$, $K=f(a,e,P,i)$ sono fittate per ogni pianeta.
-La velocit\'a radiale della stella \'e
-\begin{equation}
-v_r(t)=K[\cos{(\omega+\nu(t)}+e\cos{\omega}]+\gamma+d(t-t_0)
-\end{equation}
-\end{workout}
 
 Per sistemi multipli consideriamo la sovrapposizione lineare di $n_p$ termini \eqref{eq:vrsignal}: viene sottratto il segnale Kepleriano dominante fino a che resta solo rumore.
 

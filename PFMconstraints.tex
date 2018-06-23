@@ -9,31 +9,31 @@ L'et\'a del sole \'e definata come tempo in sequenza principale; tecniche eliosi
 La Terra si \'e formata completamente circa \SI{100}{\mega\year} dopo i meteoriti.
 
 Per stimare la massa del disco protoplanetario \cite{weidenschilling1977distribution} ha considerato la massa presente nei pianeti e nella fascia asteroidale arricchita di H/He per avere composizione solare: distribuendo questa massa in un anello di spessore proporzionale al raggio di Hill e centrato sulle orbite, l'andamento della densit\'a superficiale \'e mostrato in \ref{fig:Snebuladensity}, $\sigma\propto r\expy{-3/2}$.
+La formazione per accrescimento di gas su nucleo solido quindi prefede arricchimento di composizione rispetto a quella di partenza. Vincoli alla densit\'a sono imposti dalla misura dei momenti multipolo del potenziale gravitazionale: risolvendo un modello di pianeta che rientri nei vincoli osservativi si determinano la massa del core e la metallicit\'a dell'inviluppo gassoso dei 4 pianeti gassosi ().
 
 
-\begin{workout}[Cosa dire dei modelli planetarii: core giganti gassosi: modelli planetari e raffronto isolation mass in MMSN]
-parte relativa ai momenti multipolo gravitazionale. 
-In hydrostatic equilibrium the external gravitational potential is
-\begin{equation}
-V(r,\theta)=\frac{GM_p}{r}[1-\sum_1^{\infty}(\frac{R_+}{r})^{2n}J_{2n}P_{2n}(\theta)]
-\end{equation}
-
-
-\begin{figure}[!ht]
+\begin{table}[!ht]
 \begin{subfigure}[b]{0.47\textwidth}
 \centering
 \includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{JScomp}
-\caption{Da \cite{}}\label{fig:JScomp}
+\caption{Da \cite{baraffe2009physical}}\label{fig:JScomp}
 \end{subfigure}
 ~
 \begin{subfigure}[b]{0.47\textwidth}
 \centering
-\includegraphics[trim={0cm 0 0 0},clip,width=0.9\textwidth]{UNcomp}\label{fig:UNcomp}
-\caption{Da \cite{UNcomp}.}
+\includegraphics[trim={0cm 0 0 0},clip,width=0.9\textwidth]{UNcomp}\label{tab:UNcomp}
+\caption{Da \cite{baraffe2009physical}.}
 \end{subfigure}
-\end{figure}
+\end{table}
 
-
+\begin{workout}[Cosa dire dei modelli planetarii: core giganti gassosi: modelli planetari e raffronto isolation mass in MMSN]
+parte relativa ai momenti multipolo gravitazionale. 
+In hydrostatic equilibrium the external gravitational potential is
+\begin{align}
+&V(r,\theta)=\frac{GM_p}{r}[1-\sum_1^{\infty}(\frac{R_+}{r})^{2n}J_{2n}P_{2n}(\theta)]\\
+&J_{2n}=-\frac{1}{M_pR_+^{2n}}\int\rho(r) r\expy{2n}P_{2n}(\theta)\,d^3r
+\end{align}
+zharkov trubitsyn 74
 \end{workout}
 
 \begin{workout}[Earth age]
@@ -114,11 +114,11 @@ Effects of inhomogenous infall on obliquity (tremaine 91, bate 10)
 \chapter{Alcune caratteristiche della popolazione di esopianeti}
 }
 
-La popolazione degli esopianeti osservata riflette quella reale tramite gli effetti di selezione dovuti alla probabilit\'a direvilamento della tecnica particolare. Le osservazioni pi\'u numerose sono basate sull'osservazione della velocit\'a lungo la linea di vista dovuto al moto della stella attorno al baricentro del sistema stella pianeta (RV) o differenza nella luminosit\'a dovuto al transito del pianeta tra stella e osservatore.
+La popolazione degli esopianeti osservata riflette quella reale tramite gli effetti di selezione dovuti alla probabilit\'a di rivelamento della tecnica/strumento particolari. Le osservazioni pi\'u numerose sono basate sull'osservazione della velocit\'a lungo la linea di vista dovuto al moto della stella attorno al baricentro del sistema stella pianeta (RV) o differenza nella luminosit\'a dovuto al transito del pianeta tra stella e osservatore (T).
 
 \begin{figure}[!ht]
 \includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{obsMa}\label{fig:Maplot}
-\caption{Da \cite{mordasini2018}.}
+\caption{Diagramma massa-distanza degli esopianeti in ''The extrasolar planet encyclopedia''. Rasso, celeste, magenta e verde sono pianeti rivelati tramite RV, T, osservazione diretta e microlensing. Da \cite{mordasini2018}.}
 \end{figure}
 
 \section{Popolazione esopianeti rilevati tramite RV}
@@ -126,16 +126,18 @@ La popolazione degli esopianeti osservata riflette quella reale tramite gli effe
 Se l'asse z \'e lungo la linea di vista la posizione della stella \'e $z=r(t)\sin{i}\sin{(\omega+\nu)}$ e per la velocit\'a radiale:
 \begin{align}
 &v_r=\dot{z}=K[\cos{(\omega+\nu)}+e\cos{\omega}]\label{eq:vrsignal}\\
-&K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/1}}
+&K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/2}}
 \end{align}
 dove $K$ \'e la semi-ampiezza.
 
-\begin{workout}[Simulated radial detection limit]
-Perrymann pg 34 fig 2.25 d
-paragrafo detectability and selection effects pg 14 perryman
-\end{workout}
+Per probabilit\'a di rivelamento del $50\%$ la minima massa planetaria \'e
+\begin{equation}
+M_{p,min}\approx4\mearth{}(\frac{N}{20})\expy{-1/2}(\frac{\sigma}{\SI{1}{\meter\per\second}})(\frac{P}{\SI{1}{\day}})\expy{1/3}(\frac{M_*}{\msun{}})\expy{2/3}
+\end{equation}
+dove $\sigma$ tiene conto errori strumentali e rumore stellare.
 
-\begin{workout}[Radial velocity: dtectability and selection effects (pg 14)]
+\begin{workout}[dtectability and selection effects (pg 14)]
+Perrymann pg 34 fig 2.25 d
 fig 2.6,fig 2.18
 \end{workout}
 

@@ -68,9 +68,13 @@ Per semplicit\'a si parametrizza il trasporto di momento angolare ponendo $\nu=\
 \PDy{t}{\Sigma}=3\frac{1}{r}\PDof{r}[r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]\label{eq:sigmaevol}
 \end{equation}
 
-auto gravitazione trascurabile quindi la struttura verticale \'e determinata dalla componente lungo z dell'attrazione del corpo centrale, profilo termico determinato da equilibrio.
+auto gravitazione trascurabile quindi la struttura verticale \'e determinata dalla componente lungo z dell'attrazione del corpo centrale:
+%profilo termico determinato da equilibrio termico
+\begin{equation}
+\TDy{z}{P}=-rho g_z=-\frac{GM_*}{r^2+z^2}sin{\theta}\rho=-\Omega^2z
+\end{equation}
 
-\begin{workout}[Struttura verticale del disco]
+\begin{workout}[Struttura verticale del disco, profilo termico]
 Pressione gas determinata da equilibrio idrostatico
 \end{workout}
 
@@ -128,6 +132,23 @@ EUV($E\approx13.6eV$): ionization, FUV($E\approx6-13.6eV$): dissociation, X-ray
 \end{workout}
 
 \section{YSO: distribuzione propriet\'a dischi protoplanetari}
+
+Le condizioni iniziali delle simulazioni di popolazioni planetaria sono determinate dalle osservazioni dei dischi protoplanetari.
+
+\begin{workout}[physical processes in protoplanetary disk: IRexcess, accretion rate and lifetime,]
+(armitage 17): fig 1, accretion rate and lifetime (2.2 pg 5-6), inference from dust continuum (disk mass, evidence for mm-particle growth
+Le stelle giovani sono caratterizzate da eccesso infrarosso fra \SIrange{2.5}{10}{\micro\meter}:
+\begin{equation}
+\alpha_{IR}=\TDly{\nu}{\nu F_{\nu}}
+\end{equation}
+Sorgenti con SED declinante in mid infrared ($2.5-10\si{\micro\meter}$): $1.5<\alpha_{IR}=<0$. Active/passive: mass infall convert G into thermalradiation/reprocessed starlight.
+Refs: Perrymann 10.3 - disk formation pg 218 - 
+Classification based on slope of SED between $2-25\si{\micro\meter}$: $\alpha_{IR}=\TDly{\nu}{\nu F_{\nu}}=$ (Gail Hoppo 2010)
+Spitzer: forming regions within 500pc
+Formation: disk quickly forms as more distant material with high angular momentum, centrifugal radius $R(t)\propto\Omega^2 t^3$: . Class 0-I : protostellar disk, gravitational unstable (cloud collapse: the collapse of the cores of slowly rotating isothermal clouds, Terebey shu cassen 1984, selfsimilar collapse of isothermal spheres and star formation, shu 77). Singular isothermal sphere: $\rho=\frac{a^2}{2\pi G}r\expy{-2}$, $M(r)=\frac{2a^2}{G}r$.
+\end{workout}
+
+
 
 \begin{workout}[YSO: classificazione ]
 SED: emissine a lunghezze d'onda millimetriche probano tutto il volume del disco, otticamente sottile a quelle lunghezze (Beckwith 90, Beckwith Sargent91).

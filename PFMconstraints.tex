@@ -1,12 +1,53 @@
+% trim={5cm 0 0 0},clip
+
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Sistema solare}
 }
+Il sistema solare \'e stato a lungo il solo banco di prova delle teorie di formazione planetaria. Inoltre \'e possibile avere riferimenti temporali tramite l'analisi chimica di meteoriti, analisi diretta, e altri corpi minori, tramite spettroscopia o missioni spaziali. In particolare considero una stima inferiore della massa del disco protosolare e i risultati dei modelli dei pianeti giganti.
 
-% trim={5cm 0 0 0},clip
+L'et\'a del sole \'e definata come tempo in sequenza principale; tecniche eliosismologiche e radiologiche determinano un'et\'a di \SI{4.57+-0.11}{\giga\year} e \SI{4.57+-0.07}{\giga\year}.
+La Terra si \'e formata completamente circa \SI{100}{\mega\year} dopo i meteoriti.
 
-\begin{workout}[Sistema solare - andamento densit\'a e composizione]
-asteroid mercury mars mass depletion pg 298
-farinella pg513,weidenschilling 77,
+Per stimare la massa del disco protoplanetario \cite{weidenschilling1977distribution} ha considerato la massa presente nei pianeti e nella fascia asteroidale arricchita di H/He per avere composizione solare: distribuendo questa massa in un anello di spessore proporzionale al raggio di Hill e centrato sulle orbite, l'andamento della densit\'a superficiale \'e mostrato in \ref{fig:Snebuladensity}, $\sigma\propto r\expy{-3/2}$.
+La formazione per accrescimento di gas su nucleo solido quindi prefede arricchimento di composizione rispetto a quella di partenza. Vincoli alla densit\'a sono imposti dalla misura dei momenti multipolo del potenziale gravitazionale: risolvendo un modello di pianeta che rientri nei vincoli osservativi si determinano la massa del core e la metallicit\'a dell'inviluppo gassoso dei 4 pianeti gassosi ().
+
+
+\begin{table}[!ht]
+\begin{subfigure}[b]{0.47\textwidth}
+\centering
+\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{JScomp}
+\caption{Da \cite{baraffe2009physical}}\label{fig:JScomp}
+\end{subfigure}
+~
+\begin{subfigure}[b]{0.47\textwidth}
+\centering
+\includegraphics[trim={0cm 0 0 0},clip,width=0.9\textwidth]{UNcomp}\label{tab:UNcomp}
+\caption{Da \cite{baraffe2009physical}.}
+\end{subfigure}
+\end{table}
+
+\begin{workout}[Cosa dire dei modelli planetarii: core giganti gassosi: modelli planetari e raffronto isolation mass in MMSN]
+parte relativa ai momenti multipolo gravitazionale. 
+In hydrostatic equilibrium the external gravitational potential is
+\begin{align}
+&V(r,\theta)=\frac{GM_p}{r}[1-\sum_1^{\infty}(\frac{R_+}{r})^{2n}J_{2n}P_{2n}(\theta)]\\
+&J_{2n}=-\frac{1}{M_pR_+^{2n}}\int\rho(r) r\expy{2n}P_{2n}(\theta)\,d^3r
+\end{align}
+zharkov trubitsyn 74
+\end{workout}
+
+\begin{workout}[Earth age]
+pg 297; allegre 95
+\end{workout}
+
+\begin{workout}[Planetesimal and late heavy bombardament]
+pg 302
+Introdurre planetesimi: migrazione. 
+debris disk: pg 222
+\end{workout}
+
+\begin{workout}[Stellar age: isochrone fitting]
+Jorgensen Lindegren 05
 \end{workout}
 
 \begin{workout}[et\'a corpi sistema solare (age and chronology)]
@@ -14,16 +55,21 @@ age of the sun: $4.57Gyr$ (Bahcall95)
 CAI: $4567Gyr$ +3Myr chondrule
 \end{workout}
 
-\begin{workout}[Noble gas enrichment]
-FORMATION OF GIANT PLANETS – AN ATTEMPT IN MATCHING OBSERVATIONAL CONSTRAINTS
-\end{workout}
-
-\begin{workout}[core giganti gassosi: modelli planetari e raffronto isolation mass in MMSN]
-
+\begin{workout}[Sistema solare - andamento densit\'a e composizione]
+asteroid mercury mars mass depletion pg 298
+farinella pg513,weidenschilling 77,
+\begin{figure}[!t]
+\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{Snebuladensity}\label{fig:Snebuladensity}
+\end{figure}•
 \end{workout}
 
 \begin{workout}[atmospher composition and photoevaporation]
 pg 256: interior and atmosphere, 293 solar system, 143 properties of transit
+\end{workout}
+
+
+\begin{workout}[Noble gas enrichment]
+FORMATION OF GIANT PLANETS – AN ATTEMPT IN MATCHING OBSERVATIONAL CONSTRAINTS
 \end{workout}
 
 \begin{workout}[Degree of super-adiabaticity: Struttura interna (assimption for pre-runaway accretion)]
@@ -63,39 +109,76 @@ Non of obliquity of terrestrial planet are belived primordial (secular orbit per
 Effects of inhomogenous infall on obliquity (tremaine 91, bate 10)
 \end{workout}
 
+
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Alcune caratteristiche della popolazione di esopianeti}
 }
 
-La popolazione degli esopianeti osservata riflette quella reale tramite gli effetti di selezione dovuti alla probabilit\'a direvilamento della tecnica particolare. Le osservazioni pi\'u numerose sono basate sull'osservazione della velocit\'a lungo la linea di vista dovuto al moto della stella attorno al baricentro del sistema stella pianeta (RV) o differenza nella luminosit\'a dovuto al transito del pianeta tra stella e osservatore.
+\begin{wrapfigure}[14]{l}{0.55\textwidth}
+\includegraphics[trim={0cm 0 0 0},clip, width=0.4\textwidth]{obsMa}\label{fig:Maplot}
+\caption{Diagramma massa-distanza degli esopianeti in ''The extrasolar planet encyclopedia''. Rosso, celeste, magenta e verde sono pianeti rivelati tramite RV, T, osservazione diretta e microlensing. Da \cite{mordasini2018}.}
+\end{wrapfigure}
 
-\begin{figure}[!ht]
-\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{obsMa}\label{fig:Maplot}
-\caption{Da \cite{mordasini2018}.}
-\end{figure}
+La popolazione degli esopianeti osservata riflette quella reale tramite gli effetti di selezione dovuti alla probabilit\'a di rivelamento della tecnica/strumento particolari. Le osservazioni pi\'u numerose sono basate sull'osservazione della velocit\'a lungo la linea di vista dovuto al moto della stella attorno al baricentro del sistema stella pianeta (RV) o differenza nella luminosit\'a dovuto al transito del pianeta tra stella e osservatore (T).
+
+\begin{workout}[bimodal radius distro is observed by transit?]
+Characterization of exoplanets from their formation II. The planetary mass-radius relationship pg 21: bimodal radius distribution
+\end{workout}
+
+\begin{workout}[frequenza sistemi planetarii:doppler + transito]
+tab.1 mayor11(RV)
+tab.1: occurrence and architecture exoplanetary system 
+\end{workout}
 
 \section{Popolazione esopianeti rilevati tramite RV}
 
 Se l'asse z \'e lungo la linea di vista la posizione della stella \'e $z=r(t)\sin{i}\sin{(\omega+\nu)}$ e per la velocit\'a radiale:
 \begin{align}
 &v_r=\dot{z}=K[\cos{(\omega+\nu)}+e\cos{\omega}]\label{eq:vrsignal}\\
-&K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/1}}
+&K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/2}}
 \end{align}
 dove $K$ \'e la semi-ampiezza.
 
-\begin{workout}[Simulated radial detection limit]
-Perrymann pg 34 fig 2.25 d
-paragrafo detectability and selection effects pg 14 perryman
+Per probabilit\'a di rivelamento del $50\%$ la minima massa planetaria \'e
+\begin{equation}
+M_{p,min}\approx4\mearth{}(\frac{N}{20})\expy{-1/2}(\frac{\sigma}{\SI{1}{\meter\per\second}})(\frac{P}{\SI{1}{\day}})\expy{1/3}(\frac{M_*}{\msun{}})\expy{2/3}
+\end{equation}
+dove $\sigma$ tiene conto errori strumentali e rumore stellare.
+
+\begin{figure}[!ht]
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{PMfreq-e23}
+\caption{Da \cite{mayor2011harps}.}\label{fig:PMfreq-e23}
+\end{subfigure}
+~
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{PMfreq-e12}\label{fig:PMfreq-e12}
+\caption{Da \cite{mayor2011harps}}
+\end{subfigure}
+~
+\begin{subfigure}[b]{0.3\textwidth}
+\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{PMfreq-short}\label{fig:PMfreq-short}
+\caption{Diagramma massa-periodo: frazione di stelle che ospitano pianeta con caratteristiche nella regione evidenziata. Da sinistra a destra: $P<10\si{\year}$ e $M>50\mearth{}$, $P<1\si{\year}$ e $M>3-100\mearth{}$, $P<50\si{\day}$ e $M=1-3/3-10/10-30/30-100/100-300/300-1000$. Da \cite{mayor2011harps}}
+\end{subfigure}
+\end{figure}
+
+La distribuzione di massa (\ref{fig:Mdistro}) mostra un'abbondante popolazione di pianeti di massa piccola e una rapida diminuzione attorno a $10\mearth{}$; la distribuzione dei periodi mostra aumento dei pianeti giganti ($M>30\mearth{}$) a maggiore periodo orbitale e concentrazione pianeti piccola massa a $P=10-100\si{\day}$.
+
+Una comprensione pi\'u ampia si ha studiando la distribuzione dei pianeti nel diagramma massa-periodo (M-P): elenco alcune caratteristiche della distribuzione dei pianeti osservati (da \cite{mayor2011harps}).
+\begin{itemize}
+\item Il picco della densit\'a di super-terre si sposta da $6\mearth{}$ a $10\mearth{}$ per periodi da \SI{10}{\day} a \SI{100}{day}
+%\item Non sono osservati pianeti fino a $50\mearth{}$ con $P>\SI{1000}{\day}$
+\item il pianeta gassoso pi\'u massiccio aumenta da $1\mjupiter{}$ a $15\mjupiter{}$ passando da $P\approx\SI{1}{\day}$ a $P\approx\SI{15}{\year}$.
+\end{itemize}
+
+\begin{workout}[minimo in mass distro]
+\'e un minimo? ha un significato?
 \end{workout}
 
-\begin{workout}[Radial velocity: dtectability and selection effects (pg 14)]
+\begin{workout}[dtectability and selection effects (pg 14)]
+Perrymann pg 34 fig 2.25 d
 fig 2.6,fig 2.18
 \end{workout}
-
-
-\begin{workout}[Distribuzioni elementi orbitali: periodo e massa]
-
-La distribuzione di $M_p\sin{i}$ osservata \'e mostrata in figura \ref{fig:RVmpdistro}, la distribuzione di periodo orbitale \ref{fig:PdistroM30}/\ref{fig:Pdistrom30} perpianeti di massa maggiore/minore di $30\mearth{}$, la distribuzione dei pianeti in funzione della metallicit\'a stellare in \ref{fig:freqZstar}.
 
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.47\textwidth}
@@ -109,83 +192,59 @@ La distribuzione di $M_p\sin{i}$ osservata \'e mostrata in figura \ref{fig:RVmpd
 \end{subfigure}
 \end{figure}
 
+
+
+Per sistemi multipli consideriamo la sovrapposizione lineare di $n_p$ termini \eqref{eq:vrsignal}: viene sottratto il segnale Kepleriano dominante fino a che resta solo rumore.
+
+\begin{workout}[multplanet system: mean motion resonances, orbital spacing,...]
+dynamical classification (barnes 08): tidal dominated if ($a<0.1$), resonant dom. if one resonant argument librates, secular otherwise.
+Many systems are found dyn full and stability: packed planetary system hypothesis (Barnes Quinn 04, Barnes Raymond 04, Raymond Barnes 05, Raymond 06), orbital stability for closely packed (smith lissauer 09), outer solar system is very stable and dyna full (Levinson duncan 93, inner is less stable but dyna full (sussman wisdom 92, laskar 94)
+n-body integration-orbit fitting: deprojected mass and relative inclination
+perryman pg 38
+Interazione n-body protopianeti vs evoluzione a lungo termine: i pianeti arrivano a risonanze attraverso migrazione
+Kepler: latham 11 (first comparison of kepler planet), burke 14
+wright09: ten multiplanet sysytem and systematic
+Winn, Fabricky 15
+fig 2.30 pg 39 Perrymann
+(ford rasio 08: dynamical outcomes of PP scattering)
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.47\textwidth}
 \centering
-\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{freqvsPgiant}
-\caption{Da \cite{mayor2011harps}}\label{fig:PdistroM30}
+\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{exoresonance}
+\caption{Da \cite{winnfabrycky15}}\label{fig:exoresonance}
 \end{subfigure}
 ~
 \begin{subfigure}[b]{0.47\textwidth}
 \centering
-\includegraphics[trim={0cm 0 0 0},clip,width=0.9\textwidth]{freqvsPlowM}\label{fig:Pdistrom30}
-\caption{Da \cite{mayor2011harps}}
+\includegraphics[trim={0cm 0 0 0},clip,width=0.9\textwidth]{singlemulti}\label{fig:}
+\caption{Da \cite{wright09}}
 \end{subfigure}
 \end{figure}
-
 \end{workout}
-
-\begin{workout}[multplanet system: mean motion resonances, orbital spacing]
-wright09: ten multiplanet sysytem and systematic
-Winn, Fabricky 15
-fig 2.30 pg 39 Perrymann
-\end{workout}
-
-%\begin{figure}[]
-%\begin{subfigure}[b]{0.47\textwidth}
-%\centering
-%\includegraphics[keepaspectratio,width=0.95\textwidth]{midlmodes}
-%\caption{I picchi della densit\'a spettrale si dispongono su creste in cui \'e concentrata la potenza in accordo al modello. Determinata usando i primi 144 giorni di osservazione di MDI con $l\leq300$. Da \cite{chr02helioseismology}.}\label{fig:midlmodes}
-%\end{subfigure}
-%~
-%\begin{subfigure}[b]{0.5\textwidth}
-%\centering
-%\includegraphics[keepaspectratio,width=0.95\textwidth]{nrmodesLAWE}
-%\caption{Modi adiabatici calcolati sulla base di un modello solare. Da \cite{chr02helioseismology}.}\label{fig:nrmodesLAWE}
-%\end{subfigure}
-%\end{figure}
-
-\begin{workout}[Radial velocity: keplerian observables (Appendice RV)]
-La coordinata z della stella $z=r(t)\sin{i}\sin{(\omega+\nu)}$ e per la velocit\'a radiale
-\begin{align}
-&v_r=\dot{z}=K[\cos{(\omega+\nu)}+e\cos{\omega}]\\
-&K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/1}}
-\end{align}
-Le osservabili $e$, $P$, $t_p$, $\omega$, $K=f(a,e,P,i)$ sono fittate per ogni pianeta.
-La velocit\'a radiale della stella \'e
-\begin{equation}
-v_r(t)=K[\cos{(\omega+\nu(t)}+e\cos{\omega}]+\gamma+d(t-t_0)
-\end{equation}
-Per sistemi multipli consideriamo la sovrapposizione lineare di $n_p$ termini \eqref{eq:vrsignal}: viene sottratto il segnale Kepleriano dominante fino a che resta solo rumore.
-\end{workout}
-
-\begin{workout}[Radial velocity: keplerian observables (Appendix RV)]
-La coordinata z della stella $z=r(t)\sin{i}\sin{(\omega+\nu)}$ e per la velocit\'a radiale
-\begin{align}
-&v_r=\dot{z}=K[\cos{(\omega+\nu)}+e\cos{\omega}]\\
-&K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/1}}
-\end{align}
-Le osservabili $e$, $P$, $t_p$, $\omega$, $K=f(a,e,P,i)$ sono fittate per ogni pianeta.
-La velocit\'a radiale della stella \'e
-\begin{equation}
-v_r(t)=K[\cos{(\omega+\nu(t)}+e\cos{\omega}]+\gamma+d(t-t_0)
-\end{equation}
-\end{workout}
-
-Per sistemi multipli consideriamo la sovrapposizione lineare di $n_p$ termini \eqref{eq:vrsignal}: viene sottratto il segnale Kepleriano dominante fino a che resta solo rumore.
 
 \begin{workout}[eccentricity distro: occurrence and architecture]
 wright 09: multiplanet system tend to havelower eccentricity,
 Limbach turner 14: $e_m\propto N\expy{-1.2}$.
 planet around metal rich star have higher e (dawson, murray-clay 13)
 smaller planets tend to have lower e (hogg 10 raccomanded modelling e distro on basis of Bayesian analysis)
-\end{workout}	
+\end{workout}
+
 
 \section{Popolazione esopianeti rilevati tramite transito}
 
+\begin{workout}[radius distro]
+Local maximum at $1\mjupiter{}$, flat distro in log(r) between $4-10\mearth{}$ below strong increase, at $1.7\mearth{}$ local minimum separating super-earth from sub-neptune
+\end{workout}
+
+
+\begin{workout}[planet model: relazione massa-raggio]
+
+\end{workout}
+
 \begin{figure}[!ht]
-\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=\textwidth]{freqvsRpl50d}
+\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}
 \end{figure}
+
 
 \begin{workout}[transit distro observed refs]
 Refs:Mthods of detecting exoplanets (radius distro: pg 136)

@@ -10,12 +10,11 @@ Chronology of  early stages: apai lauretta 10 (book)
 
 \section{Modello disco di accrescimento}
 
+Nei modelli unidimensionali per disco di accrescimento si parametrizza viscosit\'a tramite $\nu=\frac{\eta}{\rho}\to\alpha c_s H$: giustifico euristicamente la parametrizzazione della viscosit\'a del disco di accrescimento in analogia alla viscosit\'a molecolare (\cite{bouvier2002theory}).
+cio\'e che:
 \begin{workout}[Strees tensor]
 appendix a pg 66 planet formation and migration vs crida PHD torque calculation pg 24
 \end{workout}
-
-Nei modelli unidimensionali per disco di accrescimento si parametrizza viscosit\'a tramite $\nu=\frac{\eta}{\rho}\to\alpha c_s H$: giustifico euristicamente la parametrizzazione della viscosit\'a del disco di accrescimento in analogia alla viscosit\'a molecolare (\cite{bouvier2002theory}).
-cio\'e che:
 \begin{workout}[Stress tensor in keplerian disk: crida PHD]
 pg 26
 \begin{align}
@@ -69,19 +68,34 @@ Per semplicit\'a si parametrizza il trasporto di momento angolare ponendo $\nu=\
 \PDy{t}{\Sigma}=3\frac{1}{r}\PDof{r}[r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]\label{eq:sigmaevol}
 \end{equation}
 
-Nella popolazione planetaria simulata $\alpha$ \'e fissato sulla base delle osservazioni  ed \'e omogeneo e costante.
+auto gravitazione trascurabile quindi la struttura verticale \'e determinata dalla componente lungo z dell'attrazione del corpo centrale:
+%profilo termico determinato da equilibrio termico
+\begin{equation}
+\TDy{z}{P}=-rho g_z=-\frac{GM_*}{r^2+z^2}sin{\theta}\rho=-\Omega^2z
+\end{equation}
+
+\begin{workout}[Passive disks]
+(Refs: Ref: spectral energy distribution of T-Tauri star with passive circumstellar disk)
+Dust passively reirradiate star light
+\end{workout}
+
+\begin{workout}[Struttura verticale del disco, profilo termico]
+Pressione gas determinata da equilibrio idrostatico
+\end{workout}
 
 \begin{workout}[Viscous/turbulent disk]
 laminar (high momentum diffusion)
 mass inflow Gullbring98 \SIrange{e-9}{e-7}{\per\year}$\msun{}$
 \end{workout}
-
-
 \begin{workout}[MRI]
 fig 10.3:
 gammie 1996
 \end{workout}
 
+\begin{workout}[alpha prescription]
+$\vec{v}=(u_r,r\Omega)$, stress tensor $\sigma_{r\phi}=-\Sigma\exv{u_ru_{\phi}}$.
+Enhanced turbulent viscosity: $-\Sigma\exv{u_ru_{\phi}}=\Sigma\nu r\TDy{r}{\Omega}$, $\nu=v_TH$, $\alpha=v_T/c_s$
+\end{workout}
 
 \begin{workout}[Accretion disk sources]
 o218, 296: disk formation, constrains from solar system
@@ -92,28 +106,15 @@ the alpha disk pg 18: theory of turbulent accretion disk
 
 \end{workout}
 
-
-\begin{workout}[Intro a disco accrescimento]
-Nei modelli globali la formazione planetaria \'e simulata partendo dalla fase finale di accrescimento di massa sulla stella centrale (per semplicit\'a considero stelle di $1\msun{}$ singole): il collasso di nube molecolare produce strutture appiattite la cui evoluzione \'e determinata dal trasporto di momento angolare verso l'esterno, l'interazione con l'oggetto centrale (campi magnetici vento stellare) e con l'ambiente circostante.
-L'ipotesi su cui si basano le simulazioni considerata \'e che la componente polverosa formi corpi pi\u massicci fino a masse di frazioni di masse terrestri  ed infine accrescere gas: lo scenario di core accretion (CA).
-\end{workout}
-
-\begin{workout}[Modelli 1D disco accrescimento: struttura verticale]
-auto gravitazione trascurabile quindi la struttura verticale \'e determinata dalla componente lungo z dell'attrazione del corpo centrale, profilo termico determinato da equilibrio.
-\end{workout}
-
 \begin{workout}[Descrizione trasporto momento angolare tramite parametrizzazione viscosit\'a]
 Mass conservation + momentum conservation in viscous flow: angular momentum evolution. Phenomena: Shear viscosity - turbulence - MRI.
 Nei modelli 1D per disco di accrescimento si parametrizza viscosit\'a tramite $\nu=\frac{\eta}{\rho}\to\alpha c_s H$: la viscosit\'a molecolare \'e troppo bassa  per trasportare all'esterno il momento angolare sui tempi-scala osservati.
-
 Theory of turbulent accretion disk: pg 18, 8.
 Flusso di x-momentum lungo y $\rho\exv{u_xu_y}$, dove considero la velocit\'a dell'elemento di fluido $(v_x+u_x,u_y)$ dove le $u$ rappresentano fluttuazioni della velocit\'a: $\sigma_{xy}=-\rho\exv{u_xu_y}$.
 Ricordando la definizione di tensore degli stress e con $\vec{v}=v_x(y)\hat{x}$
-
 \begin{equation}
 \sigma_{ij}=\eta(\partial_jv_i+\partial_iv_j-\frac{2}{3}\delta_{ij}\partial_kv_k+\zeta\delta_{ij}\partial_kv_k \to \eta\TDy{y}{v_x}
 \end{equation}
-
 \begin{equation}
 \PDof{t}(\rho v_i)+\PDof{x_i}(\rho v_iv_j+T_{ij})=F_i
 \end{equation}
@@ -126,13 +127,9 @@ Turbulence: Reynpold stress $\tau_{ij}=-\rho\exv{v_jv_i}$, $\exv{u_iu_j}=-\nu_T\
 \end{workout}
 
 \begin{workout}[Photoievaporation: X-EUV-FUV (Alexander13: The Dispersal of Protoplanetary Disks)]
-Protoplanetary disc evolution and dispersal: the implications of X-ray photoevaporation
+Protoplanetary disc evolution and dispersal: the implications of X-ray photoevaporation.
 \end{workout}
 
-\begin{workout}[alpha prescription]
-$\vec{v}=(u_r,r\Omega)$, stress tensor $\sigma_{r\phi}=-\Sigma\exv{u_ru_{\phi}}$.
-Enhanced turbulent viscosity: $-\Sigma\exv{u_ru_{\phi}}=\Sigma\nu r\TDy{r}{\Omega}$, $\nu=v_TH$, $\alpha=v_T/c_s$
-\end{workout}
 
 \begin{workout}[Foto-evaporazione]
 (Photoevaporation: veras armitage 2003, Alexander13, Mordasini12. Internal/External).
@@ -140,6 +137,37 @@ EUV($E\approx13.6eV$): ionization, FUV($E\approx6-13.6eV$): dissociation, X-ray
 \end{workout}
 
 \section{YSO: distribuzione propriet\'a dischi protoplanetari}
+
+Le condizioni iniziali delle simulazioni di popolazioni planetaria sono determinate dalle osservazioni dei dischi protoplanetari.
+
+\begin{workout}[T Tauri SED more flattish]
+Ref: spectral energy distribution of T-Tauri star with passive circumstellar disk
+\end{workout}
+
+\begin{workout}[physical processes in protoplanetary disk: IRexcess, accretion rate and lifetime,]
+(armitage 17): fig 1, accretion rate and lifetime (2.2 pg 5-6), inference from dust continuum (disk mass, evidence for mm-particle growth
+Le stelle giovani sono caratterizzate da eccesso infrarosso fra \SIrange{2.5}{10}{\micro\meter}:
+\begin{equation}
+\alpha_{IR}=\TDly{\nu}{\nu F_{\nu}}
+\end{equation}
+Sorgenti con SED declinante in mid infrared ($2.5-10\si{\micro\meter}$): $1.5<\alpha_{IR}=<0$. Active/passive: mass infall convert G into thermalradiation/reprocessed starlight.
+Refs: Perrymann 10.3 - disk formation pg 218 - 
+Classification based on slope of SED between $2-25\si{\micro\meter}$: $\alpha_{IR}=\TDly{\nu}{\nu F_{\nu}}=$ (Gail Hoppo 2010)
+Spitzer: forming regions within 500pc
+Formation: disk quickly forms as more distant material with high angular momentum, centrifugal radius $R(t)\propto\Omega^2 t^3$: . Class 0-I : protostellar disk, gravitational unstable (cloud collapse: the collapse of the cores of slowly rotating isothermal clouds, Terebey shu cassen 1984, selfsimilar collapse of isothermal spheres and star formation, shu 77). Singular isothermal sphere: $\rho=\frac{a^2}{2\pi G}r\expy{-2}$, $M(r)=\frac{2a^2}{G}r$.
+\end{workout}
+
+\begin{workout}[disco protoplanetario: distribuzioni condizioni iniziali]
+
+Initial disk mass
+(infall phase end, no more self-gravitational instabilities) - stability(shu90), MMSN hayashi81/weidenshilling77, observations(Andrews10,Manara16) points to $(0.1-10)\%$ stellar mass, distro log-normal with mean $0.01M_*$.
+
+{Disk lifetime}
+$1-10My$ with mean $3My$ (Haisch01, Mamajek09)
+
+\begin{figure}[!ht]\includegraphics[keepaspectratio,width=\textwidth]{initdistro}\label{fig:initdistro}\caption{Da \cite{mordasini2018planetary}.}\end{figure}
+
+\end{workout}
 
 \begin{workout}[YSO: classificazione ]
 SED: emissine a lunghezze d'onda millimetriche probano tutto il volume del disco, otticamente sottile a quelle lunghezze (Beckwith 90, Beckwith Sargent91).
@@ -166,8 +194,6 @@ On the snow line in dusty PPD (Sasselov lecar 99)
 Accretion disks around young object I: Detailed vertical structure (D'alessio Lizzano 98)
 \end{workout}
 
-
-
 \begin{workout}[YSO properties distro]
 Refs: ''Protoplanetary Disk Structures in Ophiuchus''
 da dove sono ricavete nei PPS?
@@ -182,7 +208,14 @@ Initial condition for planet formation (protoplanetry disk \cite{meyer2006format
 {Metallicity and Dust/Gas}
 $[M/H]$ distro modelled as normal: $\mu=-0.02$, $\sigma=0.22$ (photosphere of solar-like stars in solar neighborhood): Santos05.
 $f_{dg}=f_{dg,\odot}10\expy{[M/H]}$ with $f_{dg,\odot}=0.01-0.02$.
+\end{workout}
 
+\begin{workout}[Classificazione YSO: convenzioni]
+Sorgenti con SED declinante in mid infrared ($2.5-10\si{\micro\meter}$): $1.5<\alpha_{IR}=<0$. Active/passive: mass infall convert G into thermalradiation/reprocessed starlight.
+Refs: Perrymann 10.3 - disk formation pg 218 - 
+Classification based on slope of SED between $2-25\si{\micro\meter}$: $\alpha_{IR}=\TDly{\nu}{\nu F_{\nu}}=$ (Gail Hoppo 2010)
+Spitzer: forming regions within 500pc
+Formation: disk quickly forms as more distant material with high angular momentum, centrifugal radius $R(t)\propto\Omega^2 t^3$: . Class 0-I : protostellar disk, gravitational unstable (cloud collapse: the collapse of the cores of slowly rotating isothermal clouds, Terebey shu cassen 1984, selfsimilar collapse of isothermal spheres and star formation, shu 77). Singular isothermal sphere: $\rho=\frac{a^2}{2\pi G}r\expy{-2}$, $M(r)=\frac{2a^2}{G}r$
 \end{workout}
 
 \begin{workout}[Refs dischi protoplanetari]
@@ -192,14 +225,6 @@ williams cieza 11
 Andrews 09-10
 mamajek 2009 - Initial conditions of planet formation: lifetimes of primordial disks
 infrared excess: gail hoppe10
-\end{workout}
-
-\begin{workout}[Classificazione YSO: convenzioni]
-Sorgenti con SED declinante in mid infrared ($2.5-10\si{\micro\meter}$): $1.5<\alpha_{IR}=<0$. Active/passive: mass infall convert G into thermalradiation/reprocessed starlight.
-Refs: Perrymann 10.3 - disk formation pg 218 - 
-Classification based on slope of SED between $2-25\si{\micro\meter}$: $\alpha_{IR}=\TDly{\nu}{\nu F_{\nu}}=$ (Gail Hoppo 2010)
-Spitzer: forming regions within 500pc
-Formation: disk quickly forms as more distant material with high angular momentum, centrifugal radius $R(t)\propto\Omega^2 t^3$: . Class 0-I : protostellar disk, gravitational unstable (cloud collapse: the collapse of the cores of slowly rotating isothermal clouds, Terebey shu cassen 1984, selfsimilar collapse of isothermal spheres and star formation, shu 77). Singular isothermal sphere: $\rho=\frac{a^2}{2\pi G}r\expy{-2}$, $M(r)=\frac{2a^2}{G}r$
 \end{workout}
 
 
@@ -214,36 +239,40 @@ La correlazione tra metallicit\'a del disco protoplanetario e il numero di piane
 \end{workout}
 
 
-Il modello di formazione planetaria da me considerato, si basa sulla sedimentazione della componente polverosa nel disco protoplanetario in embrioni planetari che, se abbastanza massicci sono in grado di accrescere il gas presente nel disco protoplanetario.
+Lo schema di core accretion (CA) prevede la coagulazione della componente polverosa in embrioni planetari che, se abbastanza massicci sono in grado di accrescere il gas presente nel disco protoplanetario.
 
-L'altro schema di formazione considera l'instabilit\'a gravitazionale del disco. 
+Lo schema di formazione considera l'instabilit\'a gravitazionale del disco.
 
-Esistono alcuni dati osservativi in favore del primo modello, considerando il sistema solare: arricchimento dei pianeti del sistema solare rispetto a composizione solare di metalli (la composizione di Urano/Nettuno contiene $1\%$ di $H_2$, $He$ contenuto in pianeta di composizione solare con pari massa di metalli), ipotizzando una rimozione della parte gassosa il pianeta deve avere il tempo di sedimentare la componente metllica, \'e necessario un disco di massa solare e i pianeti si formerebbero a distanza maggiore, non spiega la formazione dei corpi minori.
+Esistono alcuni dati osservativi in favore del primo modello:
+\begin{itemize}
+\item arricchimento dei pianeti del sistema solare rispetto a composizione solare di metalli (la composizione di Urano/Nettuno contiene $1\%$ di $H_2$, $He$ contenuto in pianeta di composizione solare con pari massa di metalli)
+\item ipotizzando una successiva rimozione della parte gassosa il pianeta deve avere il tempo di sedimentare la componente metallica
+\item \'e necessario un disco di massa solare e i pianeti si formerebbero a distanza maggiore
+\item non spiega la formazione dei corpi minori
+\end{itemize}
 
 \section{Sedimentazione polvere e formazione planetesimi}
 
-Si ha la condensazione della polvere in corpi dominati da autogravitazione, in \SIrange{e4}{e5}{\year}.
+La polvere presente nel materiale interstellare ha dimensioni di \SI{0.1}{\micro\meter} sedimenta verso il centro del disco:
+
+$F_D$ \'e la forza esercitata dal gas sulla particella di polvere
+\begin{equation}
+F_D=-\frac{1}{2}C_D\pi s^2\rho_gv^2
+\end{equation}
+nel caso cammino libero medio delle molecole di gas sia maggiore delle dimensioni della particella $C_D=\frac{8}{3}\frac{v_{th}}{v}$ (Epstein drag) per particelle pi\'u grandi \'e funzione del numero di Reynold.
 
 L'equazione del moto per particella di polvere \'e
 \begin{equation}
 m_p\TDy{t}{v_z}=F_D-m_p\Omega^2z
 \end{equation}
-$F_D$ \'e la forza esercitata dal gas sulla particella di polvere
-\begin{equation}
-F_D=-\frac{1}{2}C_D\pi s^2\rho_gv^2
-\end{equation}
-nel caso cammino libero medio delle molecole di gas sia maggiore delle dimensioni della particella $C_D=\frac{8}{3}\frac{v_{th}}{v}$ (Epstein drag).
-Grani piccoli raggiungono rapidamente la velocit\'a stazionaria di regime
+che risulta in condizioni stazionarie
 \begin{equation}
 v_{set}=\frac{\Omega^2}{v_{th}}\frac{\rho_d}{\rho_g(z)}sz
 \end{equation}
-La formula precedente prevede sedimentazione per particella mm in 100: risultano evidenze contrarie dalle osservezioni.
-
-Inoltre l'eventuale scambio di momento tra gas e polvere dovuto alla velocit\'a di rotazione minore di quella kepleriana del gas:
-\begin{equation}
-g_{eff}=-\frac{GM_*}{r^2}-(\frac{1}{\rho_g}\TDy{r}{P}=r\Omega_g^2
-\end{equation}
-$\Omega_g$ \'e $\approx0.5\%$ di quella kepleriana.
+Per particelle di \SI{1}{\micro\meter} tempo di sedimentazione \'e $\SI{2e5}{\year}$.
+Inoltre turbolenza e coagulazione delle particelle hanno un ruolo non banale.
+%t=mv/F
+Inoltre la velocit\'a relativa tra gas e polvere causa un drift verso la stella massimo per particelle di \SIrange{0.01}{10}{\meter}  a \SI{1}{\astronomicalunit} per cui si deve avere rapida crescita oltre \SI{10}{\meter}.
 
 Per passare a corpi di dimensioni kilometriche si ipotizzano 2 scenarii:
 \begin{itemize}
@@ -251,7 +280,20 @@ Per passare a corpi di dimensioni kilometriche si ipotizzano 2 scenarii:
 \item In assenza di sedimentazione la formazione procede tramite urti a 2 corpi e la turbolenza creando addensamenti, pu\'o accelerare la formazione di planetesimi.
 \end{itemize}
 
+\begin{workout}[refs planetesimal formation]
+Armitage 07: lecture notes on formation and early evolution
+ \end{workout}
+
+\begin{workout}[Velocit\'a sedimentazione stzionaria]	
+Grani piccoli raggiungono rapidamente la velocit\'a stazionaria di regime
+\begin{equation}
+v_{set}=\frac{\Omega^2}{v_{th}}\frac{\rho_d}{\rho_g(z)}sz
+\end{equation}
+ \end{workout}
+ 
 \begin{workout}[Dust settling model]
+weidenschilling 89: dust settling time
+Dullemond dominique 04, johansen klahr 05, carballido 05, fromand papaloizou 06, turner 06,07
 Furlan 06: Effects of dust growth and settling in T Tauri disks
 Nomura 06: Dust Size Growth and Settling in a Protoplanetary Disk
 \cite{lissauer1993planet}
@@ -480,6 +522,8 @@ Ormel 15/ Cimerman 17
 \end{workout}
 
 \section{Fase isolata}
+
+fonti energia: tidal heating radiogeninc heat, star flux
 
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Migrazione (e N-body interactions??)}

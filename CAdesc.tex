@@ -232,6 +232,10 @@ infrared excess: gail hoppe10
 \chapter{Schema di formazione planetaria per core accretion}
 }
 
+\begin{figure}[!t]
+\includegraphics[width=0.9\textwidth]{accretiontimeline}\label{fig:accretiontimeline}\caption{Rappresentazione schematica del processo di formazione protopianeti dalla polvere. Da \cite{perryman2014exoplanets}.}
+\end{figure}
+
 \begin{workout}[Refs GI vs CA]
 planetesimal hypoithesis: chamberlin 05, Safronov 69, Hayashi 77. Formation on dynamical scale via GI: Kuiper 51, Cameron 62.
 Core accretion o instabilit\'a gravitazionale?
@@ -284,7 +288,7 @@ Per passare a corpi di dimensioni kilometriche si ipotizzano 2 scenarii:
 Armitage 07: lecture notes on formation and early evolution
  \end{workout}
 
-\begin{workout}[Velocit\'a sedimentazione stzionaria]	
+\begin{workout}[Velocit\'a sedimentazione stazionaria]	
 Grani piccoli raggiungono rapidamente la velocit\'a stazionaria di regime
 \begin{equation}
 v_{set}=\frac{\Omega^2}{v_{th}}\frac{\rho_d}{\rho_g(z)}sz
@@ -318,9 +322,33 @@ Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinam
 \section{Accrescimento planetsemi: formazione proto-pianeti.}
 
 
-\begin{figure}[!t]
-\includegraphics[width=0.9\textwidth]{accretiontimeline}
-\end{figure}
+\subsection{Distribuzione velocit\'a planetesimi}
+
+La popolazione dei planetesimi evolve attraverso interazione con gas e scattering/collisioni: l'interazione tra planetesimi trasforma il moto kepleriano in casuale e si ha equipartizione di energia tra pianetesimi di diversa massa; i planetesimi di massa minore hanno maggiore dispersione di velocit\'a, l'interazione col gas smorza eccentricit\'a e inclinazione inoltre due planetesimi hanno stessa velocit\'a relativa prima e dopo interazione ma aumenta la velocit\'a relativa al moto kepleriano in maniera casuale: la velocit\'a relativa media aumenta fino al valore della velocit\'a di fuga dal corpo maggiore, denominato protopianeta raggiunto diametro migliaia di kilometri.
+
+%\'E ragionevole supporre che si arrivi rapidamente alla condizione $v>\Omega R_H$.
+
+\subsection{Regimi accrescimento dei protopianeti}
+
+L'accrescimento di massa del protopianeta procede secondo
+\begin{equation}
+\TDy{t}{M_e}=\pi R_c\Sigma_p\Omega F_g
+\end{equation}
+$F_g$ \'e determinato dalla velocit\'a relativa tra proto-pianeta e planetesimi.
+
+Per embrioni planetarii di decine di chilometri l'attrazione gravitazionale aumenta la sezione d'urto: 
+\begin{equation}
+\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{1/3}
+\end{equation}
+questo regime di accrescimento (runaway growth) \'e responsabile crescita diametro embrioni da \SI{10}{\kilo\meter} a \SI{100}{\kilo\meter} in \SIrange{e4}{e5}{\year}.
+Accresciuta la massa presente nella zona di pertinenza gravitazionale dell'embrione,detta isolation mass,
+\begin{equation}M_{iso}\proptoM_*\expy{-1/2}\Sigma_p\expy{3/2}r^3\end{equation}
+(higher radial excursion ae)
+accrescimento oligarchico: $\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{-1/3}$.
+da 100-1000km, \SI{e5}{\year}
+\begin{workout}[Dynamical friction]
+Dynamical friction: stewart wetherill 88
+\end{workout}
 
 \begin{workout}[Dynamical evolution of planetesimal swarm: refs]
 Accretional evolution of planetesimal swarm (weidenschilling 97)
@@ -335,12 +363,6 @@ thommes 03: Oligarchic growth of giant planets
 Lissauer pg 142-143
 Perryman pg 226
 \end{workout}
-
-\subsection{Distribuzione planetesimi}
-
-La popolazione dei planetesimi evolve attraverso interazione con gas e scattering/collisioni con planetesimi: l'interazione tra planetesimi trasforma il moto kepleriano in casuale e si ha equipartizione di energia tra pianetesimi di diversa massa; i planetesimi di massa minore hanno maggiore dispersione di velocit\'a, l'interazione col gas smorza eccentricit\'a e inclinazione inoltre due planetesimi hanno stessa velocit\'a relativa primo e dopo interazione ma aumenta la velocit\'a relativa al moto kepleriano in maniera casuale.
-
-\'E ragionevole supporre che si arrivi rapidamente alla condizione $v>\Omega R_H$.
 
 \begin{workout}[Planetesimal dynamics: viscous stirring]
 The origin of anisotropic velocity dispersion of particles in a disc potential (Ida, Makino 93, Stewart-Wetherill 1988 Ida1990)
@@ -361,14 +383,6 @@ f(e,i)=4\frac{\sigma}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{[-\frac{e^2}{\exv{e^2}
 \'e una distro gaussiana triassiale in coordinate cilindriche (Lissauer Stewart 93)
 Lissauer pg 142-143
 \end{workout}
-
-\subsection{Regimi accrescimento dei protopianeti}
-
-L'accrescimento di massa del protopianeta procede secondo
-\begin{equation}
-\TDy{t}{M_e}=\pi R_c\Sigma_p\Omega F_g
-\end{equation}
-$F_g$ \'e determinato dalla velocit\'a relativa tra proto-pianeta e planetesimi.
 
 \begin{workout}[Protoplanets accretion of solids]
 Other refs: Planet formation coagulation: focus on U,N (Goldreich 04), Final stages of planets formation (Goldreich 04), Formation of giant planets core: evaluating key processes (levison 09).

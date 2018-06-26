@@ -560,7 +560,7 @@ fonti energia: tidal heating radiogeninc heat, star flux
 \chapter{Interazioni pianeta-disco: migrazione planetaria}
 }
 
-Considero in maniera schematica lo scambio di momento angolare tra pianeta e disco:
+Considero in maniera schematica lo scambio di momento angolare tra pianeta e disco usando l'approssimazione impulsiva, dove si considera la traiettora di un elemento di fluido che interagisce col pianeta, oppure descrivendo l'interazione tra onde di densit\'a e pianeta.
 
 \begin{workout}[Migration refs]
 Terquem papaloizou (planet formation and migration) pg 43
@@ -607,7 +607,6 @@ instabilities in inviscid gap enge: koller 03
 \begin{align}
 \TDy{t}{j}=1/2\sqrt{GM_*/r}\TDy{t}{r}
 \end{align}
-
 Il disco di accrescimento esercita momento torcente sul pianeta che produce un trasferimento di momento angolare dal pianeta al disco $\Lambda(a,R)$
 \begin{align*}
 &J=M_p\sqrt{GM_*a_p}\\
@@ -651,7 +650,9 @@ Veras armitage 04 (exoplanets with $a>20au$): outward migration seldom important
 \end{workout}
 
 
-\section{Migrazione tipo I: regime lineare}
+\section{Migrazione tipo I: pianeti piccola massa}
+
+\subsection{Momento torcente a risonanze di Lindblad e corotazone}
 
 Prendo un disco kepleriano ed espando il potenziale generato dal pianeta, periodico in $\phi_p=\Omega_pt$:
 \begin{align}
@@ -659,30 +660,27 @@ Prendo un disco kepleriano ed espando il potenziale generato dal pianeta, period
 \end{align}
 Il momento torcente esercitato dal disco sul pianeta \'e
 \begin{equation}
-\Gamma_t=-\int_{disk}\Sigma(\vecp{r}{F})\,df=\int_{disk}\Sigma(\vec{r}\wedge\nabla\psi_p)\,df=\int_{disk}\Sigma\PDy{\phi}{\psi_p}\,df
+\Gamma_t=-\int_{disk}\Sigma(\vecp{r}{F})\,df=\int_{disk}\Sigma(\vec{r}\wedge\nabla\psi_p)\,df=\int_{disk}\Sigma\PDy{\phi}{\psi_p}\,df\label{eq:pd-torque}
 \end{equation}
 $\Sigma$ densit\'a superficiale,  $\vec{F}$ forza per unit\'a di massa, $df$ elemento di superficie.
-
-La regione di corotazione \'e definita da $\Omega(r)-\Omega_p=0$ cio\'e il potenziale del pianeta ruota alla stessa frequenza del fluido
-
-Whenever frequency of individual potential component as seen by fluid particle in disk $\omega=m(\Omega(r)-\Omega_p)$, matches a natural  oscillation frequency of the disk we have resonant condition: torques are calculated at resonant locations.
 
 Dove la frequenza della componente m-esima del potenziale \'e uguale alla frequenza epiciclica (disco kepleriano: $\kappa_0=\Omega$) si ha una risonanza di Lindblad $\pm\Omega=m(\Omega(r)-\Omega_p)$, il raggio a cui si hanno \'e
 \begin{equation}
 r_L=(\frac{m}{m\pm1})\expy{2/3}a
 \end{equation}
 
-Integrando l'equazione
-\begin{equation}
+La regione di corotazione \'e definita da $\Omega(r)-\Omega_p=0$ cio\'e il potenziale del pianeta ruota alla stessa frequenza del fluido.
 
-\end{equation}
-si ottiene
+Integrando l'equazione \eqref{eq:pd-torue} si ottiene
 \begin{align*}
 &\Gamma_m^L=\left.\sign{(\Omega-\Omega_p)}\frac{\pi^2\Sigma}{3\Omega\Omega_p}(r\TDy{r}{\psi_m}+\frac{2m^2(\Omega-\Omega_p)}{\Omega}\psi_m)^2\right|_{r=r_L}\\
 &\Gamma_m^C=\left.\frac{m\pi^2}{2}\frac{\psi_m}{r\TDy{r}{\Omega}}\TDof{r}(\frac{\Sigma}{B})\right|_{r=r_C}
 \end{align*}
-Differnetial Lindblad torque
-$B=\frac{\kappa^2}{4\Omega}$ is the second Oort constant and represents z component of flow vorticity $\nabla\wedge\vec{v}|_z$
+$B=\frac{\kappa^2}{4\Omega}$ \'e la seconda costante di Oort (rappresenta componente z della vorticit\'a $\nabla\wedge\vec{v}|_z$).
+infine il momento torcente totale \'e
+\begin{equation}T_I=\sum_{m}^{int}\Gamma_m^L+\sum_{m}^{out}\Gamma_m^L+\sum_{m}\Gamma_m^C\end{equation}
+
+\subsection{Velocit\'a migrazione tipo I}
 
 \begin{workout}[M14:type II and outward migration]
 Freuenza epiciclica
@@ -709,16 +707,19 @@ Benitez Llambay 15: heating torque, Paardekooper14 Pierens 15: dynamic corotatio
 
 \section{Massive enough planet to open gap: migration II}
 
+\subsection{Approssimazione impulsiva}
+%Lin papaloizou 79
+\begin{wrapfigure}[14]{l}{0.45\textwidth}
+\includegraphics[width=0.4\textwidth]{impulseapprox}\label{fig:impulseapprox}
+\caption{Schema approssimazione impulsiva.}
+\end{wrapfigure}
 
-\begin{workout}[Planetary torque: nonlinear regime, type II, gap formation]
-Lin papaloizou 79: at conjuction with planets a fluid element trajectory is deflected in frame centered with planet by angle
+: at conjuction with planets a fluid element trajectory is deflected in frame centered with planet by angle
 \begin{equation}
 \beta=\arctan{\delta v/v}=\arctan{(\frac{GM_p}{bv_0^2})}
 \end{equation}
 $v_0$ velocit\'a relativa fluido-pianeta; dopo l'interazione l'elemento di fluido \'e in orbita ellittica attorno alla stella
-\begin{figure}[!t]
-\includegraphics[width=0.9\textwidth]{impulseapprox}
-\end{figure}
+
 Qual \'e il trasferimento di momento angolare disco-pianeta associato a quest'interazione?
 Trasferimento di momento per unit\'a di massa:
 \begin{align}
@@ -726,33 +727,41 @@ Trasferimento di momento per unit\'a di massa:
 &\Delta J=au\delta
 \end{align}
 lungo direzione del originale di moto del protopianeta.
-Pe rmateria in orbita circolare interna/esterna al pianeta il trasferimento \'e positivo/negativo.
+
+Per materia in orbita circolare interna/esterna al pianeta il trasferimento \'e positivo/negativo.
 (The interaction is frictional with interior speeding up protoplanet while exterior slowing down; viscous interaction with disk return mass element in circular orbit)
 Il calcolo esatto che tiene conto del fatto che siamo in SR rotante (LP93) introduce fattore correttivo $K_0=4/9[2K_0(2/3)*K_1(2/3)]^2$.
+
 La velocit\'a relativa \'e $u=a|\Omega_p-\Omega_g$ e dato che l'interazione avviene vicino al pianeta $|\Omega_p-\Omega_g|\approx3/2b\Omega_p/a$.
+
 Rate trasferimento momento angolare tra interno del disco e pianeta
 \begin{equation}
 \TDy{t}{J}=\int_{b_{min}}^{+\infty}a\Sigma\Delta J|\Omega_p-\Omega_g|\,db
 \end{equation}
+
 Per disco esterno all'orbita l'espressione \'e la stessa con segno invertito perch\'e il disco or a \'e pi\'u lento del protopianeta.
+
 Il parametro d'impatto minimo \'e l'assunzione implicita di un gap nel disco a assenza di materia nella regione di corotazione (discussione applicabilein regime non-lineare)
 Formazione gap: perch\'e il gap si stazionario il momento scambiato nell'interazione disco-pianeta deve essere almeno quello trasportato dal moto viscoso del disco:
 \begin{equation}
 \TDy{t}{J}|_{visc}=3\pi\nu\Sigma a^2\omega
 \end{equation}
 deve essere quindi $\TDy{t}{J}|_{visc}<\TDy{t}{J}$
+
 Cut-off: $b_{min}\approx H$, la pressione smorza effetti su scala pi\'u piccola; regime non-lneare, richiesto per gap formation, lunghezza-scala del flusso non minore di $r_H$: predndendo $b_m=2r_h$ si ha
 \begin{equation}
 \frac{M_p}{M_*}>\frac{40\nu}{a^2\omega}
 \end{equation}
+
 Formazione di gap per dischi tipici sopra massa di saturno.
 Migrazione tipo II: il pianeta prende momento dal disco esterno (dovuto al flusso viscoso) e cede quello richiesto al disco esterno dal trasporto viscoso: normalmente il bilancio \'e negativo quindi il pianeta migra verso l'interno.
-Quando la massa del pianetaa non eccede la massa locale del disco il tempo scale di migrazione \'e
+
+Quando la massa del pianeta non eccede la massa locale del disco il tempo scale di migrazione \'e
 \begin{equation}
 t_{II}(yr)=\frac{1}{3\alpha}(\frac{a}{H})^2\Omega\expy{-1}=0.05/\alpha(a/H)^2(a/au)\expy{3/2}
 \end{equation}
 per $H/a\approx0.1$, $\alpha=\numrange{e-3}{e-2}$ a $a=1-5 au$ si ha $t_{}=10^3-10^4yr$.
-\end{workout}
+
 
 \section{Migrazione III:}
 

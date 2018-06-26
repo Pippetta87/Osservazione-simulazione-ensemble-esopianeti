@@ -557,9 +557,10 @@ fonti energia: tidal heating radiogeninc heat, star flux
 
 
 {\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Migrazione (e N-body interactions??)}
+\chapter{Interazioni pianeta-disco: migrazione planetaria}
 }
 
+Considero in maniera schematica lo scambio di momento angolare tra pianeta e disco:
 
 \begin{workout}[Migration refs]
 Terquem papaloizou (planet formation and migration) pg 43
@@ -569,7 +570,22 @@ Planet-disk interaction and orbital evolution (kley Nelson 2012),
 Baruteau 2016)
 crida06: On width and shape of gaps in PPD,crida phd, 
 Trilling 98:Orbital evolution and migration of giant planet: modellingextrasolar planets (Angular momentum injection rate, torque from spinning star, Impact of planet migration models on planetary populations)
-Dittkrist 14: Impact of planetsmigration models n planetarypopulation (Migration II inward/outward: non equilibrium gas flow, problem of isothermal disk migration timescale: migration I regime, Fig 7,
+Dittkrist 14: Impact of planetsmigration models n planetarypopulation (Migration II inward/outward: non equilibrium gas flow, problem of isothermal disk migration timescale: migration I regime, Fig 7;
+Refs: On the tidal interaction between protoplanets and the primordial solar nebula. II - Self-consistent nonlinear interaction (1986)
+Non-linear. For larger planet mass, when disk density distro is changed cons., the linear hteory is no more adeguate. If angular momentum isdeposited locally (viscous dissipation/shock waves)  the disk receeds from planets
+Ida-lin04: angular momentum trasport in viscous accretion disk without planets that in type II migration act as relays that transmit angular momentum at that rateacross their gap via tidal torques.
+Alibert05: the planet follow the gas except when massive than local disk.
+Duffell14, Durmann kley 15: questioning that migration II follows viscous evolution of the disk but due to torque??
+Planet-disk interactions: exchange of angular momentum. Low mass planet-linear theory.(''Planet-disk interactions and orbital evolution'')
+Low mass planets: Lindblad and corotation torque. Rapid migration of intermediate mass planets. Gap forming massive planets: slower migration determined by viscous evolution of disk. (Role of disk self-gravity and MHD turbulence as function of planet mass).
+\end{workout}
+
+\begin{workout}[migration and disk parametrizzation]
+Toward deterministic model of planetary formation IV: effects of type-I migration (highly optically thin disk)
+\end{workout}
+
+\begin{workout}[disk torque]
+Orbital evolution and migration of giant planets: disk evolution and torque;
 \end{workout}
 
 \begin{workout}[Horseshoe drag refs]
@@ -587,9 +603,10 @@ opaciy transitionmenou goodman 04
 instabilities in inviscid gap enge: koller 03
 \end{workout}
 
-
-
-\section{Classificazione migrazione: risposta del disco e velocit\'a}
+\begin{workout}[planetary migration usefull formulae]
+\begin{align}
+\TDy{t}{j}=1/2\sqrt{GM_*/r}\TDy{t}{r}
+\end{align}
 
 Il disco di accrescimento esercita momento torcente sul pianeta che produce un trasferimento di momento angolare dal pianeta al disco $\Lambda(a,R)$
 \begin{align*}
@@ -597,6 +614,7 @@ Il disco di accrescimento esercita momento torcente sul pianeta che produce un t
 &\TDy{t}{a}=2a_p\frac{\Gamma_t}{J}=-(\frac{a}{GM_*})(\frac{4\pi}{M_P})\int_{r_{int}}^{r_{out}}r\Lambda\Sigma\,dr
 \end{align*}
 $r_{int}, r_{out}$ inner/outer disk radius (rif to disk ar planet)
+\end{workout}
 
 
 \begin{workout}[M14:type I]
@@ -625,21 +643,6 @@ Il momento pu\'o essere calcolato facendo una analisi lineare delle onde eccitat
 \end{align}
 \end{workout}
 
-\begin{workout}[type III and coorbital torque]
-COnsidero un pianeta migrante: quando il gap \'e parziale materiale percorre l'orbita ed esercita momento t, positive/negative feedback.
-Per un pianeta che migRA VERSO L'ESTERNO SI HA
-$2\pi\Sigma R\TDy{t}{R}$ \'e il flusso di massa che impartisce momento per unit\'a di massa al protopianeta quando la materia attraversa la regione di corotazione di spessore w, $w\omega/2$: con $w=2H$ si ha
-\begin{align}
-F_{cr}=2\pi R\Sigma\omega^2 H^2\frac{1}{c_s}\TDy{t}{R}=1/2M_d\omega\TDy{t}{R}\\
-F_{crb}=-1/2M_b\omega\TDy{t}{R}
-\end{align}
-dove la seconda \'e inerzia (??) massa legata al pianeta.
-quazione del moto:
-\begin{equation}
-1/2M_pa\omega\TDy{t}{a}=1/2(M_d-M_b)a\omega\TDy{t}{a}+T_{ext}
-\end{equation}
-\end{workout}
-
 \begin{workout}[M14:type II and outward migration]
 adiabatic and local isothermal disk: pardekooper 10/11
 Type II planet-dominated for mass $100\mearth{}$.
@@ -650,25 +653,44 @@ Veras armitage 04 (exoplanets with $a>20au$): outward migration seldom important
 
 \section{Migrazione tipo I: regime lineare}
 
-\begin{workout}[Lindblad/corotation torque: linear]
-Unperturbed disk: axisymmetric, keplerian rotation $\Omega(r)=\sqrt{GM_*/r^3}$, vanishing radial velocity. Planet potential, periodic in $\phi$, $\phi_p=\Omega_pt$:
-\begin{align*}
+Prendo un disco kepleriano ed espando il potenziale generato dal pianeta, periodico in $\phi_p=\Omega_pt$:
+\begin{align}
 &\psi_p(r,\phi,t)=-\frac{Gm_p}{|\vec{r}_p(t)-\vec{r}|}=\sum_{m=0}^{\infty}\psi_m(r)\cos{m[\phi-\phi_p(t)]}
-\end{align*}
-Total torque excertes by disk on planet
-\begin{equation*}
-\Gamma_t=-\int_{disk}\Sigma(\vecp{r}{F})\,df=\int_{disk}\Sigma(\vecp{r}\wedge\nabla\psi_p)\,df=\int_{disk}\Sigma\PDy{\phi}{\psi_p}\,df
-\end{equation*}
-$\Sigma$ surface density,  $\vec{F}$ specific force, $df$ surface element.
+\end{align}
+Il momento torcente esercitato dal disco sul pianeta \'e
+\begin{equation}
+\Gamma_t=-\int_{disk}\Sigma(\vecp{r}{F})\,df=\int_{disk}\Sigma(\vec{r}\wedge\nabla\psi_p)\,df=\int_{disk}\Sigma\PDy{\phi}{\psi_p}\,df
+\end{equation}
+$\Sigma$ densit\'a superficiale,  $\vec{F}$ forza per unit\'a di massa, $df$ elemento di superficie.
+
+La regione di corotazione \'e definita da $\Omega(r)-\Omega_p=0$ cio\'e il potenziale del pianeta ruota alla stessa frequenza del fluido
+
 Whenever frequency of individual potential component as seen by fluid particle in disk $\omega=m(\Omega(r)-\Omega_p)$, matches a natural  oscillation frequency of the disk we have resonant condition: torques are calculated at resonant locations.
-Lindblad (due to m-component of planet potential) and corotation torques:
+
+Dove la frequenza della componente m-esima del potenziale \'e uguale alla frequenza epiciclica (disco kepleriano: $\kappa_0=\Omega$) si ha una risonanza di Lindblad $\pm\Omega=m(\Omega(r)-\Omega_p)$, il raggio a cui si hanno \'e
+\begin{equation}
+r_L=(\frac{m}{m\pm1})\expy{2/3}a
+\end{equation}
+
+Integrando l'equazione
+\begin{equation}
+
+\end{equation}
+si ottiene
 \begin{align*}
 &\Gamma_m^L=\left.\sign{(\Omega-\Omega_p)}\frac{\pi^2\Sigma}{3\Omega\Omega_p}(r\TDy{r}{\psi_m}+\frac{2m^2(\Omega-\Omega_p)}{\Omega}\psi_m)^2\right|_{r=r_L}\\
 &\Gamma_m^C=\left.\frac{m\pi^2}{2}\frac{\psi_m}{r\TDy{r}{\Omega}}\TDof{r}(\frac{\Sigma}{B})\right|_{r=r_C}
 \end{align*}
 Differnetial Lindblad torque
 $B=\frac{\kappa^2}{4\Omega}$ is the second Oort constant and represents z component of flow vorticity $\nabla\wedge\vec{v}|_z$
+
+\begin{workout}[M14:type II and outward migration]
+Freuenza epiciclica
+\begin{equation}
+\kappa^2=4\Omega^2+r\TDy{r}{\Omega^2}
+\end{equation}
 \end{workout}
+
 
 \begin{workout}[Migration I in isothermal disk: pressure. Adiabatic, irradiated?]
 Low mass planet in isothermal disk: linear analysis of perturbed flow.
@@ -732,18 +754,23 @@ t_{II}(yr)=\frac{1}{3\alpha}(\frac{a}{H})^2\Omega\expy{-1}=0.05/\alpha(a/H)^2(a/
 per $H/a\approx0.1$, $\alpha=\numrange{e-3}{e-2}$ a $a=1-5 au$ si ha $t_{}=10^3-10^4yr$.
 \end{workout}
 
-Refs: On the tidal interaction between protoplanets and the primordial solar nebula. II - Self-consistent nonlinear interaction (1986)
-Non-linear. For larger planet mass, when disk density distro is changed cons., the linear hteory is no more adeguate. If angular momentum isdeposited locally (viscous dissipation/shock waves)  the disk receeds from planets
-Ida-lin04: angular momentum trasport in viscous accretion disk without planets that in type II migration act as relays that transmit angular momentum at that rateacross their gap via tidal torques.
-Alibert05: the planet follow the gas except when massive than local disk.
-Duffell14, Durmann kley 15: questioning that migration II follows viscous evolution of the disk but due to torque??
-
-
-Planet-disk interactions: exchange of angular momentum. Low mass planet-linear theory.(''Planet-disk interactions and orbital evolution'')
-Low mass planets: Lindblad and corotation torque. Rapid migration of intermediate mass planets. Gap forming massive planets: slower migration determined by viscous evolution of disk. (Role of disk self-gravity and MHD turbulence as function of planet mass).
-
-
 \section{Migrazione III:}
+
+\begin{workout}[type III and coorbital torque]
+COnsidero un pianeta migrante: quando il gap \'e parziale materiale percorre l'orbita ed esercita momento t, positive/negative feedback.
+Per un pianeta che migRA VERSO L'ESTERNO SI HA
+$2\pi\Sigma R\TDy{t}{R}$ \'e il flusso di massa che impartisce momento per unit\'a di massa al protopianeta quando la materia attraversa la regione di corotazione di spessore w, $w\omega/2$: con $w=2H$ si ha
+\begin{align}
+F_{cr}=2\pi R\Sigma\omega^2 H^2\frac{1}{c_s}\TDy{t}{R}=1/2M_d\omega\TDy{t}{R}\\
+F_{crb}=-1/2M_b\omega\TDy{t}{R}
+\end{align}
+dove la seconda \'e inerzia (??) massa legata al pianeta.
+quazione del moto:
+\begin{equation}
+1/2M_pa\omega\TDy{t}{a}=1/2(M_d-M_b)a\omega\TDy{t}{a}+T_{ext}
+\end{equation}
+\end{workout}
+
 Planet-disk interactions: exchange of angular momentum. Type III migration: planet of intermediate mass. (‘’Planet-disk interactions and orbital evolution’’).
 
 Flow-through corotation torque: $\Gamma_{flow}=2\pi\Sigma_s\dot{a}_p\Omega_pa_p^3x_s$.
@@ -752,13 +779,12 @@ Flow-through corotation torque: $\Gamma_{flow}=2\pi\Sigma_s\dot{a}_p\Omega_pa_p^
 &\dot{a}_p=\frac{2\Gamma^L}{\Omega_pa_p(m_p’-\delta m)}
 \end{align*}
 
-\section{Eccentricity and inclination evolution}
+\begin{workout}[Eccentricity and inclination evolution]
 Planet-disk interactions: normal, tangential, radial forces. eccentricity and inclination evolution. (‘’Planet-disk interactions and orbital evolution’’)
 Decomposition of planet’s potential: non-circular orbit
 \begin{align*}
 &\psi_p(r,\phi,t)=-\frac{Gm_p}{|\vec{r}_p(t)-\vec{r}|}=\sum_{m=0}^{\infty}\sum_{n=-m}^m\psi_{m,n}(r)\cos{m\phi+(n-m)\Omega_pt]}
 \end{align*}
-
 Eccentricity damping.
 For each m,n there are 3 resonant locations: external L resonance act to increase, corotation res. to damp (if unsaturted), and coorbital L res damp $e_p$. Linear analysis for low mass planets indicates rapid exponential damping of $e_p$:
 \begin{align*}
@@ -766,8 +792,18 @@ For each m,n there are 3 resonant locations: external L resonance act to increas
 &e_P>\frac{H}{r}: \TDy{t}{e_p}\propto-e_p\expy{-2}
 \end{align*}
 Risultati analoghi per inclinazione.	
+\end{workout}
 
 \section{Altre interazioni che producono migrazione}
+
+
+\begin{workout}[mass loss and conservation of angular momentum]
+Orbital evolution and migration of giant planets: mass loss and conservation of angular momentum.
+\end{workout}
+
+\begin{workout}[torque from spinning star]
+Orbital evolution and migration of giant planets: torque from spinning star
+\end{workout}
 
 \begin{workout}[planet overlflowing roche lobe migrate outward]
 trilling 98:n During mass flow planet moves outward to conserve angular momentum

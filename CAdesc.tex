@@ -650,9 +650,9 @@ Veras armitage 04 (exoplanets with $a>20au$): outward migration seldom important
 \end{workout}
 
 
-\section{Migrazione tipo I: pianeti piccola massa}
+\section{Migrazione tipo I: pianeti piccola massa - comportamento lineare.}
 
-\subsection{Momento torcente a risonanze di Lindblad e corotazone}
+\subsection{Momento torcente a risonanze di Lindblad}
 
 Prendo un disco kepleriano ed espando il potenziale generato dal pianeta, periodico in $\phi_p=\Omega_pt$:
 \begin{align}
@@ -669,18 +669,50 @@ Dove la frequenza della componente m-esima del potenziale \'e uguale alla freque
 r_L=(\frac{m}{m\pm1})\expy{2/3}a
 \end{equation}
 
-La regione di corotazione \'e definita da $\Omega(r)-\Omega_p=0$ cio\'e il potenziale del pianeta ruota alla stessa frequenza del fluido.
+Alla posizione delle risonanze di Lindblad si generano onde la cui relazione di dispersione \'e modificata dalla pressione
+\begin{equation}
+\tilde{\omega}^2=\kappa^2+c_s^2k^2
+\end{equation}
+inoltre le risonanze rimangono a distanza finita dal pianeta:
+\begin{align}
+&m(\Omega(r)-\Omega_p)=\sqrt{\kappa^2(r)(1+\xi^2)}\\
+&\lim_{m\to\infty}r_L=r_p+\frac{2H}{3}
+\end{align}
+dove $\xi=\frac{mc_s}{\Omega r}$, $c_s=H\Omega$.
 
-Integrando l'equazione \eqref{eq:pd-torue} si ottiene
-\begin{align*}
-&\Gamma_m^L=\left.\sign{(\Omega-\Omega_p)}\frac{\pi^2\Sigma}{3\Omega\Omega_p}(r\TDy{r}{\psi_m}+\frac{2m^2(\Omega-\Omega_p)}{\Omega}\psi_m)^2\right|_{r=r_L}\\
-&\Gamma_m^C=\left.\frac{m\pi^2}{2}\frac{\psi_m}{r\TDy{r}{\Omega}}\TDof{r}(\frac{\Sigma}{B})\right|_{r=r_C}
-\end{align*}
+%Linear. Occur if $R_H$ is smaller then H, disk scale heigth, and if viscous torque are dominant compared to gravitational torque.
+
+(Integrando l'equazione \eqref{eq:pd-torque} si ottiene) L'espressione del momento torcente esterno/interno
+\begin{equation}
+%\Gamma_m^L=\left.\sign{(\Omega-\Omega_p)}\frac{\pi^2\Sigma}{3\Omega\Omega_p}(r\TDy{r}{\psi_m}+\frac{2m^2(\Omega-\Omega_p)}{\Omega}\psi_m)^2\right|_{r=r_L}
+\Gamma_L\propto\sign{(r-r_p)}q^2\Sigma r^4\Omega^2(\frac{r}{H})^3
+\end{equation}
+con $q=M_p/M_*$, infine una stima del momento torcente differenziale delle risonanze di Lindblad \'e fornito da \cite{tanaka2002three}:
+\begin{equation}
+\Gamma_L^d\propto q^2\Sigma r_p^4\Omega_p^2(\frac{H}{r})\expy{-2}
+\end{equation}
+per disco isotermo infinitamente sottile.
+
+\subsection{Momento torcente generato nella regione di corotazione.}
+
+
+
+La regione di corotazione \'e definita da $\Omega(r)-\Omega_p=0$ cio\'e il potenziale del pianeta ruota alla stessa frequenza del fluido.
+\begin{equation}
+\Gamma_m^C=\left.\frac{m\pi^2}{2}\frac{\psi_m}{r\TDy{r}{\Omega}}\TDof{r}(\frac{\Sigma}{B})\right|_{r=r_C}
+\end{equation}
 $B=\frac{\kappa^2}{4\Omega}$ \'e la seconda costante di Oort (rappresenta componente z della vorticit\'a $\nabla\wedge\vec{v}|_z$).
 infine il momento torcente totale \'e
 \begin{equation}T_I=\sum_{m}^{int}\Gamma_m^L+\sum_{m}^{out}\Gamma_m^L+\sum_{m}\Gamma_m^C\end{equation}
 
 \subsection{Velocit\'a migrazione tipo I}
+
+Utilizzando la stima di \cite{tanaka2002three} si trova il tempo caratteristico per migrazione tipo I
+
+\begin{equation}
+\tau_I=\frac{r_p}{|\dot{r}_p|}=\frac{\dot{J}_p}{\Gamma_{dL}}=\frac{1}{2.1+1.1\gamma}\frac{M_*}{M_p}\frac{M_*}{r_p^2\Sigma(r_p)}(\frac{c_s}{r_p\Omega_p})^2\frac{1}{\Omega_p}
+\end{equation}
+da cui risulta pr disco protoplanetario con $\Sigma(r)=1500(r\SI{5}{\astronomicalunit})\expy{-3/2}\si{\kilo\gram\per\square\meter}$ a $T=\SI{130}{\kelvin}$ per pianeta di massa terrestre a \SI{5}{\astronomicalunit} un tempo di migrazione $\tau_I\approx\SI{8e5}{\year}$: molto minore del tempo di vita del disco.
 
 \begin{workout}[M14:type II and outward migration]
 Freuenza epiciclica
@@ -690,7 +722,7 @@ Freuenza epiciclica
 \end{workout}
 
 
-\begin{workout}[Migration I in isothermal disk: pressure. Adiabatic, irradiated?]
+\begin{workout}[Migration I in isothermal disk: pressure.]
 Low mass planet in isothermal disk: linear analysis of perturbed flow.
 When pressure can't be neglected the resonance condition becomes $m(\Omega(r)-\Omega_p=\sqrt{\kappa^2(r)(1+\xi^2)}$ where $\xi=\frac{mc_s}{\Omega r}$ where we used isothermal sound speed and let $c_s=H\Omega$: for $m\to\infty$ L. res position becomes $r_L=r_p+\frac{2H}{3}$ (torque cutoff).
 

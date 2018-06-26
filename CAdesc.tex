@@ -332,20 +332,35 @@ La popolazione dei planetesimi evolve attraverso interazione con gas e scatterin
 
 L'accrescimento di massa del protopianeta procede secondo
 \begin{equation}
-\TDy{t}{M_e}=\pi R_c\Sigma_p\Omega F_g
+\TDy{t}{M_e}=\pi R_c\rho_{pl}v F_g=\pi R_c\Sigma_p\Omega F_g
 \end{equation}
-$F_g$ \'e determinato dalla velocit\'a relativa tra proto-pianeta e planetesimi.
+con $F_g$ fattore che tiene conto dell'interazione gravitazionale, determinato dalla velocit\'a relativa tra i 2 corpi, e $\rho_{pl}$ densit\'a di planetesimi:
+\begin{align}
+&\rho_{pl}\approx\frac{\sigma}{2a\sin{i}}\approx\frac{\sqrt{3}}{2}\frac{\Sigma_p\Omega}{v}
+\end{align}
+assumendo relazione di dispersione per velocit\'a planetesimi isotropa.
 
 Per embrioni planetarii di decine di chilometri l'attrazione gravitazionale aumenta la sezione d'urto: 
 \begin{equation}
 \frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{1/3}
 \end{equation}
 questo regime di accrescimento (runaway growth) \'e responsabile crescita diametro embrioni da \SI{10}{\kilo\meter} a \SI{100}{\kilo\meter} in \SIrange{e4}{e5}{\year}.
-Accresciuta la massa presente nella zona di pertinenza gravitazionale dell'embrione,detta isolation mass,
-\begin{equation}M_{iso}\proptoM_*\expy{-1/2}\Sigma_p\expy{3/2}r^3\end{equation}
-(higher radial excursion ae)
-accrescimento oligarchico: $\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{-1/3}$.
-da 100-1000km, \SI{e5}{\year}
+%(higher radial excursion ae)
+Quando la massa degli embrioni domina su quella dei planetesimi si ha transizione a regime oligarchico in cui l'accrescimento \'e pi\'u lento fino a che non \'e stata accresciuta la massa presente nella zona di pertinenza gravitazionale dell'embrione,detta isolation mass,
+\begin{equation}
+M_{iso}\propto M_*\expy{-1/2}\Sigma_p\expy{3/2}r^3
+\end{equation}
+
+La fase finale di crescita caotica evolve il sistema verso una configurazione dinamica stabile ed ha tempi tipici di \SIrange{10}{100}{\mega\year}.
+
+\begin{workout}[oligarchic growth rate]
+La fase successiva che porta a dimensioni di migliaia di chilometri, accrescimento oligarchico ha andamento in funzione della massa
+\begin{equation}
+\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{-1/3}
+\end{equation}
+e tempo caratteritico $\SI{e5}{\year}$. Nel dettaglio \'e determinata 
+\end{workout}
+
 \begin{workout}[Dynamical friction]
 Dynamical friction: stewart wetherill 88
 \end{workout}
@@ -437,63 +452,44 @@ Accrescimento ordinato: $\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{-1/3}$. Accre
 
 \end{workout}
 
-\begin{workout}[Timescale of oligarchic growth]
-kokubo ida 02 (ida lin 04)
-\begin{align}
-&\dot{M}_c=\frac{M_c}{\tau_c}\\
-&\tau_c=\SI{1.2e5}{\year}(\frac{\Sigma_p}{\SI{10}{\gram\per\cubic\cm}})\expy{-1}(\frac{a_p}{\SI{1}{\astronomicalunit}})\expy{1/2}(\frac{M_p}{\mearth{}})\expy{1/3}(\frac{M_*}{\msun{}})\expy{-1/6}[(\frac{\Sigma_g}{\SI{2400}{\gram\per\cubic\cm}})\expy{-1/5}(\frac{a_p}{\SI{1}{\astronomicalunit}})\expy{1/20}(\frac{m}{\SI{e18}{\gram}})\expy{1/15}]^2
-\end{align}
-\end{workout}
-
-\begin{workout}[Post-oligarchic growth: 1000km-10000km]
-Chaotic growth until stable configuration is reached.
-Factors determning orbital spacing: pg 229, earth formation (chambers 01, raymond 05, o'brian 06)
-\end{workout}
-
 
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Evoluzione struttura planetaria: accrescimento e fase isolata.}
 }
 
-\begin{workout}[Critical core mass]
-From toward deterministic
-\begin{equation}
-M_{c,crit}\approx10(\frac{\dot{M}_c}{\num{e-6}\mearth{}\si{\per\year}})\expy{0.2-0.3}(\frac{\kappa}{\SI{1}{\square\cm\per\gram}})\expy{0.2-0.3}\mearth{}
-\end{equation}•
-\end{workout}
+Se il protopianeta raggiunge un valore critico di massa, dipendente debolmente da luminosit\'a generata da accrescimento dei pianetesimi e opacit\'a, per mantenere equilibrio idrostatico l'inviluppo gassoso del pianeta si contrae e si ha un afflusso di massa.
+Il flusso di massa cresce fino a esurire la massa presente nella fascia di pertinenza del protopianeta: in questa seconda fase l'accresscimento di massa \'e regolato da tempo scala viscoso del disco.
 
-Se il core \'e sufficientemente massiccio lega il gas presente nelle disco: 
-Seguendo \cite{rafikov2006atmospheres}.
-
-Indico la massa di gas legata al core con
+Da modelli numerici risulta
 \begin{equation}
-M_e=4\pi\int_{R_c}^{R_B}\rho(r')r'^2\,dr'
+M_c^{crit}=7\mearth{}(\frac{\dot{M}_c}{\num{e-7}\mearth{}\si{\per\year}})\expy{q}(\frac{\kappa}{\SI{0.1}{\square\meter\per\kilo\gram}})\expy{s}
 \end{equation}
+con $q,s\approx0.2-0.3$.
 
-dove $R_C$ \'e il raggio del core e il raggio di Bondi
+\section{Accrescimento limitato da velocit\'a di raffreddamento}
+
+La luminosit\'a del pianeta \'e determinata tramite
+\begin{align}
+&E_t=E_g+E_i=\int_0^M\frac{Gm}{r}\,dm+\int_{M_z}^Mu\,dm=-\xi\frac{GM^2}{2R}\\
+&-\TDof{t}E_t=L=L_M+L_R+L_{\xi}=\xi\frac{GM}{R}\dot{M}-\xi\frac{GM^2}{2R^2}\dot{R}+\frac{GM^2}{2R}\dot{\xi}
+\end{align}
+con $\dot{M}=\dot{M}_Z+\dot{M}_{XY}$ dove ho indicato la massa di gas legata al core con
+\begin{equation}
+M_{XY}=4\pi\int_{R_c}^{R_B}\rho(r')r'^2\,dr'
+\end{equation}
+e $R_C$ \'e il raggio del core e inoltro introduco il raggio di Bondi
 \begin{equation}
 R_B=G\frac{M_c}{c_0^2}\approx\SI{4e10}{\cm}a(AU)\expy{1/2}\frac{M_c}{\mearth{}}
 \end{equation}
 definito come raggio in cui energia termica e potenziale gravitazionale si equivalgono: il core perturba la pressione del gas del disco.
 
-\section{Accrescimento idrostatico}
-
-\begin{workout}[Wien displacement]
-$\lambda_{max}T\approx \SI{3e-3}{\meter\kelvin}$
-\end{workout}
-
-\begin{workout}[Gas accretion: characterization of exoplanets from their formation]
-\begin{align}
-&E_t=E_g+E_i=\int_0^M\frac{Gm}{r}\,dm+\int_{M_z}^Mu\,dm=-\xi\frac{GM^2}{2R}\\
-&-\TDof{t}E_t=L=L_M+L_R+L_{\xi}=\xi\frac{GM}{R}\dot{M}-\xi\frac{GM^2}{2R^2}\dot{R}+\frac{GM^2}{2R}\xi\\
-\dot{M}=\dot{M}_Z+\dot{M}_{XY}
-\end{align}
+La struttura del pianeta \'e detrminata integrando le equazioni di conservazione di massa, momento, energia e l'equazione del trasporto di energia
 Mass conservation, hydrostatic equilibrium and energy transfer:
 \begin{align}
 &\TDy{r}{m}=4\pi r^2\rho\\
 &\TDy{r}{l}=0\\
 &\TDy{r}{P}=-\frac{Gm}{r^2}\rho\\
-&\TDy{r}{T}=\frac{T}{P}&\TDy{r}{P}\nabla(T,P)\\
+&\TDy{r}{T}=\frac{T}{P}\TDy{r}{P}\nabla(T,P)\\
 &\nabla(T,P)=\TDly{P}{T}=\min{(\nad{},\nrad{})}
 \end{align}
 
@@ -504,25 +500,41 @@ Condizioni al bordo:
 &T^4=T_{neb}^4+T_{int}^4,\ L(R)=L_{int}
 \end{align}
 $k_{liss}=3-4$, quindi $R_p\approx \min{(R_B,k_{liss}\expy{-1}R_H)}$.
+
+\begin{workout}[Hydrostatic equilibrium hypothesis]
+Characterization of exoplanets from their formation I (eq 10)
 \end{workout}
 
 Rate di accrescimento limitato dalla velocit\'a di raffreddamento ($\tau\approx\tkh{}$):
-\begin{align}
-&\dot{M}_{XY}\propto,\ \frac{M_p}{M_*}<(H_P/R_p)^3/\sqrt{3}\\
-&\dot{M}_{XY}\propto M_p
-\end{align}
+\begin{equation}
+\dot{M}_{XY}\propto\ \frac{M_p}{M_*}<(H_P/R_p)^3/\sqrt{3}
+\end{equation}
 
 quindi la massa di gas aumenta esponenzialmente a partire da $M_c\approx10\mearth{}$.
 
-\section{Instaurarsi instabilit\'a gravitazionale}
+\section{Accrescimento limitato dalla disponibilit\'a di gas del disco}
 
 Se $H_p\approx R_p$ il pianeta perturba in maniera non trascurabile il disco (il rate di accrescimento di gas \'e maggiore di quello fornito dal disco). Il raggio del pianeta \'e determinato dalle condizioni al bordo per materia accresciuta tramite free-fall da $R_H$ a $R_p$:
 \begin{align}
 &\dot{M}_{XY}=\dot{M}_{XY,max},\ v_{ff}^2=2GM(\frac{1}{R}-\frac{1}{R_H})\\
-&P=P_{neb}+\frac{\dot{M}_{XY}}{4\pi r^2}+\frac{2g}{3\kappa},\ \tau=\max{(\rho_{neb}\kappa_{neb}R,2/3)}\\
+&P=P_{neb}+\frac{\dot{M}_{XY}}{4\pi r^2}v_{ff}+\frac{2g}{3\kappa},\ \tau=\max{(\rho_{neb}\kappa_{neb}R,2/3)}\\
 &T_{int}^4=\frac{3\tau L_{int}}{8\pi\sigma R^2},\ T^4=(1-A)T_{neb}^4+T_{int}^4
 \end{align}
 
+\begin{workout}[Detached phase accretion rate]
+Characterization of exoplanets from their formation pg 8
+\end{workout}
+
+\begin{workout}[Wien displacement]
+$\lambda_{max}T\approx \SI{3e-3}{\meter\kelvin}$
+\end{workout}
+
+\begin{workout}[Critical core mass]
+From toward deterministic
+\begin{equation}
+M_{c,crit}\approx10(\frac{\dot{M}_c}{\num{e-6}\mearth{}\si{\per\year}})\expy{0.2-0.3}(\frac{\kappa}{\SI{1}{\square\cm\per\gram}})\expy{0.2-0.3}\mearth{}
+\end{equation}•
+\end{workout}
 
 \begin{workout}[gas accretion refs]
 Lissauer 09: Models of Jupiter’s growth incorporating thermal and hydrodynamic constraints
@@ -536,12 +548,19 @@ Ormel 15/ Cimerman 17
 \end{workout}
 
 \section{Fase isolata}
+fonti energia
 
+
+\begin{workout}[Fase isolata: fonti energia]
 fonti energia: tidal heating radiogeninc heat, star flux
+\end{workout}
+
 
 {\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Migrazione (e N-body interactions??)}
+\chapter{Interazioni pianeta-disco: migrazione planetaria}
 }
+
+Considero in maniera schematica lo scambio di momento angolare tra pianeta e disco:
 
 \begin{workout}[Migration refs]
 Terquem papaloizou (planet formation and migration) pg 43
@@ -551,15 +570,28 @@ Planet-disk interaction and orbital evolution (kley Nelson 2012),
 Baruteau 2016)
 crida06: On width and shape of gaps in PPD,crida phd, 
 Trilling 98:Orbital evolution and migration of giant planet: modellingextrasolar planets (Angular momentum injection rate, torque from spinning star, Impact of planet migration models on planetary populations)
-Dittkrist 14: Impact of planetsmigration models n planetarypopulation (Migration II inward/outward: non equilibrium gas flow, problem of isothermal disk migration timescale: migration I regime, Fig 7,
+Dittkrist 14: Impact of planetsmigration models n planetarypopulation (Migration II inward/outward: non equilibrium gas flow, problem of isothermal disk migration timescale: migration I regime, Fig 7;
+Refs: On the tidal interaction between protoplanets and the primordial solar nebula. II - Self-consistent nonlinear interaction (1986)
+Non-linear. For larger planet mass, when disk density distro is changed cons., the linear hteory is no more adeguate. If angular momentum isdeposited locally (viscous dissipation/shock waves)  the disk receeds from planets
+Ida-lin04: angular momentum trasport in viscous accretion disk without planets that in type II migration act as relays that transmit angular momentum at that rateacross their gap via tidal torques.
+Alibert05: the planet follow the gas except when massive than local disk.
+Duffell14, Durmann kley 15: questioning that migration II follows viscous evolution of the disk but due to torque??
+Planet-disk interactions: exchange of angular momentum. Low mass planet-linear theory.(''Planet-disk interactions and orbital evolution'')
+Low mass planets: Lindblad and corotation torque. Rapid migration of intermediate mass planets. Gap forming massive planets: slower migration determined by viscous evolution of disk. (Role of disk self-gravity and MHD turbulence as function of planet mass).
 \end{workout}
 
-\begin{workout}[planet locked in resonances]
-as solar system satellites: goldreich 65.
-N-body, resonanceand migration: The dynamics of two massive planets on inclined orbits (Veras Armitage 04)
-orbital migration occurring at different rates due to disk parameters can produces convergent migration and locking into mean motion resonances.
-kley 04
-aligned absidal line: papaloizou 03
+\begin{workout}[migration and disk parametrizzation]
+Toward deterministic model of planetary formation IV: effects of type-I migration (highly optically thin disk)
+\end{workout}
+
+\begin{workout}[disk torque]
+Orbital evolution and migration of giant planets: disk evolution and torque;
+\end{workout}
+
+\begin{workout}[Horseshoe drag refs]
+Horseshoe drag in three-dimensional globally isothermal disks (masset15)
+mordasini dittkrist14 (width of horseshoe region)
+On horseshoe drag of a low-mass planet. I-migration in isothermal disks: relaxation of globally isothermal HP 6 (pg 29);Inroduction and first torque expression (pg1-14); 
 \end{workout}
 
 \begin{workout}[type I: migration is too fast]
@@ -571,11 +603,10 @@ opaciy transitionmenou goodman 04
 instabilities in inviscid gap enge: koller 03
 \end{workout}
 
-\begin{workout}[Width horseshoe region]
-mordasini dittkrist14
-\end{workout}
-
-\section{Classificazione migrazione: risposta del disco e velocit\'a}
+\begin{workout}[planetary migration usefull formulae]
+\begin{align}
+\TDy{t}{j}=1/2\sqrt{GM_*/r}\TDy{t}{r}
+\end{align}
 
 Il disco di accrescimento esercita momento torcente sul pianeta che produce un trasferimento di momento angolare dal pianeta al disco $\Lambda(a,R)$
 \begin{align*}
@@ -583,6 +614,7 @@ Il disco di accrescimento esercita momento torcente sul pianeta che produce un t
 &\TDy{t}{a}=2a_p\frac{\Gamma_t}{J}=-(\frac{a}{GM_*})(\frac{4\pi}{M_P})\int_{r_{int}}^{r_{out}}r\Lambda\Sigma\,dr
 \end{align*}
 $r_{int}, r_{out}$ inner/outer disk radius (rif to disk ar planet)
+\end{workout}
 
 
 \begin{workout}[M14:type I]
@@ -611,21 +643,6 @@ Il momento pu\'o essere calcolato facendo una analisi lineare delle onde eccitat
 \end{align}
 \end{workout}
 
-\begin{workout}[type III and coorbital torque]
-COnsidero un pianeta migrante: quando il gap \'e parziale materiale percorre l'orbita ed esercita momento t, positive/negative feedback.
-Per un pianeta che migRA VERSO L'ESTERNO SI HA
-$2\pi\Sigma R\TDy{t}{R}$ \'e il flusso di massa che impartisce momento per unit\'a di massa al protopianeta quando la materia attraversa la regione di corotazione di spessore w, $w\omega/2$: con $w=2H$ si ha
-\begin{align}
-F_{cr}=2\pi R\Sigma\omega^2 H^2\frac{1}{c_s}\TDy{t}{R}=1/2M_d\omega\TDy{t}{R}\\
-F_{crb}=-1/2M_b\omega\TDy{t}{R}
-\end{align}
-dove la seconda \'e inerzia (??) massa legata al pianeta.
-quazione del moto:
-\begin{equation}
-1/2M_pa\omega\TDy{t}{a}=1/2(M_d-M_b)a\omega\TDy{t}{a}+T_{ext}
-\end{equation}
-\end{workout}
-
 \begin{workout}[M14:type II and outward migration]
 adiabatic and local isothermal disk: pardekooper 10/11
 Type II planet-dominated for mass $100\mearth{}$.
@@ -636,25 +653,44 @@ Veras armitage 04 (exoplanets with $a>20au$): outward migration seldom important
 
 \section{Migrazione tipo I: regime lineare}
 
-\begin{workout}[Lindblad/corotation torque: linear]
-Unperturbed disk: axisymmetric, keplerian rotation $\Omega(r)=\sqrt{GM_*/r^3}$, vanishing radial velocity. Planet potential, periodic in $\phi$, $\phi_p=\Omega_pt$:
-\begin{align*}
+Prendo un disco kepleriano ed espando il potenziale generato dal pianeta, periodico in $\phi_p=\Omega_pt$:
+\begin{align}
 &\psi_p(r,\phi,t)=-\frac{Gm_p}{|\vec{r}_p(t)-\vec{r}|}=\sum_{m=0}^{\infty}\psi_m(r)\cos{m[\phi-\phi_p(t)]}
-\end{align*}
-Total torque excertes by disk on planet
-\begin{equation*}
-\Gamma_t=-\int_{disk}\Sigma(\vecp{r}{F})\,df=\int_{disk}\Sigma(\vecp{r}\wedge\nabla\psi_p)\,df=\int_{disk}\Sigma\PDy{\phi}{\psi_p}\,df
-\end{equation*}
-$\Sigma$ surface density,  $\vec{F}$ specific force, $df$ surface element.
+\end{align}
+Il momento torcente esercitato dal disco sul pianeta \'e
+\begin{equation}
+\Gamma_t=-\int_{disk}\Sigma(\vecp{r}{F})\,df=\int_{disk}\Sigma(\vec{r}\wedge\nabla\psi_p)\,df=\int_{disk}\Sigma\PDy{\phi}{\psi_p}\,df
+\end{equation}
+$\Sigma$ densit\'a superficiale,  $\vec{F}$ forza per unit\'a di massa, $df$ elemento di superficie.
+
+La regione di corotazione \'e definita da $\Omega(r)-\Omega_p=0$ cio\'e il potenziale del pianeta ruota alla stessa frequenza del fluido
+
 Whenever frequency of individual potential component as seen by fluid particle in disk $\omega=m(\Omega(r)-\Omega_p)$, matches a natural  oscillation frequency of the disk we have resonant condition: torques are calculated at resonant locations.
-Lindblad (due to m-component of planet potential) and corotation torques:
+
+Dove la frequenza della componente m-esima del potenziale \'e uguale alla frequenza epiciclica (disco kepleriano: $\kappa_0=\Omega$) si ha una risonanza di Lindblad $\pm\Omega=m(\Omega(r)-\Omega_p)$, il raggio a cui si hanno \'e
+\begin{equation}
+r_L=(\frac{m}{m\pm1})\expy{2/3}a
+\end{equation}
+
+Integrando l'equazione
+\begin{equation}
+
+\end{equation}
+si ottiene
 \begin{align*}
 &\Gamma_m^L=\left.\sign{(\Omega-\Omega_p)}\frac{\pi^2\Sigma}{3\Omega\Omega_p}(r\TDy{r}{\psi_m}+\frac{2m^2(\Omega-\Omega_p)}{\Omega}\psi_m)^2\right|_{r=r_L}\\
 &\Gamma_m^C=\left.\frac{m\pi^2}{2}\frac{\psi_m}{r\TDy{r}{\Omega}}\TDof{r}(\frac{\Sigma}{B})\right|_{r=r_C}
 \end{align*}
 Differnetial Lindblad torque
 $B=\frac{\kappa^2}{4\Omega}$ is the second Oort constant and represents z component of flow vorticity $\nabla\wedge\vec{v}|_z$
+
+\begin{workout}[M14:type II and outward migration]
+Freuenza epiciclica
+\begin{equation}
+\kappa^2=4\Omega^2+r\TDy{r}{\Omega^2}
+\end{equation}
 \end{workout}
+
 
 \begin{workout}[Migration I in isothermal disk: pressure. Adiabatic, irradiated?]
 Low mass planet in isothermal disk: linear analysis of perturbed flow.
@@ -718,18 +754,23 @@ t_{II}(yr)=\frac{1}{3\alpha}(\frac{a}{H})^2\Omega\expy{-1}=0.05/\alpha(a/H)^2(a/
 per $H/a\approx0.1$, $\alpha=\numrange{e-3}{e-2}$ a $a=1-5 au$ si ha $t_{}=10^3-10^4yr$.
 \end{workout}
 
-Refs: On the tidal interaction between protoplanets and the primordial solar nebula. II - Self-consistent nonlinear interaction (1986)
-Non-linear. For larger planet mass, when disk density distro is changed cons., the linear hteory is no more adeguate. If angular momentum isdeposited locally (viscous dissipation/shock waves)  the disk receeds from planets
-Ida-lin04: angular momentum trasport in viscous accretion disk without planets that in type II migration act as relays that transmit angular momentum at that rateacross their gap via tidal torques.
-Alibert05: the planet follow the gas except when massive than local disk.
-Duffell14, Durmann kley 15: questioning that migration II follows viscous evolution of the disk but due to torque??
-
-
-Planet-disk interactions: exchange of angular momentum. Low mass planet-linear theory.(''Planet-disk interactions and orbital evolution'')
-Low mass planets: Lindblad and corotation torque. Rapid migration of intermediate mass planets. Gap forming massive planets: slower migration determined by viscous evolution of disk. (Role of disk self-gravity and MHD turbulence as function of planet mass).
-
-
 \section{Migrazione III:}
+
+\begin{workout}[type III and coorbital torque]
+COnsidero un pianeta migrante: quando il gap \'e parziale materiale percorre l'orbita ed esercita momento t, positive/negative feedback.
+Per un pianeta che migRA VERSO L'ESTERNO SI HA
+$2\pi\Sigma R\TDy{t}{R}$ \'e il flusso di massa che impartisce momento per unit\'a di massa al protopianeta quando la materia attraversa la regione di corotazione di spessore w, $w\omega/2$: con $w=2H$ si ha
+\begin{align}
+F_{cr}=2\pi R\Sigma\omega^2 H^2\frac{1}{c_s}\TDy{t}{R}=1/2M_d\omega\TDy{t}{R}\\
+F_{crb}=-1/2M_b\omega\TDy{t}{R}
+\end{align}
+dove la seconda \'e inerzia (??) massa legata al pianeta.
+quazione del moto:
+\begin{equation}
+1/2M_pa\omega\TDy{t}{a}=1/2(M_d-M_b)a\omega\TDy{t}{a}+T_{ext}
+\end{equation}
+\end{workout}
+
 Planet-disk interactions: exchange of angular momentum. Type III migration: planet of intermediate mass. (‘’Planet-disk interactions and orbital evolution’’).
 
 Flow-through corotation torque: $\Gamma_{flow}=2\pi\Sigma_s\dot{a}_p\Omega_pa_p^3x_s$.
@@ -738,13 +779,12 @@ Flow-through corotation torque: $\Gamma_{flow}=2\pi\Sigma_s\dot{a}_p\Omega_pa_p^
 &\dot{a}_p=\frac{2\Gamma^L}{\Omega_pa_p(m_p’-\delta m)}
 \end{align*}
 
-\section{Eccentricity and inclination evolution}
+\begin{workout}[Eccentricity and inclination evolution]
 Planet-disk interactions: normal, tangential, radial forces. eccentricity and inclination evolution. (‘’Planet-disk interactions and orbital evolution’’)
 Decomposition of planet’s potential: non-circular orbit
 \begin{align*}
 &\psi_p(r,\phi,t)=-\frac{Gm_p}{|\vec{r}_p(t)-\vec{r}|}=\sum_{m=0}^{\infty}\sum_{n=-m}^m\psi_{m,n}(r)\cos{m\phi+(n-m)\Omega_pt]}
 \end{align*}
-
 Eccentricity damping.
 For each m,n there are 3 resonant locations: external L resonance act to increase, corotation res. to damp (if unsaturted), and coorbital L res damp $e_p$. Linear analysis for low mass planets indicates rapid exponential damping of $e_p$:
 \begin{align*}
@@ -752,8 +792,18 @@ For each m,n there are 3 resonant locations: external L resonance act to increas
 &e_P>\frac{H}{r}: \TDy{t}{e_p}\propto-e_p\expy{-2}
 \end{align*}
 Risultati analoghi per inclinazione.	
+\end{workout}
 
 \section{Altre interazioni che producono migrazione}
+
+
+\begin{workout}[mass loss and conservation of angular momentum]
+Orbital evolution and migration of giant planets: mass loss and conservation of angular momentum.
+\end{workout}
+
+\begin{workout}[torque from spinning star]
+Orbital evolution and migration of giant planets: torque from spinning star
+\end{workout}
 
 \begin{workout}[planet overlflowing roche lobe migrate outward]
 trilling 98:n During mass flow planet moves outward to conserve angular momentum
@@ -763,6 +813,13 @@ trilling 98:n During mass flow planet moves outward to conserve angular momentum
 planet-planet scattering (rasio ford 96, kozai (nagasawa 08, tidal interactions with gas disk (goldreich tremaine 80, tanaka 02))
 \end{workout}
 
+\begin{workout}[planet locked in resonances]
+as solar system satellites: goldreich 65.
+N-body, resonanceand migration: The dynamics of two massive planets on inclined orbits (Veras Armitage 04)
+orbital migration occurring at different rates due to disk parameters can produces convergent migration and locking into mean motion resonances.
+kley 04
+aligned absidal line: papaloizou 03
+\end{workout}
 
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{N-body interactions inside proto disk}

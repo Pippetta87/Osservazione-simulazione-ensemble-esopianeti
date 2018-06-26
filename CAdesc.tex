@@ -693,20 +693,38 @@ con $q=M_p/M_*$, infine una stima del momento torcente differenziale delle rison
 \end{equation}
 per disco isotermo infinitamente sottile.
 
-\subsection{Momento torcente generato nella regione di corotazione.}
+\subsection{Momento torcente generato nella regione di corotazione}
 
-\begin{wrapfigure}[10]{lr}{0.\textwidth}
-\includegraphics[trim={0cm 0 0 0},clip, width=0.\textwidth]{newfig}\label{fig:newfig}
+
+
+\begin{wrapfigure}[10]{lr}{0.5\textwidth}
+\includegraphics[trim={0cm 0 0 0},clip, width=0.45\textwidth]{corotation}\label{fig:corotation}
 \caption{Da \cite{armitage2007lecture}.}
 \end{wrapfigure}
 
-La regione di corotazione \'e definita da $\Omega(r)-\Omega_p=0$ cio\'e il potenziale del pianeta ruota alla stessa frequenza del fluido.
+La regione di corotazione \'e definita da $\Omega(r)-\Omega_p=0$ cio\'e il potenziale del pianeta ruota alla stessa frequenza del fluido; utilizzando l'approssimazione impulsi nel regime di piccolo parametro d'impatto e bassa velocit\'a relativa si determina il valorelimite $x_s$ per cui se $x_s<b$ la particella di fluido compie un orbita a ferro di cavallo (\ref{fig:corotation}). 
+low mass $q<\num{e-4.5}$: $x_s\propto m_p^2$, for massive planets $q>\num{e-4}$: $x_s\propto R_H$.
+
+
+The torque excerted by all fluid elements is (Goldreich tremaine79, Ward 91,92)
+\begin{equation}
+T_C3/4x_s^4\Omega_p^2\Sigma\TDly{r}{\Sigma/B}
+\end{equation}
+old from ''disk-planet interactions''
 \begin{equation}
 \Gamma_m^C=\left.\frac{m\pi^2}{2}\frac{\psi_m}{r\TDy{r}{\Omega}}\TDof{r}(\frac{\Sigma}{B})\right|_{r=r_C}
 \end{equation}
 $B=\frac{\kappa^2}{4\Omega}$ \'e la seconda costante di Oort (rappresenta componente z della vorticit\'a $\nabla\wedge\vec{v}|_z$).
 infine il momento torcente totale \'e
 \begin{equation}T_I=\sum_{m}^{int}\Gamma_m^L+\sum_{m}^{out}\Gamma_m^L+\sum_{m}\Gamma_m^C\end{equation}
+
+Corotation torque saturation depends upon $\tau_{nlib}/\tau_{vis}$: over timescale long rel. to librration time angular momentum exchanged between planet-disk average to zero.
+
+\subsection{Corotation torque in accretion disk and migration 3 type}
+Viscosity desaturate,
+crida pg 39: 
+Sia $b_0=r-r_p$ la distanza dal pianeta di un elemento di fluido in congiunzione
+$\tau\approx2\pi/|x_s\TDy{r}{\Omega}|=4\pi r_p/(3x_s\Omega_p)$
 
 \subsection{Velocit\'a migrazione tipo I}
 
@@ -717,6 +735,7 @@ Utilizzando la stima di \cite{tanaka2002three} si trova il tempo caratteristico 
 \end{equation}
 da cui risulta pr disco protoplanetario con $\Sigma(r)=1500(r\SI{5}{\astronomicalunit})\expy{-3/2}\si{\kilo\gram\per\square\meter}$ a $T=\SI{130}{\kelvin}$ per pianeta di massa terrestre a \SI{5}{\astronomicalunit} un tempo di migrazione $\tau_I\approx\SI{8e5}{\year}$: molto minore del tempo di vita del disco.
 
+Il momento torcente
 \begin{workout}[M14:type II and outward migration]
 Freuenza epiciclica
 \begin{equation}

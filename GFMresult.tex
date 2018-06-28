@@ -1,5 +1,5 @@
 {\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Simulazione popolazioni planetarie}
+\chapter{Modelli di formazione globali e semplificazioni introdotte}
 }
 
 \begin{workout}[Ref PPS]
@@ -7,11 +7,31 @@ Towarddeterminist model of planetary formation iV: effectsof type I migration
 									: accumulation neare iceline
 									: dynamical intaraction and coagulation of multiple rocky embrios (isolation mass, semi-analytic vs n-body)
 									: eccentricity distribution of gas giant
-									
-Theoretical models of planetary system formation: mass vs. semi-major axis	(alibert carron 13)								
+Theoretical models of planetary system formation: mass vs. semi-major axis	(alibert carron 13)			Lecture 15 -planetary ...
+Modelling planetary system formation with N-body simulation (11)
+Global model of planet formation and evolution
+Planetary population synthesis
+planet population synthesis					
 \end{workout}
 
 \section{Modello disco di accrescimento e distribuzione condizioni iniziali}
+
+\begin{workout}[modello globale: evoluzione dal semplice al complesso]
+Global model of planets formation and evolution: more detailed submodels
+\end{workout}
+
+Il modello pi\'u semplice di disco di accrescimento usa distribuzione esponenziale per andamento densit\'a superficiale e temperature, assumendo disco otticamente sottile, e relazione $L_*\propto M_*^4$ di sequenza principale. Le lacune di questo modello sono che i dischi sono otticamente spessi con transizioni nell'opacit\'a, non \'e presente evoluzione temporale consistente.
+
+Modelli pi\'u recenti  risolvono l'equazione per l'evoluzione viscosa:
+\begin{align}
+&\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_p(r)\label{eq:diskaccrphev-m18}\\
+&\dot{\Sigma}_w(a)=\left\{\begin{array}{c}0\\\frac{\dot{M}_w}{2\pi(a_{max}-R_g)a}\\\end{array}\right.
+\end{align}
+con $\dot{Sigma}_w$ contributo della foto-evaporazione,  $\dot{Sigma}_p$ contributo di accrescimento di gas dei pianeti e con densit\'a superficiale iniziale:
+\begin{equation}
+\Sigma(a,t=0)=\Sigma_0(\frac{r}{1AU})\expy{p_g}\Exp{[-(\frac{r}{R_o})\expy{2+p_g}]}(1-\sqrt{\frac{r}{R_i}})
+\end{equation}
+in i parametri possono essere scelti casualmente secondo una distribuzione di probabilit\'a ricavata dalle osservazioni.
 
 \begin{workout}[viscosit\'a disco]
 Nella popolazione planetaria simulata $\alpha$ \'e fissato sulla base delle osservazioni  ed \'e omogeneo e costante.
@@ -20,12 +40,10 @@ Nella popolazione planetaria simulata $\alpha$ \'e fissato sulla base delle osse
 \begin{workout}[Modello di disco di accrescimento - (Mordasini18: 4) - Introduzione descrizione fenomeni grazie a PPS]
 Refs: garaud lin 07, chiang goldreich 97
 Un modello di disco  di accrescimento usato nelle simulazioni considera l'evoluzione della densit\'a superficiale tramite l'equazione \eqref{eq:diskaccrphev-m18}
-
 \begin{align}
 &\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_p(r)\label{eq:diskaccrphev-m18}\\
 &\dot{\Sigma}_w(a)=\left\{\begin{array}{c}0\\\frac{\dot{M}_w}{2\pi(a_{max}-R_g)a}\\\end{array}\right.
 \end{align}
-
 Densit\'a superficiale iniziale:
 \begin{equation}
 \Sigma(a,t=0)=\Sigma_0(\frac{r}{1AU})\expy{p_g}\Exp{[-(\frac{r}{R_o})\expy{2+p_g}]}(1-\sqrt{\frac{r}{R_i}})
@@ -35,10 +53,12 @@ Densit\'a superficiale iniziale:
 
 
 \section{Distribuzione iniziale planetesimi}
+
 Assumendo conversione completa di polvere in planetesimi, la densit\'a superficiale di planetesimi \'e
 \begin{equation}
 \Sigma_p(t=0,r)=f_{dg}\eta_{ice}\Sigma_g(t=0,r)
 \end{equation}
+con $f_{dg}$ rapporto gas/polvere (circa metallicit\'a) \'e una parametro casuale con distribuzione che riflette distribuzione di metallicit\'a stellari, $\eta_{ice}$ tiene conto della discontinuit\'a nella distribuzione superficiale di solidi all'iceline.
 
 \begin{workout}[Initial planetesimal distro]
 Dust converted early everywhere fully-efficient (mordasini18: pg 12),Thommes pg8)
@@ -124,8 +144,13 @@ Considero o risulati di alcuni modelli di formazione planetari (\cite{mordasini2
 \end{figure}
 
 {\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Raffronto popolazione osservata vs sintetiche}
+\chapter{Confronto semi-quantitativo tra caratteristiche popolazioni sintetiche e osservate}
 }
+
+{\let\clearpage\relax\let\cleardoublepage\relax
+\chapter{Raffinamento dei modelli}
+}
+
 
 \begin{workout}[Effects of saturation, cooling and irradiation.]
 Impact of planet migration model on planetary populations: effects of saturation, cooling and stellar irradiation (??)

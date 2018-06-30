@@ -107,7 +107,7 @@ Trapped evolution model: Hasegawa pudritz 11, Cridland 16
 
 \section{Caratteristiche iniziali degli embioni planetarii e accrescimento}
 
-La massa iniziale dei core deve essere molto minore della massa di isolamento: si usano core di frazioni di massa terrestre; la distanza dalla stella varia seguendo distribuzione di probabilit\'a $p(a)$ inversamente proporzionale alla distanza orbitale $p(a)\,da\propto\frac{da}{\Delta}\propto\,dlog{a}$. Il momento di comparsa \'e determinato dal rate di accrescimento dei planetesimi \eqref{eq:Gaccretionpl}.
+La massa iniziale dei core deve essere molto minore della massa di isolamento: si usano core di frazioni di massa terrestre; la distanza dalla stella varia seguendo distribuzione di probabilit\'a $p(a)$ inversamente proporzionale alla distanza orbitale $p(a)\,da\propto\frac{da}{\Delta}\propto\,d\log{a}$. Il momento di comparsa \'e determinato dal rate di accrescimento dei planetesimi \eqref{eq:Gaccretionpl}.
 
 La massa dei core varia per l'accrescimento dei planetesimi secondo
 \begin{align}
@@ -159,37 +159,60 @@ disk dominated
 planet dominates: $\TDy{t}{a}=-\frac{3\nu}{a}\frac{\Sigma(a,t)a^2}{M_p}$
 \end{workout}
 
+\begin{workout}[Formation track and planet diversity]
+
+\section{popolazioni sintetiche}
+%Considero i risulati di alcuni modelli di formazione planetari (\cite{mordasini2018planetary}). 
+La soluzione delle equazioni che descrivono l'accrescimento di massa dei protopianeti e la loro evoluzione orbitale interata su numerose combinazioni delle condizioni iniziali produce una popolazione di sistemi planetari appena formati dal disco-protoplanetario.
+
+\begin{itemize}
+\item Numerosi sistemi con piccola massa
+\item Sistemi pianeti di piccola massa e giganti: sweet spot per pianeti giganti \'e all'esterno dell'ice-line.
+\item Un pianeta gigante superstite di scattering trapianeti gignti vicini. Sistemi rari formati in dischi massicci con alta metallicit\'a
+\end{itemize}•
+
+
+\end{workout}
 
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Confronto semi-quantitativo tra caratteristiche popolazioni sintetiche e osservate}
 }
 
+\section{Distribuzione popolazione sintetica diagramma $(a-M)$}
 
-\section{Popolazione sintetiche}
+\begin{workout}[Diagramma $(a-M)$]
 
-Considero o risulati di alcuni modelli di formazione planetari (\cite{mordasini2018planetary}). 
-
-\begin{figure}
-\includegraphics[width=0.9\textwidth,keepaspectratio]{track1}
-\caption{Da \cite{mordasini2018planetary}. Formazione di un sistema planetario nel diagramma $a-M$: alla scomparsa del disco protoplanetario si hanno 2 pianeti giganti, un nettuniano caldo e 3 pianeti terrestri. La scala di colore indica la composizione $\frac{M_e}{M_c}$.}\label{fig:track1}
-\end{figure}
-
-\begin{figure}
+\begin{figure}[!ht]
 \includegraphics[width=0.9\textwidth,keepaspectratio]{ma-synth}
 \caption{Da \cite{mordasini2018planetary}. Simulazione popolazione planetaria di 504 sistemi Punti rossi: pianeti giganti con $M_e/M_c>1$; blu hanno accresciuto core oltre la iceline, verdi all'interno dell'iceline .}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=0.9\textwidth,keepaspectratio]{MaLR-freq-synth}
+La distribuzione della popolazione planetaria \'e mostrata in \ref{fig:MaLR-freq-synth}: la posizione finale di un pianeta \'e terminata principalmente dalla posizione iniziale e dai tempi caratteristici di accrescimento e migrazione; considerando inoltre l'interazione gravitazionale tra i pianeti si hanno effetti delle risonanze e eccitazione eccentricit\'a.
+
+\begin{figure}[!ht]
+\includegraphics[width=0.9\textwidth,keepaspectratio]{track1}
+\caption{Da \cite{mordasini2018planetary}. Formazione di un sistema planetario nel diagramma $a-M$: alla scomparsa del disco protoplanetario si hanno 2 pianeti giganti, un nettuniano caldo e 3 pianeti terrestri. La scala di colore indica la composizione $\frac{M_e}{M_c}$.}\label{fig:track1}
+\end{figure}
+
+Differenze con osservazioni
+
+Nettuno/Saturno in posizioni poco affollate
+
+Popolazione pianeti in origine nettuniani (frazione giaccio nel core $50\%$) che migrano all'interno accumulando materiale roccioso (frazione ghiaccio nel core $10-20\%$): saturazione momento di corotazione positivo.
+
+\end{workout}
+
+\begin{figure}[!ht]
+\includegraphics[width=0.9\textwidth,keepaspectratio]{MaLR-freq-synth}\label{fig:MaLR-freq-synth}
 \caption{Da \cite{mordasini2018planetary}. }
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!ht]
 \includegraphics[width=0.9\textwidth,keepaspectratio]{giant-Zsynth}
 \caption{Da \cite{mordasini2018planetary}. }
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!ht]
 \includegraphics[width=0.9\textwidth,keepaspectratio]{envelopecoresynth}
 \caption{Da \cite{mordasini2018planetary}. }
 \end{figure}

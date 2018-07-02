@@ -255,19 +255,26 @@ smaller planets tend to have lower e (hogg 10 raccomanded modelling e distro on 
 
 \section{Popolazione esopianeti rilevati tramite transito}
 
-\begin{workout}[radius distro]
-Local maximum at $1\mjupiter{}$, flat distro in log(r) between $4-10\mearth{}$ below strong increase, at $1.7\mearth{}$ local minimum separating super-earth from sub-neptune
-\end{workout}
+Le osservabili sono la differenza di luminosit\'a durante il transito, la durata totale e di massima occultazione del transito, e il periodo: da questi \'e possibile ricavare $R_p$, a, i, $R_*$, e facendo uso della relazione massa raggio appropriata per la fase evolutiva della stella $M_*$
 
+La probabilit\'a che l'orbita di un pianeta sia allineata con l'osservatore in maniera da avere un transito, per orbite circolari ed eccentriche, \'e:
+\begin{align*}
+&p=\frac{R_*}{a}=0.005(\frac{R_*}{\rsun{}})(\frac{a}{1AU})\expy{-1}\\
+&p=(\frac{R_*\pm R_p}{a})(\frac{1}{1-e^2})
+\end{align*}
+La maggiore probabilit\'a di osservazione per orbite eccentriche \'e compensata approssimativamente dalla minore durata del transito.
 
-\begin{workout}[planet model: relazione massa-raggio]
-
+\begin{workout}[transiti: dectability and selection effects]
+Considerando un numero totale di osservazioni $N_o$ durante il transito si hanno $N_t\approx N_o\frac{R_*}{\pi a}$; il rapport segnale rumore \'e $S/N=\sqrt{N_t}\frac{\delta}{\sigma}$, $\sigma$ precisione fotometrica, $\sigma\propto\frac{1}{\sqrt{N_{ph}}}\propto d$. Per fissato S/N e tipo stellare il numero di pianeti rivelati varia come
+\begin{equation}
+V_p*P\propto d^3*\frac{R_*}{a}\propto R_p^6/P\expy{\frac{5}{3}}
+\end{equation}
 \end{workout}
 
 \begin{figure}[!ht]
-\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}
+%\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}\label{freqvsRpl50d}\caption{Da \cite{howard2012planet}}
+\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}\label{Rfreq}\caption{Da \cite{exoplanet.eu}}
 \end{figure}
-howard2012planet
 
 \begin{workout}[transit distro observed refs]
 Refs:Mthods of detecting exoplanets (radius distro: pg 136)
@@ -277,22 +284,6 @@ fressin 13:
 petigure 13: plateau PLANET POPULATION BELOW TWICE EARTH SIZE
 bathala 13
 exoplanet.eu
-\end{workout}
-
-Le osservabili sono la differenza di luminosit\'a durante il transito, la durata totale e di massima occultazione del transito, e il periodo: da questi \'e possibile ricavare $R_p$, a, i, $R_*$, e facendo uso della relazione massa raggio appropriata per la fase evolutiva della stella $M_*$
-
-La probabilit\'a che l'orbita di un pianeta sia allineata con l'osservatore in maniera da avere un transito, per orbite circolari ed eccentriche, \'e:
-\begin{align*}
-&p=\frac{R_*}{a}=0.005(\frac{R_*}{\rsun{}})(\frac{a}{1AU})\expy{-1}\\
-&p=(\frac{R_*\pm R_p}{a})(\frac{1}{1-e^2})
-\end{align*}
-La maggiore probabilit\'a \'e compensata approssimativamente dalla minore durata del transito.
-
-\begin{workout}[transiti: dectability and selection effects]
-Considerando un numero totale di osservazioni $N_o$ durante il transito si hanno $N_t\approx N_o\frac{R_*}{\pi a}$; il rapport segnale rumore \'e $S/N=\sqrt{N_t}\frac{\delta}{\sigma}$, $\sigma$ precisione fotometrica, $\sigma\propto\frac{1}{\sqrt{N_{ph}}}\propto d$. Per fissato S/N e tipo stellare il numero di pianeti rivelati varia come
-\begin{equation}
-V_p*P\propto d^3*\frac{R_*}{a}\propto R_p^6/P\expy{\frac{5}{3}}
-\end{equation}
 \end{workout}
 
 \begin{workout}[radius distro]

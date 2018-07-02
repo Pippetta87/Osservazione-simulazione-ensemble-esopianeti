@@ -9,7 +9,7 @@ L'et\'a del sole \'e definita come tempo in sequenza principale; tecniche eliosi
 La Terra si \'e formata completamente circa \SI{100}{\mega\year} dopo i meteoriti.
 
 \begin{figure}[!ht]
-\includegraphics[trim={0cm 2cm 0 0cm},clip, width=0.9\textwidth]{Snebuladensity}\label{fig:Snebuladensity}\caption{Andamento minimum mass solar nebula (MMSN). Da \cite{weidenschilling1977distribution}.}
+\includegraphics[trim={0cm 5cm 0 0cm},clip, width=0.9\textwidth]{Snebuladensity}\label{fig:Snebuladensity}\caption{Andamento minimum mass solar nebula (MMSN). Da \cite{weidenschilling1977distribution}.}
 \end{figure}
 
 Per stimare la massa del disco protoplanetario \cite{weidenschilling1977distribution} ha considerato la massa presente nei pianeti e nella fascia asteroidale arricchita di H/He per avere composizione solare: distribuendo questa massa in un anello di spessore proporzionale al raggio di Hill e centrato sulle orbite si ha l'andamento della densit\'a superficiale mostrato in \ref{fig:Snebuladensity}, $\sigma\propto r\expy{-3/2}$.
@@ -88,7 +88,7 @@ pg 256: interior and atmosphere, 293 solar system, 143 properties of transit
 
 
 \begin{workout}[Noble gas enrichment]
-FORMATION OF GIANT PLANETS – AN ATTEMPT IN MATCHING OBSERVATIONAL CONSTRAINTS
+FORMATION OF GIANT PLANETS ? AN ATTEMPT IN MATCHING OBSERVATIONAL CONSTRAINTS
 \end{workout}
 
 \begin{workout}[Degree of super-adiabaticity: Struttura interna (assimption for pre-runaway accretion)]
@@ -133,7 +133,7 @@ Effects of inhomogenous infall on obliquity (tremaine 91, bate 10)
 \chapter{Caratteristiche della popolazione di esopianeti}
 }
 
-\begin{wrapfigure}[10]{l}{0.55\textwidth}
+\begin{wrapfigure}[5]{l}{0.55\textwidth}
 \includegraphics[trim={0cm 0 0 0},clip, width=0.5\textwidth]{obsMa}\label{fig:Maplot}
 \caption{Diagramma massa-distanza degli esopianeti in ''The extrasolar planet encyclopedia''. Rosso, celeste, magenta e verde sono pianeti rivelati tramite RV, T, osservazione diretta e microlensing. Da \cite{mordasini2018}.}
 \end{wrapfigure}
@@ -157,7 +157,6 @@ Se l'asse z \'e lungo la linea di vista la posizione della stella \'e $z=r(t)\si
 &K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/2}}
 \end{align}
 dove $K$ \'e la semi-ampiezza.
-
 Per probabilit\'a di rivelamento del $50\%$ la minima massa planetaria \'e
 \begin{equation}
 M_{p,min}\approx4\mearth{}(\frac{N}{20})\expy{-1/2}(\frac{\sigma}{\SI{1}{\meter\per\second}})(\frac{P}{\SI{1}{\day}})\expy{1/3}(\frac{M_*}{\msun{}})\expy{2/3}
@@ -166,24 +165,36 @@ dove $\sigma$ tiene conto errori strumentali e rumore stellare.
 
 Per sistemi multipli consideriamo la sovrapposizione lineare di $n_p$ termini \eqref{eq:vrsignal}: viene sottratto il segnale Kepleriano dominante fino a che resta solo rumore.
 
+\begin{wrapfigure}[5]{l}{0.35\textwidth}
+\includegraphics[trim={0cm 4cm 0 0},clip, width=0.34\textwidth]{freqvsM}
+\caption{Da \cite{mayor2011harps}.}\label{fig:Mdistro}
+\end{wrapfigure}
+
+La distribuzione di massa (\ref{fig:Mdistro}) mostra un'abbondante popolazione di pianeti di massa piccola e una rapida diminuzione attorno a $10\mearth{}$; la distribuzione dei periodi mostra aumento dei pianeti giganti ($M>30\mearth{}$) a maggiore periodo orbitale e concentrazione pianeti piccola massa a $P=10-100\si{\day}$.
+\vspace{5cm}
+\begin{figure}[!ht]
+\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 2cm 0 0},clip, width=0.98\textwidth]{freqvsPgiant}\caption{Da \cite{mayor2011harps}.}\label{fig:freqvsPgiant} \end{subfigure}
+~
+\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 2cm 0 0},clip,width=0.98\textwidth]{freqvsPlowM}\label{fig:freqvsPlowM} \caption{Da \cite{mayor2011harps}.}
+\end{subfigure}
+\end{figure}
+
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.3\textwidth}
-\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{PMfreq-e23}
+\includegraphics[trim={0cm 8cm 0 0},clip, width=0.9\textwidth]{PMfreq-e23}
 \caption{Da \cite{mayor2011harps}.}\label{fig:PMfreq-e23}
 \end{subfigure}
 ~
 \begin{subfigure}[b]{0.3\textwidth}
-\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{PMfreq-e12}\label{fig:PMfreq-e12}
+\includegraphics[trim={0cm 8cm 0 0},clip, width=0.9\textwidth]{PMfreq-e12}\label{fig:PMfreq-e12}
 \caption{Da \cite{mayor2011harps}}
 \end{subfigure}
 ~
 \begin{subfigure}[b]{0.3\textwidth}
-\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{PMfreq-short}\label{fig:PMfreq-short}
-\caption{Diagramma massa-periodo: frazione di stelle che ospitano pianeta con caratteristiche nella regione evidenziata. Da sinistra a destra: $P<10\si{\year}$ e $M>50\mearth{}$, $P<1\si{\year}$ e $M>3-100\mearth{}$, $P<50\si{\day}$ e $M=1-3/3-10/10-30/30-100/100-300/300-1000$. Da \cite{mayor2011harps}}
+\includegraphics[trim={0cm 8cm 0 0},clip, width=0.9\textwidth]{PMfreq-short}\label{fig:PMfreq-short}
 \end{subfigure}
+\caption{Diagramma massa-periodo: frazione di stelle che ospitano pianeta con caratteristiche nella regione evidenziata. Da sinistra a destra: $P<10\si{\year}$ e $M>50\mearth{}$, $P<1\si{\year}$ e $M>3-100\mearth{}$, $P<50\si{\day}$ e $M=1-3/3-10/10-30/30-100/100-300/300-1000$. Da \cite{mayor2011harps}}
 \end{figure}
-
-La distribuzione di massa (\ref{fig:Mdistro}) mostra un'abbondante popolazione di pianeti di massa piccola e una rapida diminuzione attorno a $10\mearth{}$; la distribuzione dei periodi mostra aumento dei pianeti giganti ($M>30\mearth{}$) a maggiore periodo orbitale e concentrazione pianeti piccola massa a $P=10-100\si{\day}$.
 
 Una comprensione pi\'u ampia si ha studiando la distribuzione dei pianeti nel diagramma massa-periodo (M-P): elenco alcune caratteristiche della distribuzione dei pianeti osservati (da \cite{mayor2011harps}).
 \begin{itemize}
@@ -201,25 +212,10 @@ Perrymann pg 34 fig 2.25 d
 fig 2.6,fig 2.18
 \end{workout}
 
-\begin{figure}[!ht]
-\begin{subfigure}[b]{0.47\textwidth} \centering \includegraphics[trim={0cm 0 0 0},clip, width=0.\textwidth]{freqvsPgiant}\caption{Da \cite{ref}.}\label{fig:figref} \end{subfigure}
-~
-\begin{subfigure}[b]{0.\textwidth} \centering \includegraphics[trim={0cm 0 0 0},clip,width=\textwidth]{freqvsPlowM}\label{fig:figlabel} \caption{Da \cite{ref}.}
-\end{subfigure}
-\end{figure} 
-
-
-\begin{figure}[!ht]
-\begin{subfigure}[b]{0.47\textwidth}
-\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{freqvsM}
-\caption{Da \cite{mayor2011harps}.}\label{fig:Mdistro}
-\end{subfigure}
-~
-\begin{subfigure}[b]{0.47\textwidth}
-\includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{PfreqvsFeH}\label{fig:freqZstar}
+\begin{wrapfigure}[5]{l}{0.35\textwidth}
+\includegraphics[trim={0cm 2cm 0 0},clip, width=0.34\textwidth]{PfreqvsFeH}\label{fig:freqZstar}
 \caption{Da \cite{mayor2011harps}}
-\end{subfigure}
-\end{figure}
+\end{wrapfigure}
 
 \begin{workout}[multplanet system: mean motion resonances, orbital spacing,...]
 dynamical classification (barnes 08): tidal dominated if ($a<0.1$), resonant dom. if one resonant argument librates, secular otherwise.
@@ -232,6 +228,7 @@ wright09: ten multiplanet sysytem and systematic
 Winn, Fabricky 15
 fig 2.30 pg 39 Perrymann
 (ford rasio 08: dynamical outcomes of PP scattering)
+
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.47\textwidth}
 \centering
@@ -254,6 +251,7 @@ planet around metal rich star have higher e (dawson, murray-clay 13)
 smaller planets tend to have lower e (hogg 10 raccomanded modelling e distro on basis of Bayesian analysis)
 \end{workout}
 
+\clearpage
 
 \section{Popolazione esopianeti rilevati tramite transito}
 
@@ -290,12 +288,24 @@ La probabilit\'a che l'orbita di un pianeta sia allineata con l'osservatore in m
 \end{align*}
 La maggiore probabilit\'a \'e compensata approssimativamente dalla minore durata del transito.
 
-\begin{workout}[Radial velocity: dectability and selection effects]
+\begin{workout}[transiti: dectability and selection effects]
 Considerando un numero totale di osservazioni $N_o$ durante il transito si hanno $N_t\approx N_o\frac{R_*}{\pi a}$; il rapport segnale rumore \'e $S/N=\sqrt{N_t}\frac{\delta}{\sigma}$, $\sigma$ precisione fotometrica, $\sigma\propto\frac{1}{\sqrt{N_{ph}}}\propto d$. Per fissato S/N e tipo stellare il numero di pianeti rivelati varia come
 \begin{equation}
 V_p*P\propto d^3*\frac{R_*}{a}\propto R_p^6/P\expy{\frac{5}{3}}
 \end{equation}
 \end{workout}
+
+\begin{workout}[radius distro]
+Local maximum at $1\mjupiter{}$, flat distro in log(r) between $4-10\mearth{}$ below strong increase, at $1.7\mearth{}$ local minimum separating super-earth from sub-neptune
+\end{workout}
+
+\begin{workout}[planet model: relazione massa-raggio]
+
+\end{workout}
+
+\begin{figure}[!ht]
+\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}\label{fig:freqvsRpl50d}\caption{Da \cite{}.}
+\end{figure}
 
 \begin{workout}[KEPLER MULTI-PLANET SYSTEM]
 THE CALIFORNIA-KEPLER SURVEY. V. PEAS IN A POD: PLANETS IN A KEPLER MULTI-PLANET SYSTEM ARE SIMILAR IN SIZE AND REGULARLY SPACED
@@ -322,12 +332,10 @@ Fig 6.33/34/35: mass radius realtion
 
 pg 144: theoretical model - La posizione di un pianeta nel diagramma M-R fornisce indicazione della composizione
 fig 6.35
-
-\begin{wrapfigure}[10]{r}{0.4\textwidth} \includegraphics[trim={0cm 0 0 0},clip, width=0.4\textwidth]{MRC}\label{fig:MRC} \caption{Da \cite{perryman2011exoplanet}.} \end{wrapfigure}
-
 \end{workout}
 
-\section{Struttura orbitale e risonanze moto medio}
+\begin{workout}[Struttura orbitale e risonanze moto medio]
+\end{workout}
 
 \begin{workout}[Long term dynamical stability: mmr, fully packing, eccentricity, inclination distro]
 tidal circularization
@@ -339,5 +347,3 @@ Architecture of planetary systems based om kepler data: number of planets and co
 Spacing Kepler planets (Wu Pu 15)
 Are planetary systems filled to capacity? (Fang Nargot 13)
 \end{workout}
-
-

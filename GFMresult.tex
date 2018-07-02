@@ -157,44 +157,11 @@ disk dominated
 planet dominates: $\TDy{t}{a}=-\frac{3\nu}{a}\frac{\Sigma(a,t)a^2}{M_p}$
 \end{workout}
 
-\begin{workout}[Formation track and planet diversity]
+
 
 \section{popolazioni sintetiche}
 %Considero i risulati di alcuni modelli di formazione planetari (\cite{mordasini2018planetary}). 
 La soluzione delle equazioni che descrivono l'accrescimento di massa dei protopianeti e la loro evoluzione orbitale interata su numerose combinazioni delle condizioni iniziali produce una popolazione di sistemi planetari appena formati dal disco-protoplanetario.
-
-\begin{itemize}
-\item Numerosi sistemi con piccola massa
-\item Sistemi pianeti di piccola massa e giganti: sweet spot per pianeti giganti \'e all'esterno dell'ice-line.
-\item Un pianeta gigante superstite di scattering trapianeti gignti vicini. Sistemi rari formati in dischi massicci con alta metallicit\'a
-\end{itemize}
-
-\end{workout}
-
-\begin{figure}[!ht]
-\includegraphics[width=0.9\textwidth,keepaspectratio]{MaLR-freq-synth}\label{fig:MaLR-freq-synth}
-\caption{Da \cite{mordasini2018planetary}. }
-\end{figure}
-
-\subsection{Caratteristiche delle distribuzioni delle propriet\'a fisiche dei pianeti e significativit\'a}
-
-La \ref{fig:MaLR-freq-synth} mostra la distribuzione di massa di 509 pianeti della popolazione sintetica di \cite{mordasini2018planetary}: la distribuzione della massa dei pianeti mostra due andamento diversi per pianeti fino a $30\mearth{}$ formati da solidi e pianeti che hanno raggiunto la massa critica peravviare l'accrescimento di gas runaway. La differente slope della distribuzione di massa nelle due regioni caratterizza i differenti meccanismi di accrescimento. 
-
-\begin{workout}[Distro luminosit\'a: relazione M-L]
-La distribuzione di luminosit\'a segue andamento $L\propto M^2$ con terzo picco per innesco deuterio a $\log{\frac{L}{\lsun}}\approx-3.5$
-\end{workout}
-
-La distribuzione del raggio dei pianeti mostra picco a $1\rjupiter$ e crescita per piccoli raggi dovuta al loro lungo $\tkh{}$ e quindi scarso accrescimento di H/He.
-
-La distribuzione dei semi-assi cresce rapidamente tra $0.01-0.1\si{\astronomicalunit}$, resta uniforme in log tra $0.1-10\si{\astronomicalunit}$ nonostante molti pianeti migrino all'interno,mentre i pianeti giganti sono ristretti in \SIrange{0.1}{6}{\astronomicalunit}.
-
-{\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Confronto semi-quantitativo tra caratteristiche popolazioni sintetiche e osservate}
-}
-
-Per confrontare una popolazione planetaria simulata con le osservazioni \'e opportuno, oltre a tenere conto dei bias osservativi, valutare per quali sottoinsiemi dell'ensamble di pianeti osservato le approssimazioni fatte nel modello sono valide.
-
-\section{Distribuzione popolazione sintetica diagramma $(a-M)$}
 
 \begin{workout}[Diagramma $(a-M)$]
 
@@ -219,22 +186,75 @@ La distribuzione della popolazione planetaria \'e mostrata in \ref{fig:MaLR-freq
 \end{subfigure}
 \end{figure}
 
-Differenze con osservazioni
-
-Nettuno/Saturno in posizioni poco affollate
+Differenze con osservazioni.
 
 Popolazione pianeti in origine nettuniani (frazione giaccio nel core $50\%$) che migrano all'interno accumulando materiale roccioso (frazione ghiaccio nel core $10-20\%$): saturazione momento di corotazione positivo.
 
 \end{workout}
+\begin{itemize}
+\item Numerosi sistemi con piccola massa
+\item Sistemi pianeti di piccola massa e giganti: sweet spot per pianeti giganti \'e all'esterno dell'ice-line.
+\item Un pianeta gigante superstite di scattering trapianeti gignti vicini. Sistemi rari formati in dischi massicci con alta metallicit\'a
+\end{itemize}
 
 
 
-\begin{figure}[!ht]\includegraphics[keepaspectratio,width=0.9\textwidth]{MR-freq-obssynth}\label{}\caption{Da \cite{mordasini2018pèlanetary}.}\end{figure}
+\begin{figure}[!ht]
+\includegraphics[width=0.9\textwidth,keepaspectratio]{MaLR-freq-synth}\label{fig:MaLR-freq-synth}
+\caption{Da \cite{mordasini2018planetary}. }
+\end{figure}
+
+\subsection{Caratteristiche delle distribuzioni delle propriet\'a fisiche dei pianeti e significativit\'a}
+
+La \ref{fig:MaLR-freq-synth} mostra la distribuzione di massa di 509 pianeti della popolazione sintetica di \cite{mordasini2018planetary}: la distribuzione della massa dei pianeti mostra due andamento diversi per pianeti fino a $30\mearth{}$ formati da solidi e pianeti che hanno raggiunto la massa critica peravviare l'accrescimento di gas runaway. La differente slope della distribuzione di massa nelle due regioni caratterizza i differenti meccanismi di accrescimento. 
+
+\begin{workout}[Distro luminosit\'a: relazione M-L]
+La distribuzione di luminosit\'a segue andamento $L\propto M^2$ con terzo picco per innesco deuterio a $\log{\frac{L}{\lsun}}\approx-3.5$
+\end{workout}
+
+La distribuzione del raggio dei pianeti mostra picco a $1\rjupiter$ e crescita per piccoli raggi dovuta al loro lungo $\tkh{}$ e quindi scarso accrescimento di H/He.
+
+La distribuzione dei semi-assi cresce rapidamente tra $0.01-0.1\si{\astronomicalunit}$, resta uniforme in log tra $0.1-10\si{\astronomicalunit}$ nonostante molti pianeti migrino all'interno,mentre i pianeti giganti sono ristretti in \SIrange{0.1}{6}{\astronomicalunit}.
+
+{\let\clearpage\relax\let\cleardoublepage\relax
+\chapter{Confronto semi-quantitativo tra caratteristiche popolazioni sintetiche e osservate}
+}
+
+Per confrontare una popolazione planetaria simulata con le osservazioni \'e opportuno, oltre a tenere conto dei bias osservativi, valutare per quali sottoinsiemi dell'ensamble di pianeti osservato le approssimazioni fatte nel modello sono valide.
+
+\section{Struttura orbitale e tipo di pianeta}
+
+\begin{table}
+\begin{tabular}{|ccc|}
+N&Giganti ($M>300\mearth{}$)&vicini ($P\leq100\si{\day}, R\geq\rearth{}$)\\
+1&4.8&8.4\\
+2&7.4&12.8\\
+3&5.4&11.4\\
+4&0.4&10.0\\
+$\geq5$&0.0&11.4\\
+$\exv{S}$&18.0&54.0\\
+O&10-20&50-60
+\end{tabular}
+\caption{Percentuale di stelle con N pianeti del dato tipo nella popolazione sintetica di \cite{mordasini2018planetary} e confronto con osservazioni.}
+\end{table}
+
+Nettuno/Saturno in posizioni poco affollate
+
+
+\begin{figure}[!ht]\includegraphics[keepaspectratio,width=0.9\textwidth]{MR-freq-obssynth}\label{}\caption{Distribuzioni di massa e raggio per popolazione planetaria sintetica (linea nera) e distribuzioni osservate tramite RV e transiti (linea blu) corrette per i bias. Da \cite{mordasini2018planetary}.}\end{figure}
 
 \begin{figure}[!ht]
 \includegraphics[width=0.9\textwidth,keepaspectratio]{giant-Zsynth}
 \caption{Da \cite{mordasini2018planetary}. }
 \end{figure}
+
+\begin{workout}[Orbital structure and MMR: comparison simulation/observation]
+
+\end{workout}
+
+\begin{workout}[Comparison with stellar initial mass function]
+Stelalr imf: chabrier 03, salpeter slope 1955
+\end{workout}
 
 
 %{\let\clearpage\relax\let\cleardoublepage\relax

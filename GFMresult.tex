@@ -43,8 +43,6 @@ Il tempo caratteristico del disco \'e determinato dalla viscosit\'a $\alpha$: fi
 
  $t_{disk}(\alpha,\Sigma_0,\dot{M}_w)$ per $\dot{M}_w=\SIrange{5e-10}{3e-8}\msun{}/\si{\year}$ per $\alpha=\num{7e-3}$.
 
-
-
 \begin{workout}[viscosit\'a disco]
 Nella popolazione planetaria simulata $\alpha$ \'e fissato sulla base delle osservazioni  ed \'e omogeneo e costante.
 \end{workout}
@@ -169,14 +167,32 @@ La soluzione delle equazioni che descrivono l'accrescimento di massa dei protopi
 \item Numerosi sistemi con piccola massa
 \item Sistemi pianeti di piccola massa e giganti: sweet spot per pianeti giganti \'e all'esterno dell'ice-line.
 \item Un pianeta gigante superstite di scattering trapianeti gignti vicini. Sistemi rari formati in dischi massicci con alta metallicit\'a
-\end{itemize}•
-
+\end{itemize}
 
 \end{workout}
+
+\begin{figure}[!ht]
+\includegraphics[width=0.9\textwidth,keepaspectratio]{MaLR-freq-synth}\label{fig:MaLR-freq-synth}
+\caption{Da \cite{mordasini2018planetary}. }
+\end{figure}
+
+\subsection{Caratteristiche delle distribuzioni delle propriet\'a fisiche dei pianeti e significativit\'a}
+
+La \ref{fig:MaLR-freq-synth} mostra la distribuzione di massa di 509 pianeti della popolazione sintetica di \cite{mordasini2018planetary}: la distribuzione della massa dei pianeti mostra due andamento diversi per pianeti fino a $30\mearth{}$ formati da solidi e pianeti che hanno raggiunto la massa critica peravviare l'accrescimento di gas runaway. La differente slope della distribuzione di massa nelle due regioni caratterizza i differenti meccanismi di accrescimento. 
+
+\begin{workout}[Distro luminosit\'a: relazione M-L]
+La distribuzione di luminosit\'a segue andamento $L\propto M^2$ con terzo picco per innesco deuterio a $\log{\frac{L}{\lsun}}\approx-3.5$
+\end{workout}
+
+La distribuzione del raggio dei pianeti mostra picco a $1\rjupiter$ e crescita per piccoli raggi dovuta al loro lungo $\tkh{}$ e quindi scarso accrescimento di H/He.
+
+La distribuzione dei semi-assi cresce rapidamente tra $0.01-0.1\si{\astronomicalunit}$, resta uniforme in log tra $0.1-10\si{\astronomicalunit}$ nonostante molti pianeti migrino all'interno,mentre i pianeti giganti sono ristretti in \SIrange{0.1}{6}{\astronomicalunit}.
 
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Confronto semi-quantitativo tra caratteristiche popolazioni sintetiche e osservate}
 }
+
+Per confrontare una popolazione planetaria simulata con le osservazioni \'e opportuno, oltre a tenere conto dei bias osservativi, valutare per quali sottoinsiemi dell'ensamble di pianeti osservato le approssimazioni fatte nel modello sono valide.
 
 \section{Distribuzione popolazione sintetica diagramma $(a-M)$}
 
@@ -190,8 +206,17 @@ La soluzione delle equazioni che descrivono l'accrescimento di massa dei protopi
 La distribuzione della popolazione planetaria \'e mostrata in \ref{fig:MaLR-freq-synth}: la posizione finale di un pianeta \'e terminata principalmente dalla posizione iniziale e dai tempi caratteristici di accrescimento e migrazione; considerando inoltre l'interazione gravitazionale tra i pianeti si hanno effetti delle risonanze e eccitazione eccentricit\'a.
 
 \begin{figure}[!ht]
+\begin{subfigure}[b]{0.47\textwidth}
+\centering
 \includegraphics[width=0.9\textwidth,keepaspectratio]{track1}
 \caption{Da \cite{mordasini2018planetary}. Formazione di un sistema planetario nel diagramma $a-M$: alla scomparsa del disco protoplanetario si hanno 2 pianeti giganti, un nettuniano caldo e 3 pianeti terrestri. La scala di colore indica la composizione $\frac{M_e}{M_c}$.}\label{fig:track1}
+\end{subfigure}
+~
+\begin{subfigure}[b]{0.47\textwidth}
+\centering
+\includegraphics[width=0.9\textwidth,keepaspectratio]{envelopecoresynth}
+\caption{Da \cite{mordasini2018planetary}. }
+\end{subfigure}
 \end{figure}
 
 Differenze con osservazioni
@@ -202,26 +227,19 @@ Popolazione pianeti in origine nettuniani (frazione giaccio nel core $50\%$) che
 
 \end{workout}
 
-\begin{figure}[!ht]\includegraphics[keepaspectratio,width=0.9\textwidth]{MR-freq-obssynth}\label{}\caption{Da \cite{mordasini2018pèlanetary}.}\end{figure}
 
-\begin{figure}[!ht]
-\includegraphics[width=0.9\textwidth,keepaspectratio]{MaLR-freq-synth}\label{fig:MaLR-freq-synth}
-\caption{Da \cite{mordasini2018planetary}. }
-\end{figure}
+
+\begin{figure}[!ht]\includegraphics[keepaspectratio,width=0.9\textwidth]{MR-freq-obssynth}\label{}\caption{Da \cite{mordasini2018pèlanetary}.}\end{figure}
 
 \begin{figure}[!ht]
 \includegraphics[width=0.9\textwidth,keepaspectratio]{giant-Zsynth}
 \caption{Da \cite{mordasini2018planetary}. }
 \end{figure}
 
-\begin{figure}[!ht]
-\includegraphics[width=0.9\textwidth,keepaspectratio]{envelopecoresynth}
-\caption{Da \cite{mordasini2018planetary}. }
-\end{figure}
 
-{\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Raffinamento dei modelli}
-}
+%{\let\clearpage\relax\let\cleardoublepage\relax
+%\chapter{Raffinamento dei modelli}
+%}
 
 
 \begin{workout}[Effects of saturation, cooling and irradiation.]

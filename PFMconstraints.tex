@@ -149,6 +149,14 @@ tab.1 mayor11(RV)
 tab.1: occurrence and architecture exoplanetary system 
 \end{workout}
 
+\begin{workout}[Occurence rate]
+\begin{itemize}
+\item Coralie hot jupiter: giant planets $M\sin{i}>0.2\mjupiter$ and $a<0.1au$; $5.6\%$ giant out to 4au
+\item Lick/Keck/AAT ($M\sin{i}>0.5\mjupiter$): $1.2\%$ stars have hot jupiter and $6.6\%$ giant within 5 au
+\item ...
+\end{itemize}•
+\end{workout}
+
 \section{Popolazione esopianeti rilevati tramite RV}
 
 Se l'asse z \'e lungo la linea di vista la posizione della stella \'e $z=r(t)\sin{i}\sin{(\omega+\nu)}$ e per la velocit\'a radiale:
@@ -165,29 +173,33 @@ dove $\sigma$ tiene conto errori strumentali e rumore stellare.
 
 Per sistemi multipli consideriamo la sovrapposizione lineare di $n_p$ termini \eqref{eq:vrsignal}: viene sottratto il segnale Kepleriano dominante fino a che resta solo rumore.
 
-\begin{wrapfigure}[5]{l}{0.35\textwidth}
-\includegraphics[trim={0cm 4cm 0 0},clip, width=0.34\textwidth]{freqvsM}
-\caption{Da \cite{mayor2011harps}.}\label{fig:Mdistro}
-\end{wrapfigure}
-
-La distribuzione di massa (\ref{fig:Mdistro}) mostra un'abbondante popolazione di pianeti di massa piccola e una rapida diminuzione attorno a $10\mearth{}$; la distribuzione dei periodi mostra aumento dei pianeti giganti ($M>30\mearth{}$) a maggiore periodo orbitale e concentrazione pianeti piccola massa a $P=10-100\si{\day}$.
-\vspace{5cm}
 \begin{figure}[!ht]
-\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 2cm 0 0},clip, width=0.98\textwidth]{freqvsPgiant}\caption{Da \cite{mayor2011harps}.}\label{fig:freqvsPgiant} \end{subfigure}
+\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 5cm 0 0},clip, width=0.94\textwidth]{freqvsM}
+\caption{Distribuzione di massa di massa dei pianeti: in rosso distribuzione corretta per bias osservativi. Da \cite{mayor2011harps}.}\label{fig:freqvsM} \end{subfigure}
 ~
-\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 2cm 0 0},clip,width=0.98\textwidth]{freqvsPlowM}\label{fig:freqvsPlowM} \caption{Da \cite{mayor2011harps}.}
+\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 8cm 0 0},clip, width=0.94\textwidth]{PfreqvsFeH}\label{fig:PfreqvsFeH}
+\caption{Numero di pianeti in funzione della metallicit\'a stellare: nero dei giganti gassosi, rosso dei pianeti con $M\leq30\mearth{}$ e blu combinata. Da \cite{mayor2011harps}}
+\end{subfigure}
+\end{figure}
+
+La distribuzione di massa (\ref{fig:freqvsM}) mostra un'abbondante popolazione di pianeti di massa piccola e una rapida diminuzione attorno a $10\mearth{}$; la distribuzione dei periodi mostra aumento dei pianeti giganti ($M>30\mearth{}$) a maggiore periodo orbitale e concentrazione pianeti piccola massa a $P=10-100\si{\day}$.
+
+La \ref{fig:freqZstar} mostra l'assenza di correlazione tra la metallicit\'a della stella e la frequenza di pianeti di piccola massa fino a $30-40\mearth{}$ al contrario di quello che accade per pianeti giganti.
+
+\begin{figure}[!ht]
+\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 6cm 0 0},clip, width=0.98\textwidth]{freqvsPgiant}\caption{Frequenza pianeti con $M\geq 30\mearth{}$ in funzione del periodo orbitale; in rosso  tratteggiato con correzione bias osservativi. Da \cite{mayor2011harps}.}\label{fig:freqvsPgiant} \end{subfigure}
+~
+\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 10cm 0 0},clip,width=0.98\textwidth]{freqvsPlowM}\label{fig:freqvsPlowM} \caption{Frequenza pianeti con $M\leq 30\mearth{}$ in funzione del periodo orbitale; in rosso con correzione bias osservativi. Da \cite{mayor2011harps}.}
 \end{subfigure}
 \end{figure}
 
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.3\textwidth}
-\includegraphics[trim={0cm 8cm 0 0},clip, width=0.9\textwidth]{PMfreq-e23}
-\caption{Da \cite{mayor2011harps}.}\label{fig:PMfreq-e23}
+\includegraphics[trim={0cm 17cm 0 0},clip, width=0.9\textwidth]{PMfreq-e23}\label{fig:PMfreq-e23}
 \end{subfigure}
 ~
 \begin{subfigure}[b]{0.3\textwidth}
-\includegraphics[trim={0cm 8cm 0 0},clip, width=0.9\textwidth]{PMfreq-e12}\label{fig:PMfreq-e12}
-\caption{Da \cite{mayor2011harps}}
+\includegraphics[trim={0cm 10cm 0 0},clip, width=0.9\textwidth]{PMfreq-e12}\label{fig:PMfreq-e12}
 \end{subfigure}
 ~
 \begin{subfigure}[b]{0.3\textwidth}
@@ -203,6 +215,10 @@ Una comprensione pi\'u ampia si ha studiando la distribuzione dei pianeti nel di
 \item il pianeta gassoso pi\'u massiccio aumenta da $1\mjupiter{}$ a $15\mjupiter{}$ passando da $P\approx\SI{1}{\day}$ a $P\approx\SI{15}{\year}$.
 \end{itemize}
 
+\begin{workout}[Origin of metallicity excess: stellar structure]
+Pinsonneault depoy caffee 01
+\end{workout}•
+
 \begin{workout}[minimo in mass distro]
 \'e un minimo? ha un significato?
 \end{workout}
@@ -211,11 +227,6 @@ Una comprensione pi\'u ampia si ha studiando la distribuzione dei pianeti nel di
 Perrymann pg 34 fig 2.25 d
 fig 2.6,fig 2.18
 \end{workout}
-
-\begin{wrapfigure}[5]{l}{0.35\textwidth}
-\includegraphics[trim={0cm 2cm 0 0},clip, width=0.34\textwidth]{PfreqvsFeH}\label{fig:freqZstar}
-\caption{Da \cite{mayor2011harps}}
-\end{wrapfigure}
 
 \begin{workout}[multplanet system: mean motion resonances, orbital spacing,...]
 dynamical classification (barnes 08): tidal dominated if ($a<0.1$), resonant dom. if one resonant argument librates, secular otherwise.
@@ -271,12 +282,14 @@ V_p*P\propto d^3*\frac{R_*}{a}\propto R_p^6/P\expy{\frac{5}{3}}
 \end{equation}
 \end{workout}
 
-%\begin{figure}[!ht]
-%\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}\label{freqvsRpl50d}\caption{Da \cite{howard2012planet}}
-%\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}\label{Rfreq}\caption{Da \cite{exoplanet.eu}}
-%\end{figure}
 
-\begin{figure}[!ht] \begin{subfigure}[b]{0.47\textwidth} \centering \includegraphics[trim={0cm 0 0 0},clip, width=0.\textwidth]{RfreqPl100ub} \caption{Da \cite{fulton2017california}}\label{fig:figref} \end{subfigure} ~ \begin{subfigure}[b]{0.\textwidth} \centering \includegraphics[trim={0cm 0 0 0},clip,width=\textwidth]{keplerRfreq}\label{fig:figlabel} \caption{Da \cite{ref}} \end{subfigure} \end{figure} 
+%\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}\label{freqvsRpl50d}\caption{Da \cite{howard2012planet}}
+% \includegraphics[trim={0cm 0 0 0},clip,width=0.95\textwidth]{keplerRfreq}\label{fig:keplerRfreq} \caption{Da \cite{fressin2013false}}
+%\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}\label{fig:freqvsRpl50d}\caption{Da \cite{}.}
+
+\begin{figure}[!ht] \begin{subfigure}[b]{0.45\textwidth} \centering \includegraphics[trim={0 10cm 0 0},clip, width=0.95\textwidth]{RfreqPl100ub} 
+\label{fig:RfreqPl100ub} \end{subfigure} ~ \begin{subfigure}[b]{0.55\textwidth} \centering\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{Rfreq}\label{Rfreq}
+ \end{subfigure}\caption{A sinistra: distribuzione per i pianeti osservati tramite transito con $P<\SI{100}{\day}$: il picco a $1.7\mearth{}$ si ipotizza causato dall'evaporazione. Da \cite{fulton2017california}. A destra: distribuzione radiale pianeti rivelati tramite T (da \cite{exoplanet.eu} (luglio 2018): la frequenza ha andamento crescente verso pianeti di raggio terrestre, andamento piatto tra $4-10\rearth{}$ e picco a $R\approx\rjupiter{}$.} \end{figure} 
 
 
 \begin{workout}[transit distro observed refs]
@@ -297,9 +310,7 @@ Local maximum at $1\mjupiter{}$, flat distro in log(r) between $4-10\mearth{}$ b
 
 \end{workout}
 
-\begin{figure}[!ht]
-\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}\label{fig:freqvsRpl50d}\caption{Da \cite{}.}
-\end{figure}
+
 
 \begin{workout}[KEPLER MULTI-PLANET SYSTEM]
 THE CALIFORNIA-KEPLER SURVEY. V. PEAS IN A POD: PLANETS IN A KEPLER MULTI-PLANET SYSTEM ARE SIMILAR IN SIZE AND REGULARLY SPACED

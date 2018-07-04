@@ -373,13 +373,26 @@ Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinam
 \section{Accrescimento planetsemi: formazione proto-pianeti.}
 
 \subsection{Distribuzione velocit\'a planetesimi}
+%Refs: kokubo Ida 12 `'Dynamics and accretion of planetesimal''
+La popolazione dei planetesimi evolve attraverso interazione con gas, che smorza eccentricit\'a e inclinazione, e scattering, che trasforma il moto kepleriano in casuale.
 
-La popolazione dei planetesimi evolve attraverso interazione con gas, che smorza eccentricit\'a e inclinazione, e scattering, che trasforma il moto kepleriano in casuale e si ha equipartizione di energia tra pianetesimi di diversa massa: la velocit\'a relativa media aumenta fino al valore della velocit\'a di fuga dal corpo maggiore, denominato protopianeta raggiunto diametro migliaia di kilometri.
-
+%e si ha equipartizione di energia tra pianetesimi di diversa massa
 %i planetesimi di massa minore hanno maggiore dispersione di velocit\'a 
 %due planetesimi hanno stessa velocit\'a relativa prima e dopo interazione ma aumenta la velocit\'a relativa al moto kepleriano in maniera casuale: 
 %\'E ragionevole supporre che si arrivi rapidamente alla condizione $v>\Omega R_H$.
 
+%v deviazione dei planetesimi da velocit\'a kepleriana
+La componente casuale della velocit\'a v dei planetesimi \'e approssimativamente
+\begin{equation}
+v\approx\sqrt{e^2+i^2}v_K
+\end{equation}
+dove si assume che eccentricit\'a e inclinazione seguano distribuzione di Rayleigh
+\begin{equation}
+f(e,i)=4\frac{\Sigma}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{-\frac{e^2}{\exv{e^2}}-\frac{i^2}{\exv{i^2}}}
+\end{equation}
+I valori iniziali sono $\exv{i^2}=\exv{e^2}=[2\frac{r_H}{a}]^2$, il loro aumento, determinato da interazioni gravitazionali \'e chiamato viscous stirring, mentre , una volta formato un corpo molto pi\'u massiccio degli altri (embrione planetario), l'equipartizione di energia tra il corpo massiccio e i planetesimi produce diminuzione di eccentricit\'a/inclinazione dell'embrione planetario a scapito di aumento di queste per i corpi di massa minore.
+%la velocit\'a relativa media aumenta fino al valore della velocit\'a di fuga dal corpo maggiore, denominato protopianeta raggiunto diametro migliaia di kilometri.
+ 
 \subsection{Regimi accrescimento dei protopianeti}
 
 L'accrescimento di massa del protopianeta procede secondo
@@ -388,9 +401,9 @@ L'accrescimento di massa del protopianeta procede secondo
 \end{equation}
 con $F_g$ fattore che tiene conto dell'interazione gravitazionale, determinato dalla velocit\'a relativa tra i 2 corpi, e $\rho_{pl}$ densit\'a di planetesimi:
 \begin{align}
-&\rho_{pl}\approx\frac{\Sigma_p}{2a\sin{i}}\approx\frac{\sqrt{3}}{2}\frac{\Sigma_p\Omega}{v}
+&\rho_{pl}\approx\frac{\Sigma_p}{2a\sin{i}}\propto\frac{\Sigma_p\Omega}{v}
 \end{align}
-assumendo relazione di dispersione per velocit\'a planetesimi isotropa.
+% Costante proporzionalit\'a \'e $\frac{\sqrt{3}}{2}$ assumendo relazione di dispersione per velocit\'a planetesimi isotropa.
 
 Per embrioni planetarii di decine di chilometri l'attrazione gravitazionale aumenta la sezione d'urto: 
 \begin{equation}

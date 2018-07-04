@@ -2,7 +2,7 @@
 \chapter{Disco protoplanetario}
 }
 
-Il materiale presente nella regione instabile di una nube molecolare \'e dotato di momento angolare quindi accresce s la massa della protostella centrale formando un disco ortogonale al momento totale della nube che trascurando l'effetto della pressione del gas, ruota con velocit\'a angolare kepleriana.
+Il materiale presente nella regione instabile di una nube molecolare \'e dotato di momento angolare quindi accresce sulla massa della protostella centrale formando un disco ortogonale al momento totale della nube che trascurando l'effetto della pressione del gas, ruota con velocit\'a angolare kepleriana.
 
 \begin{workout}[Refs dischi protoplanetari]
 Chronology of  early stages: apai lauretta 10 (book)
@@ -10,8 +10,8 @@ Chronology of  early stages: apai lauretta 10 (book)
 
 \section{Modello disco di accrescimento}
 
-Nei modelli unidimensionali per disco di accrescimento si parametrizza viscosit\'a tramite $\nu=\frac{\eta}{\rho}\to\alpha c_s H$: giustifico euristicamente la parametrizzazione della viscosit\'a del disco di accrescimento in analogia alla viscosit\'a molecolare (\cite{bouvier2002theory}).
-cio\'e che:
+Nei modelli unidimensionali per disco di accrescimento si descrive il trasporto di momento angolare verso l'esterno introducendo la viscosit\'a aumentata $\nu=\frac{\eta}{\rho}\to\alpha c_s H$: giustifico euristicamente la parametrizzazione della viscosit\'a del disco di accrescimento in analogia alla viscosit\'a molecolare (\cite{bouvier2002theory}).
+
 \begin{workout}[Strees tensor]
 appendix a pg 66 planet formation and migration vs crida PHD torque calculation pg 24
 \end{workout}
@@ -28,7 +28,7 @@ L'equazione del moto per un elemento di fluido
 \begin{align}
 &\PDof{t}(\rho v_i)+\PDof{x_i}(\rho v_iv_j+T_{ij})=F_i\\
 &T_{ij}=P\delta_{ij}-\sigma_{ij}\\
-&\sigma_{ij}=\eta(\partial_jv_i+\partial_iv_j-\frac{2}{3}\delta_{ij}\partial_kv_k+\zeta\delta_{ij}\partial_kv_k
+&\sigma_{ij}=\eta(\partial_jv_i+\partial_iv_j-\frac{2}{3}\delta_{ij}\partial_kv_k+\zeta\delta_{ij}\partial_kv_k)
 \end{align}
 dove $\eta$, $\zeta$ sono le shear and bulk viscosity, quest'ultima legata ai gradi di libert\'a interni della molecola \'e trascurabile se i tempi di equipartizione interni sono molto minori del tempo fra due collisioni.
 %-$\sigma_{ij}$ \'e flusso di componente i di momento in direzione j
@@ -51,7 +51,7 @@ Dalle equazioni precedenti si ha che
 Per un disco di densit\'a superficiale $\Sigma(r,t)$, dotato del campo di velocit\'a $(u_r,r\Omega+u_{\phi})$, scrivo le equazioni di conservazione di massa e la componente azimutale dell'equazione del moto
 \begin{align}
 &\PDy{t}{\Sigma}+\frac{1}{r}\PDof{r}(r\Sigma v_r)=0\\
-\Sigma(\PDy{t}{v_{\phi}}+v_r\PDy{r}{v_{\phi}}\frac{v_rv_{\phi}}{r})=0
+&\Sigma(\PDy{t}{v_{\phi}}+v_r\PDy{r}{v_{\phi}}\frac{v_rv_{\phi}}{r})=0
 \end{align}
 da cui segue l'equazione del momento angolare
 \begin{equation}
@@ -63,16 +63,20 @@ infine, mediando le fluttuazioni su scala spaziale opportuna e trascurando la fl
 \end{equation}
 che rappresenta un fluido viscoso di velocit\'a $\vec{v}=(u_r,\Omega r)$ tensore degli stress $\sigma_{r\phi}=-\Sigma\exv{u_ru_{\phi}}$.
 
-Per semplicit\'a si parametrizza il trasporto di momento angolare ponendo $\nu=\alpha c_s H$ dove $\alpha$ \'e parametro da fissare, $c_s$ la velocit\'a del suono e H lo spessore del disco:
+Nei modelli di disco di accrescimento unidimensionali si parametrizza il trasporto di momento angolare ponendo $\nu=\alpha c_s H$ dove $\alpha$ \'e parametro da fissare, $c_s$ la velocit\'a del suono e H lo spessore del disco:
 \begin{equation}
 \PDy{t}{\Sigma}=3\frac{1}{r}\PDof{r}[r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]\label{eq:sigmaevol}
 \end{equation}
 
-auto gravitazione trascurabile quindi la struttura verticale \'e determinata dalla componente lungo z dell'attrazione del corpo centrale:
+Poich\'e nei dischi protoplanetari l'autogravitazione \'e trascurabile la struttura verticale \'e determinata dalla componente lungo z dell'attrazione del corpo centrale:
 %profilo termico determinato da equilibrio termico
 \begin{equation}
-\TDy{z}{P}=-rho g_z=-\frac{GM_*}{r^2+z^2}sin{\theta}\rho=-\Omega^2z
+\TDy{z}{P}=-\rho g_z=-\frac{GM_*}{r^2+z^2}sin{\theta}\rho=-\Omega^2z
 \end{equation}
+
+\begin{workout}[Profilo termico del disco]
+
+\end{workout}
 
 \begin{workout}[Momento torcente in disco Kepleriano]
 \begin{align}
@@ -154,7 +158,37 @@ EUV($E\approx13.6eV$): ionization, FUV($E\approx6-13.6eV$): dissociation, X-ray
 
 \section{YSO: distribuzione propriet\'a dischi protoplanetari}
 
-Le condizioni iniziali delle simulazioni di popolazioni planetaria sono determinate dalle osservazioni dei dischi protoplanetari.
+La classificazione empirica degli young stellar object (YSO) si basa sul valore di
+\begin{equation}
+\alpha_{IR}=\TDly{\lambda}{\lambda F_{\lambda}}
+\end{equation}
+tra \SIrange{2.2}{25}{\micro\meter}.
+
+\begin{itemize}
+\item Classe 0: emissioni continua sub-millimetrica della polvere. Nubi molecolari compatte.
+\item Classe 1: $\alpha_{IR}>0$ a \SI{2}{\micro\meter}.
+\item Classe 2: $0\geq\alpha_{IR}\geq-1.5$. Stella T-Tauri con disco otticamente spesso a $\lambda\leq\SI{10}{\micro\meter}$.
+\item Classe 3: $\alpha_{IR}\leq-1.5$. Stella T-Tauri con disco otticamente sottile a $\lambda\leq\SI{10}{\micro\meter}$.
+\end{itemize}
+
+Le condizioni iniziali delle simulazioni di popolazioni planetaria sono determinate dalle osservazioni dei dischi protoplanetari: le distribuzioni di metallicit\'a, massa, massa di polvere ed et\'a sono mostrati in ~\ref{fig:initdistro}. Il tempo caratteristico dei dischi protoplanetari, determinato misurando l'eccesso infrarosso in ammassi di et\'a diversa, \'e \SI{2.5}{\mega\year}. La massa del disco \'e ottenuta tramite fit con spettro osservato di un modello di disco.
+
+\begin{figure}[!ht]
+\includegraphics[trim={0cm 10cm 0 0},clip, keepaspectratio,width=0.7\textwidth]{initdistro}\label{fig:initdistro}
+\caption{Distribuzione caretteristiche dischi di accrescimento. Da \cite{mordasini2018planetary}.}\end{figure}
+
+\begin{workout}[Fit SED]
+Disk model
+\begin{align}
+\nu\propto R\expy{\gamma}\\
+\Sigma=(2-\gamma)\frac{M_d}{2\pi R_c^2}(\frac{R}{R_c})\expy{-\gamma}\\Exp{-(\frac{R}{R_c})\expy{2-\gamma}}
+\end{align}
+\end{workout}
+
+
+\begin{workout}[Initial conditionfor protostellar collapse]
+Andre 2000 - 
+\end{workout}
 
 \begin{workout}[T Tauri SED more flattish]
 Ref: spectral energy distribution of T-Tauri star with passive circumstellar disk
@@ -180,8 +214,6 @@ Initial disk mass
 
 {Disk lifetime}
 $1-10My$ with mean $3My$ (Haisch01, Mamajek09)
-
-\begin{figure}[!ht]\includegraphics[keepaspectratio,width=\textwidth]{initdistro}\label{fig:initdistro}\caption{Distribuzione caretteristiche dischi di accrescimento. Da \cite{mordasini2018planetary}.}\end{figure}
 
 \end{workout}
 
@@ -248,7 +280,8 @@ infrared excess: gail hoppe10
 \chapter{Schema di accrescimento componente solida}
 }
 
-\begin{figure}[!t]
+
+\begin{figure}[!ht]
 \includegraphics[width=0.9\textwidth]{accretiontimeline}\label{fig:accretiontimeline}\caption{Rappresentazione schematica del processo di formazione protopianeti dalla polvere. Da \cite{perryman2014exoplanets}.}
 \end{figure}
 
@@ -261,7 +294,7 @@ La correlazione tra metallicit\'a del disco protoplanetario e il numero di piane
 
 Lo schema di core accretion (CA) prevede la coagulazione della componente polverosa in embrioni planetari che, se abbastanza massicci sono in grado di accrescere il gas presente nel disco protoplanetario.
 
-Lo schema di formazione considera l'instabilit\'a gravitazionale del disco.
+Lo schema di formazione alternativo considera l'instabilit\'a gravitazionale del disco.
 
 Esistono alcuni dati osservativi in favore del primo modello:
 \begin{itemize}
@@ -273,26 +306,28 @@ Esistono alcuni dati osservativi in favore del primo modello:
 
 \section{Sedimentazione polvere e formazione planetesimi}
 
-La polvere presente nel materiale interstellare ha dimensioni di \SI{0.1}{\micro\meter} sedimenta verso il centro del disco:
+La polvere presente nel materiale interstellare ha dimensioni di \SI{0.1}{\micro\meter} sedimenta verso il centro del disco e forma aggregati di dimensioni maggiori.
 
+L'equazione del moto per particella di polvere \'e
+\begin{equation}\label{eq:motiondust}
+m_p\TDy{t}{v_z}=F_D-m_p\Omega^2z
+\end{equation}
 $F_D$ \'e la forza esercitata dal gas sulla particella di polvere
 \begin{equation}
 F_D=-\frac{1}{2}C_D\pi s^2\rho_gv^2
 \end{equation}
 nel caso cammino libero medio delle molecole di gas sia maggiore delle dimensioni della particella $C_D=\frac{8}{3}\frac{v_{th}}{v}$ (Epstein drag) per particelle pi\'u grandi \'e funzione del numero di Reynold.
+%La pressione non supporta i grani: troppo pesanti
 
-L'equazione del moto per particella di polvere \'e
-\begin{equation}
-m_p\TDy{t}{v_z}=F_D-m_p\Omega^2z
-\end{equation}
-che risulta in condizioni stazionarie
+Dall'equazione \eqref{eq:motiondust} si che in condizioni stazionarie:
 \begin{equation}
 v_{set}=\frac{\Omega^2}{v_{th}}\frac{\rho_d}{\rho_g(z)}sz
 \end{equation}
 Per particelle di \SI{1}{\micro\meter} tempo di sedimentazione \'e $\SI{2e5}{\year}$.
 Inoltre turbolenza e coagulazione delle particelle hanno un ruolo non banale.
 %t=mv/F
-Inoltre la velocit\'a relativa tra gas e polvere causa un drift verso la stella massimo per particelle di \SIrange{0.01}{10}{\meter}  a \SI{1}{\astronomicalunit} per cui si deve avere rapida crescita oltre \SI{10}{\meter}.
+
+La velocit\'a relativa tra gas e polvere causa un drift verso la stella massimo per particelle di \SIrange{0.01}{10}{\meter}  a \SI{1}{\astronomicalunit} per cui si deve avere rapida crescita oltre \SI{10}{\meter}.
 
 Per passare a corpi di dimensioni kilometriche si ipotizzano 2 scenarii:
 \begin{itemize}
@@ -337,13 +372,27 @@ Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinam
 
 \section{Accrescimento planetsemi: formazione proto-pianeti.}
 
-
 \subsection{Distribuzione velocit\'a planetesimi}
+%Refs: kokubo Ida 12 `'Dynamics and accretion of planetesimal''
+La popolazione dei planetesimi evolve attraverso interazione con gas, che smorza eccentricit\'a e inclinazione, e scattering, che trasforma il moto kepleriano in casuale.
 
-La popolazione dei planetesimi evolve attraverso interazione con gas e scattering/collisioni: l'interazione tra planetesimi trasforma il moto kepleriano in casuale e si ha equipartizione di energia tra pianetesimi di diversa massa; i planetesimi di massa minore hanno maggiore dispersione di velocit\'a, l'interazione col gas smorza eccentricit\'a e inclinazione inoltre due planetesimi hanno stessa velocit\'a relativa prima e dopo interazione ma aumenta la velocit\'a relativa al moto kepleriano in maniera casuale: la velocit\'a relativa media aumenta fino al valore della velocit\'a di fuga dal corpo maggiore, denominato protopianeta raggiunto diametro migliaia di kilometri.
-
+%e si ha equipartizione di energia tra pianetesimi di diversa massa
+%i planetesimi di massa minore hanno maggiore dispersione di velocit\'a 
+%due planetesimi hanno stessa velocit\'a relativa prima e dopo interazione ma aumenta la velocit\'a relativa al moto kepleriano in maniera casuale: 
 %\'E ragionevole supporre che si arrivi rapidamente alla condizione $v>\Omega R_H$.
 
+%v deviazione dei planetesimi da velocit\'a kepleriana
+La componente casuale della velocit\'a v dei planetesimi \'e approssimativamente
+\begin{equation}
+v\approx\sqrt{e^2+i^2}v_K
+\end{equation}
+dove si assume che eccentricit\'a e inclinazione seguano distribuzione di Rayleigh
+\begin{equation}
+f(e,i)=4\frac{\Sigma}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{-\frac{e^2}{\exv{e^2}}-\frac{i^2}{\exv{i^2}}}
+\end{equation}
+I valori iniziali sono $\exv{i^2}=\exv{e^2}=[2\frac{r_H}{a}]^2$, il loro aumento, determinato da interazioni gravitazionali \'e chiamato viscous stirring, mentre , una volta formato un corpo molto pi\'u massiccio degli altri (embrione planetario), l'equipartizione di energia tra il corpo massiccio e i planetesimi produce diminuzione di eccentricit\'a/inclinazione dell'embrione planetario a scapito di aumento di queste per i corpi di massa minore.
+%la velocit\'a relativa media aumenta fino al valore della velocit\'a di fuga dal corpo maggiore, denominato protopianeta raggiunto diametro migliaia di kilometri.
+ 
 \subsection{Regimi accrescimento dei protopianeti}
 
 L'accrescimento di massa del protopianeta procede secondo
@@ -352,9 +401,9 @@ L'accrescimento di massa del protopianeta procede secondo
 \end{equation}
 con $F_g$ fattore che tiene conto dell'interazione gravitazionale, determinato dalla velocit\'a relativa tra i 2 corpi, e $\rho_{pl}$ densit\'a di planetesimi:
 \begin{align}
-&\rho_{pl}\approx\frac{\sigma}{2a\sin{i}}\approx\frac{\sqrt{3}}{2}\frac{\Sigma_p\Omega}{v}
+&\rho_{pl}\approx\frac{\Sigma_p}{2a\sin{i}}\propto\frac{\Sigma_p\Omega}{v}
 \end{align}
-assumendo relazione di dispersione per velocit\'a planetesimi isotropa.
+% Costante proporzionalit\'a \'e $\frac{\sqrt{3}}{2}$ assumendo relazione di dispersione per velocit\'a planetesimi isotropa.
 
 Per embrioni planetarii di decine di chilometri l'attrazione gravitazionale aumenta la sezione d'urto: 
 \begin{equation}
@@ -470,7 +519,7 @@ Accrescimento ordinato: $\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{-1/3}$. Accre
 
 
 {\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Evoluzione struttura planetaria: accrescimento e fase isolata.}
+\chapter{Evoluzione struttura planetaria: accrescimento e fase isolata.}\label{chap:gasaccretion}
 }
 
 Se il protopianeta raggiunge un valore critico di massa, dipendente debolmente da luminosit\'a generata da accrescimento dei pianetesimi e opacit\'a, per mantenere equilibrio idrostatico l'inviluppo gassoso del pianeta si contrae e si ha un afflusso di massa.

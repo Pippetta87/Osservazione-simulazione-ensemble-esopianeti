@@ -649,24 +649,24 @@ fonti energia: tidal heating radiogeninc heat, star flux
 \chapter{Interazioni pianeta-disco: migrazione planetaria}
 }
 
-\begin{wrapfigure}[15]{l}{0.3\textwidth}
-\includegraphics[trim={0cm 10cm 0 0},clip, width=0.3\textwidth]{corotation}\label{fig:corotation}
-\caption{Da \cite{armitage2007lecture}.}
+\begin{wrapfigure}[17]{l}{0.3\textwidth}
+\includegraphics[trim={0cm 11cm 0 0},clip, keepaspectratio, width=0.3\textwidth]{corotation}\label{fig:corotation}
+\caption{In alto: Orbite periodiche e librazione delle particelle di gas del disco. In basso: Asimmetrie tra gli U-turn che precedono/seguono il pianeta. Da \cite{armitage2007lecture}.}
 \end{wrapfigure}
 
 Considero in maniera schematica lo scambio di momento angolare tra pianeta e disco usando l'approssimazione impulsiva, dove si considera la traiettora di un elemento di fluido che interagisce col pianeta e integrando sui parametri d'impatto ammissibili, oppure descrivendo in approssimazione lineare l'interazione tra onde di densit\'a e pianeta. L'analisi lineare delle perturbazioni generate dal pianeta fornisce l'espressione analitica dei momenti torcenti esercitati dal disco sul pianeta alle risonanze di Lindblad e di corotazione.
 
 Per pianeti massicci la risposta del disco non \'e pi\'u lineare: il momento angolare viene assorbito in prossimit\'a delle risonanze di Lindblad e si crea un gap nel disco. Il passaggio a regimenon lineare nella regione di corotazione avviene su tempi minori del tempo-scala di librazione:
-\begin{align}
-\left.\begin{aligned}
-&\tau_{lib}\propto\frac{a_p}{\Omega_px_s}
-\end{aligned}
-\right. \quad\text{con}\quad\begin{aligned}
-&x_s\propto a_p\sqrt{\frac{q}{h}}\\
-&h=\frac{H}{a}\\
-&q=\frac{m_p}{M_*}
-\end{aligned}•
-\end{align}•
+\begin{equation}
+\tau_{lib}\propto\frac{a_p}{\Omega_px_s}
+\end{equation}
+con:
+\begin{equation}
+x_s\propto a_p\sqrt{\frac{q}{h}}, \ h=\frac{H}{a},\ q=\frac{m_p}{M_*}
+\end{equation}
+
+I risultati riportati sono per disco isotermo:nei dischi reali si pu\'o avere migrazione stocastica e zone di concentramento dovute a transizioni di opacit\'a.
+
 \clearpage
 
 \begin{workout}[Migrazione: situazione complessa]
@@ -776,7 +776,7 @@ Attorno all'orbita del pianeta si hanno orbite risonanti per elementi di fluido 
 &r_L=(\frac{m}{m\pm1})\expy{2/3}a
 %\kappa_0^2=\frac{2\Omega}{r}\TDof{r}(r^2\Omega)
 \end{align}
-dove $\kappa_0=\Omega$ per disco Kepleriano \'e frequenza epiciclica.
+dove $\kappa_0=\Omega$ per disco Kepleriano \'e frequenza epiciclica e $r_L$ posizione delle risonanze.
 
 %%RMM disco pianeta: gli elementi di fluido descrivono m orbite attorno al pianeta il pianeta compie $m\pm1$ orbite
 
@@ -795,14 +795,14 @@ Inoltre le risonanze rimangono a distanza finita dal pianeta:
 \subsection{Momento torcente dovuto alle risonanze di Lindblad}
 Il momento torcente esercitato dal disco sul pianeta \'e
 \begin{equation}
-\Gamma_L^{int/est}=-\int_L^{int/est}\Sigma(\vecp{r}{F})\,df=\int_L^{int/est}\Sigma(\vec{r}\wedge\nabla\psi_p)\,df=\int_L^{int/est}\Sigma\PDy{\phi}{\psi_p}\,df\label{eq:pd-torque}
+\Gamma_L^{int/est}=-\int_{int/est}\Sigma(\vecp{r}{F})\,df=\int_{int/est}\Sigma(\vec{r}\wedge\nabla\psi_p)\,df=\int_{int/est}\Sigma\PDy{\phi}{\psi_p}\,df\label{eq:pd-torque}
 \end{equation}
 $\Sigma$ densit\'a superficiale,  $\vec{F}$ forza per unit\'a di massa, $df$ elemento di superficie.
 %Linear. Occur if $R_H$ is smaller then H, disk scale heigth, and if viscous torque are dominant compared to gravitational torque.
 (Integrando l'equazione \eqref{eq:pd-torque} si ottiene) L'espressione del momento torcente esterno/interno
 \begin{equation}
 %\Gamma_m^L=\left.\sign{(\Omega-\Omega_p)}\frac{\pi^2\Sigma}{3\Omega\Omega_p}(r\TDy{r}{\psi_m}+\frac{2m^2(\Omega-\Omega_p)}{\Omega}\psi_m)^2\right|_{r=r_L}
-\Gamma_L^{int/est}\propto\sign{(r-r_p)}q^2\Sigma r^4\Omega^2(\frac{r}{H})^3
+\Gamma_L^{int/est}\propto q^2\Sigma r^4\Omega^2(\frac{r}{H})^3
 \end{equation}\label{eq:torqueimp}
 con $q=M_p/M_*$, infine una stima del momento torcente differenziale delle risonanze di Lindblad \'e fornito da \cite{tanaka2002three}:
 \begin{equation}
@@ -815,7 +815,7 @@ per disco isotermo infinitamente sottile.
 La regione di corotazione \'e definita da $\Omega(r)-\Omega_p=0$ cio\'e il potenziale del pianeta ruota alla stessa frequenza del fluido.
 
 Il momento torcente dovuto alle risonanze di corotazione \'e
-\begin{equation}
+\begin{equation}\label{eq:corotorquelinear}
 \Gamma_C^m\propto m[\frac{\psi_m}{\TDy{r}{\Omega}}\TDof{r}(\frac{\Sigma}{B})]_{r_c}
 \end{equation}
 dove $\psi_m$ \'e la m-esima componente del potenziale e $2B$ la vorticit\'a del flusso; la regione di corotazione \'e divisa in m isole di librazione.
@@ -829,7 +829,7 @@ Utilizzando la stima di \cite{tanaka2002three} si trova il tempo caratteristico 
 \begin{equation}
 \tau_I=\frac{r_p}{|\dot{r}_p|}=\frac{\dot{J}_p}{\Gamma_{dL}}=\frac{1}{2.1+1.1\gamma}\frac{M_*}{M_p}\frac{M_*}{r_p^2\Sigma(r_p)}(\frac{c_s}{r_p\Omega_p})^2\frac{1}{\Omega_p}
 \end{equation}
-da cui risulta pr disco protoplanetario con $\Sigma(r)=1500(r\SI{5}{\astronomicalunit})\expy{-3/2}\si{\kilo\gram\per\square\meter}$ a $T=\SI{130}{\kelvin}$ per pianeta di massa terrestre a \SI{5}{\astronomicalunit} un tempo di migrazione $\tau_I\approx\SI{8e5}{\year}$: molto minore del tempo di vita del disco.
+da cui risulta pr disco protoplanetario con $\Sigma(r)=1500(r/\SI{5}{\astronomicalunit})\expy{-3/2}\si{\kilo\gram\per\square\meter}$ a $T=\SI{130}{\kelvin}$ per pianeta di massa terrestre a \SI{5}{\astronomicalunit} un tempo di migrazione $\tau_I\approx\SI{8e5}{\year}$: molto minore del tempo di vita del disco.
 
 Il momento torcente
 \begin{workout}[M14:type II and outward migration]
@@ -864,7 +864,7 @@ Per pianeti massicci il trasporto viscoso di momento angolare non \'e abbastanza
 %Lin papaloizou 79
 \begin{wrapfigure}[14]{l}{0.45\textwidth}
 \includegraphics[width=0.45\textwidth]{impulseapprox}\label{fig:impulseapprox}
-\caption{Schema approssimazione impulsiva. Da \cite{crida}.}
+\caption{Schema approssimazione impulsiva.}
 \end{wrapfigure}
 
 L'approssimazione impulsiva \'e valida per incontri veloci dove la velocit\'a relativa tra elemento di fluido e pianeta \'e maggiore della velocit\'a del suono $c_s$:
@@ -872,13 +872,12 @@ L'approssimazione impulsiva \'e valida per incontri veloci dove la velocit\'a re
 
 In questa approssimazione posso trascurare il moto del pianeta attorno alla stella. La traiettoria di un elemento di fluido \'e deviata di un angolo
 \begin{equation}
-\beta=\arctan{\delta v/v}=\arctan{(\frac{GM_p}{bv_0^2})}
+\beta=\arctan{\delta v/v_0}=\arctan{(\frac{GM_p}{bv_0^2})}
 \end{equation}
-$v_0$ velocit\'a relativa fluido-pianeta, b parametro d'impatto.
+$v_0=r(\Omega-\Omega_p)$ velocit\'a relativa fluido-pianeta, b parametro d'impatto.
 
 Trasferimento di momento angolareper unit\'a di massa rispetto alla stella:
 \begin{align}
-&v=r(\Omega-\Omega_p)\\
 &\delta j=rv(\cos{\beta}-1)=-2r\frac{G^2M_p^2}{b^2v^3}
 \end{align}
 Il disco cede momento angolare al pianeta con rate
@@ -886,12 +885,13 @@ Il disco cede momento angolare al pianeta con rate
 \frac{\delta j}{\delta t}=\frac{\delta j}{2\pi/|\Omega-\Omega_p|}
 \end{equation}
 
-Infine il momento torcente totale esercitato da pianeta sulla porzione esterna di disco che si estende da $r_p+\Delta$ a infinito \'e
+Infine il momento torcente totale esercitato dal pianeta sulla porzione esterna di disco che si estende da $r_p+\Delta$ a infinito \'e
 \begin{equation}
 \Gamma_{imp}=\int_{r_p+\Delta}^{\infty}\int_0^{2\pi}\frac{\delta j}{\delta t}\Sigma r\,d\theta\,dr\propto\Sigma q^2r_p^4\Omega_p^2\frac{r_p^3}{\Delta^3}\label{eq:torqueimp}
 \end{equation}
 
-Per materia in orbita circolare interna/esterna al pianeta il trasferimento \'e positivo/negativo: per disco esterno all'orbita l'espressione \'e la stessa con segno invertito perch\'e il disco or a \'e pi\'u lento del protopianeta.
+Per materia in orbita circolare interna/esterna al pianeta il trasferimento \'e positivo/negativo.
+%per disco esterno all'orbita l'espressione \'e la stessa con segno invertito perch\'e il disco or a \'e pi\'u lento del protopianeta.
 
 \subsection{Regime non lineare: fromazione di gap attorno al pianeta}
 %Formazione di gap per dischi tipici sopra massa di saturno.
@@ -901,7 +901,7 @@ Il limite del regime lineare  \'e raggiunto quando il momento torcente dovuto al
 \begin{equation}
 \Gamma_g(\Delta)+\Gamma_{\nu}(r_p+\Delta)=0
 \end{equation}
-con $\Gamma_g$ dato da \eqref{eq:torqueimp} o \eqref{eq:torqueimp} dove si era usata la distanza minima $\Delta=\frac{2}{3}H$.
+con $\Gamma_g$ dato da o \eqref{eq:torqueimp} dove si era usata la distanza minima $\Delta=\frac{2}{3}H$.
 
 Le condizioni necessarie per apertura gap sono (\cite{papaloizoulin1984})
 \begin{align}
@@ -944,6 +944,11 @@ Cut-off: $b_{min}\approx H$, la pressione smorza effetti su scala pi\'u piccola;
 Esistono condizioni per cui il momento torcente generato nella zona di corotazione diventa dominante.
 
 \subsection{Momento torcente generato nella regione di corotazione}
+
+L'espressione \ref{corotorquelinear} \'e valida per $t\ll\tau_{lib}$, dal momento che si instaurano orbite di librazione nel disco l'espressione del momento torcente diventa
+\begin{equation}
+\Gamma_C\propto x_s^4\Omega_p^2\Sigma\TDly{r}{(\frac{\Sigma}{B})}\label{eq:horsetorque}
+\end{equation}
 
 \begin{workout}[horseshoe drag: streamline, nonlinear. corotation torque: linear]
 paardekooper papaloizou 09: '' On corotation torque, horseshoe drag and the possibility of sustrained stalled or outward protoplanetary migration''.
@@ -993,14 +998,12 @@ quazione del moto:
 \end{equation}
 \end{workout}
 
-Planet-disk interactions: exchange of angular momentum. Type III migration: planet of intermediate mass. (‘’Planet-disk interactions and orbital evolution’’).
-
-Flow-through corotation torque: $\Gamma_{flow}=2\pi\Sigma_s\dot{a}_p\Omega_pa_p^3x_s$.
-
-\begin{align*}
-&\dot{a}_p=\frac{2\Gamma^L}{\Omega_pa_p(m_p’-\delta m)}
-\end{align*}
-
+Per pianeti di massa intermedia si pu\'o instaurare un regime di migrazione veloce detta mifìgrazione di tipo III dove il momento torcente esercitato sul pianeta \'e
+\begin{equation}
+%\Gamma_{flow}=2\pi\Sigma_s\dot{a}_p\Omega_pa_p^3x_s
+\Gamma_{flow}\propto\dot{a}_p\Omega_pa_p\delta m
+\end{equation}
+dove $\delta m$ esprime la perturbazione della massa presente nella regione di corotazione dovuta al pianeta.
 %\section{Evoluzione elementi orbitali durante migrazione}
 
 \begin{workout}[Eccentricity and inclination evolution]

@@ -1,5 +1,24 @@
 \ProvidesPackage{LocalF}
 
+\newcommand{\inlinelabel}[2][0]{%
+    \refstepcounter{equation}\label{#2}%
+    \marginnote{%
+        \ifnum#1>0%
+            \addtocounter{equation}{-#1}%
+            \newcount\inlinecount%
+            \inlinecount=0%
+            \loop\ifnum\inlinecount<#1%
+            \setbox0\hbox{\theequation}%
+            \hskip\wd0,% This % was missing resulting in more space than 1ex
+            \hskip1ex%
+            \stepcounter{equation}%
+            \advance\inlinecount by 1%
+            \repeat%
+        \fi%
+        \theequation%
+    }%
+}
+
 \newcommand{\canrel}[2]{%
 \par\medskip\noindent
 \makebox[\textwidth][s]{\rlap{#1}\hfill%#2\hfill

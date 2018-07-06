@@ -24,24 +24,31 @@ Le variabili di montecarlo ha distribuzione determinata dalle osservazioni di di
 Global model of planets formation and evolution: more detailed submodels
 \end{workout}
 
-Il modello pi\'u semplice di disco di accrescimento usa distribuzione esponenziale per andamento densit\'a superficiale e temperature, assumendo disco otticamente sottile, e relazione $L_*\propto M_*^4$ di sequenza principale. Le lacune di questo modello sono che i dischi sono otticamente spessi con transizioni nell'opacit\'a, non \'e presente evoluzione temporale consistente.
+Il modello pi\'u semplice di disco di accrescimento usa distribuzione esponenziale per andamento densit\'a superficiale e temperature, assumendo disco otticamente sottile, e relazione $L_*\propto M_*^4$ di sequenza principale. Le lacune di questo modello sono
+\begin{itemize}
+\item i dischi sono otticamente spessi con transizioni nell'opacit\'a
+\item non \'e presente evoluzione temporale consistente
+\end{itemize}
 
 Modelli pi\'u recenti  risolvono l'equazione per l'evoluzione viscosa:
 \begin{align}
 &\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_p(r)\label{eq:diskaccrphev-m18}\\
 &\dot{\Sigma}_w(a)=\left\{\begin{array}{c}0\\\frac{\dot{M}_w}{2\pi(a_{max}-R_g)a}\\\end{array}\right.
 \end{align}
-con $\dot{\Sigma}_w$ contributo della foto-evaporazione,  $\dot{\Sigma}_p$ contributo di accrescimento di gas dei pianeti e con densit\'a superficiale iniziale:
+con $\dot{\Sigma}_w$ contributo della foto-evaporazione,  $\dot{\Sigma}_p$ contributo di accrescimento di gas dei pianeti.
+La densit\'a superficiale iniziale \'e assunta essere:
 \begin{equation}
 \Sigma(a,t=0)=\Sigma_0(\frac{r}{1AU})\expy{p_g}\Exp{[-(\frac{r}{R_o})\expy{2+p_g}]}(1-\sqrt{\frac{r}{R_i}})
 \end{equation}
-in i parametri possono essere scelti casualmente secondo una distribuzione di probabilit\'a ricavata dalle osservazioni.
+dove i parametri possono essere scelti casualmente secondo una distribuzione di probabilit\'a ricavata dalle osservazioni.
 
-La distribuzione di massa e la frazione di dischi protoplanetari per ammassi stellari di et\'a diversa \'e mostrata in \ref{fig:initdistro}: la massa \'e determinata misurando flusso di emissione termica della polvera la distribuzione di $\log{M_{disk}}$  \'e gaussiana e per il cluster Ophiuchus la distribuzione \'e fittata da gaussiana con $\mu=-1.38$ ($M_{disk}=0.042\msun{}$) e $\sigma=0.49$.
+La distribuzione di massa e la frazione di dischi protoplanetari per ammassi stellari di et\'a diversa \'e mostrata in \ref{fig:initdistro}. La massa \'e determinata misurando il flusso di emissione termica della polvere: la distribuzione di $\log{M_{disk}}$  \'e gaussiana e per il cluster Ophiuchus la distribuzione \'e fittata da gaussiana con $\mu=-1.38$ ($M_{disk}=0.042\msun{}$) e $\sigma=0.49$.
 
-Il tempo caratteristico del disco \'e determinato dalla viscosit\'a $\alpha$: fissata $\alpha$, e assumendo la distribuzione uniforme nel logaritmo di $\dot{M}_w$, e calcolando  $t_{disk}(\alpha,\Sigma_0,\dot{M}_w)$ si determinano gli estremi dello fotoevaporazione per riprodurre tempi di vita osservati.
+Il tempo caratteristico del disco \'e determinato dalla viscosit\'a $\alpha$: fissata $\alpha$ compatibile con tempo caratteristico osservato $\tau_{disk}^{obs}\approx\SI{3}{\mega\year}$ e assumendo la distribuzione uniforme nel logaritmo di $\dot{M}_w$, si calcola  $t_{disk}(\alpha,\Sigma_0,\dot{M}_w)$ determinando gli estremi dello fotoevaporazione per riprodurre tempi di vita osservati.
 
- $t_{disk}(\alpha,\Sigma_0,\dot{M}_w)$ per $\dot{M}_w=\SIrange{5e-10}{3e-8}\msun{}/\si{\year}$ per $\alpha=\num{7e-3}$.
+Valori tipici sono $\dot{M}_w=\SIrange{5e-10}{3e-8}\msun{}/\si{\year}$ per $\alpha=\num{7e-3}$.
+
+Nelle popolazione planetaria considerata $\alpha$ \'e fissato sulla base delle osservazioni  ed \'e omogeneo e costante.
 
 \begin{workout}[viscosit\'a disco]
 Nella popolazione planetaria simulata $\alpha$ \'e fissato sulla base delle osservazioni  ed \'e omogeneo e costante.
@@ -71,8 +78,9 @@ con $f_{dg}$ rapporto gas/polvere (circa metallicit\'a) \'e una parametro casual
 
 Sulla scorta della piccola differenza tra composizione solare e composizione meteoritica e assumendo inoltre che il ferro sia un buon indicatore della componente solida  si usa la formula
 \begin{equation}
-\frac{f_{D/G}}{f_{D/G\odot}}=10\expy{[\cel{Fe}{}{}{}/\cel{Fe}{}{}{}]}
+\frac{f_{D/G}}{f_{D/G\odot}}=10\expy{[\cel{Fe}{}{}{}/\cel{H}{}{}{}]}
 \end{equation}
+con $f_{D/G\odot}\approx\numrange{0.01}{0.02}$ (\cite{lodders2003solar}).
 
 \begin{workout}[Planet host stars are enriched in nikel and silicon]
 Robinson06
@@ -84,7 +92,7 @@ p([Fe/H])=\frac{1}{\sigma\sqrt{2\pi}}\exp{-\frac{([Fe/H]-\mu)^2}{2\sigma^2}}
 \end{equation}
 Per le stelle campionate da CORALIE si ha $\mu=-0.02$ e $\sigma=0.22$.
 
-L'evoluzione della distribuzione dei planetesimi tiene conto dell'acrescimento sugli embrioni planetari:
+L'evoluzione della distribuzione dei planetesimi tiene conto dell'acrescimento sugli embrioni planetari
 \begin{equation}\dot{\Sigma}_p=-\frac{(3M_*)\expy{1/3}}{6\pi a_p^2B_LM_p\expy{1/3}}\dot{M}_c\end{equation}
 e generalmente si assume che eccentricit\'a e inclinazione seguono distribuzione di Rayleigh.
 
@@ -118,14 +126,23 @@ Per determinare l'accrescimento di gas \'e necessario calcolare la struttura pla
 &\dot{M}_{e,KH}=\frac{M_p}{\tau_{KH}}\\
 &\tau_{KH}=10\expy{p}(\frac{M_p}{\mearth{}})^q(\frac{\kappa}{\si{\gram\per\square\cm}})\si{\year}
 \end{align}
-dove p,q sono ottenuti tramite modelli di struttura planetaria
+dove p,q sono ottenuti tramite modelli di struttura planetaria.
+
 \begin{workout}[Higher mass gap formation reduces accretion rate]
 \begin{equation}
 f_{va04}=1.668(\frac{M_p}{\mjupiter{}})\expy{1/3}\exp{-\frac{M_p}{1.5\mjupiter{}}}+0.04
 \end{equation}
 \end{workout}
 
-\subsection{Parametrizzazioni della migrazione}
+\subsection{Parametrizzazioni della migrazione.}
+
+\begin{equation}
+\TDy{t}{r}=f(p,q,p_{\nu},p_{\xi})\frac{M_p}{M_*}\frac{\Sigma r^2}{M_*}(\frac{r\Omega}{c_s})^2r\Omega
+\end{equation}
+dove
+\begin{align}
+&p(r)=\TDly{r}{\Sigma},\ q(r)=\TDly{r}{T},\ p_{\nu}=\frac{2}{3}\sqrt{\Rey{} x_s^3},\ p_{\chi}=\frac{3p_{\nu}}{2\sqrt{\Pra{}}}
+\end{align}
 
 \begin{workout}[Migrazione mordasini 09]
 La velocit\'a di migrazione calcolata per disco isotermo (\cite{tanaka2002}) \'e troppo rapida
@@ -150,6 +167,10 @@ eq 2: theimportance of disk structure in stalling planet migration
 \begin{equation}
 \TDy{t}{r}=f(p,q,p_{\nu},p_{\xi})\frac{M_p}{M_*}\frac{\Sigma r^2}{M_*}(\frac{r\Omega}{c_s})^2r\Omega
 \end{equation}
+dove
+\begin{align}
+&p(r)=\TDly{r}{\Sigma},\ q(r)=\TDly{r}{T},\ p_{\nu}=\frac{2}{3}\sqrt{\Re x_s^3},\ p_{\chi}=\frac{3p_{\nu}}{2\sqrt{\Pr}}
+\end{align}
 \end{workout}
 
 \begin{workout}[Velocit\'a tipo II: viscosit\'a]

@@ -17,6 +17,26 @@ planet population synthesis
 \section{Modello disco di accrescimento e distribuzione condizioni iniziali}
 %Refs: Sec4 mordasini09
 
+\begin{wrapfigure}[17]{l}{0.5\textwidth}
+\includegraphics[trim={0cm 5cm 0 0},clip, keepaspectratio, width=0.5\textwidth]{GFM}\label{fig:GFM}
+\caption{Schema dei processi che \'e necessario includere in un modello di formazione planetario coerente.
+ Da \cite{benz2014planet}.}
+\end{wrapfigure}
+
+La simulazione della formazione planetaria implica la conoscenza della struttura del disco di gas e della densit\'a della componente solida. Le condizioni in fondo all'atmosfera planetaria forniscono le condizioni di temperatura e pressione all'estremo dell'inviluppo gassoso. La struttura del disco determina anche il rate massimo di accrescimento del gas. Il rate d'accrescimento di solidi \'e determinato dalla sezione d'urto efficace, determinata dalla struttura dell'inviluppo gassoso, dalla densit\'a di solidi nel disco e dalla velocit\'a orbitale. La luminosit\'a del pianeta \'e determinata dal rate di accrescimento dei solidi e dal rate di contrazione del pianeta. Infine la migrazione \'e determinata dalla caretteristiche del disco e dalla massa del pianeta.
+
+\clearpage
+
+\begin{workout}[planet luminosity]
+\begin{align}
+&L=L_{cont}+L_{acc}\\
+&L_{cont}=-\frac{E_t(t+dt)-E_t(t)-E_{gas,acc}}{dt}\\
+&E_{gas,acc}=dt\,\dot{M}_{gas}u_{int}\\
+&L_{acc}=G\frac{\dot{M}_{core}M_{core}}{R_{core}}
+\end{align}
+\end{workout}
+
+
 Tramite metodi di montecarlo si determinano numerose combinazioni delle condizioni iniziali del disco e dei parametri scelti per descrivere la sua struttura.
 Le variabili di montecarlo ha distribuzione determinata dalle osservazioni di dischi protoplanetari.
 
@@ -134,10 +154,9 @@ f_{va04}=1.668(\frac{M_p}{\mjupiter{}})\expy{1/3}\exp{-\frac{M_p}{1.5\mjupiter{}
 \end{equation}
 \end{workout}
 
-\subsection{Parametrizzazioni della migrazione.}
+%\subsection{Descrizione della migrazione.}
 
-Il primo modello di migrazione di tipo I (\cite{tanaka2002three}) assume disco localmente isotermo
-
+\begin{workout}[Descrizione della migrazione]
 \begin{equation}
 \TDy{t}{r}=f(p,q,p_{\nu},p_{\xi})\frac{M_p}{M_*}\frac{\Sigma r^2}{M_*}(\frac{r\Omega}{c_s})^2r\Omega
 \end{equation}
@@ -145,11 +164,11 @@ dove
 \begin{align}
 &p(r)=\TDly{r}{\Sigma},\ q(r)=\TDly{r}{T},\ p_{\nu}=\frac{2}{3}\sqrt{\Rey{} x_s^3},\ p_{\chi}=\frac{3p_{\nu}}{2\sqrt{\Pra{}}}
 \end{align}
+\end{workout}
 
 \begin{workout}[Migrazione mordasini 09]
 La velocit\'a di migrazione calcolata per disco isotermo (\cite{tanaka2002}) \'e troppo rapida
 \end{workout}
-
 
 \begin{workout}[model migration-pps]
 Tanaka02-m09
@@ -180,56 +199,49 @@ disk dominated
 planet dominates: $\TDy{t}{a}=-\frac{3\nu}{a}\frac{\Sigma(a,t)a^2}{M_p}$
 \end{workout}
 
-
-
-\section{popolazioni sintetiche}
-%Considero i risulati di alcuni modelli di formazione planetari (\cite{mordasini2018planetary}). 
-La soluzione delle equazioni che descrivono l'accrescimento di massa dei protopianeti e la loro evoluzione orbitale interata su numerose combinazioni delle condizioni iniziali produce una popolazione di sistemi planetari appena formati dal disco-protoplanetario.
-
-\begin{workout}[Diagramma $(a-M)$]
+\section{Popolazioni planetarie sintetiche}
+%Considero i risulati di alcuni modelli di formazione planetari (\cite{mordasini2018planetary}).
+La soluzione del modello di formazione planetario variando le condizioni iniziali in maniera opportuna e determinando un gran numero di combinazioni tramite metodi di montecarlo produce un ensemble di sistemi da cui, tramite confronto statistico con la popolazione osservata,  si determina la rispondenza con la realt\'a.
 
 \begin{figure}[!ht]
-\includegraphics[trim={0cm 12cm 0 0},clip, width=0.9\textwidth,keepaspectratio]{ma-synth}
-\caption{Da \cite{mordasini2018planetary}. Simulazione popolazione planetaria di 504 sistemi Punti rossi: pianeti giganti con $M_e/M_c>1$; blu hanno accresciuto core oltre la iceline, verdi all'interno dell'iceline .}
+\includegraphics[trim={0cm 12cm 0 0},clip, width=0.9\textwidth,keepaspectratio]{ma-synth}\label{fig:ma-synth}
+\caption{Simulazione popolazione planetaria di 504 sistemi Punti rossi: pianeti giganti con $M_e/M_c>1$; punti blu: pianeti che hanno accresciuto core oltre la iceline mentre i punti verdi all'interno dell'iceline. Da \cite{mordasini2018planetary}.}
 \end{figure}
 
-La distribuzione della popolazione planetaria \'e mostrata in \ref{fig:MaLR-freq-synth}: la posizione finale di un pianeta \'e terminata principalmente dalla posizione iniziale e dai tempi caratteristici di accrescimento e migrazione; considerando inoltre l'interazione gravitazionale tra i pianeti si hanno effetti delle risonanze e eccitazione eccentricit\'a.
+La figura \ref{fig:MaLR-freq-synth} mostra la distribuzione della popolazione sintetica nel diagramma massa-distanza: la posizione finale di un pianeta \'e terminata principalmente dai tempi caratteristici di accrescimento e migrazione; considerando inoltre l'interazione gravitazionale tra i pianeti si hanno effetti delle risonanze e eccitazione di eccentricit\'a.
 
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.47\textwidth}
 \centering
 \includegraphics[trim={0cm 12cm 0 0},clip, width=0.9\textwidth,keepaspectratio]{track1}
-\caption{Da \cite{mordasini2018planetary}. Formazione di un sistema planetario nel diagramma $a-M$: alla scomparsa del disco protoplanetario si hanno 2 pianeti giganti, un nettuniano caldo e 3 pianeti terrestri. La scala di colore indica la composizione $\frac{M_e}{M_c}$.}\label{fig:track1}
+\caption{Formazione di un sistema planetario nel diagramma $a-M$: alla scomparsa del disco protoplanetario si hanno 2 pianeti giganti, un nettuniano caldo e 3 pianeti terrestri. La scala di colore indica la composizione $\frac{M_e}{M_c}$. Da \cite{mordasini2018planetary}.}\label{fig:track1}
 \end{subfigure}
 ~
 \begin{subfigure}[b]{0.47\textwidth}
 \centering
 \includegraphics[trim={0cm 12cm 0 0},clip, width=0.9\textwidth,keepaspectratio]{envelopecoresynth}
-\caption{Da \cite{mordasini2018planetary}. }
+\caption{Massa inviluppo gassoso vs massa core. Il colore indica la distanza in $\log{\frac{a}{\si{\astronomicalunit}}}$. La linea continua mostra andamento $M_c\expy{-q_{KH}-1}=M_c\expy{2.5}$ precedente alla fase runaway di accrescimento gassoso. Da \cite{mordasini2018planetary}. }
 \end{subfigure}
 \end{figure}
 
-Differenze con osservazioni.
-
-Popolazione pianeti in origine nettuniani (frazione giaccio nel core $50\%$) che migrano all'interno accumulando materiale roccioso (frazione ghiaccio nel core $10-20\%$): saturazione momento di corotazione positivo.
-
-\end{workout}
+Alcune caratteristiche dell'ensemble sintetico (\cite{mordasini2018planetary}):
 \begin{itemize}
 \item Numerosi sistemi con piccola massa
 \item Sistemi pianeti di piccola massa e giganti: sweet spot per pianeti giganti \'e all'esterno dell'ice-line.
-\item Un pianeta gigante superstite di scattering trapianeti gignti vicini. Sistemi rari formati in dischi massicci con alta metallicit\'a
+\item Un pianeta gigante superstite di scattering trapianeti giganti vicini. Sistemi rari formati in dischi massicci con alta metallicit\'a
+\item Popolazione di pianeti tra $\numrange{30}{100}\mearth{}$: i fattori che influenzano la popolazione di pianeti di massa intermedia sono la massa presente nel disco quando il protopianeta raggiunge la massa critica per accrescimento di gas, il tempo-scala di rilassamento radiativo e competizione per accrescimento di gas tra protopianeti giganti.
 \end{itemize}
 
-
+Inoltre in \ref{fig:ma-synth} \'e evidente l'effetto della saturazione del momento torcente di corotazione con conseguente migrazione rapida all'interno: popolazione pianeti in origine nettuniani (frazione giaccio nel core $50\%$) che migrano all'interno accumulando materiale roccioso (frazione ghiaccio nel core $10-20\%$).
 
 \begin{figure}[!ht]
 \includegraphics[trim={0cm 10cm 0 0},clip, width=0.9\textwidth,keepaspectratio]{MaLR-freq-synth}\label{fig:MaLR-freq-synth}
-\caption{Da \cite{mordasini2018planetary}. }
+\caption{Distribuzione di massa, semiasse, luminosit\'a, raggio. Da \cite{mordasini2018planetary}. }
 \end{figure}
 
 \subsection{Caratteristiche delle distribuzioni delle propriet\'a fisiche dei pianeti e significativit\'a}
 
-La \ref{fig:MaLR-freq-synth} mostra la distribuzione di massa di 509 pianeti della popolazione sintetica di \cite{mordasini2018planetary}: la distribuzione della massa dei pianeti mostra due andamento diversi per pianeti fino a $30\mearth{}$ formati da solidi e pianeti che hanno raggiunto la massa critica peravviare l'accrescimento di gas runaway. La differente slope della distribuzione di massa nelle due regioni caratterizza i differenti meccanismi di accrescimento. 
+La \ref{fig:MaLR-freq-synth} mostra la distribuzione di massa di 509 pianeti della popolazione sintetica di \cite{mordasini2018planetary}. La distribuzione della massa dei pianeti ha due andamento diversi per pianeti fino a $30\mearth{}$ formati da solidi e pianeti che hanno raggiunto la massa critica per l'accrescimento di gas runaway. La differente slope della distribuzione di massa nelle due regioni caratterizza i differenti meccanismi di accrescimento. Si ha un minimo locale attorno alla massa critica dopo di che l'aumento di massa \'e molto veloce. I risultati sono significativi per masse maggiori delle masse dell'embrione iniziale.
 
 \begin{workout}[Distro luminosit\'a: relazione M-L]
 La distribuzione di luminosit\'a segue andamento $L\propto M^2$ con terzo picco per innesco deuterio a $\log{\frac{L}{\lsun}}\approx-3.5$
@@ -237,7 +249,7 @@ La distribuzione di luminosit\'a segue andamento $L\propto M^2$ con terzo picco 
 
 La distribuzione del raggio dei pianeti mostra picco a $1\rjupiter$ e crescita per piccoli raggi dovuta al loro lungo $\tkh{}$ e quindi scarso accrescimento di H/He.
 
-La distribuzione dei semi-assi cresce rapidamente tra $0.01-0.1\si{\astronomicalunit}$, resta uniforme in log tra $0.1-10\si{\astronomicalunit}$ nonostante molti pianeti migrino all'interno,mentre i pianeti giganti sono ristretti in \SIrange{0.1}{6}{\astronomicalunit}.
+La distribuzione dei semi-assi cresce rapidamente tra $0.01-0.1\si{\astronomicalunit}$, resta uniforme in log tra $0.1-10\si{\astronomicalunit}$ nonostante molti pianeti migrino all'interno,mentre i pianeti giganti sono ristretti in \SIrange{0.1}{6}{\astronomicalunit}. La distribuzioni del semiasse non mostra deviazioni dalla distribuzione iniziale.
 
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Confronto semi-quantitativo tra caratteristiche popolazioni sintetiche e osservate}
@@ -265,6 +277,8 @@ O&10-20&50-60\\
 \end{table}
 
 Nettuno/Saturno in posizioni poco affollate
+
+Differenze con osservazioni: diagramma m-a exoplanets
 
 
 \begin{figure}[!ht]\includegraphics[trim={0cm 17cm 0 0},clip, keepaspectratio,width=0.9\textwidth]{MR-freq-obssynth}\label{}\caption{Distribuzioni di massa e raggio per popolazione planetaria sintetica (linea nera) e distribuzioni osservate tramite RV e transiti (linea blu) corrette per i bias. Da \cite{mordasini2018planetary}.}\end{figure}

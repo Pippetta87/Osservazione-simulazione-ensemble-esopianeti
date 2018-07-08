@@ -40,7 +40,7 @@ $M_{ice}$&$9.3\mearth{}$&$10.7\mearth{}$\\
 $M_{H/He}$&$1.5\mearth{}$&$2.2\mearth{}$\\
         \end{tabular}
     \end{minipage} 
-    \caption{Composizione Giove, Saturno, Urano e Nettuno. Da \cite{baraffe2009physical}}\label{tab:JSUNcomp}
+    \caption{Composizione Giove, Saturno, Urano e Nettuno. Da \cite{baraffe2009physical}.}\label{tab:JSUNcomp}
 \end{table}
 
 Il modello di Nizza del sistema solare riproduce caratteristiche orbitali dei pianeti giganti considerando la loro migrazione in una distribuzione di planentesimi di $30-50\mearth{}$; la presenza di numerosa popolazione di planetesimi \'e corroborata dalla craterizzazionedei pianeti terrestri e corpi minori come dall'esistenza di numerosi oggetti di piccole dimensioni superstiti.
@@ -134,8 +134,8 @@ Effects of inhomogenous infall on obliquity (tremaine 91, bate 10)
 }
 
 \begin{wrapfigure}[16]{l}{0.55\textwidth}
-\includegraphics[trim={0cm 0 0 0},clip, width=0.5\textwidth]{obsMa}\label{fig:Maplot}
-\caption{Diagramma massa-distanza degli esopianeti in ''The extrasolar planet encyclopedia''. Rosso, celeste, magenta e verde sono pianeti rivelati tramite RV, T, osservazione diretta e microlensing. Da \cite{mordasini2018planetary}.}
+\includegraphics[trim={0cm 0 0 0},clip, width=0.5\textwidth]{obsMa}
+\caption{Diagramma massa-distanza degli esopianeti in ''The extrasolar planet encyclopedia''. Rosso, celeste, magenta e verde sono pianeti rivelati tramite RV, T, osservazione diretta e microlensing. Da \cite{mordasini2018planetary}.}\label{fig:Maplot}
 \end{wrapfigure}
 
 La popolazione degli esopianeti osservata riflette quella reale tramite gli effetti di selezione dovuti alla probabilit\'a di rivelamento della tecnica/strumento particolari. Le osservazioni pi\'u numerose sono basate sull'osservazione della velocit\'a lungo la linea di vista dovuto al moto della stella attorno al baricentro del sistema stella pianeta (RV) o differenza nella luminosit\'a dovuto al transito del pianeta tra stella e osservatore (T).
@@ -160,10 +160,12 @@ tab.1: occurrence and architecture exoplanetary system
 \section{Popolazione esopianeti rilevati tramite RV}
 
 Se l'asse z \'e lungo la linea di vista la posizione della stella \'e $z=r(t)\sin{i}\sin{(\omega+\nu)}$ e per la velocit\'a radiale:
-\begin{align}
-&v_r=\dot{z}=K[\cos{(\omega+\nu)}+e\cos{\omega}]\label{eq:vrsignal}\\
-&K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/2}}
-\end{align}
+\begin{equation}
+v_r=\dot{z}=K[\cos{(\omega+\nu)}+e\cos{\omega}]\label{eq:vrsignal}
+\end{equation}
+\begin{equation}
+K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/2}}
+\end{equation}
 dove $K$ \'e la semi-ampiezza.
 Per probabilit\'a di rivelamento del $50\%$ la minima massa planetaria \'e
 \begin{equation}
@@ -177,8 +179,8 @@ Per sistemi multipli consideriamo la sovrapposizione lineare di $n_p$ termini \e
 \begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 5cm 0 0},clip, width=0.94\textwidth]{freqvsM}
 \caption{Distribuzione di massa di massa dei pianeti: in rosso distribuzione corretta per bias osservativi. Da \cite{mayor2011harps}.}\label{fig:freqvsM} \end{subfigure}
 ~
-\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 8cm 0 0},clip, width=0.94\textwidth]{PfreqvsFeH}\label{fig:PfreqvsFeH}
-\caption{Numero di pianeti in funzione della metallicit\'a stellare: nero dei giganti gassosi, rosso dei pianeti con $M\leq30\mearth{}$ e blu combinata. Da \cite{mayor2011harps}}
+\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 8cm 0 0},clip, width=0.94\textwidth]{PfreqvsFeH}
+\caption{Numero di pianeti in funzione della metallicit\'a stellare: nero dei giganti gassosi, rosso dei pianeti con $M\leq30\mearth{}$ e blu combinata. Da \cite{mayor2011harps}.}\label{fig:PfreqvsFeH}
 \end{subfigure}
 \end{figure}
 
@@ -189,7 +191,7 @@ La \ref{fig:PfreqvsFeH} mostra l'assenza di correlazione tra la metallicit\'a de
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 6cm 0 0},clip, width=0.98\textwidth]{freqvsPgiant}\caption{Frequenza pianeti con $M\geq 30\mearth{}$ in funzione del periodo orbitale; in rosso  tratteggiato con correzione bias osservativi. Da \cite{mayor2011harps}.}\label{fig:freqvsPgiant} \end{subfigure}
 ~
-\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 10cm 0 0},clip,width=0.98\textwidth]{freqvsPlowM}\label{fig:freqvsPlowM} \caption{Frequenza pianeti con $M\leq 30\mearth{}$ in funzione del periodo orbitale; in rosso con correzione bias osservativi. Da \cite{mayor2011harps}.}
+\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 10cm 0 0},clip,width=0.98\textwidth]{freqvsPlowM} \caption{Frequenza pianeti con $M\leq 30\mearth{}$ in funzione del periodo orbitale; in rosso con correzione bias osservativi. Da \cite{mayor2011harps}.}\label{fig:freqvsPlowM}
 \end{subfigure}
 \end{figure}
 
@@ -205,7 +207,7 @@ La \ref{fig:PfreqvsFeH} mostra l'assenza di correlazione tra la metallicit\'a de
 \begin{subfigure}[b]{0.3\textwidth}
 \includegraphics[trim={0cm 8cm 0 0},clip, width=0.9\textwidth]{PMfreq-short}\label{fig:PMfreq-short}
 \end{subfigure}
-\caption{Diagramma massa-periodo: frazione di stelle che ospitano pianeta con caratteristiche nella regione evidenziata. Da sinistra a destra: $P<10\si{\year}$ e $M>50\mearth{}$, $P<1\si{\year}$ e $M>3-100\mearth{}$, $P<50\si{\day}$ e $M=1-3/3-10/10-30/30-100/100-300/300-1000$. Da \cite{mayor2011harps}}
+\caption{Diagramma massa-periodo: frazione di stelle che ospitano pianeta con caratteristiche nella regione evidenziata. Da sinistra a destra: $P<10\si{\year}$ e $M>50\mearth{}$, $P<1\si{\year}$ e $M>3-100\mearth{}$, $P<50\si{\day}$ e $M=1-3/3-10/10-30/30-100/100-300/300-1000$. Da \cite{mayor2011harps}.}
 \end{figure}
 
 Una comprensione pi\'u ampia si ha studiando la distribuzione dei pianeti nel diagramma massa-periodo (M-P): elenco alcune caratteristiche della distribuzione dei pianeti osservati (da \cite{mayor2011harps}).
@@ -244,13 +246,13 @@ fig 2.30 pg 39 Perrymann
 \begin{subfigure}[b]{0.47\textwidth}
 \centering
 \includegraphics[trim={0cm 0 0 0},clip, width=0.9\textwidth]{exoresonance}
-\caption{Da \cite{winnfabrycky15}}\label{fig:exoresonance}
+\caption{Da \cite{winnfabrycky15}.}\label{fig:exoresonance}
 \end{subfigure}
 ~
 \begin{subfigure}[b]{0.47\textwidth}
 \centering
-\includegraphics[trim={0cm 0 0 0},clip,width=0.9\textwidth]{singlemulti}\label{fig:}
-\caption{Da \cite{wright09}}
+\includegraphics[trim={0cm 0 0 0},clip,width=0.9\textwidth]{singlemulti}
+\caption{Da \cite{wright09}.}\label{fig:singlemulti}
 \end{subfigure}
 \end{figure}
 \end{workout}
@@ -262,7 +264,7 @@ planet around metal rich star have higher e (dawson, murray-clay 13)
 smaller planets tend to have lower e (hogg 10 raccomanded modelling e distro on basis of Bayesian analysis)
 \end{workout}
 
-\clearpage
+%\cleardoublepage
 
 \section{Popolazione esopianeti rilevati tramite transito}
 
@@ -287,9 +289,14 @@ V_p*P\propto d^3*\frac{R_*}{a}\propto R_p^6/P\expy{\frac{5}{3}}
 % \includegraphics[trim={0cm 0 0 0},clip,width=0.95\textwidth]{keplerRfreq}\label{fig:keplerRfreq} \caption{Da \cite{fressin2013false}}
 %\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}\label{fig:freqvsRpl50d}\caption{Da \cite{}.}
 
-\begin{figure}[!ht] \begin{subfigure}[b]{0.45\textwidth} \centering \includegraphics[trim={0 12cm 0 0},clip, width=0.95\textwidth]{RfreqPl100ub} 
-\label{fig:RfreqPl100ub} \end{subfigure} ~ \begin{subfigure}[b]{0.55\textwidth} \centering\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{Rfreq}\label{Rfreq}
- \end{subfigure}\caption{A sinistra: distribuzione per i pianeti osservati tramite transito con $P<\SI{100}{\day}$: il picco a $1.7\mearth{}$ si ipotizza causato dall'evaporazione. Da \cite{fulton2017california}. A destra: distribuzione radiale pianeti rivelati tramite T (da \cite{exoplanet.eu} (luglio 2018): la frequenza ha andamento crescente verso pianeti di raggio terrestre, andamento piatto tra $4-10\rearth{}$ e picco a $R\approx\rjupiter{}$.} \end{figure} 
+\begin{figure}[!ht]
+\begin{subfigure}[b]{0.45\textwidth} \centering \includegraphics[trim={0 12cm 0 0},clip, width=0.95\textwidth]{RfreqPl100ub} 
+\label{fig:RfreqPl100ub} \end{subfigure}
+~
+\begin{subfigure}[b]{0.55\textwidth} \centering\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{Rfreq}\label{Rfreq}
+\end{subfigure}
+\caption{A sinistra: distribuzione per i pianeti osservati tramite transito con $P<\SI{100}{\day}$: il picco a $1.7\mearth{}$ si ipotizza causato dall'evaporazione. Da \cite{fulton2017california}. A destra: distribuzione radiale pianeti rivelati tramite T (da \cite{exoplanet.eu} (luglio 2018): la frequenza ha andamento crescente verso pianeti di raggio terrestre, andamento piatto tra $4-10\rearth{}$ e picco a $R\approx\rjupiter{}$.}
+ \end{figure} 
 
 
 \begin{workout}[transit distro observed refs]
@@ -324,7 +331,7 @@ R\propto M\expy{(1-n)/(3-n)}
 \end{equation}•
 Tramite un modello planetarie si ricava la composizione media di un pianeta dalla posizione nel diagramma mass-raggio.
 
-\begin{figure}[!ht] \centering\includegraphics[trim={0cm 14cm 0 0},clip, keepaspectratio,width=0.9\textwidth]{MRD}\label{fig:MRD}\caption{Diagramma mass-raggio per pianeti di transito. Le curve tratteggiate sono a densit\'a costante. Il simbolo $\circ$ indica i pianeti del sistema solare. Da \cite{perryman2011exoplanet}.}
+\begin{figure}[!ht] \centering\includegraphics[trim={0cm 14cm 0 0},clip, keepaspectratio,width=0.9\textwidth]{MRD}\caption{Diagramma mass-raggio per pianeti di transito. Le curve tratteggiate sono a densit\'a costante. Il simbolo $\circ$ indica i pianeti del sistema solare. Da \cite{perryman2011exoplanet}.}\label{fig:MRD}
  \end{figure} 
 
 \begin{workout}[KEPLER MULTI-PLANET SYSTEM]

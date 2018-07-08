@@ -174,8 +174,8 @@ tra \SIrange{2.2}{25}{\micro\meter}.
 Le condizioni iniziali delle simulazioni di popolazioni planetaria sono determinate dalle osservazioni dei dischi protoplanetari: le distribuzioni di metallicit\'a, massa, massa di polvere ed et\'a sono mostrati in ~\ref{fig:initdistro}. Il tempo caratteristico dei dischi protoplanetari, determinato misurando l'eccesso infrarosso in ammassi di et\'a diversa, \'e \SI{2.5}{\mega\year}. La massa del disco \'e ottenuta tramite fit con spettro osservato di un modello di disco.
 
 \begin{figure}[!ht]
-\includegraphics[trim={0cm 10cm 0 0},clip, keepaspectratio,width=0.7\textwidth]{initdistro}\label{fig:initdistro}
-\caption{Distribuzione caretteristiche dischi di accrescimento. Da \cite{mordasini2018planetary}.}\end{figure}
+\includegraphics[trim={0cm 10cm 0 0},clip, keepaspectratio,width=0.7\textwidth]{initdistro}
+\caption{Distribuzione caretteristiche dischi di accrescimento. Da \cite{mordasini2018planetary}.}\label{fig:initdistro}\end{figure}
 
 \begin{workout}[Fit SED]
 Disk model
@@ -282,7 +282,7 @@ infrared excess: gail hoppe10
 
 
 \begin{figure}[!ht]
-\includegraphics[width=0.9\textwidth]{accretiontimeline}\label{fig:accretiontimeline}\caption{Rappresentazione schematica del processo di formazione protopianeti dalla polvere. Da \cite{perryman2014exoplanets}.}
+\includegraphics[width=0.9\textwidth]{accretiontimeline}\caption{Rappresentazione schematica del processo di formazione protopianeti dalla polvere. Da \cite{perryman2014exoplanets}.}\label{fig:accretiontimeline}
 \end{figure}
 
 \begin{workout}[Refs GI vs CA]
@@ -649,9 +649,9 @@ fonti energia: tidal heating radiogeninc heat, star flux
 \chapter{Interazioni pianeta-disco: migrazione planetaria}
 }
 
-\begin{wrapfigure}[17]{l}{0.3\textwidth}
-\includegraphics[trim={0cm 11cm 0 0},clip, keepaspectratio, width=0.3\textwidth]{corotation}\label{fig:corotation}
-\caption{In alto: Orbite periodiche e librazione delle particelle di gas del disco. In basso: Asimmetrie tra gli U-turn che precedono/seguono il pianeta. Da \cite{armitage2007lecture}.}
+\begin{wrapfigure}[20]{l}{0.3\textwidth}
+\includegraphics[trim={0cm 11cm 0 0},clip, keepaspectratio, width=0.3\textwidth]{corotation}
+\caption{In alto: Orbite periodiche e librazione delle particelle di gas del disco. In basso: Asimmetrie tra gli U-turn che precedono/seguono il pianeta. Da \cite{armitage2007lecture}.}\label{fig:corotation}
 \end{wrapfigure}
 
 Considero in maniera schematica lo scambio di momento angolare tra pianeta e disco usando l'approssimazione impulsiva, dove si considera la traiettora di un elemento di fluido che interagisce col pianeta e integrando sui parametri d'impatto ammissibili, oppure descrivendo in approssimazione lineare l'interazione tra onde di densit\'a e pianeta. L'analisi lineare delle perturbazioni generate dal pianeta fornisce l'espressione analitica dei momenti torcenti esercitati dal disco sul pianeta alle risonanze di Lindblad e di corotazione.
@@ -667,7 +667,7 @@ x_s\propto a_p\sqrt{\frac{q}{h}}, \ h=\frac{H}{a},\ q=\frac{m_p}{M_*}
 
 I risultati riportati sono per disco isotermo:nei dischi reali si pu\'o avere migrazione stocastica e zone di concentramento dovute a transizioni di opacit\'a.
 
-\clearpage
+\cleardoublepage
 
 \begin{workout}[Migrazione: situazione complessa]
 Armitage07 pg 57-58
@@ -859,12 +859,14 @@ Benitez Llambay 15: heating torque, Paardekooper14 Pierens 15: dynamic corotatio
 
 Per pianeti massicci il trasporto viscoso di momento angolare non \'e abbastanza efficiente quindi si forma un gap attorno al pianeta: questo \'e detta migrazione di tipo II. il pianeta prende momento dal disco esterno (dovuto al flusso viscoso) e cede quello richiesto al disco esterno dal trasporto viscoso: normalmente il bilancio \'e negativo quindi il pianeta migra verso l'interno.
 
+\cleardoublepage
+
 \subsection{Approssimazione impulsiva}
 
 %Lin papaloizou 79
-\begin{wrapfigure}[14]{l}{0.45\textwidth}
-\includegraphics[width=0.45\textwidth]{impulseapprox}\label{fig:impulseapprox}
-\caption{Schema approssimazione impulsiva.}
+\begin{wrapfigure}[7]{l}{0.45\textwidth}
+\includegraphics[width=0.45\textwidth]{impulseapprox}
+\caption{Schema approssimazione impulsiva.}\label{fig:impulseapprox}
 \end{wrapfigure}
 
 L'approssimazione impulsiva \'e valida per incontri veloci dove la velocit\'a relativa tra elemento di fluido e pianeta \'e maggiore della velocit\'a del suono $c_s$:
@@ -945,7 +947,7 @@ Esistono condizioni per cui il momento torcente generato nella zona di corotazio
 
 \subsection{Momento torcente generato nella regione di corotazione}
 
-L'espressione \ref{corotorquelinear} \'e valida per $t\ll\tau_{lib}$, dal momento che si instaurano orbite di librazione nel disco l'espressione del momento torcente diventa
+L'espressione \ref{eq:corotorquelinear} \'e valida per $t\ll\tau_{lib}$, dal momento che si instaurano orbite di librazione nel disco l'espressione del momento torcente diventa
 \begin{equation}
 \Gamma_C\propto x_s^4\Omega_p^2\Sigma\TDly{r}{(\frac{\Sigma}{B})}\label{eq:horsetorque}
 \end{equation}
@@ -977,8 +979,7 @@ Corotation torque saturation depends upon $\tau_{nlib}/\tau_{vis}$: over timesca
 \end{workout}
 
 \subsection{Corotation torque in accretion disk and migration 3 type}
-Viscosity desaturate,
-crida pg 39: 
+%Viscosity desaturate,crida pg 39: 
 Sia $b_0=r-r_p$ la distanza dal pianeta di un elemento di fluido in congiunzione
 $\tau\approx2\pi/|x_s\TDy{r}{\Omega}|=4\pi r_p/(3x_s\Omega_p)$
 

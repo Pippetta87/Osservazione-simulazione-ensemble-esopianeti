@@ -173,8 +173,8 @@ tab.1: occurrence and architecture exoplanetary system
 \end{workout}
 
 \section{Popolazione esopianeti rilevati tramite RV}
-
-Se l'asse z \'e lungo la linea di vista la posizione della stella \'e $z=r(t)\sin{i}\sin{(\omega+\nu)}$ e per la velocit\'a radiale:
+Considero il moto stellare attorno al centro di massa del sistem stella pianeta:
+se l'asse z \'e lungo la linea di vista la posizione della stella \'e $z=r(t)\sin{i}\sin{(\omega+\nu)}$ e per la velocit\'a radiale:
 \begin{equation}
 v_r=\dot{z}=K[\cos{(\omega+\nu)}+e\cos{\omega}]\label{eq:vrsignal}
 \end{equation}
@@ -182,6 +182,7 @@ v_r=\dot{z}=K[\cos{(\omega+\nu)}+e\cos{\omega}]\label{eq:vrsignal}
 K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/2}}
 \end{equation}
 dove $K$ \'e la semi-ampiezza.
+Numero misure della velocit\'a radiale permettono di determinare alcuni parametri orbitali ($e$, $P$, $t_p$, $\omega$) e la massa minima $M_p\sin{i}$.
 
 \begin{errata}[Detection probability]
 Per probabilit\'a di rivelamento del $50\%$ la minima massa planetaria \'e
@@ -195,15 +196,15 @@ Per sistemi multipli consideriamo la sovrapposizione lineare di $n_p$ termini \e
 La probabilit\'a di rivelamento \'e determinata dall'ampiezza del moto radiale della stella attorno al centro di massa K, il rumore strumentale e stellare, la durata dell'osservazione e la forma dell'orbita.
 
 \begin{figure}[!ht]
-\begin{subfigure}[b]{0.33\textwidth}
+\begin{subfigure}[b]{0.32\textwidth}
 \includegraphics[trim={0cm 17cm 1cm 0},clip, width=0.99\textwidth]{PMfreq-e23}\label{fig:PMfreq-e23}
 \end{subfigure}
 ~
-\begin{subfigure}[b]{0.33\textwidth}
+\begin{subfigure}[b]{0.32\textwidth}
 \includegraphics[trim={0cm 10cm 0 0},clip, width=0.99\textwidth]{PMfreq-e12}\label{fig:PMfreq-e12}
 \end{subfigure}
 ~
-\begin{subfigure}[b]{0.33\textwidth}
+\begin{subfigure}[b]{0.32\textwidth}
 \includegraphics[trim={0cm 8cm 0 0},clip, width=0.99\textwidth]{PMfreq-short}\label{fig:PMfreq-short}
 \end{subfigure}
 \caption{Diagramma massa-periodo: frazione di stelle che ospitano pianeta con caratteristiche nella regione evidenziata. Da sinistra a destra: $P<10\si{\year}$ e $M>50\mearth{}$, $P<1\si{\year}$ e $M>3-100\mearth{}$, $P<50\si{\day}$ e $M=1-3/3-10/10-30/30-100/100-300/300-1000$. Da \cite{mayor2011harps}.}\label{fig:PMfreqs}
@@ -213,20 +214,26 @@ La probabilit\'a di rivelamento \'e determinata dall'ampiezza del moto radiale d
 mayor 11 fig 1
 \end{workout}
 
-I tre diagrammi \ref{fig:PMfreqs} mostrano la frequenza dei pianeti in delimitate regioni del diagramma periodo-massa ($P-M$)  ricavate da \cite{mayor2011harps} usando in camèione di stelle determinata utilizzando un sottocampione di stelle per cui la probabilit\'a di rivelazione relativa alla regione del diagramma $(P-M)$ \'e $99\%$: accanto alle linee continue nei diagrimmi $(P,M)$ sono indicate le percentuali di stelle per cui \'e possibile ottenere una probabilit\'a di rivelamento del $99\%$ nella regione superiore.
+I tre diagrammi \ref{fig:PMfreqs} mostrano la frequenza dei pianeti in delimitate regioni del diagramma periodo-massa ($P-M$)  ricavate da \cite{mayor2011harps} determinata utilizzando un sottocampione di stelle per cui la probabilit\'a di rivelazione relativa alla regione del diagramma $(P-M)$ \'e $99\%$: accanto alle linee continue nei diagrammi $(P,M)$ sono indicate le percentuali di stelle per cui \'e possibile ottenere una probabilit\'a di rivelamento del $99\%$.
 
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 5cm 0 0},clip, width=0.94\textwidth]{freqvsM}
 \caption{Distribuzione di massa di massa dei pianeti: in rosso distribuzione corretta per bias osservativi. Da \cite{mayor2011harps}.}\label{fig:freqvsM} \end{subfigure}
 ~
-\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 8cm 0 0},clip, width=0.94\textwidth]{PfreqvsFeH}
-\caption{Numero di pianeti in funzione della metallicit\'a stellare: nero dei giganti gassosi, rosso dei pianeti con $M\leq30\mearth{}$ e blu combinata. Da \cite{mayor2011harps}.}\label{fig:PfreqvsFeH}
+\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 8cm 0 0},clip, width=0.94\textwidth]{freqvsMcomb}
+\caption{Distribuzione di massa dei pianeti osservata. Da \cite{mayor2011harps}.}\label{fig:freqvsMcomb}
 \end{subfigure}
 \end{figure}
 
-La distribuzione di massa (\ref{fig:freqvsM}) mostra un'abbondante popolazione di pianeti di massa piccola e una rapida diminuzione attorno a $10\mearth{}$; la distribuzione dei periodi mostra aumento dei pianeti giganti ($M>30\mearth{}$) a maggiore periodo orbitale e concentrazione pianeti piccola massa a $P=10-100\si{\day}$.
+\begin{wrapfigure}[5]{0.49\textwidth}
+\centering \includegraphics[trim={0cm 8cm 0 0},clip, width=0.94\textwidth]{PfreqvsFeH}
+\caption{Numero di pianeti in funzione della metallicit\'a stellare: nero dei giganti gassosi, rosso dei pianeti con $M\leq30\mearth{}$ e blu combinata. Da \cite{mayor2011harps}.}\label{fig:PfreqvsFeH}
+\end{wrapfigure}
 
-La \ref{fig:PfreqvsFeH} mostra l'assenza di correlazione tra la metallicit\'a della stella e la frequenza di pianeti di piccola massa fino a $30-40\mearth{}$ al contrario di quello che accade per pianeti giganti.
+
+La distribuzione di massa (figure \subref{fig:freqvsM}, \subref{fig:freqvsMcomb}) mostra un'abbondante popolazione di pianeti di massa piccola e una rapida diminuzione attorno a $10\mearth{}$; la distribuzione dei periodi mostra aumento dei pianeti giganti ($M>30\mearth{}$) a maggiore periodo orbitale \subref{fig:freqvsPgiant} e concentrazione pianeti piccola massa a $P=10-100\si{\day}$ \subref{fig:freqvsPlowM}.
+
+La figura \ref{fig:PfreqvsFeH} mostra l'assenza di correlazione tra la metallicit\'a della stella e la frequenza di pianeti di piccola massa fino a $30-40\mearth{}$ al contrario di quello che accade per pianeti giganti.
 
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 6cm 0 0},clip, width=0.98\textwidth]{freqvsPgiant}\caption{Frequenza pianeti con $M\geq 30\mearth{}$ in funzione del periodo orbitale; in rosso  tratteggiato con correzione bias osservativi. Da \cite{mayor2011harps}.}\label{fig:freqvsPgiant} \end{subfigure}
@@ -296,14 +303,16 @@ smaller planets tend to have lower e (hogg 10 raccomanded modelling e distro on 
 
 \section{Popolazione esopianeti rilevati tramite transito}
 
-Le osservabili sono la differenza di luminosit\'a durante il transito, la durata totale e di massima occultazione del transito, e il periodo: da questi \'e possibile ricavare $R_p$, a, i, $R_*$, e facendo uso della relazione massa raggio appropriata per la fase evolutiva della stella $M_*$
+Le osservabili sono la differenza di luminosit\'a durante il transito, la durata totale e di massima occultazione del transito, e il periodo: da questi \'e possibile ricavare $R_p$, a, i, $R_*$, $M_*$ facendo uso della relazione massa raggio appropriata per la fase evolutiva della stella, per stelle di sequenza principale
+\begin{equation}
+R_*=M_*\expy{0.8}
+\end{equation}
 
-La probabilit\'a che l'orbita di un pianeta sia allineata con l'osservatore in maniera da avere un transito, per orbite circolari ed eccentriche, \'e:
+La probabilit\'a che l'orbita di un pianeta sia allineata con l'osservatore in maniera da avere un transito \'e:
 \begin{align*}
-&p=\frac{R_*}{a}=0.005(\frac{R_*}{\rsun{}})(\frac{a}{1AU})\expy{-1}\\
-&p=(\frac{R_*\pm R_p}{a})(\frac{1}{1-e^2})
+&p=(\frac{R_*\pm R_p}{a})(\frac{1}{1-e^2})=0.005(\frac{R_*}{\rsun{}})(\frac{a}{1AU})\expy{-1}(\frac{1}{1-e^2})
 \end{align*}
-La maggiore probabilit\'a di osservazione per orbite eccentriche \'e compensata approssimativamente dalla minore durata del transito.
+La maggiore probabilit\'a di transito per orbite eccentriche \'e compensata approssimativamente dalla minore durata del transito.
 
 \begin{workout}[transiti: dectability and selection effects]
 Considerando un numero totale di osservazioni $N_o$ durante il transito si hanno $N_t\approx N_o\frac{R_*}{\pi a}$; il rapport segnale rumore \'e $S/N=\sqrt{N_t}\frac{\delta}{\sigma}$, $\sigma$ precisione fotometrica, $\sigma\propto\frac{1}{\sqrt{N_{ph}}}\propto d$. Per fissato S/N e tipo stellare il numero di pianeti rivelati varia come
@@ -312,20 +321,38 @@ V_p*P\propto d^3*\frac{R_*}{a}\propto R_p^6/P\expy{\frac{5}{3}}
 \end{equation}
 \end{workout}
 
+\begin{wrapfigure}[5]{0.49\textwidth}
+\centering \includegraphics[trim={0cm 8cm 0 0},clip, width=0.94\textwidth]{MR-model-obs}
+\caption{. Da \cite{}.}\label{fig:}
+\end{wrapfigure}
+
+La posizione di un pianeta nel diagramma massa-raggio \'e determinata dalla densit\'a media quindi dalla storia di accrescimento del pianeta (pianeta roccioso, pianeta costituito in parte da ghiacci, pianeta con massa consistente di gas), dal bilancio termico, e propriet\'a di H/He e metalli a alte densit\'a (rottura H molecolare, ionizzazione da pressione, degenerazione elettronica, transizioni di fase).
+
+\begin{errata}[Equazione di stato politropa: relazione massa raggio]
+\begin{equation}
+P\propto\rho\expy{\gamma},\ \gamma=\frac{1}{n}+1
+\end{equation}
+si che per $M\approx\mjupiter$ $n\approx1$.
+Inoltre la relazione massa-raggio  \'e approssimabile
+\begin{equation}
+R\propto M\expy{(1-n)/(3-n)}
+\end{equation}
+\end{errata}
+
+\begin{figure}[!ht] \centering\includegraphics[trim={0cm 14cm 0 0},clip, keepaspectratio,width=0.9\textwidth]{MRD}\caption{Diagramma mass-raggio per pianeti di transito. Le curve tratteggiate sono a densit\'a costante. Il simbolo $\circ$ indica i pianeti del sistema solare. Da \cite{perryman2011exoplanet}.}\label{fig:MRD}
+\end{figure}
 
 %\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}\label{freqvsRpl50d}\caption{Da \cite{howard2012planet}}
 % \includegraphics[trim={0cm 0 0 0},clip,width=0.95\textwidth]{keplerRfreq}\label{fig:keplerRfreq} \caption{Da \cite{fressin2013false}}
 %\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}\label{fig:freqvsRpl50d}\caption{Da \cite{}.}
 
 \begin{figure}[!ht]
-\begin{subfigure}[b]{0.45\textwidth} \centering \includegraphics[trim={0 12cm 0 0},clip, width=0.95\textwidth]{RfreqPl100ub} 
-\label{fig:RfreqPl100ub} \end{subfigure}
+\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0 12cm 0 0},clip, width=0.95\textwidth]{RfreqPl100ub} 
+\label{fig:RfreqPl100ub}\subcaption{Distribuzione per i pianeti osservati tramite transito con $P<\SI{100}{\day}$: la valle a $1.7\mearth{}$ si ipotizza causato dall'evaporazione. Da \cite{fulton2017california}.} \end{subfigure}
 ~
-\begin{subfigure}[b]{0.55\textwidth} \centering\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{Rfreq}\label{Rfreq}
+\begin{subfigure}[b]{0.49\textwidth} \centering\includegraphics[trim={0cm 2.5cm 0 0},clip, keepaspectratio,width=0.9\textwidth]{Rfreq}\label{Rfreq}\subcaption{Distribuzione radiale pianeti rivelati tramite T (da \cite{exoplanet.eu} (luglio 2018): la frequenza ha andamento crescente verso pianeti di raggio terrestre, andamento piatto tra $4-10\rearth{}$ e picco a $R\approx\rjupiter{}$.}
 \end{subfigure}
-\caption{A sinistra: distribuzione per i pianeti osservati tramite transito con $P<\SI{100}{\day}$: il picco a $1.7\mearth{}$ si ipotizza causato dall'evaporazione. Da \cite{fulton2017california}. A destra: distribuzione radiale pianeti rivelati tramite T (da \cite{exoplanet.eu} (luglio 2018): la frequenza ha andamento crescente verso pianeti di raggio terrestre, andamento piatto tra $4-10\rearth{}$ e picco a $R\approx\rjupiter{}$.}
- \end{figure} 
-
+\end{figure}
 
 \begin{workout}[transit distro observed refs]
 Refs:Mthods of detecting exoplanets (radius distro: pg 136)
@@ -347,20 +374,6 @@ formazione: vedi \ref{ch:gasaccretion}
 MR diagram chabrier 09 (perryman 143)
 
 \end{workout}
-
-La posizione di un pianeta nel diagramma massa-raggio \'e determinata dall'equazione di stato, e quindi da densit\'a e composizione. Per un equazione di stato della forma
-\begin{equation}
-P\propto\rho\expy{\gamma},\ \gamma=\frac{1}{n}+1
-\end{equation}
-si che per $M\approx\mjupiter$ $n\approx1$.
-Inoltre la relazione massa-raggio  \'e approssimabile
-\begin{equation}
-R\propto M\expy{(1-n)/(3-n)}
-\end{equation}•
-Tramite un modello planetarie si ricava la composizione media di un pianeta dalla posizione nel diagramma mass-raggio.
-
-\begin{figure}[!ht] \centering\includegraphics[trim={0cm 14cm 0 0},clip, keepaspectratio,width=0.9\textwidth]{MRD}\caption{Diagramma mass-raggio per pianeti di transito. Le curve tratteggiate sono a densit\'a costante. Il simbolo $\circ$ indica i pianeti del sistema solare. Da \cite{perryman2011exoplanet}.}\label{fig:MRD}
- \end{figure} 
 
 \begin{workout}[KEPLER MULTI-PLANET SYSTEM]
 THE CALIFORNIA-KEPLER SURVEY. V. PEAS IN A POD: PLANETS IN A KEPLER MULTI-PLANET SYSTEM ARE SIMILAR IN SIZE AND REGULARLY SPACED

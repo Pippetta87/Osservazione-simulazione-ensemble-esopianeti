@@ -70,10 +70,11 @@
 \renewenvironment{wrapfigure}[3][]{\begin{figure}[!ht]}{\end{figure}}
 \fi
 
-\AtBeginDocument{%ref->(ref)
-\let\refold\ref
-\renewcommand{\ref}[1]{(\refold{#1})}
-}
+%\AtBeginDocument{%ref->(ref)
+%\let\refold\ref
+%\renewcommand{\ref}[1]{(\refold{#1})}
+%}
+
 
 \renewcommand\cftappendixname{\appendixname~} %% Appendix ???
 

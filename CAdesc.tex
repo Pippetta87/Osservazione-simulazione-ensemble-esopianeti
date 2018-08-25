@@ -26,17 +26,17 @@ pg 26
 
 L'equazione del moto per un elemento di fluido
 \begin{align}
-&\PDof{t}(\rho v_i)+\PDof{x_i}(\rho v_iv_j+T_{ij})=F_i\\
+&\PDof{t}(\rho v_i)+\PDof{x_i}(\rho v_iv_j+T_{ij})=F_i\label{eq:fluidmotion}\\
 &T_{ij}=P\delta_{ij}-\sigma_{ij}\\
 &\sigma_{ij}=\eta(\partial_jv_i+\partial_iv_j-\frac{2}{3}\delta_{ij}\partial_kv_k+\zeta\delta_{ij}\partial_kv_k)
 \end{align}
-dove $\eta$, $\zeta$ sono le shear and bulk viscosity, quest'ultima legata ai gradi di libert\'a interni della molecola \'e trascurabile se i tempi di equipartizione interni sono molto minori del tempo fra due collisioni.
+dove $\eta$, $\zeta$ sono le shear e bulk viscosity, quest'ultima legata ai gradi di libert\'a interni della molecola \'e trascurabile se i tempi di equipartizione interni sono molto minori del tempo fra due collisioni.
 %-$\sigma_{ij}$ \'e flusso di componente i di momento in direzione j
-Considero la velocit\'a istantanea di una molecola nel piano xy $(v_x+u_x,u_y)$, dove u \'e la componente casuale e $\exv{}$ rappresenta valore mediato su grande numero di particelle/tempo (agitazione termica: $\exv{u}=0$) quindi
+Considero la velocit\'a istantanea di una molecola nel piano xy $(v_x+u_x,u_y)$, dove u \'e la componente casuale e $\exv{}$ rappresenta media temporale (agitazione termica: $\exv{u}=0$) quindi
 \begin{equation}
 \sigma_{xy}=-\rho\exv{u_xu_y}
 \end{equation}
-dove ho preso la media temporale.
+
 D'altra parte la forza viscosa agente sulla molecola \'e
 \begin{equation}
 F_{visc,x}=\TDy{y}{\sigma_{xy}}\approx\TDof{y}(\eta\TDy{y}{v_x})
@@ -57,22 +57,31 @@ da cui segue l'equazione del momento angolare
 \begin{equation}
 \PDof{t}[r\Sigma(r\Omega+u_{\phi})]+\frac{1}{r}\PDof{r}[r^2\Sigma(r\Omega+u_{\phi})u_r]=0
 \end{equation}
-infine, mediando le fluttuazioni su scala spaziale opportuna e trascurando la fluttuazione azimutale nel termine di derivata temporale, ottengo l'equazione
+Trascuro la fluttuazione azimutale nel termine di derivata temporale e considero media spaziale su scala opportuna:
 \begin{equation}
 \PDof{t}r^2\Sigma\Omega+\frac{1}{r}\PDof{r}[r^3\Sigma\Omega\exv{u_r}+\Sigma r^2\exv{u_ru_{\phi}}]=0
 \end{equation}
-che rappresenta un fluido viscoso di velocit\'a $\vec{v}=(u_r,\Omega r)$ tensore degli stress $\sigma_{r\phi}=-\Sigma\exv{u_ru_{\phi}}$.
+da confronto con l'equazione \eqref{eq:fluidmotion} la precedente rappresenta un fluido viscoso di velocit\'a $\vec{v}=(u_r,\Omega r)$ tensore degli stress $\sigma_{r\phi}=-\Sigma\exv{u_ru_{\phi}}$.
 
 Nei modelli di disco di accrescimento unidimensionali si parametrizza il trasporto di momento angolare ponendo $\nu=\alpha c_s H$ dove $\alpha$ \'e parametro da fissare, $c_s$ la velocit\'a del suono e H lo spessore del disco:
 \begin{equation}
 \PDy{t}{\Sigma}=3\frac{1}{r}\PDof{r}[r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]\label{eq:sigmaevol}
 \end{equation}
 
-Poich\'e nei dischi protoplanetari l'autogravitazione \'e trascurabile la struttura verticale \'e determinata dalla componente lungo z dell'attrazione del corpo centrale:
+La struttura verticale \'e determinata dalla componente lungo z dell'attrazione del corpo centrale:
 %profilo termico determinato da equilibrio termico
 \begin{equation}
-\TDy{z}{P}=-\rho g_z=-\frac{GM_*}{r^2+z^2}sin{\theta}\rho=-\Omega^2z
+\TDy{z}{P}=-\rho g_z=-\frac{GM_*}{r^2+z^2}\frac{z}{r}\rho=-\Omega^2\rho z
 \end{equation}
+mentre la struttura radiale:
+\begin{equation}
+\frac{v_g^2}{r}=\frac{GM_*}{r^2}+\frac{1}{\rho}\TDy{r}{P}
+\end{equation}
+Per piccole deviazioni dalla velocit\'a kepleriana si ha
+\begin{equation}
+v_k-v_g\approx v_k\frac{1}{\rho}\TDy{r}{P}/(2g)
+\end{equation}
+con $g=GM_*/r^2$.
 
 \begin{workout}[Profilo termico del disco]
 
@@ -278,10 +287,6 @@ infrared excess: gail hoppe10
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Schema di accrescimento componente solida}
 }
-
-\begin{figure}[!ht]
-\includegraphics[width=0.9\textwidth]{accretiontimeline}\caption{Rappresentazione schematica del processo di formazione protopianeti dalla polvere. Da \cite{perryman2011exoplanet}.}\label{fig:accretiontimeline}
-\end{figure}
 
 \begin{workout}[Refs GI vs CA]
 planetesimal hypothesis: chamberlin 05, Safronov 69, Hayashi 77. Formation on dynamical scale via GI: Kuiper 51, Cameron 62.

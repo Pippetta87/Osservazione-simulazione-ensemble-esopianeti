@@ -28,7 +28,7 @@ L'equazione del moto per un elemento di fluido
 \begin{align}
 &\PDof{t}(\rho v_i)+\PDof{x_i}(\rho v_iv_j+T_{ij})=F_i\label{eq:fluidmotion}\\
 &T_{ij}=P\delta_{ij}-\sigma_{ij}\\
-&\sigma_{ij}=\eta(\partial_jv_i+\partial_iv_j-\frac{2}{3}\delta_{ij}\partial_kv_k+\zeta\delta_{ij}\partial_kv_k)
+&\sigma_{ij}=\eta(\partial_jv_i+\partial_iv_j-\frac{2}{3}\delta_{ij}\partial_kv_k)+\zeta\delta_{ij}\partial_kv_k
 \end{align}
 dove $\eta$, $\zeta$ sono le shear e bulk viscosity, quest'ultima legata ai gradi di libert\'a interni della molecola \'e trascurabile se i tempi di equipartizione interni sono molto minori del tempo fra due collisioni.
 %-$\sigma_{ij}$ \'e flusso di componente i di momento in direzione j
@@ -48,7 +48,7 @@ Dalle equazioni precedenti si ha che
 \exv{u_iu_j}=-\nu\TDy{x_j}{v_i}
 \end{equation}
 
-Per un disco di densit\'a superficiale $\Sigma(r,t)$, dotato del campo di velocit\'a $(u_r,r\Omega+u_{\phi})$, scrivo le equazioni di conservazione di massa e la componente azimutale dell'equazione del moto
+Per un disco di densit\'a superficiale $\Sigma(r,t)$, dotato del campo di velocit\'a $(u_r,r\Omega+u_{\phi})$, con $v_k=\omega r$, scrivo le equazioni di conservazione di massa e la componente azimutale dell'equazione del moto
 \begin{align}
 &\PDy{t}{\Sigma}+\frac{1}{r}\PDof{r}(r\Sigma v_r)=0\\
 &\Sigma(\PDy{t}{v_{\phi}}+v_r\PDy{r}{v_{\phi}}\frac{v_rv_{\phi}}{r})=0
@@ -79,7 +79,7 @@ mentre la struttura radiale:
 \end{equation}
 Per piccole deviazioni dalla velocit\'a kepleriana si ha
 \begin{equation}
-v_k-v_g\approx v_k\frac{1}{\rho}\TDy{r}{P}/(2g)
+v_k-v_g\approx -v_k\frac{1}{\rho}\TDy{r}{P}/(2g)\label{eq:velocitykg}
 \end{equation}
 con $g=GM_*/r^2$.
 
@@ -300,7 +300,6 @@ Planetary formation scenario revisited: CA vs GI (2007)
 
 \end{workout}
 
-
 \section{Sedimentazione polvere e formazione planetesimi}
 
 La polvere presente nel materiale interstellare ha dimensioni di \SI{0.1}{\micro\meter} sedimenta verso il centro del disco e forma aggregati di dimensioni maggiori.
@@ -311,20 +310,22 @@ m_p\TDy{t}{v_z}=F_D-m_p\Omega^2z
 \end{equation}
 $F_D$ \'e la forza esercitata dal gas sulla particella di polvere
 \begin{equation}
-F_D=-\frac{1}{2}C_D\pi s^2\rho_gv^2
+F_D=-\frac{1}{2}C_D\pi s^2\rho_gv^2_z
 \end{equation}
-nel caso cammino libero medio delle molecole di gas sia maggiore delle dimensioni della particella $C_D=\frac{8}{3}\frac{v_{th}}{v}$ (Epstein drag) per particelle pi\'u grandi \'e funzione del numero di Reynold.
+nel caso cammino libero medio delle molecole di gas sia maggiore delle dimensioni della particella $C_D=\frac{8}{3}\frac{v_{th}}{v_z}$ (Epstein drag) per particelle pi\'u grandi \'e funzione del numero di Reynold.
 %La pressione non supporta i grani: troppo pesanti
 
+\begin{workout}[Velocit\'a stazionaria settling verticale]
 Dall'equazione \eqref{eq:motiondust} si che in condizioni stazionarie:
 \begin{equation}
 v_{set}=\frac{\Omega^2}{v_{th}}\frac{\rho_d}{\rho_g(z)}sz
 \end{equation}
-Per particelle di \SI{1}{\micro\meter} tempo di sedimentazione \'e $\SI{2e5}{\year}$.
-Inoltre turbolenza e coagulazione delle particelle hanno un ruolo non banale.
+\end{workout}
+
+Per particelle di \SI{1}{\micro\meter} tempo di sedimentazione \'e $\SI{2e5}{\year}$, inoltre turbolenza e coagulazione delle particelle hanno un ruolo non banale.
 %t=mv/F
 
-La velocit\'a relativa tra gas e polvere causa un drift verso la stella massimo per particelle di \SIrange{0.01}{10}{\meter}  a \SI{1}{\astronomicalunit} per cui si deve avere rapida crescita oltre \SI{10}{\meter}.
+La velocit\'a relativa tra gas e polvere (equazione \eqref{eq:velocitykg}) causa un drift verso la stella di quest'ultima massimo per particelle di \SIrange{0.01}{10}{\meter}  a \SI{1}{\astronomicalunit} con tempo caratteristico di \SI{100}{\year} (\cite{lissauer1993planet}) per cui la materia solida che forma i planetesimi deve crescere rapidamente oltre \SI{10}{\meter}.
 
 Per passare a corpi di dimensioni kilometriche si ipotizzano 2 scenarii:
 \begin{itemize}
@@ -367,11 +368,11 @@ Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Laur
 Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
 \end{workout}
 
-\section{Accrescimento planetsemi: formazione proto-pianeti.}
+\section{Accrescimento planetesimi: formazione proto-pianeti.}
 
 \subsection{Distribuzione velocit\'a planetesimi}
 %Refs: kokubo Ida 12 `'Dynamics and accretion of planetesimal''
-La popolazione dei planetesimi evolve attraverso interazione con gas, che smorza eccentricit\'a e inclinazione, e scattering, che trasforma il moto kepleriano in casuale.
+La distribuzione di velocit\'a dei planetesimi, che percorrono orbite kepleriane, evolve attraverso interazione con gas, che smorza eccentricit\'a e inclinazione, e scattering, che trasforma il moto kepleriano in casuale.
 
 %e si ha equipartizione di energia tra pianetesimi di diversa massa
 %i planetesimi di massa minore hanno maggiore dispersione di velocit\'a 
@@ -383,23 +384,28 @@ La componente casuale della velocit\'a v dei planetesimi \'e approssimativamente
 \begin{equation}
 v\approx\sqrt{e^2+i^2}v_K
 \end{equation}
-dove si assume che eccentricit\'a e inclinazione seguano distribuzione di Rayleigh
+dove si assume che eccentricit\'a e inclinazione seguano distribuzione di Rayleigh (\cite{ida1992n})
 \begin{equation}
 f(e,i)=4\frac{\Sigma}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{-\frac{e^2}{\exv{e^2}}-\frac{i^2}{\exv{i^2}}}
 \end{equation}
-I valori iniziali sono $\exv{i^2}=\exv{e^2}=[2\frac{r_H}{a}]^2$, il loro aumento, determinato da interazioni gravitazionali \'e chiamato viscous stirring, mentre , una volta formato un corpo molto pi\'u massiccio degli altri (embrione planetario), l'equipartizione di energia tra il corpo massiccio e i planetesimi produce diminuzione di eccentricit\'a/inclinazione dell'embrione planetario a scapito di aumento di queste per i corpi di massa minore.
+I valori iniziali sono $\exv{i^2}=\exv{e^2}=[2\frac{r_H}{a}]^2$, il loro aumento, determinato da interazioni gravitazionali \'e chiamato viscous stirring, mentre , una volta formato un corpo molto pi\'u massiccio degli altri (embrione planetario), l'equipartizione di energia tra il corpo massiccio e i planetesimi produce diminuzione di eccentricit\'a/inclinazione dell'embrione planetario a scapito di aumento di queste per i corpi di massa minore, questo fenomeno \'e detto dynamical friction. (\cite{kokubo2012dynamics})
 %la velocit\'a relativa media aumenta fino al valore della velocit\'a di fuga dal corpo maggiore, denominato protopianeta raggiunto diametro migliaia di kilometri.
  
 \subsection{Regimi accrescimento dei protopianeti}
 
-L'accrescimento di massa del protopianeta procede secondo
+L'accrescimento di massa degli embioni planetari procede, in approssimazione di interazione a 2 corpi, secondo
 \begin{equation}
-\TDy{t}{M_e}=\pi R_c\rho_{pl}v F_g=\pi R_c\Sigma_p\Omega F_g\label{eq:Gaccretionpl}
+\TDy{t}{M_e}=\pi R_e^2\rho_{pl}v F_g=A\pi R_e^2\Sigma_p\Omega F_g\label{eq:Gaccretionpl}
 \end{equation}
-con $F_g$ fattore che tiene conto dell'interazione gravitazionale, determinato dalla velocit\'a relativa tra i 2 corpi, e $\rho_{pl}$ densit\'a di planetesimi:
+con $F_g$ fattore che tiene conto dell'interazione gravitazionale
+\begin{equation}
+F_g=(1+(\frac{v_e}{v})^2)
+\end{equation}
+$v$ velocit\'a relativa e $v_e$ velocit\'a di fuga, $\rho_{pl}$ densit\'a di planetesimi
 \begin{align}
-&\rho_{pl}\approx\frac{\Sigma_p}{2a\sin{i}}\propto\frac{\Sigma_p\Omega}{v}
+&\rho_{pl}\approx\frac{\Sigma_p}{2a\sin{i}}=A\frac{\Sigma_p\Omega}{v}
 \end{align}
+dove A dipende dalle propriet\'a della distribuzione di velocit\'a dei planetesimi.
 % Costante proporzionalit\'a \'e $\frac{\sqrt{3}}{2}$ assumendo relazione di dispersione per velocit\'a planetesimi isotropa.
 
 Per embrioni planetarii di decine di chilometri l'attrazione gravitazionale aumenta la sezione d'urto: 
@@ -408,10 +414,16 @@ Per embrioni planetarii di decine di chilometri l'attrazione gravitazionale aume
 \end{equation}
 questo regime di accrescimento (runaway growth) \'e responsabile crescita diametro embrioni da \SI{10}{\kilo\meter} a \SI{100}{\kilo\meter} in \SIrange{e4}{e5}{\year}.
 %(higher radial excursion ae)
-Quando la massa degli embrioni domina su quella dei planetesimi si ha transizione a regime oligarchico in cui l'accrescimento \'e pi\'u lento fino a che non \'e stata accresciuta la massa presente nella zona di pertinenza gravitazionale dell'embrione,detta isolation mass,
+Quando la massa degli embrioni domina su quella dei planetesimi si ha transizione a regime oligarchico in cui l'accrescimento \'e pi\'u lento fino a che non \'e stata accresciuta la massa presente nella zona di pertinenza gravitazionale dell'embrione,detta isolation mass (\cite{lissauer1993planet}):
+\begin{align}
+&M_{iso}=\frac{(4\pi Br^2\Sigma)\expy{3/2}}{(3M_*)\expy{1/2}}=\num{2.10e-3}(\frac{Br^2\Sigma}{2\sqrt{3}})\expy{3/2}(\frac{\msun{}}{M_*})\expy{1/2}\mearth{}
+\end{align}
+
+\begin{errata}[Isolation mass: proportion]
 \begin{equation}
 M_{iso}\propto M_*\expy{-1/2}\Sigma_p\expy{3/2}r^3
 \end{equation}
+\end{errata}
 
 La fase finale di crescita caotica evolve il sistema verso una configurazione dinamica stabile ed ha tempi tipici di \SIrange{10}{100}{\mega\year}.
 
@@ -516,7 +528,7 @@ Accrescimento ordinato: $\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{-1/3}$. Accre
 
 
 {\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Evoluzione struttura planetaria: accrescimento.}\label{chap:gasaccretion}
+\chapter{Evoluzione struttura planetaria: accrescimento di gas.}\label{chap:gasaccretion}
 }% e fase isolata
 
 Se il protopianeta raggiunge un valore critico di massa, dipendente debolmente da luminosit\'a generata da accrescimento dei pianetesimi e opacit\'a, per mantenere equilibrio idrostatico l'inviluppo gassoso del pianeta si contrae su tempi scala di Kelvin-Helmholtz.
@@ -524,11 +536,21 @@ Il flusso di massa cresce fino a esurire la massa presente nella fascia di perti
 
 Da modelli numerici risulta
 \begin{equation}
-M_c^{crit}=7\mearth{}(\frac{\dot{M}_c}{\num{e-7}\mearth{}\si{\per\year}})\expy{q}(\frac{\kappa}{\SI{0.1}{\square\meter\per\kilo\gram}})\expy{s}
+M_c^{crit}=10\mearth{}(\frac{\dot{M}_c}{\num{e-7}\mearth{}\si{\per\year}})\expy{q}(\frac{\kappa}{\SI{0.1}{\square\meter\per\kilo\gram}})\expy{s}
 \end{equation}
-con $q,s\approx0.2-0.3$.
+con $q,s\approx0.2-0.3$ (\cite{ikoma2000formation}).
 
 \section{Accrescimento limitato da velocit\'a di raffreddamento}
+
+Seguendo \cite{} la struttura del pianeta \'e determinata integrando le equazioni di conservazione di massa, momento, energia e l'equazione del trasporto di energia:
+\begin{align}
+&\TDy{r}{m}=4\pi r^2\rho\\
+&\TDy{r}{l}=0\\
+&\TDy{r}{P}=-\frac{Gm}{r^2}\rho\\
+&\TDy{r}{T}=\frac{T}{P}\TDy{r}{P}\nabla(T,P)\\
+&\nabla(T,P)=\TDly{P}{T}=\min{(\nad{},\nrad{})}
+\end{align}
+dove $\nrad{}$ e $\nad{}$ indicano il gradiente radiativo e adiabatico.
 
 La luminosit\'a del pianeta \'e determinata tramite
 \begin{equation}
@@ -542,24 +564,21 @@ con $\dot{M}=\dot{M}_Z+\dot{M}_{XY}$.
 
 Ho indicato la massa di gas legata al core con
 \begin{equation}
-M_{XY}=4\pi\int_{R_c}^{R_B}\rho(r')r'^2\,dr'
+M_{XY}=4\pi\int_{R_c}^R\rho(r')r'^2\,dr'
 \end{equation}
-e $R_C$ \'e il raggio del core e introduco il raggio di Bondi
+con $R_C$ \'e il raggio del core.
+
+Condizioni al bordo:
+\begin{align}
+&R=\frac{R_A}{1+R_A/(k_lR_H )},\ P=P_{neb}\\
+&\tau=\max{(\rho_{neb}\kappa_{neb}R),2/3)},\ T_i^4=\frac{3\tau L_{int}}{8\pi\sigma R^2}\\
+&T^4=T_{neb}^4+T_{int}^4,\ L(R)=L_{int}
+\end{align}
+$k_{liss}=3-4$, quindi $R_p\approx \min{(R_B,k_{liss}R_H)}$ e introduco il raggio di Bondi
 \begin{equation}
 R_B=G\frac{M_c}{c_0^2}\approx\SI{4e10}{\cm}a(AU)\expy{1/2}\frac{M_c}{\mearth{}}
 \end{equation}
 definito come raggio in cui energia termica e potenziale gravitazionale si equivalgono.%il core perturba la pressione del gas del disco.
-
-La struttura del pianeta \'e detrminata integrando le equazioni di conservazione di massa, momento, energia e l'equazione del trasporto di energia
-Mass conservation, hydrostatic equilibrium and energy transfer:
-\begin{align}
-&\TDy{r}{m}=4\pi r^2\rho\\
-&\TDy{r}{l}=0\\
-&\TDy{r}{P}=-\frac{Gm}{r^2}\rho\\
-&\TDy{r}{T}=\frac{T}{P}\TDy{r}{P}\nabla(T,P)\\
-&\nabla(T,P)=\TDly{P}{T}=\min{(\nad{},\nrad{})}
-\end{align}
-
 
 \begin{workout}[envelope mass as function of core mass]
 Armitage 17 eq 232 (`'lecture nite on formation and early evolution of PS)
@@ -568,24 +587,24 @@ M_{env}\approx\int_{R_c}^{R_o}4\pi r^2\rho\,dr\propto\frac{\sigma}{\kappa_RL}(\f
 \end{equation}
 \end{workout}
 
-Condizioni al bordo:
-\begin{align}
-&R=\frac{R_A}{1+R_A/(k_lR_H )},\ P=P_{neb}\\
-&\tau=\max{(\rho_{neb}\kappa_{neb}R),2/3)},\ T_i^4=\frac{3\tau L_{int}}{8\pi\sigma R^2}\\
-&T^4=T_{neb}^4+T_{int}^4,\ L(R)=L_{int}
-\end{align}
-$k_{liss}=3-4$, quindi $R_p\approx \min{(R_B,k_{liss}\expy{-1}R_H)}$.
+\begin{workout}[Rfes per espressione raggio bondi]
+
+\end{workout}
+
 
 \begin{workout}[Hydrostatic equilibrium hypothesis]
 Characterization of exoplanets from their formation I (eq 10)
 \end{workout}
 
-Rate di accrescimento limitato dalla velocit\'a di raffreddamento ($\tau\approx\tkh{}$):
+Rate di accrescimento limitato dalla velocit\'a di raffreddamento:
 \begin{equation}
 \dot{M}_{XY}\propto\ \frac{M_p}{M_*}<(H_P/R_p)^3/\sqrt{3}
 \end{equation}
-
 quindi la massa di gas aumenta esponenzialmente a partire da $M_c\approx10\mearth{}$.
+
+\begin{workout}[Rfes espressione accrescimento gas]
+
+\end{workout}
 
 \section{Accrescimento limitato dalla disponibilit\'a di gas del disco}
 

@@ -1,5 +1,136 @@
 \chapter{Interazione disco-pianeta}
 
+\begin{wrapfigure}[20]{l}{0.3\textwidth}
+\includegraphics[trim={0cm 11cm 0 0},clip, keepaspectratio, width=0.3\textwidth]{corotation}
+\caption{In alto: Orbite periodiche e librazione delle particelle di gas del disco. In basso: Asimmetrie tra gli U-turn che precedono/seguono il pianeta. Da \cite{armitage2007lecture}.}\label{fig:corotation}
+\end{wrapfigure}
+
+Considero in maniera schematica lo scambio di momento angolare tra pianeta e disco usando l'approssimazione impulsiva, dove si considera la traiettora di un elemento di fluido che interagisce col pianeta e integrando sui parametri d'impatto ammissibili, oppure descrivendo in approssimazione lineare l'interazione tra onde di densit\'a e pianeta. L'analisi lineare delle perturbazioni generate dal pianeta fornisce l'espressione analitica dei momenti torcenti esercitati dal disco sul pianeta alle risonanze di Lindblad e di corotazione.
+
+Per pianeti massicci la risposta del disco non \'e pi\'u lineare: il momento angolare viene assorbito in prossimit\'a delle risonanze di Lindblad e si crea un gap nel disco. Il passaggio a regimenon lineare nella regione di corotazione avviene su tempi minori del tempo-scala di librazione:
+\begin{equation}
+\tau_{lib}\propto\frac{a_p}{\Omega_px_s}
+\end{equation}
+con:
+\begin{equation}
+x_s\propto a_p\sqrt{\frac{q}{h}}, \ h=\frac{H}{a},\ q=\frac{m_p}{M_*}
+\end{equation}
+
+I risultati riportati sono per disco isotermo:nei dischi reali si pu\'o avere migrazione stocastica e zone di concentramento dovute a transizioni di opacit\'a.
+
+\cleardoublepage
+
+\begin{workout}[Migrazione: situazione complessa]
+Armitage07 pg 57-58
+\end{workout}
+
+\begin{workout}[Migration refs]
+lecture 14 (Henning Benz Klahr mordasini)
+Terquem papaloizou (planet formation and migration) pg 43
+Planet-disk interaction and orbital evolution
+Refs: \cite{ward1997protoplanet}, \cite{terquem2000disks}, \cite{menou2004low}, (
+Planet-disk interaction and orbital evolution (kley Nelson 2012), 
+Baruteau 2016)
+crida06: On width and shape of gaps in PPD,crida phd, 
+Trilling 98:Orbital evolution and migration of giant planet: modellingextrasolar planets (Angular momentum injection rate, torque from spinning star, Impact of planet migration models on planetary populations)
+Dittkrist 14: Impact of planetsmigration models n planetarypopulation (Migration II inward/outward: non equilibrium gas flow, problem of isothermal disk migration timescale: migration I regime, Fig 7;
+Refs: On the tidal interaction between protoplanets and the primordial solar nebula. II - Self-consistent nonlinear interaction (1986)
+Non-linear. For larger planet mass, when disk density distro is changed cons., the linear hteory is no more adeguate. If angular momentum isdeposited locally (viscous dissipation/shock waves)  the disk receeds from planets
+Ida-lin04: angular momentum trasport in viscous accretion disk without planets that in type II migration act as relays that transmit angular momentum at that rateacross their gap via tidal torques.
+Alibert05: the planet follow the gas except when massive than local disk.
+Duffell14, Durmann kley 15: questioning that migration II follows viscous evolution of the disk but due to torque??
+Planet-disk interactions: exchange of angular momentum. Low mass planet-linear theory.(''Planet-disk interactions and orbital evolution'')
+Low mass planets: Lindblad and corotation torque. Rapid migration of intermediate mass planets. Gap forming massive planets: slower migration determined by viscous evolution of disk. (Role of disk self-gravity and MHD turbulence as function of planet mass).
+\end{workout}
+
+\begin{workout}[Bernoulli -Fluid dynamics (Landau)]
+Bernulli: lungo linea di flusso $\frac{1}{2}v^2+w+gz=\const{}$
+\end{workout}
+
+\begin{workout}[Not isoentropic flow (pg14) -Fluid dynamics (Landau)]
+$\TDof{t}(\frac{\vec{\omega}\cdot\nabla s}{\rho})=0$
+\end{workout}
+
+\begin{workout}[Flow between rotating cylinder (pg55) -Fluid dynamics (Landau)]
+Navier-Stokes equation gives
+\begin{align*}
+&\TDy{r}{P}=\frac{\rho v^2}{r}\\
+&\TtwoDy{r}{v}+\frac{1}{r}\TDy{r}{v}-\frac{v}{r^2}
+\end{align*}
+cercabdo soluzione della forma $r^n$ l'ultima ha soluzione: $v=ar+\frac{b}{r}$.
+a,b determinate da condizioni al contorno
+\end{workout}
+
+
+\begin{workout}[migration and disk parametrizzation]
+Toward deterministic model of planetary formation IV: effects of type-I migration (highly optically thin disk)
+\end{workout}
+
+\begin{workout}[disk torque]
+Orbital evolution and migration of giant planets: disk evolution and torque;
+\end{workout}
+
+\begin{workout}[Horseshoe drag refs]
+Horseshoe drag in three-dimensional globally isothermal disks (masset15)
+mordasini dittkrist14 (width of horseshoe region)
+On horseshoe drag of a low-mass planet. I-migration in isothermal disks: relaxation of globally isothermal HP 6 (pg 29);Inroduction and first torque expression (pg1-14); 
+\end{workout}
+
+\begin{workout}[type I: migration is too fast]
+magnetic fields cloud produce stocasticity and thus s migration: nelson papaloizou 04, laughlin 04
+laminar/turbulent disk: nelson 05 - tidal torque on fluctuations
+global magnetic fields terquem 03
+global distortion (non zero eccentricity): papaloizou 02
+opaciy transitionmenou goodman 04
+instabilities in inviscid gap enge: koller 03
+\end{workout}
+
+\begin{workout}[planetary migration usefull formulae]
+\begin{align}
+\TDy{t}{j}=1/2\sqrt{GM_*/r}\TDy{t}{r}
+\end{align}
+Il disco di accrescimento esercita momento torcente sul pianeta che produce un trasferimento di momento angolare dal pianeta al disco $\Lambda(a,R)$
+\begin{align*}
+&J=M_p\sqrt{GM_*a_p}\\
+&\TDy{t}{a}=2a_p\frac{\Gamma_t}{J}=-(\frac{a}{GM_*})(\frac{4\pi}{M_P})\int_{r_{int}}^{r_{out}}r\Lambda\Sigma\,dr
+\end{align*}
+$r_{int}, r_{out}$ inner/outer disk radius (rif to disk ar planet)
+\end{workout}
+
+
+\begin{workout}[M14:type I]
+below few tenth of $\mearth{}$.
+Linblad torque: inside/outside corotation region.
+corotation torque: depends on thermodynamics regime of interaction between planet/disk.
+\end{workout}
+
+\begin{workout}[Corotation torque: non-linear (except early stages) horseshoe drag.]
+(On horseshoe drag of low-mass planets)
+Jump in angular momentum of particles undergoing U turn, before/after planets (in librating orbit).
+ward91, masset 01,02, masset papaloizou 03, paardekooper papaloizou 09.
+Linear analysis: corotation torque arise from anulus of radial extent H around corotation, launch of evanescent waves in coorbital region; horseshoe analysis consider horseshoe region.
+\end{workout}
+
+\begin{workout}[Horseshoe drag]
+Horseshoe drag low-mas planet: migration in isothermal disk (casoli Masset 09): torque, width of corotation region
+\end{workout}
+
+\begin{workout}[type I: planets not massive enough to open a gap]
+Linear response of disk to orbiting planets - perturbazione del pianeta sul disco si propagano come onde di densit\'a fuori dalle risonanze e come onda evanescente fra le risonanze nella regione di corotazione. Il protopianeta esercita un momento torcente sulle onde di densit\'a cha assieme  a quello di corotazione \'e responsabiledello scambio di momento angolare tra disco mkoto orbitale del pianeta: la maggior parte del toque \'e esercitato vicino alle risonanze di L./corotazione dove la lunghezza d'onda della perturbazione \'e lunga (lontano la perturbazione ha lunghezza d'onda breve: contributo mediato a zero): terquem00.
+Il momento pu\'o essere calcolato facendo una analisi lineare delle onde eccitate in 2D/3D o sommando i momenti torcenti puntiformi esercitati alle risonanze di lindblad/corotazione.
+\begin{align}
+&t_I\propto J/\dot{J}\propto(H/a)^2\\
+&t_e\propto e/\dot{e}\propto(H/a)^4
+\end{align}
+\end{workout}
+
+\begin{workout}[M14:type II and outward migration]
+adiabatic and local isothermal disk: pardekooper 10/11
+Type II planet-dominated for mass $100\mearth{}$.
+$\dot{a}_p\propto v_g$: ??
+Veras armitage 04 (exoplanets with $a>20au$): outward migration seldom important, radius velocity reversal when type II migration occure $R_{mvc}$ is outside them.
+\end{workout}
+
 \section{Migrazione tipo I: pianeti piccola massa - comportamento lineare.}
 
 \subsection{Risonanze di Lindblad}

@@ -1,6 +1,7 @@
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Modelli di formazione globali e semplificazioni introdotte}
 }
+(Da \cite{mordasini2009extrasolar}, \cite{mordasini2018planetary})
 
 \begin{wrapfigure}[22]{l}{0.7\textwidth}
 \includegraphics[trim={8cm 5cm 8cm 0},clip, keepaspectratio, width=0.7\textwidth]{GFM}
@@ -8,11 +9,11 @@
  Da \cite{benz2014planet}.}\label{fig:GFM}
 \end{wrapfigure}
 
-La struttura del disco protoplanetario determina la rapidit\'a di accrescimento degli embrioni planetari  principalmente tramite la densit\'a di polvere, influenzata a sua volta dalla posizione dell'iceline ($H_2O$): \'e possibile tenere traccia della frazione di rocce o ghiacci accrescuti. 
+La struttura del disco protoplanetario determina la rapidit\'a di accrescimento degli embrioni planetari  principalmente tramite la densit\'a di polvere, influenzata a sua volta dalla posizione dell'iceline ($H_2O$): \'e possibile tenere traccia della frazione di rocce o ghiacci accrescuti. L'interazione tra disco ed embrione che da luogo alla migrazione \'e determinata dalla struttura del disco e dalla massa del pianeta.
 
-Una volta che il core dell'embrione planetario \'e abbastanza massiccio si forma un inviluppo gassoso che inzialmente si raccorda alle condizioni del disco e alla saturazione della capacit\'a del disco di fornire gas si stacca dal disco: la struttura del pianeta \'e quindi determinata da massa, raggio e luminosit\'a del core, massa gassosa legata al pianeta, energia rialasciata da accrescimento planetesi e gas.
+Una volta che il core dell'embrione planetario \'e abbastanza massiccio si forma un inviluppo gassoso che inzialmente si raccorda alle condizioni del disco e alla saturazione della capacit\'a del disco di fornire gas si stacca dal disco: la struttura del pianeta \'e quindi determinata da massa, raggio e luminosit\'a del core, massa gassosa legata al pianeta, energia rilasciata da accrescimento planetesimi e gas.
 
-La capacit\'a del pianeta di accrescere planetesimi aumenta con l'aumentare della massa del pianeta e del raggio
+La capacit\'a del pianeta di accrescere planetesimi aumenta con l'aumentare della massa e del raggio del pianeta.
 
 \begin{errata}[atmosfera e luminosit\'a pianeta: discorsivo]
  Le condizioni in fondo all'atmosfera planetaria forniscono le condizioni di temperatura e pressione all'estremo dell'inviluppo gassoso. La struttura del disco determina anche il rate massimo di accrescimento del gas. Il rate d'accrescimento di solidi \'e determinato dalla sezione d'urto efficace, determinata dalla struttura dell'inviluppo gassoso, dalla densit\'a di solidi nel disco e dalla velocit\'a orbitale. La luminosit\'a del pianeta \'e determinata dal rate di accrescimento dei solidi e dal rate di contrazione del pianeta. Infine la migrazione \'e determinata dalla caretteristiche del disco e dalla massa del pianeta.
@@ -31,6 +32,7 @@ planet population synthesis
 \end{workout}
 
 \section{Modello disco di accrescimento e distribuzione condizioni iniziali}
+
 %Refs: Sec4 mordasini09
 
 %\cleardoublepage
@@ -46,7 +48,7 @@ planet population synthesis
 
 
 Tramite metodi di montecarlo si determinano numerose combinazioni delle condizioni iniziali del disco e dei parametri scelti per descrivere la sua struttura.
-Le variabili di montecarlo ha distribuzione determinata dalle osservazioni di dischi protoplanetari.
+Le variabili di montecarlo hanno distribuzione determinata dalle osservazioni.
 
 \begin{workout}[modello globale: evoluzione dal semplice al complesso]
 Global model of planets formation and evolution: more detailed submodels
@@ -60,17 +62,17 @@ Il modello pi\'u semplice di disco di accrescimento usa distribuzione esponenzia
 
 Modelli pi\'u recenti  risolvono l'equazione per l'evoluzione viscosa:
 \begin{align}
-&\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_p(r)\label{eq:diskaccrphev-m18}\\
+&\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_{embryo}(r)\label{eq:diskaccrphev-m18}\\
 &\dot{\Sigma}_w(a)=\left\{\begin{array}{c}0\\\frac{\dot{M}_w}{2\pi(a_{max}-R_g)a}\\\end{array}\right.
 \end{align}
-con $\dot{\Sigma}_w$ contributo della foto-evaporazione,  $\dot{\Sigma}_p$ contributo di accrescimento di gas dei pianeti.
+con $\dot{\Sigma}_w$ contributo della foto-evaporazione,  $\dot{\Sigma}_p$ contributo di accrescimento di gas e componente solida dei pianeti.
 La densit\'a superficiale iniziale \'e assunta essere:
 \begin{equation}
 \Sigma(a,t=0)=\Sigma_0(\frac{r}{1AU})\expy{p_g}\Exp{[-(\frac{r}{R_o})\expy{2+p_g}]}(1-\sqrt{\frac{r}{R_i}})
 \end{equation}
 dove i parametri possono essere scelti casualmente secondo una distribuzione di probabilit\'a ricavata dalle osservazioni.
 
-La distribuzione di massa e la frazione di dischi protoplanetari per ammassi stellari di et\'a diversa \'e mostrata in \ref{fig:initdistro}. La massa \'e determinata misurando il flusso di emissione termica della polvere: la distribuzione di $\log{M_{disk}}$  \'e gaussiana e per il cluster Ophiuchus la distribuzione \'e fittata da gaussiana con $\mu=-1.38$ ($M_{disk}=0.042\msun{}$) e $\sigma=0.49$.
+La distribuzione di massa e la frazione di dischi protoplanetari per ammassi stellari di et\'a diversa \'e mostrata in figura (\ref{fig:initdistro}). La massa \'e determinata misurando il flusso di emissione termica della polvere: la distribuzione di $\log{M_{disk}}$  \'e gaussiana e per il cluster Ophiuchus la distribuzione \'e fittata da gaussiana con $\mu=-1.38$ ($M_{disk}=0.042\msun{}$) e $\sigma=0.49$.
 
 Il tempo caratteristico del disco \'e determinato dalla viscosit\'a $\alpha$: fissata $\alpha$ compatibile con tempo caratteristico osservato $\tau_{disk}^{obs}\approx\SI{3}{\mega\year}$ e assumendo la distribuzione uniforme nel logaritmo di $\dot{M}_w$, si calcola  $t_{disk}(\alpha,\Sigma_0,\dot{M}_w)$ determinando gli estremi dello fotoevaporazione per riprodurre tempi di vita osservati.
 
@@ -139,7 +141,7 @@ Ida, lin10: asymptotical isolation mass ''Toward a Deterministic Model of Planet
 Trapped evolution model: Hasegawa pudritz 11, Cridland 16
 \end{workout}
 
-\section{Caratteristiche iniziali degli embioni planetarii e accrescimento}
+\section{Caratteristiche iniziali degli embrioni planetarii e accrescimento}
 
 La massa iniziale dei core deve essere molto minore della massa di isolamento: si usano core di frazioni di massa terrestre; la distanza dalla stella varia seguendo distribuzione di probabilit\'a $p(a)$ inversamente proporzionale alla distanza orbitale $p(a)\,da\propto\frac{da}{\Delta}\propto\,d\log{a}$. Il momento di comparsa \'e determinato dal rate di accrescimento dei planetesimi \eqref{eq:Gaccretionpl}.
 
@@ -154,7 +156,7 @@ Per determinare l'accrescimento di gas \'e necessario calcolare la struttura pla
 &\dot{M}_{e,KH}=\frac{M_p}{\tau_{KH}}\\
 &\tau_{KH}=10\expy{p}(\frac{M_p}{\mearth{}})^q(\frac{\kappa}{\si{\gram\per\square\cm}})\si{\year}
 \end{align}
-dove p,q sono ottenuti tramite modelli di struttura planetaria.
+dove p,q sono ottenuti tramite modelli di struttura planetaria; \cite{mordasini2014grain} hanno determinato $\kappa=\SI{e-2}{\gram\per\square\cm}$, $p=10.4$ e $q=-1.5$.
 
 \begin{workout}[Higher mass gap formation reduces accretion rate]
 \begin{equation}
@@ -209,14 +211,14 @@ planet dominates: $\TDy{t}{a}=-\frac{3\nu}{a}\frac{\Sigma(a,t)a^2}{M_p}$
 
 \section{Popolazioni planetarie sintetiche}
 %Considero i risulati di alcuni modelli di formazione planetari (\cite{mordasini2018planetary}).
-La soluzione del modello di formazione planetario variando le condizioni iniziali in maniera opportuna e determinando un gran numero di combinazioni tramite metodi di montecarlo produce un ensemble di sistemi da cui, tramite confronto statistico con la popolazione osservata,  si determina la rispondenza con la realt\'a.
+La soluzione del modello di formazione planetario variando le condizioni iniziali in maniera opportuna e determinando un gran numero di combinazioni tramite metodi di montecarlo produce un ensemble di sistemi da cui, tramite confronto statistico con la popolazione osservata,  si valuta la rispondenza con la realt\'a.
 
 \begin{figure}[!ht]
-\includegraphics[trim={0cm 12cm 0 0},clip, width=0.9\textwidth,keepaspectratio]{ma-synth}
-\caption{Simulazione popolazione planetaria di 504 sistemi Punti rossi: pianeti giganti con $M_e/M_c>1$; punti blu: pianeti che hanno accresciuto core oltre la iceline mentre i punti verdi all'interno dell'iceline. Da \cite{mordasini2018planetary}.}\label{fig:ma-synth}
+\includegraphics[trim={0cm 8cm 0 0},clip, width=0.9\textwidth,keepaspectratio]{ma-synth}
+\caption{Simulazione popolazione planetaria di 504 sistemi Punti rossi: pianeti giganti con $M_e/M_c>1$; simboli blu/verdi: pianeti che hanno accresciuto core con ghiacci/rocce; punti aperti: $0.1\leq M_{env}/M_{core}\leq1$; croci e punti pieni verdi: pianeti con $M_{env}/M_{core}\leq0.1$. Da \cite{mordasini2018planetary}.}\label{fig:ma-synth}
 \end{figure}
 
-La figura \ref{fig:MaLR-freq-synth} mostra la distribuzione della popolazione sintetica nel diagramma massa-distanza: la posizione finale di un pianeta \'e terminata principalmente dai tempi caratteristici di accrescimento e migrazione; considerando inoltre l'interazione gravitazionale tra i pianeti si hanno effetti delle risonanze e eccitazione di eccentricit\'a.
+La figura (\ref{fig:MaLR-freq-synth}) mostra la distribuzione della popolazione sintetica nel diagramma massa-distanza: la posizione finale di un pianeta \'e terminata principalmente dai tempi caratteristici di accrescimento e migrazione; considerando inoltre l'interazione gravitazionale tra i pianeti si hanno effetti delle risonanze e eccitazione di eccentricit\'a.
 
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.47\textwidth}
@@ -234,13 +236,15 @@ La figura \ref{fig:MaLR-freq-synth} mostra la distribuzione della popolazione si
 
 Alcune caratteristiche dell'ensemble sintetico (\cite{mordasini2018planetary}):
 \begin{itemize}
-\item Numerosi sistemi con piccola massa
-\item Sistemi pianeti di piccola massa e giganti: sweet spot per pianeti giganti \'e all'esterno dell'ice-line.
-\item Un pianeta gigante superstite di scattering trapianeti giganti vicini. Sistemi rari formati in dischi massicci con alta metallicit\'a
-\item Popolazione di pianeti tra $\numrange{30}{100}\mearth{}$: i fattori che influenzano la popolazione di pianeti di massa intermedia sono la massa presente nel disco quando il protopianeta raggiunge la massa critica per accrescimento di gas, il tempo-scala di rilassamento radiativo e competizione per accrescimento di gas tra protopianeti giganti.
+\item Numerosi sistemi con costituiti d pianeti di piccola massa (\numrange{0.1}{10}$\mearth{}$)
+\item Sistemi con pianeti di piccola massa e giganti. Sistemi che mimano il sistema solare con andamento di massa piccolo-massiccio-piccolo: sweet spot per formazione di pianeti giganti \'e all'esterno dell'ice-line.
+\item L'architettura dei pianeti giganti varia notevolmente ma quello pi\'u vicino alle stella \'e distanza di circa \SI{1}{\astronomicalunit}, o meno, dalla stella.
+\item Piccola percentuale di sistemi con un pianeta gigante superstite di scattering tra pianeti giganti vicini. Sistemi rari formati in dischi massicci con alta metallicit\'a.
+%\item Popolazione di pianeti tra $\numrange{30}{100}\mearth{}$: i fattori che influenzano la popolazione di pianeti di massa intermedia sono la massa presente nel disco quando il protopianeta raggiunge la massa critica per accrescimento di gas, il tempo-scala di rilassamento radiativo e competizione per accrescimento di gas tra protopianeti giganti.
 \end{itemize}
+%saturazione momento di corotazione
 
-Inoltre in \ref{fig:ma-synth} \'e evidente l'effetto della saturazione del momento torcente di corotazione con conseguente migrazione rapida all'interno: popolazione pianeti in origine nettuniani (frazione giaccio nel core $50\%$) che migrano all'interno accumulando materiale roccioso (frazione ghiaccio nel core $10-20\%$).
+Inoltre in figura (\ref{fig:ma-synth}) \'e evidente l'effetto della migrazione rapida all'interno: popolazione pianeti in origine nettuniani (frazione giaccio nel core $50\%$) che migrano all'interno accumulando materiale roccioso (frazione ghiaccio nel core $10-20\%$).
 
 \begin{figure}[!ht]
 \includegraphics[trim={0cm 10cm 0 0},clip, width=0.9\textwidth,keepaspectratio]{MaLR-freq-synth}
@@ -249,7 +253,9 @@ Inoltre in \ref{fig:ma-synth} \'e evidente l'effetto della saturazione del momen
 
 \subsection{Caratteristiche delle distribuzioni delle propriet\'a fisiche dei pianeti e significativit\'a}
 
-La \ref{fig:MaLR-freq-synth} mostra la distribuzione di massa di 509 pianeti della popolazione sintetica di \cite{mordasini2018planetary}. La distribuzione della massa dei pianeti ha due andamento diversi per pianeti fino a $30\mearth{}$ formati da solidi e pianeti che hanno raggiunto la massa critica per l'accrescimento di gas runaway. La differente slope della distribuzione di massa nelle due regioni caratterizza i differenti meccanismi di accrescimento. Si ha un minimo locale attorno alla massa critica dopo di che l'aumento di massa \'e molto veloce. I risultati sono significativi per masse maggiori delle masse dell'embrione iniziale.
+La figura (\ref{fig:MaLR-freq-synth}) mostra la distribuzione di massa di 509 pianeti della popolazione sintetica di \cite{mordasini2018planetary}. La distribuzione della massa dei pianeti ha andamento diverso per pianeti fino a $30\mearth{}$ formati principalmente da solidi e pianeti che hanno raggiunto la massa critica per l'accrescimento di gas runaway.
+%La differente slope della distribuzione di massa nelle due regioni caratterizza i differenti meccanismi di accrescimento.
+Si ha un minimo locale attorno alla massa critica dopo di che l'aumento di massa \'e molto veloce verso piccole masse. I risultati sono significativi per masse maggiori delle masse dell'embrione iniziale.
 
 \begin{workout}[Distro luminosit\'a: relazione M-L]
 La distribuzione di luminosit\'a segue andamento $L\propto M^2$ con terzo picco per innesco deuterio a $\log{\frac{L}{\lsun}}\approx-3.5$

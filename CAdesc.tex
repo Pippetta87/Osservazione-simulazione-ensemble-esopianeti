@@ -24,7 +24,7 @@ pg 26
 \end{align}
 \end{workout}
 
-L'equazione del moto per un elemento di fluido
+L'equazione del moto per un elemento di fluido \'e
 \begin{align}
 &\PDof{t}(\rho v_i)+\PDof{x_i}(\rho v_iv_j+T_{ij})=F_i\label{eq:fluidmotion}\\
 &T_{ij}=P\delta_{ij}-\sigma_{ij}\\
@@ -46,16 +46,15 @@ Dalle equazioni precedenti si ha che
 \begin{equation}
 \exv{u_iu_j}=-\nu\TDy{x_j}{v_i}\label{eq:molvisccorr}
 \end{equation}
-con $\eta=\rho\nu$.
+%con $\eta=\rho\nu$.
 
-Scrivo le equazioni di conservazione di massa e la componente azimutale dell'equazione del moto
+Per un disco di densit\'a superficiale $\Sigma(r,t)$, dotato del campo di velocit\'a $(v_r,v_{\phi})=(u_r,r\Omega+u_{\phi})$, scrivo le equazioni di conservazione di massa e la componente azimutale dell'equazione del moto
 \begin{align}
 &\PDy{t}{\Sigma}+\frac{1}{r}\PDof{r}(r\Sigma v_r)=0\\
 &\Sigma(\PDy{t}{v_{\phi}}+v_r\PDy{r}{v_{\phi}}\frac{v_rv_{\phi}}{r})=0
 \end{align}
-dove $v_r$, $v_{\phi}$ sono componenti radiale e azimutale del campo di velocit\'a.
 
-Per un disco di densit\'a superficiale $\Sigma(r,t)$, dotato del campo di velocit\'a $(u_r,r\Omega+u_{\phi})$, dalle equazioni precedenti segue l'equazione del momento angolare:
+Dalle equazioni precedenti segue l'equazione del momento angolare:
 \begin{equation}
 \PDof{t}[r\Sigma(r\Omega+u_{\phi})]+\frac{1}{r}\PDof{r}[r^2\Sigma(r\Omega+u_{\phi})u_r]=0
 \end{equation}
@@ -68,6 +67,11 @@ In analogia all'equazione \eqref{eq:molvisccorr} si definisce
 \begin{equation}
 \sigma_{r\phi}=-\Sigma\exv{u_ru_{\phi}}=\Sigma\nu r \TDy{r}{\Omega}
 \end{equation}
+
+\begin{wrapfigure}[16]{l}{0.5\textwidth}
+\includegraphics[trim={0cm 19cm 0 0},clip, keepaspectratio,width=0.48\textwidth]{selfsimilaralphadisk}
+\caption{Soluzione equazione \eqref{eq:sigmaevol} per $\nu\propto r\expy{\gamma}$ con $\gamma=1$. Da \cite{armitage2007lecture}.}\label{fig:selfsimilaralphadisk}
+\end{wrapfigure}
 
 Nei modelli di disco di accrescimento unidimensionali si parametrizza il trasporto di momento angolare ponendo $\nu=\alpha c_s H$ dove $\alpha$ \'e parametro da fissare, $c_s$ la velocit\'a del suono e H lo spessore del disco:
 \begin{equation}
@@ -84,6 +88,28 @@ mentre la struttura radiale del disco di gas \'e determinata dall'equilibrio idr
 \frac{v_g^2}{r}=\frac{GM_*}{r^2}+\frac{1}{\rho}\TDy{r}{P}
 \end{equation}
 dove ho introdotto $v_g$ velocit\'a a cui il gas orbita attorno alla stella centrale.
+
+\begin{wrapfigure}[16]{l}{0.5\textwidth}
+\includegraphics[trim={0cm 19cm 0 0},clip, keepaspectratio,width=0.48\textwidth]{diskdensity}
+\caption{Densit\'a superficiale dischi protplanetari osservati nella regione di Ophiuchus ricavata risolvendo modello disco di accrescimento che riproduca densit\'a spettrale di energia osservata. Da \cite{andrews2010protoplanetary}.}\label{fig:diskdensity}
+\end{wrapfigure}
+
+Se $\nu\propto r\expy{\gamma}$ una soluzione di \eqref{eq:sigmaevol} per $t=0$ \'e
+\begin{equation}
+\Sigma=(2-\gamma)\frac{M_d}{2\pi R_c^2}(\frac{r}{R_c})\expy{-\gamma}\Exp{-(\frac{r}{R_c})\expy{2-\gamma}}
+\end{equation}
+\cite{andrews2010protoplanetary} hanno osservato lo spettro emesso da oggetti nella regione di formazione stellare Ophiuchus determinando massa, dimensioni caratteristiche e viscosit\'a: $M_d=0.004-0.143\msun{}$, $\gamma=0.4-1.1$, $R_c=\SIrange{14}{198}{\astronomicalunit}$.
+
+Il tempo caratteristico dei dischi protoplanetari, determinato misurando l'eccesso infrarosso in ammassi di et\'a diversa, \'e \SI{2.5}{\mega\year}. La massa del disco \'e ottenuta tramite fit con spettro osservato di un modello di disco.
+
+\begin{workout}[Caratteristiche fittate proto-dischi]
+\begin{table}[!ht]
+\begin{tabular}{|ccccc|}
+Nome&$M_d$&$\gamma$&$R_c$&$H_{100}\\
+AS 205&0.029&0.9&46&19.6&0.11
+\end{tabular}
+\end{table}
+\end{workout}
 
 \begin{workout}[Profilo densit\'a verticale disco isotermo]
 Thin vertically isothermal disk
@@ -175,26 +201,20 @@ Protoplanetary disc evolution and dispersal: the implications of X-ray photoevap
 EUV($E\approx13.6eV$): ionization, FUV($E\approx6-13.6eV$): dissociation, X-ray
 \end{workout}
 
-\section{YSO: distribuzione propriet\'a dischi protoplanetari}
-
+\begin{workout}[classificazione YSO]
+section{YSO: distribuzione propriet\'a dischi protoplanetari}
 La classificazione empirica degli young stellar object (YSO) si basa sul valore di
 \begin{equation}
 \alpha_{IR}=\TDly{\lambda}{\lambda F_{\lambda}}
 \end{equation}
 tra \SIrange{2.2}{25}{\micro\meter}.
-
 \begin{itemize}
-\item Classe 0: emissioni continua sub-millimetrica della polvere. Nubi molecolari compatte.
-\item Classe 1: $\alpha_{IR}>0$ a \SI{2}{\micro\meter}.
+\item Classe 0: Picco emissione in regione da lontano infrarosso a sub-millimetrica. Nubi molecolari compatte/protostelle.
+\item Classe 1: $\alpha_{IR}>0$ a \SI{2}{\micro\meter}. La stella accresce la maggior parte della sua massa finale.
 \item Classe 2: $0\geq\alpha_{IR}\geq-1.5$. Stella T-Tauri con disco otticamente spesso a $\lambda\leq\SI{10}{\micro\meter}$.
 \item Classe 3: $\alpha_{IR}\leq-1.5$. Stella T-Tauri con disco otticamente sottile a $\lambda\leq\SI{10}{\micro\meter}$.
 \end{itemize}
-
-Le condizioni iniziali delle simulazioni di popolazioni planetaria sono determinate dalle osservazioni dei dischi protoplanetari: le distribuzioni di metallicit\'a, massa, massa di polvere ed et\'a sono mostrati in ~\ref{fig:initdistro}. Il tempo caratteristico dei dischi protoplanetari, determinato misurando l'eccesso infrarosso in ammassi di et\'a diversa, \'e \SI{2.5}{\mega\year}. La massa del disco \'e ottenuta tramite fit con spettro osservato di un modello di disco.
-
-\begin{figure}[!ht]
-\includegraphics[trim={0cm 10cm 0 0},clip, keepaspectratio,width=0.7\textwidth]{initdistro}
-\caption{Distribuzione caretteristiche dischi di accrescimento. Da \cite{mordasini2018planetary}.}\label{fig:initdistro}\end{figure}
+\end{workout}
 
 \begin{workout}[Fit SED]
 Disk model

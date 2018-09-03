@@ -10,8 +10,6 @@ Il materiale presente nella regione instabile di una nube molecolare \'e dotato 
 Chronology of  early stages: apai lauretta 10 (book)
 \end{workout}
 
-\vspace{0.2\textheight}
-
 \section{Modello disco di accrescimento}
 
 Nei modelli unidimensionali per disco di accrescimento si descrive il trasporto di momento angolare verso l'esterno introducendo la viscosit\'a aumentata $\nu=\frac{\eta}{\rho}\to\alpha c_s H$: giustifico euristicamente la parametrizzazione della viscosit\'a del disco di accrescimento in analogia alla viscosit\'a molecolare (\cite{bouvier2002theory}).
@@ -54,8 +52,8 @@ Dalle equazioni precedenti si ha che
 
 Per un disco di densit\'a superficiale $\Sigma(r,t)$, dotato del campo di velocit\'a $(v_r,v_{\phi})=(u_r,r\Omega+u_{\phi})$, scrivo le equazioni di conservazione di massa e la componente azimutale dell'equazione del moto
 \begin{align}
-&\PDy{t}{\Sigma}+\frac{1}{r}\PDof{r}(r\Sigma v_r)=0\\
-&\Sigma(\PDy{t}{v_{\phi}}+v_r\PDy{r}{v_{\phi}}\frac{v_rv_{\phi}}{r})=0
+&\PDy{t}{\Sigma}+\frac{1}{r}\PDof{r}(r\Sigma v_r)=0\label{eq:massconservation}\\
+&\Sigma(\PDy{t}{v_{\phi}}+v_r\PDy{r}{v_{\phi}}+\frac{v_rv_{\phi}}{r})=0
 \end{align}
 
 Dalle equazioni precedenti segue l'equazione del momento angolare:
@@ -64,7 +62,7 @@ Dalle equazioni precedenti segue l'equazione del momento angolare:
 \end{equation}
 Trascuro la fluttuazione azimutale nel termine di derivata temporale e considero media spaziale su scala opportuna:
 \begin{equation}
-\PDof{t}r^2\Sigma\Omega+\frac{1}{r}\PDof{r}[r^3\Sigma\Omega\exv{u_r}+\Sigma r^2\exv{u_ru_{\phi}}]=0
+\PDof{t}r^2\Sigma\Omega+\frac{1}{r}\PDof{r}[r^3\Sigma\Omega\exv{u_r}+\Sigma r^2\exv{u_ru_{\phi}}]=0\label{eq:smoothedangularmomentumequation}
 \end{equation}
 %\vec{v}=(u_r,\Omega r)
 In analogia all'equazione \eqref{eq:molvisccorr} si definisce
@@ -72,12 +70,16 @@ In analogia all'equazione \eqref{eq:molvisccorr} si definisce
 \sigma_{r\phi}=-\Sigma\exv{u_ru_{\phi}}=\Sigma\nu r \TDy{r}{\Omega}
 \end{equation}
 
-\begin{wrapfigure}[16]{l}{0.5\textwidth}
+\begin{wrapfigure}[17]{l}{0.5\textwidth}
 \includegraphics[trim={0cm 19cm 0 0},clip, keepaspectratio,width=0.48\textwidth]{selfsimilaralphadisk}
 \caption{Soluzione equazione \eqref{eq:sigmaevol} per $\nu\propto r\expy{\gamma}$ con $\gamma=1$. Da \cite{armitage2007lecture}.}\label{fig:selfsimilaralphadisk}
 \end{wrapfigure}
 
-Nei modelli di disco di accrescimento unidimensionali si parametrizza il trasporto di momento angolare ponendo $\nu=\alpha c_s H$ dove $\alpha$ \'e parametro da fissare, $c_s$ la velocit\'a del suono e H lo spessore del disco:
+Nei modelli di disco di accrescimento unidimensionali si parametrizza il trasporto di momento angolare ponendo
+\begin{equation}
+\nu=\alpha c_s H
+\end{equation}
+dove $\alpha$ \'e parametro da fissare, $c_s$ la velocit\'a del suono e H lo spessore del disco. Utilizzo l'equazione di conservazione della massa per riscrivere \eqref{eq:smoothedangularmomentumequation}:
 \begin{equation}
 \PDy{t}{\Sigma}=3\frac{1}{r}\PDof{r}[r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]\label{eq:sigmaevol}
 \end{equation}
@@ -93,34 +95,34 @@ mentre la struttura radiale del disco di gas \'e determinata dall'equilibrio idr
 \end{equation}
 dove ho introdotto $v_g$ velocit\'a a cui il gas orbita attorno alla stella centrale.
 
-\begin{wrapfigure}[16]{l}{0.5\textwidth}
-\includegraphics[trim={0cm 19cm 0 0},clip, keepaspectratio,width=0.48\textwidth]{diskdensity}
-\caption{Densit\'a superficiale dischi protoplanetari osservati nella regione di Ophiuchus ricavata risolvendo modello disco di accrescimento che riproduca densit\'a spettrale di energia osservata. Da \cite{andrews2010protoplanetary}.}\label{fig:diskdensity}
-\end{wrapfigure}
+\begin{figure}[!ht]
+\begin{subfigure}[b]{0.39\textwidth}
+\centering
+\includegraphics[trim={0cm 10cm 0 0},clip, keepaspectratio,width=0.98\textwidth]{SED-contours}
+\caption{Struttura dischi protoplanetari (flusso a $\lambda=\SI{880}{\micro\meter}$) e densit\'a spettrale. La linea tratteggiata viola indica la distribuzione di corpo nero della fotosfera stellare. Da \cite{andrews2010protoplanetary}.}\label{fig:SED-contours}
+\end{subfigure}
+~
+\begin{subfigure}[b]{0.55\textwidth}
+\includegraphics[trim={0cm 15cm 0 0},clip, keepaspectratio,width=0.98\textwidth]{diskdensity}
+\caption{Densit\'a superficiale dischi protoplanetari osservati nella regione di Ophiuchus ricavata risolvendo modello disco di accrescimento che riproduca densit\'a spettrale di energia osservata. I rettangoli grigi indicano densit\'a superficiale per la MMSN nella regione di Saturno, Urano e Nettuno. Da \cite{andrews2010protoplanetary}.}\label{fig:diskdensity}
+\end{subfigure}
+\end{figure}
 
-Se $\nu\propto r\expy{\gamma}$ una soluzione di \eqref{eq:sigmaevol} per $t=0$ \'e
+Attorno alle stelle giovani sovente si trovano strutture opache nel visibile ma otticamente sottili nelle onde infrarosse: risolvendo il modello di disco protoplanetario, avente come input la distribuzione della dimensione della polvere e rapporto gas/polvere, per riprodurre le caratteristiche spettrali e flusso termico osservati, note anche le caratteristiche della stella centrale, si determinano i parametri caratteristici del disco. La figura (\subref{fig:SED-contours}) mostra le strutture attorno a stelle giovani del cluster Ophiuchus secondo profili di intensit\'a a \SI{880}{\micro\meter}. Se $\nu\propto r\expy{\gamma}$ una soluzione di \eqref{eq:sigmaevol} per $t=0$ \'e
 \begin{equation}
 \Sigma=(2-\gamma)\frac{M_d}{2\pi R_c^2}(\frac{r}{R_c})\expy{-\gamma}\Exp{-(\frac{r}{R_c})\expy{2-\gamma}}
 \end{equation}
 \cite{andrews2010protoplanetary} hanno osservato lo spettro emesso da oggetti nella regione di formazione stellare Ophiuchus determinando massa, dimensioni caratteristiche e viscosit\'a: $M_d=0.004-0.143\msun{}$, $\gamma=0.4-1.1$, $R_c=\SIrange{14}{198}{\astronomicalunit}$.
 
-
-
-\begin{figure}[!ht]
-\begin{subfigure}[b]{0.47\textwidth}
+\begin{wrapfigure}[6]{l}{0.5\textwidth}
 \centering
-\includegraphics[trim={0cm 10cm 0 0},clip, keepaspectratio,width=0.48\textwidth]{SED-contours}
-\caption{Regioni di flusso omogeneo a $\lambda=\SI{880}{\micro\meter}$ e densit\'a spettrale. Da \cite{andrews2010protoplanetary}.}\label{fig:SED-contours}
-\end{subfigure}
-~
-\begin{subfigure}[b]{0.47\textwidth}
-\centering
-\includegraphics[trim={0cm 12cm 0 0},clip, width=0.9\textwidth,keepaspectratio]{clusterage-fstar}
-\caption{Frazione di stelle con disco protoplanetario in funzione dell'et\'a dell'ammasso. Da \cite{mordasini2018planetary}. }\label{fig:clusterage-fstar}
-\end{subfigure}
-\end{figure}
+\includegraphics[trim={0cm 13cm 0 0},clip, width=0.49\textwidth,keepaspectratio]{clusterage-fstar}
+\caption{Frazione di stelle con disco protoplanetario in funzione dell'et\'a del cluster. Da \cite{mamajek2009initial}. }\label{fig:clusterage-fstar}
+\end{wrapfigure}
 
-Attorno alle stelle giovani sovente si trovano strutture che hanno spettro di emissione con eccesso di radiazione infrarossa rispetto a corpo nero: il riprocessamento della luce stellare da parte delle particelle di polvere causa questo fenomeno.
+In figura (\ref{fig:clusterage-fstar}) \'e riportata la sfrazione di stelle con dischi protoplanetari in funzione dell'et\'a del cluster. \'E possibile stimare tempo di vita caratteristico del disco considerando andamento esponenziale per frazione di dischi: secondo \cite{mamajek2009initial} $\tau_c\approx\SI{2.5}{\mega\year}$, mentre \cite{haisch2001disk} hanno determinato $\tau_c\approx\SI{6}{\mega\year}$.
+
+\vspace{0.2\textheight}
 
 \begin{workout}[Caratteristiche fittate proto-dischi]
 \begin{table}[!ht]

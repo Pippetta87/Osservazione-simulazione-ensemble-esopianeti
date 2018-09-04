@@ -108,7 +108,9 @@ dove ho introdotto $v_g$ velocit\'a a cui il gas orbita attorno alla stella cent
 \end{subfigure}
 \end{figure}
 
-Attorno alle stelle giovani sovente si trovano strutture opache nel visibile ma otticamente sottili nelle onde infrarosse: risolvendo il modello di disco protoplanetario, avente come input la distribuzione della dimensione della polvere e rapporto gas/polvere, per riprodurre le caratteristiche spettrali e flusso termico osservati, note anche le caratteristiche della stella centrale, si determinano i parametri caratteristici del disco. La figura (\subref{fig:SED-contours}) mostra le strutture attorno a stelle giovani del cluster Ophiuchus secondo profili di intensit\'a a \SI{880}{\micro\meter}. Se $\nu\propto r\expy{\gamma}$ una soluzione di \eqref{eq:sigmaevol} per $t=0$ \'e
+Attorno alle stelle giovani sovente si trovano strutture opache nel visibile ma otticamente sottili nelle onde infrarosse: risolvendo il modello di disco protoplanetario, avente come input la distribuzione della dimensione della polvere e rapporto gas/polvere, per riprodurre le caratteristiche spettrali e flusso termico osservati, note anche le caratteristiche della stella centrale, si determinano i parametri caratteristici del disco.
+
+La figura (\subref{fig:SED-contours}) mostra le strutture attorno a stelle giovani del cluster Ophiuchus secondo profili di intensit\'a a \SI{880}{\micro\meter}. Se $\nu\propto r\expy{\gamma}$ una soluzione di \eqref{eq:sigmaevol} per $t=0$ \'e
 \begin{equation}
 \Sigma=(2-\gamma)\frac{M_d}{2\pi R_c^2}(\frac{r}{R_c})\expy{-\gamma}\Exp{-(\frac{r}{R_c})\expy{2-\gamma}}
 \end{equation}
@@ -369,9 +371,9 @@ L'equazione del moto per particella di polvere \'e
 \begin{equation}\label{eq:motiondust}
 m_p\TDy{t}{\vec{v}}=\vec{F}_D-m_p\Omega^2z\hat{z}
 \end{equation}
-$F_D$ \'e la forza esercitata dal gas sulla particella di polvere
+$\vec{F}_D$ \'e la forza esercitata dal gas sulla particella di polvere che si oppone al moto relativo con velocit\'a $v$
 \begin{equation}
-F_D=-\frac{1}{2}C_D\pi s^2\rho_gv^2
+F_D=\frac{1}{2}C_D\pi s^2\rho_gv^2
 \end{equation}
 nel caso cammino libero medio delle molecole di gas sia maggiore delle dimensioni della particella $C_D=\frac{8}{3}\frac{v_{th}}{v_z}$ (Epstein drag) per particelle pi\'u grandi \'e funzione del numero di Reynold.
 %La pressione non supporta i grani: troppo pesanti
@@ -431,6 +433,7 @@ Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinam
 
 \section{Accrescimento planetesimi: formazione proto-pianeti.}
 
+Assumiamo quindi che la polvere condensi in planetesimi con densit\'a superficiale $\Sigma_p$.
 \subsection{Distribuzione velocit\'a planetesimi}
 %Refs: kokubo Ida 12 `'Dynamics and accretion of planetesimal''
 La distribuzione di velocit\'a dei planetesimi, che percorrono orbite kepleriane, evolve attraverso interazione con gas, che smorza eccentricit\'a e inclinazione, e scattering, che trasforma il moto kepleriano in casuale.
@@ -447,7 +450,7 @@ v\approx\sqrt{e^2+i^2}v_K
 \end{equation}
 dove si assume che eccentricit\'a e inclinazione seguano distribuzione di Rayleigh (\cite{ida1992n})
 \begin{equation}
-f(e,i)=4\frac{\Sigma}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{-\frac{e^2}{\exv{e^2}}-\frac{i^2}{\exv{i^2}}}
+f(e,i)=4\frac{\Sigma_p}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{-\frac{e^2}{\exv{e^2}}-\frac{i^2}{\exv{i^2}}}
 \end{equation}
 I valori iniziali sono $\exv{i^2}=\exv{e^2}=[2\frac{r_H}{a}]^2$, il loro aumento, determinato da interazioni gravitazionali \'e chiamato viscous stirring, mentre , una volta formato un corpo molto pi\'u massiccio degli altri (embrione planetario), l'equipartizione di energia tra il corpo massiccio e i planetesimi produce diminuzione di eccentricit\'a/inclinazione dell'embrione planetario a scapito di aumento di queste per i corpi di massa minore, questo fenomeno \'e detto dynamical friction. (\cite{kokubo2012dynamics})
 %la velocit\'a relativa media aumenta fino al valore della velocit\'a di fuga dal corpo maggiore, denominato protopianeta raggiunto diametro migliaia di kilometri.
@@ -477,7 +480,7 @@ questo regime di accrescimento (runaway growth) \'e responsabile crescita diamet
 %(higher radial excursion ae)
 Quando la massa degli embrioni domina su quella dei planetesimi si ha transizione a regime oligarchico in cui l'accrescimento \'e pi\'u lento fino a che non \'e stata accresciuta la massa presente nella zona di pertinenza gravitazionale dell'embrione,detta isolation mass (\cite{lissauer1993planet}):
 \begin{align}
-&M_{iso}=\frac{(4\pi Br^2\Sigma)\expy{3/2}}{(3M_*)\expy{1/2}}=\num{2.10e-3}(\frac{Br^2\Sigma}{2\sqrt{3}})\expy{3/2}(\frac{\msun{}}{M_*})\expy{1/2}\mearth{}
+&M_{iso}=\frac{(4\pi Br^2\Sigma_p)\expy{3/2}}{(3M_*)\expy{1/2}}=\num{2.10e-3}(\frac{Br^2\Sigma_p}{2\sqrt{3}})\expy{3/2}(\frac{\msun{}}{M_*})\expy{1/2}\mearth{}
 \end{align}
 
 \begin{errata}[Isolation mass: proportion]
@@ -663,14 +666,13 @@ M_{env}\approx\int_{R_c}^{R_o}4\pi r^2\rho\,dr\propto\frac{\sigma}{\kappa_RL}(\f
 Characterization of exoplanets from their formation I (eq 10)
 \end{workout}
 
+
+\begin{workout}[Rfes espressione accrescimento gas]
 Rate di accrescimento limitato dalla velocit\'a di raffreddamento:
 \begin{equation}
 \dot{M}_{XY}\propto\ \frac{M_p}{M_*}<(H_P/R_p)^3/\sqrt{3}
 \end{equation}
 quindi la massa di gas aumenta esponenzialmente a partire da $M_c\approx10\mearth{}$.
-
-\begin{workout}[Rfes espressione accrescimento gas]
-
 \end{workout}
 
 \section{Accrescimento limitato dalla disponibilit\'a di gas del disco}

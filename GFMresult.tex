@@ -212,14 +212,31 @@ planet dominates: $\TDy{t}{a}=-\frac{3\nu}{a}\frac{\Sigma(a,t)a^2}{M_p}$
 
 \section{Popolazioni planetarie sintetiche}
 %Considero i risulati di alcuni modelli di formazione planetari (\cite{mordasini2018planetary}).
-La soluzione del modello di formazione planetario variando le condizioni iniziali in maniera opportuna e determinando un gran numero di combinazioni tramite metodi di montecarlo produce un ensemble di sistemi da cui, tramite confronto statistico con la popolazione osservata,  si valuta la rispondenza con la realt\'a.
+\begin{errata}[Soluzione del modello di formazione globale]
+La soluzione del modello di formazione planetario variando le condizioni iniziali in maniera opportuna e determinando un gran numero di combinazioni tramite metodi di montecarlo produce un ensemble di sistemi da cui, tramite confronto statistico con la popolazione osservata, si valuta l'accuratezza delle .
+\end{errata}
+
+%\subsection{Progresso nei modelli di formazione globale}
+
+\begin{workout}[Risultati dello sforzo di riprodurre la forma del diagramma a-M]
+Alcuni risultati prodotti dal tentavo di migliorare l'accordo tra popolazioni sintetiche  e popolazione pianeti reali:
+\begin{itemize}
+\item Il modello di migrazione GT80 e tanaka02 producono migrazipone troppo veloce (mordasini09: assenza pianeti minori di 10masse solari entro 0.1AU). L'analisi del momento torcente di corotazione in dischi non isotermi dimostra che questo fenomeno pu\'o essere la soluzione alla migrazione troppo rapida, inoltre si pu\'o avere migrazione verso l'esterno con formazione di zone di convergenza.
+\item rate di accrescimento di gas runaway (ida lin 04: deserto di pianeti tra 10-100 masse terrestri): il calore generato dall'accrescimento di pianetesimi ritarda l'accrescimento di gas e nei modelli recenti i a molti embrioni si ha competizione per il gas
+%\item Migrazione II: flussi di gas
+\item molteplicit\'a: effetti sui pianeti di piaccola massa sono scattering (eccitazione eccentricit\'a o espulsione), cattura in risonanza e collisioni
+\item Relazione con massa stellare: Stelle di minor massa sono circondate da dischi di minore massa: quindi minor frequenza di giaganti.%Relazione tra $\eta_J-M_*$
+\end{itemize}
+\end{workout}
+
+%\subsection{Popolazione M18}
 
 \begin{figure}[!ht]
 \includegraphics[trim={0cm 8cm 0 0},clip, width=0.9\textwidth,keepaspectratio]{ma-synth}
-\caption{Simulazione popolazione planetaria di 504 sistemi Punti rossi: pianeti giganti con $M_e/M_c>1$; simboli blu/verdi: pianeti che hanno accresciuto core con ghiacci/rocce; punti aperti: $0.1\leq M_{env}/M_{core}\leq1$; croci e punti pieni verdi: pianeti con $M_{env}/M_{core}\leq0.1$. Da \cite{mordasini2018planetary}.}\label{fig:ma-synth}
+\caption{Simulazione popolazione planetaria di 504 sistemi Punti rossi: pianeti giganti con $M_e/M_c>1$; simboli blu/verdi: pianeti che hanno accresciuto core con ghiacci/rocce; punti aperti: $0.1\leq M_{env}/M_{core}\leq1$; croci blu e punti pieni verdi: pianeti con $M_{env}/M_{core}\leq0.1$. Da \cite{mordasini2018planetary}.}\label{fig:ma-synth}
 \end{figure}
 
-La figura (\ref{fig:MaLR-freq-synth}) mostra la distribuzione della popolazione sintetica nel diagramma massa-distanza: la posizione finale di un pianeta \'e terminata principalmente dai tempi caratteristici di accrescimento e migrazione; considerando inoltre l'interazione gravitazionale tra i pianeti si hanno effetti delle risonanze e eccitazione di eccentricit\'a.
+La figura (\ref{fig:ma-synth}) mostra la distribuzione della popolazione sintetica nel diagramma massa-distanza: la posizione finale di un pianeta \'e terminata principalmente dai tempi caratteristici di accrescimento e migrazione; considerando inoltre l'interazione gravitazionale tra i pianeti si hanno effetti delle risonanze e eccitazione di eccentricit\'a.
 
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.47\textwidth}
@@ -235,10 +252,10 @@ La figura (\ref{fig:MaLR-freq-synth}) mostra la distribuzione della popolazione 
 \end{subfigure}
 \end{figure}
 
-Alcune caratteristiche dell'ensemble sintetico (\cite{mordasini2018planetary}):
+Alcune caratteristiche dell'ensemble sintetico: %(\cite{mordasini2018planetary}):
 \begin{itemize}
-\item Numerosi sistemi con costituiti d pianeti di piccola massa (\numrange{0.1}{10}$\mearth{}$)
-\item Sistemi con pianeti di piccola massa e giganti. Sistemi che mimano il sistema solare con andamento di massa piccolo-massiccio-piccolo: sweet spot per formazione di pianeti giganti \'e all'esterno dell'ice-line.
+\item Numerosi sistemi costituiti da pianeti di piccola massa (\numrange{0.1}{10}$\mearth{}$)
+\item Sistemi con pianeti di piccola massa e giganti. Sistemi che mimano il sistema solare con andamento di massa piccolo-massiccio-piccolo (sweet spot per formazione di pianeti giganti \'e all'esterno dell'ice-line).
 \item L'architettura dei pianeti giganti varia notevolmente ma quello pi\'u vicino alle stella \'e distanza di circa \SI{1}{\astronomicalunit}, o meno, dalla stella.
 \item Piccola percentuale di sistemi con un pianeta gigante superstite di scattering tra pianeti giganti vicini. Sistemi rari formati in dischi massicci con alta metallicit\'a.
 %\item Popolazione di pianeti tra $\numrange{30}{100}\mearth{}$: i fattori che influenzano la popolazione di pianeti di massa intermedia sono la massa presente nel disco quando il protopianeta raggiunge la massa critica per accrescimento di gas, il tempo-scala di rilassamento radiativo e competizione per accrescimento di gas tra protopianeti giganti.
@@ -291,15 +308,15 @@ O&10-20&50-60\\
 \caption{Percentuale di stelle con N pianeti del dato tipo nella popolazione sintetica di \cite{mordasini2018planetary} e confronto con osservazioni.}\label{tab:planetfreq}
 \end{table}
 
-La posizione di Nettuno e Saturno nella figura \ref{fig:ma-synth} suggerisce che la posizione iniziale fosse probabilmente pi\'u interna (Grand-tack scenario).
+La posizione di Nettuno e Saturno nella figura (\ref{fig:ma-synth}) suggerisce che la posizione iniziale fosse probabilmente pi\'u interna (Grand-tack scenario).
 
-La tabella \ref{tab:planetfreq} mostra un buon accordo tra teoria e osservazione per frequenza di pianeti giganti e sistemi compatti.
+La tabella (\ref{tab:planetfreq}) mostra un buon accordo tra teoria e osservazione per frequenza di pianeti giganti e sistemi compatti.
 
 Il confronto della distribuzione di massa tra teorica e osservata mostra il buon accordo della pendenza nei due regimi di accrescimento e della posizione della massa critica. Per quanto riguarda la distribuzione dei raggi planetarii il picco a $1\rjupiter{}$ \'e meno pronunciato perch\'e sono inclusi solo pianeti giganti vicini e la distribuzione sintetica cresce meno rapidamente a piccoli raggi. Infine il gran numero di pianeti terrestri della popolazione sintetica pu\'o collidere dando luogo a pianeti pi\'u massicci tuttavia le interazioni dinamiche sono simulate solo per il tempo di vita del disco.
 
 \begin{figure}[!ht]\includegraphics[trim={0cm 17cm 0 0},clip, keepaspectratio,width=0.9\textwidth]{MR-freq-obssynth}\caption{Distribuzioni di massa e raggio per popolazione planetaria sintetica (linea nera) e distribuzioni osservate tramite RV e transiti (linea blu) corrette per i bias. Da \cite{mordasini2018planetary}.}\label{fig:MR-freq-obssynth}\end{figure}
 
-La probabilit\'a di osservare pianeti giganti aumenta con la metallicit\'a: la figura \ref{fig:giant-Zsynth} mostra che l'incremento relativo \'e in accordo con le osservazioni.
+La probabilit\'a di osservare pianeti giganti aumenta con la metallicit\'a: la figura (\ref{fig:giant-Zsynth}) mostra che l'incremento relativo \'e in accordo con le osservazioni.
 
 \begin{figure}[!ht]
 \includegraphics[trim={0cm 10cm 0 0},clip, width=0.9\textwidth,keepaspectratio]{giant-Zsynth}

@@ -29,13 +29,13 @@
 	{#1}
 }
 \newcounter{reworkingc}
-\def\thereworkingc{(\arabic{reworkingc})}
+\def\thereworkingc{\arabic{reworkingc}}
 \newenvironment{reworking}[1][ ]%%%% reworking
 {\refstepcounter{reworkingc}\addreworkingcontent{#1}%
- {(\thereworkingc): \color{dollarbill}{#1}} \\
+ {(\thereworkingc): \color{candyapplered}{\huge #1}} \\
 
 }{
-\hspace*{\textwidth}\\\noindent\color{dollarbill}{\rule{0.5\textwidth}{1mm}}}
+\hspace*{\textwidth}\\\noindent\color{candyapplered}{\rule{0.5\textwidth}{1mm}}}
 %%ERRATA
 \newcommand{\listerrataname}{List of errata}
 \newlistof{erratac%counter
@@ -46,7 +46,7 @@
 {#1}
 }
 \newcounter{erratac}
-\def\theerratac{(\arabic{erratac})}
+\def\theerratac{\arabic{erratac}}
 \newenvironment{errata}[1][ ]%%%% errata
 {\refstepcounter{erratac}\adderratacontent{#1}%
 \begingroup {(\theerratac): #1} \\

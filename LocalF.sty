@@ -18,7 +18,25 @@
   \item\relax}
  {\endlist}
  
-\ifx \versione\bozza%%ERRATA
+\ifx \versione\bozza
+%REWORKING
+\newcommand{\listreworkingname}{List of reworking}
+\newlistof{reworkingc%counter
+}{reworkingl%extension
+}{\listreworkingname}
+\newcommand\addreworkingcontent[1]{%
+	\addcontentsline{reworkingl}{chapter}%
+	{#1}
+}
+\newcounter{reworkingc}
+\def\thereworkingc{(\arabic{reworkingc})}
+\newenvironment{reworking}[1][ ]%%%% reworking
+{\refstepcounter{reworkingc}\addreworkingcontent{#1}%
+ {(\thereworkingc): \color{dollarbill}{#1}} \\
+
+}{
+\hspace*{\textwidth}\\\noindent\color{dollarbill}{\rule{0.5\textwidth}{1mm}}}
+%%ERRATA
 \newcommand{\listerrataname}{List of errata}
 \newlistof{erratac%counter
 }{erratal%extension
@@ -27,54 +45,47 @@
 \addcontentsline{erratal}{chapter}%
 {#1}
 }
-
 \newcounter{erratac}
-\def\thewoc{(\arabic{erratac})}
+\def\theerratac{(\arabic{erratac})}
 \newenvironment{errata}[1][ ]%%%% errata
 {\refstepcounter{erratac}\adderratacontent{#1}%
 \begingroup {(\theerratac): #1} \\
 \color{grey}
-}{\hspace*{\textwidth}\\\noindent\rule{0.5\textwidth}{0.4pt}\\\endgroup\\}
-
-\else
-
-\newenvironment{errata}[1][ ]%%%% errata
-{\comment}{\endcomment}
-\fi
-
-\ifx \versione\bozza%%WORKOUT
+}{\hspace*{\textwidth}\\\noindent\rule{0.5\textwidth}{1mm}\\\endgroup\\}
+%WORKOUT
 \newcommand{\listworkoutname}{List of Workout}
 \newlistof{woc%counter
 }{wol%extension
 }{\listworkoutname}
 \newcommand\addwocontent[1]{%
-\addcontentsline{wol}{chapter}%
-{#1}
+	\addcontentsline{wol}{chapter}%
+	{#1}
 }
-
 \newcounter{woc}
 \def\thewoc{(\arabic{woc})}
 \newenvironment{workout}[1][ ]%%%% workout
 {\refstepcounter{woc}\addwocontent{#1}%
-\begingroup {\thewoc: #1} \\
-\color{midnightblue}
+	\begingroup {\thewoc: #1} \\
+	\color{midnightblue}
 }{\hspace*{\textwidth}\\\noindent\rule{0.5\textwidth}{0.4pt}\endgroup\\}
-
-\else
-
-\newenvironment{workout}[1][ ]%%%% workout
-{\comment}{\endcomment}
-\fi
-
-\ifx \versione\bozza%%wrapfigure->figure
+%wrapfigure->figure
 \renewenvironment{wrapfigure}[3][]{\begin{figure}[!ht]}{\end{figure}}
+\else
+%ERRATA
+\newenvironment{errata}[1][ ]
+{\comment}{\endcomment}
+%WORKOUT
+\newenvironment{workout}[1][ ]
+{\comment}{\endcomment}
+%reworking
+\newenvironment{reworking}[1][ ]
+{\comment}{\endcomment}
 \fi
 
 %\AtBeginDocument{%ref->(ref)
 %\let\refold\ref
 %\renewcommand{\ref}[1]{(\refold{#1})}
 %}
-
 
 \renewcommand\cftappendixname{\appendixname~} %% Appendix ???
 

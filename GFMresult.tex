@@ -99,6 +99,231 @@ Densit\'a superficiale iniziale:
 4-Mordasini18 (Hayashi81). $p_g\approx1$ (Andrews10).
 \end{workout}
 
+\begin{reworking}[Révolutionne planetesimi e accrescimento solidi]
+
+\section{Sedimentazione polvere e formazione planetesimi}
+
+La polvere presente nel materiale interstellare ha dimensioni di \SI{0.1}{\micro\meter}: l'evoluzione del disco di polvere \'e determinata da attrazione della stella centrale e drag del gas.
+
+L'equazione del moto per particella di polvere \'e
+\begin{equation}\label{eq:motiondust}
+m_p\TDy{t}{\vec{v}}=\vec{F}_D-m_p\Omega^2z\hat{z}
+\end{equation}
+$\vec{F}_D$ \'e la forza esercitata dal gas sulla particella di polvere che si oppone al moto relativo con velocit\'a $v$
+\begin{equation}
+F_D=\frac{1}{2}C_D\pi s^2\rho_gv^2
+\end{equation}
+nel caso cammino libero medio delle molecole di gas sia maggiore delle dimensioni della particella $C_D=\frac{8}{3}\frac{v_{th}}{v_z}$ (Epstein drag) per particelle pi\'u grandi \'e funzione del numero di Reynold.
+%La pressione non supporta i grani: troppo pesanti
+
+Per particelle di \SI{1}{\micro\meter} tempo di sedimentazione \'e $\SI{2e5}{\year}$, inoltre turbolenza e coagulazione delle particelle hanno un ruolo non banale.
+%t=mv/F
+
+La velocit\'a relativa tra gas e polvere causa un drift verso la stella di quest'ultima massimo per particelle di \SIrange{0.01}{10}{\meter}  a \SI{1}{\astronomicalunit} con tempo caratteristico di \SI{100}{\year} (\cite{lissauer1993planet}).
+
+Per passare a corpi di dimensioni kilometriche si ipotizzano 2 scenarii:
+\begin{itemize}
+	\item La componente solida del disco di accrescimento sedimenta rapidamente in disco sottile: secondo il modello di Goldreich-Ward il disco di polvere \'e instabile e le condensazioni generano i planetesimi.
+	\item In assenza di sedimentazione la formazione procede tramite urti a 2 corpi e la turbolenza creando addensamenti, pu\'o accelerare la formazione di planetesimi.
+\end{itemize}
+
+\section{Accrescimento planetesimi: formazione proto-pianeti.}
+
+Assumiamo quindi che la polvere condensi in planetesimi con densit\'a superficiale $\Sigma_p$.
+\subsection{Distribuzione velocit\'a planetesimi}
+%Refs: kokubo Ida 12 `'Dynamics and accretion of planetesimal''
+La distribuzione di velocit\'a dei planetesimi, che percorrono orbite kepleriane, evolve attraverso interazione con gas, che smorza eccentricit\'a e inclinazione, e scattering, che trasforma il moto kepleriano in casuale.
+
+%e si ha equipartizione di energia tra pianetesimi di diversa massa
+%i planetesimi di massa minore hanno maggiore dispersione di velocit\'a 
+%due planetesimi hanno stessa velocit\'a relativa prima e dopo interazione ma aumenta la velocit\'a relativa al moto kepleriano in maniera casuale: 
+%\'E ragionevole supporre che si arrivi rapidamente alla condizione $v>\Omega R_H$.
+
+%v deviazione dei planetesimi da velocit\'a kepleriana
+La componente casuale della velocit\'a v dei planetesimi \'e approssimativamente
+\begin{equation}
+v\approx\sqrt{e^2+i^2}v_K
+\end{equation}
+dove si assume che eccentricit\'a e inclinazione seguano distribuzione di Rayleigh (\cite{ida1992n})
+\begin{equation}
+f(e,i)=4\frac{\Sigma_p}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{-\frac{e^2}{\exv{e^2}}-\frac{i^2}{\exv{i^2}}}
+\end{equation}
+I valori iniziali sono $\exv{i^2}=\exv{e^2}=[2\frac{r_H}{a}]^2$, il loro aumento, determinato da interazioni gravitazionali \'e chiamato viscous stirring, mentre , una volta formato un corpo molto pi\'u massiccio degli altri (embrione planetario), l'equipartizione di energia tra il corpo massiccio e i planetesimi produce diminuzione di eccentricit\'a/inclinazione dell'embrione planetario a scapito di aumento di queste per i corpi di massa minore, questo fenomeno \'e detto dynamical friction. (\cite{kokubo2012dynamics})
+%la velocit\'a relativa media aumenta fino al valore della velocit\'a di fuga dal corpo maggiore, denominato protopianeta raggiunto diametro migliaia di kilometri.
+
+\subsection{Regimi accrescimento dei protopianeti}
+
+L'accrescimento di massa degli embioni planetari procede, in approssimazione di interazione a 2 corpi, secondo
+\begin{equation}
+\TDy{t}{M_e}=\pi R_e^2\rho_{pl}v F_g=A\pi R_e^2\Sigma_p\Omega F_g\label{eq:Gaccretionpl}
+\end{equation}
+con $F_g$ fattore che tiene conto dell'interazione gravitazionale
+\begin{equation}
+F_g=(1+(\frac{v_e}{v})^2)
+\end{equation}
+$v$ velocit\'a relativa e $v_e$ velocit\'a di fuga, $\rho_{pl}$ densit\'a di planetesimi
+\begin{align}
+&\rho_{pl}\approx\frac{\Sigma_p}{2a\sin{i}}=A\frac{\Sigma_p\Omega}{v}
+\end{align}
+dove A dipende dalle propriet\'a della distribuzione di velocit\'a dei planetesimi.
+% Costante proporzionalit\'a \'e $\frac{\sqrt{3}}{2}$ assumendo relazione di dispersione per velocit\'a planetesimi isotropa.
+
+Per embrioni planetarii di decine di chilometri l'attrazione gravitazionale aumenta la sezione d'urto: 
+\begin{equation}
+\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{1/3}
+\end{equation}
+questo regime di accrescimento (runaway growth) \'e responsabile crescita diametro embrioni da \SI{10}{\kilo\meter} a \SI{100}{\kilo\meter} in \SIrange{e4}{e5}{\year}.
+%(higher radial excursion ae)
+Quando la massa degli embrioni domina su quella dei planetesimi si ha transizione a regime oligarchico in cui l'accrescimento \'e pi\'u lento fino a che non \'e stata accresciuta la massa presente nella zona di pertinenza gravitazionale dell'embrione,detta isolation mass (\cite{lissauer1993planet}):
+\begin{align}
+&M_{iso}=\frac{(4\pi Br^2\Sigma_p)\expy{3/2}}{(3M_*)\expy{1/2}}=\num{2.10e-3}(\frac{Br^2\Sigma_p}{2\sqrt{3}})\expy{3/2}(\frac{\msun{}}{M_*})\expy{1/2}\mearth{}
+\end{align}
+
+La fase finale di crescita caotica evolve il sistema verso una configurazione dinamica stabile ed ha tempi tipici di \SIrange{10}{100}{\mega\year}.
+
+\end{reworking}
+
+\begin{workout}[Refs GI vs CA]
+	planetesimal hypothesis: chamberlin 05, Safronov 69, Hayashi 77. Formation on dynamical scale via GI: Kuiper 51, Cameron 62.
+	Core accretion o instabilit\'a gravitazionale?
+	La correlazione tra metallicit\'a del disco protoplanetario e il numero di pianeti (giganti) \'e in accordocon osservazioni?
+	The runt of the litter: why planets formed through gravitational instability can only be failed binary stars (2010).
+	Planetary formation scenario revisited: CA vs GI (2007)
+\end{workout}
+%Assumo  sedimenta verso il centro del disco e forma aggregati di dimensioni maggiori: 
+\begin{workout}[Succo beamer formazione]
+	Per piccole deviazioni dalla velocit\'a kepleriana si ha
+	\begin{equation}
+	v_k-v_g\approx -v_k\frac{1}{\rho}\TDy{r}{P}/(2g)\label{eq:velocitykg}
+	\end{equation}
+	con $g=GM_*/r^2$.
+\end{workout}
+\begin{workout}[Velocit\'a stazionaria settling verticale]
+	Dall'equazione \eqref{eq:motiondust} si che in condizioni stazionarie:
+	\begin{equation}
+	v_{set}=\frac{\Omega^2}{v_{th}}\frac{\rho_d}{\rho_g(z)}sz
+	\end{equation}
+\end{workout}
+\begin{workout}[refs planetesimal formation]
+	Armitage 07: lecture notes on formation and early evolution
+\end{workout}
+\begin{workout}[Velocit\'a sedimentazione stazionaria]	
+	Grani piccoli raggiungono rapidamente la velocit\'a stazionaria di regime
+	\begin{equation}
+	v_{set}=\frac{\Omega^2}{v_{th}}\frac{\rho_d}{\rho_g(z)}sz
+	\end{equation}
+\end{workout}
+\begin{workout}[Dust settling model]
+	weidenschilling 89: dust settling time
+	Dullemond dominique 04, johansen klahr 05, carballido 05, fromand papaloizou 06, turner 06,07
+	Furlan 06: Effects of dust growth and settling in T Tauri disks
+	Nomura 06: Dust Size Growth and Settling in a Protoplanetary Disk
+	\cite{lissauer1993planet}
+\end{workout}
+\begin{workout}[Dust dynamics refs]
+	Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
+	Protoplanetary disk and their evolution pg 29
+	Protoplanetary dust: Apai Lauretta - particles dynamics pg 100
+\end{workout}
+\begin{workout}[Particle-gas dynamics. dust midplane sedimantation]
+	Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
+	Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
+\end{workout}
+\begin{workout}[Formazione planetesimi: meccanismo Goldreich-Ward]
+	Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
+	Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
+\end{workout}
+\begin{errata}[Isolation mass: proportion]
+	\begin{equation}
+	M_{iso}\propto M_*\expy{-1/2}\Sigma_p\expy{3/2}r^3
+	\end{equation}
+\end{errata}
+\begin{workout}[oligarchic growth rate]
+	La fase successiva che porta a dimensioni di migliaia di chilometri, accrescimento oligarchico ha andamento in funzione della massa
+	\begin{equation}
+	\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{-1/3}
+	\end{equation}
+	e tempo caratteritico $\SI{e5}{\year}$. Nel dettaglio \'e determinata 
+\end{workout}
+\begin{workout}[Dynamical friction]
+	Dynamical friction: stewart wetherill 88
+\end{workout}
+\begin{workout}[Dynamical evolution of planetesimal swarm: refs]
+	Accretional evolution of planetesimal swarm (weidenschilling 97)
+	Goldreich 2004: Planet Formation by Coagulation: A Focus on Uranus and Neptune
+	Goldreich 04: FINAL STAGES OF PLANET FORMATION
+	rafikov 03: DYNAMICAL EVOLUTION OF PLANETESIMALS IN PROTOPLANETARY DISKS.
+	rafikov 02: The growth of planetary embryos: orderly, runaway, or oligarchic?
+	thommes 03: Oligarchic growth of giant planets
+\end{workout}
+\begin{workout}[10m-10km, 100km-1000km, 1000km-10000km: refs]
+	Lissauer pg 142-143
+	Perryman pg 226
+\end{workout}
+\begin{workout}[Planetesimal dynamics: viscous stirring]
+	The origin of anisotropic velocity dispersion of particles in a disc potential (Ida, Makino 93, Stewart-Wetherill 1988 Ida1990)
+\end{workout}
+\begin{workout}[Gravitational stirring: Viscous stirring and dynamical friction]
+	\begin{itemize}
+		\item Viscous stirring increses i,e
+		\item Dynamical stirring: tends to equalize energy of random motion among bodies having different masses and velocities
+	\end{itemize}
+\end{workout}
+\begin{workout}[orbital elements distribution: rayleigh distro]
+	I planetesimi hanno distribuzione di velocit\'a casuale, localmente equivalente a
+	\begin{equation}
+	f(e,i)=4\frac{\sigma}{m}\frac{ei}{\exv{e^2}\exv{i^2}}\Exp{[-\frac{e^2}{\exv{e^2}}-\frac{}{\exv{i^2}}]}
+	\end{equation}
+	\'e una distro gaussiana triassiale in coordinate cilindriche (Lissauer Stewart 93)
+	Lissauer pg 142-143
+\end{workout}
+\begin{workout}[Protoplanets accretion of solids]
+	Other refs: Planet formation coagulation: focus on U,N (Goldreich 04), Final stages of planets formation (Goldreich 04), Formation of giant planets core: evaluating key processes (levison 09).
+	Safronov69: $\dot{M}_c=\Omega\Sigma_pR^2_{capture}F_G$, $R_{capture}$ larger than core radius due to gas drag, $F_G(e,i)$ gravitational focus (give rise to different growth regimes: runaway, oligarchic, orderly).
+	Runaway growth until protoplanets $100-1000km$ (dep on position).
+	Oligarchic growth: velocity of planetesimal raised by viscous stirring (gravitational scattering)/ damped by gas (until disk present).
+	Enhanced radius by atmospheric drag: Enhanced collisional growth of a protoplanet that has an atmosphere (Inaba Ikoma 03)
+\end{workout}
+\begin{workout}[orderly growth]
+	lissauer pg 144: equapartition effect saturation. This regime is never observed in simulations.
+	\begin{equation}
+	\frac{1}{m_p}\TDy{t}{m_p}\propto m_p\expy{-1/3}
+	\end{equation}
+\end{workout}
+\begin{workout}[runaway growth]
+	per planetesimi circa 1km (perch\'e?)
+	\begin{equation}
+	\frac{1}{m_p}\TDy{t}{m_p}\propto m_p\expy{1/3}
+	\end{equation}
+\end{workout}
+\begin{workout}[feeding zone: jacobi integral]
+	Jacobi integral
+	\begin{align}
+	&E_J=\frac{1}{2}(e^2+i^2)a^2\Omega^2-\frac{3}{8}b^2\Omega^2+\frac{9}{2}R_H^2\Omega^2\\
+	&\tilde{E}_J=\frac{E_J}{a^2h^2\Omega^2},\ h=R_H/a
+	\end{align}
+	Planetesimi con $\tilde{E}_J>0$ possono accrescere il protopianeta  cio\'e entro $w_{feed}=B_LR_H$, per orbite circolari $B_L=2\sqrt{3 }$.
+\end{workout}
+\begin{workout}[runaway to oligarchic. Isolation mass]
+	NEW CONDITION FOR THE TRANSITION FROM RUNAWAY TO OLIGARCHIC GROWTH (Ormel 10)
+	\begin{equation}
+	M_{iso}\propto M_*\expy{-1/2}\Sigma_p\expy{3/2}r^3
+	\end{equation}
+	$0.07\mearth{}$ 1AU, $9\mearth{}$ 5 AU.
+	Accretion among preplanetary bodies: runaway growth, summary of collision interactions
+	Understanding how planets become massive
+\end{workout}
+\begin{workout}[Accrescimento pianetesimi: orderly, runaway, oligarchic]
+	The growth of planetary embryos:  orderly, runaway, or oligarchic? (Rafikov 2002)
+	\begin{align}
+	\TDy{t}{M_e}\approx\pi R_e^2\Omega mN\frac{v}{v_z}[1+\frac{2GM_e}{R_ev^2}]
+	\end{align}
+	Accrescimento ordinato: $\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{-1/3}$. Accrescimento runaway: $\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{1/3}$. Accrescimento oligarchico: $\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{-1/3}$.
+\end{workout}
+\begin{workout}[Atmospheric drag increases accretion rate]
+	
+\end{workout}
+
 \section{Distribuzione iniziale planetesimi ed evoluzione}
 
 Assumendo conversione completa di polvere in planetesimi, la densit\'a superficiale di planetesimi \'e

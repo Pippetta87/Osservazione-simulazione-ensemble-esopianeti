@@ -243,16 +243,9 @@ I tre diagrammi (\ref{fig:PMfreqs}) mostrano la frequenza dei pianeti in delimit
 \caption{Numero di pianeti in funzione della metallicit\'a stellare: nero dei giganti gassosi, rosso dei pianeti con $M\leq30\mearth{}$ e blu combinata. Da \cite{mayor2011harps}.}\label{fig:PfreqvsFeH}
 \end{figure}
 
-La distribuzione di massa (figure \subref{fig:freqvsM}, \subref{fig:freqvsMcomb}) mostra un'abbondante popolazione di pianeti di massa piccola e una rapida diminuzione attorno a $10\mearth{}$; la distribuzione dei periodi mostra aumento dei pianeti giganti ($M>30\mearth{}$) a maggiore periodo orbitale (figura \subref{fig:freqvsPgiant}) e concentrazione pianeti piccola massa a $P=10-100\si{\day}$ (figura \subref{fig:freqvsPlowM}).
+La distribuzione di massa (figure \subref{fig:freqvsM}, \subref{fig:freqvsMcomb}) mostra un'abbondante popolazione di pianeti di massa piccola e una rapida diminuzione attorno a $10\mearth{}$.
 
 La figura \ref{fig:PfreqvsFeH} mostra l'assenza di correlazione tra la metallicit\'a della stella e la frequenza di pianeti di piccola massa fino a $30-40\mearth{}$ al contrario di quello che accade per pianeti giganti.
-
-\begin{figure}[!ht]
-\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 6cm 0 0},clip, width=0.98\textwidth]{freqvsPgiant}\caption{Frequenza pianeti con $M\geq 30\mearth{}$ in funzione del periodo orbitale; in rosso  tratteggiato con correzione bias osservativi. Da \cite{mayor2011harps}.}\label{fig:freqvsPgiant} \end{subfigure}
-~
-\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 10cm 0 0},clip,width=0.98\textwidth]{freqvsPlowM} \caption{Frequenza pianeti con $M\leq 30\mearth{}$ in funzione del periodo orbitale; in rosso con correzione bias osservativi. Da \cite{mayor2011harps}.}\label{fig:freqvsPlowM}
-\end{subfigure}
-\end{figure}
 
 \begin{workout}[Spostamento picco superterre-aumento massa pianeti giganti all'aumentare del periodo]
 Una comprensione pi\'u ampia si ha studiando la distribuzione dei pianeti nel diagramma massa-periodo (M-P): elenco alcune caratteristiche della distribuzione dei pianeti osservati (da \cite{mayor2011harps}).
@@ -368,11 +361,6 @@ R\propto M\expy{(1-n)/(3-n)}
 \end{equation}
 per $M\approx\mjupiter$ $n\approx1$ quindi il raggio \'e approssimativamente costante. Questo fatto \'e visibile anche nella distribuzione dei raggi planetari (figura \subref{fig:probvsR-T}) nel picco attorno a $\rjupiter$.
 La figura (\subref{fig:RfreqPl100ub}) mostra due picchi nella distribuzione radiale a $1.3\rearth{}$ e $2.4\rearth{}$ dovuti alle sottopopolazioni di pianeti rocciosi e gassosi per $P<\SI{100}{\day}$: i pianeti rocciosi hanno atmosfera di H/He che non contribuisce alle dimensione mentre i pianeti nettuniani hanno strato di gas consistente rispetto alla massa del pianeta. La valle a $1.7\rearth{}$ potrebbe essere il raggio di separazione tra pianeti terrestri con atmosfera tenue di H/He soggetta a evaporazione e pianeti nettuniani con massa consistente di H/He.
-La distribuzione dei periodi \'e mostrata in figura (\subref{fig:freqperstarvsPanfit}): i pianeti sono raggruppati per intervalli di raggio. La frequenza dei pianeti in funzione del periodo segue andamento
-\begin{equation}
-\TDy{\log{P}}{f}=K_PP\expy{\beta}[1-\exp{-(\frac{P}{P_0})\expy{\gamma}}]
-\end{equation}
-Si ipotizza che il diverso valore del raggio critico $P_0$ (riportato in figura) sia dovuto alla dipendenza dal raggio planetario del meccanismo di frenamento della migrazione.
 
 \begin{errata}[Equazione di stato politropa: relazione massa raggio]
 \begin{equation}
@@ -393,14 +381,8 @@ R\propto M\expy{(1-n)/(3-n)}
 %\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}\label{fig:freqvsRpl50d}\caption{Da \cite{}.}
 
 \begin{figure}[!ht]
-\begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0 12cm 0 0},clip, width=0.95\textwidth]{RfreqPl100ub} 
-\caption{Distribuzione per i pianeti osservati tramite transito con $P<\SI{100}{\day}$: la valle a $1.7\mearth{}$ si ipotizza causato dall'evaporazione. Da \cite{fulton2017california}.}\label{fig:RfreqPl100ub}\end{subfigure}
-~
-\begin{subfigure}[b]{0.47\textwidth}
-\centering
-\includegraphics[trim={0cm 19cm 0 0},clip,width=0.95\textwidth]{freqperstarvsPanfit}
-\caption{Distribuzione dei periodi orbitali raggruppate per diversi raggi planetari: indicato il diverso periodo critico a cui si ha drastica diminuzione nella distribuzione planetaria. Da \cite{howard2012planet}.}\label{fig:freqperstarvsPanfit}
-\end{subfigure}
+\centering \includegraphics[trim={0 12cm 0 0},clip, width=0.95\textwidth]{RfreqPl100ub} 
+\caption{Distribuzione per i pianeti osservati tramite transito con $P<\SI{100}{\day}$: la valle a $1.7\mearth{}$ si ipotizza causato dall'evaporazione. Da \cite{fulton2017california}.}\label{fig:RfreqPl100ub}
 \end{figure}
 
 \begin{workout}[transit distro observed refs]

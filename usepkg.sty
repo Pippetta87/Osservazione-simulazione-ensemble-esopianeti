@@ -44,6 +44,11 @@
 \usepackage{capt-of}
 \renewcommand{\thesubfigure}{\alph{subfigure}}
 \renewcommand{\thefigure}{\thechapter.\alph{figure}}
+\patchcmd\subequations%
+{\theparentequation\alph{equation}}
+{\subequationsformat}
+{}{}
+\newcommand{\subequationsformat}{\theparentequation-\alph{equation}}%
 
 \usepackage{threeparttable} %% footnotes and table
 

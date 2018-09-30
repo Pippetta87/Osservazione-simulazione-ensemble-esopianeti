@@ -12,7 +12,7 @@
 %\chapter{N-body interactions inside proto disk}
 %}
 
-\begin{reworking}[Capitalit\'a modelli end2end: Non considero descrizione migrazione]
+\begin{reworking}[Capitalit\'a modelli end2end: Perch\'e non considero descrizione migrazione?]
 \begin{wrapfigure}[22]{l}{0.7\textwidth}
 	\includegraphics[trim={8cm 5cm 8cm 0},clip, keepaspectratio, width=0.7\textwidth]{GFM}
 	\caption{Schema dei processi che \'e necessario includere in un modello di formazione planetario coerente.
@@ -27,7 +27,7 @@ Una volta che il core dell'embrione planetario \'e abbastanza massiccio si forma
 La capacit\'a del pianeta di accrescere planetesimi aumenta con l'aumentare della massa e del raggio del pianeta.
 
 {\let\clearpage\relax\let\cleardoublepage\relax
-	\chapter{Disco di accrescimento e condizioni iniziali}
+	\chapter{Disco di accrescimento}
 }
 (Da \cite{mordasini2009extrasolar}, \cite{mordasini2018planetary})
 
@@ -53,28 +53,30 @@ La capacit\'a del pianeta di accrescere planetesimi aumenta con l'aumentare dell
 		\end{align}
 	\end{workout}
 	
+\begin{workout}[viscosit\'a aumentata: Elemento di fluido o molecola]
 	L'equazione del moto per un elemento di fluido \'e
-	\begin{align}
-	&\PDof{t}(\rho v_i)+\PDof{x_i}(\rho v_iv_j+T_{ij})=F_i\label{eq:fluidmotion}\\
-	&T_{ij}=P\delta_{ij}-\sigma_{ij}\\
-	&\sigma_{ij}=\eta(\partial_jv_i+\partial_iv_j-\frac{2}{3}\delta_{ij}\partial_kv_k)+\zeta\delta_{ij}\partial_kv_k
-	\end{align}
-	dove $\eta$, $\zeta$ sono le shear e bulk viscosity, quest'ultima legata ai gradi di libert\'a interni della molecola \'e trascurabile se i tempi di equipartizione interni sono molto minori del tempo fra due collisioni.
-	%-$\sigma_{ij}$ \'e flusso di componente i di momento in direzione j
-	Considero la velocit\'a istantanea di una molecola nel piano xy $(v_x+u_x,u_y)$, dove u \'e la componente casuale e $\exv{}$ rappresenta media temporale (agitazione termica: $\exv{u}=0$) quindi
-	\begin{equation}
-	\sigma_{xy}=-\rho\exv{u_xu_y}
-	\end{equation}
-	
-	D'altra parte la forza viscosa agente sulla molecola \'e
-	\begin{equation}
-	F_{visc,x}=\TDy{y}{\sigma_{xy}}\approx\TDof{y}(\eta\TDy{y}{v_x})
-	\end{equation}
-	%PRIM'ORDINE IN \lambda/L
-	Dalle equazioni precedenti si ha che
-	\begin{equation}
-	\exv{u_iu_j}=-\nu\TDy{x_j}{v_i}\label{eq:molvisccorr}
-	\end{equation}
+\begin{align}
+&\PDof{t}(\rho v_i)+\PDof{x_i}(\rho v_iv_j+T_{ij})=F_i\label{eq:fluidmotion}\\
+&T_{ij}=P\delta_{ij}-\sigma_{ij}\\
+&\sigma_{ij}=\eta(\partial_jv_i+\partial_iv_j-\frac{2}{3}\delta_{ij}\partial_kv_k)+\zeta\delta_{ij}\partial_kv_k
+\end{align}
+dove $\eta$, $\zeta$ sono le shear e bulk viscosity, quest'ultima legata ai gradi di libert\'a interni della molecola \'e trascurabile se i tempi di equipartizione interni sono molto minori del tempo fra due collisioni.
+%-$\sigma_{ij}$ \'e flusso di componente i di momento in direzione j
+Considero la velocit\'a istantanea di una molecola nel piano xy $(v_x+u_x,u_y)$, dove u \'e la componente casuale e $\exv{}$ rappresenta media temporale (agitazione termica: $\exv{u}=0$) quindi
+\begin{equation}
+\sigma_{xy}=-\rho\exv{u_xu_y}
+\end{equation}
+
+D'altra parte la forza viscosa agente sulla molecola \'e
+\begin{equation}
+F_{visc,x}=\TDy{y}{\sigma_{xy}}\approx\TDof{y}(\eta\TDy{y}{v_x})
+\end{equation}
+%PRIM'ORDINE IN \lambda/L
+Dalle equazioni precedenti si ha che
+\begin{equation}
+\exv{u_iu_j}=-\nu\TDy{x_j}{v_i}\label{eq:molvisccorr}
+\end{equation}
+\end{workout}
 	%con $\eta=\rho\nu$.
 	
 	Per un disco di densit\'a superficiale $\Sigma(r,t)$, dotato del campo di velocit\'a $(v_r,v_{\phi})=(u_r,r\Omega+u_{\phi})$, scrivo le equazioni di conservazione di massa e la componente azimutale dell'equazione del moto
@@ -137,29 +139,26 @@ La capacit\'a del pianeta di accrescere planetesimi aumenta con l'aumentare dell
 \caption{Densit\'a superficiale dischi protoplanetari osservati nella regione di Ophiuchus ricavata risolvendo modello disco di accrescimento che riproduca densit\'a spettrale di energia osservata. I rettangoli grigi indicano densit\'a superficiale per la MMSN nella regione di Saturno, Urano e Nettuno. Da \cite{andrews2010protoplanetary}.}\label{fig:diskdensity}
 \end{subfigure}
 \end{figure}
-	
+
+\section{Caratteristiche dischi accrescimento osservate. Condizioni partenza formazione sistemi planetari.}
+%Refs: Sec4 mordasini09
+%\cleardoublepage
+
 Attorno alle stelle giovani sovente si trovano strutture opache nel visibile ma otticamente sottili nelle onde infrarosse: risolvendo il modello di disco protoplanetario, avente come input la distribuzione della dimensione della polvere e rapporto gas/polvere, per riprodurre le caratteristiche spettrali e flusso termico osservati, note anche le caratteristiche della stella centrale, si determinano i parametri caratteristici del disco.
-	
+
 La figura (\subref{fig:SED-contours}) mostra le strutture attorno a stelle giovani del cluster Ophiuchus secondo profili di intensit\'a a \SI{880}{\micro\meter}. Se $\nu\propto r\expy{\gamma}$ una soluzione di \eqref{eq:sigmaevol} per $t=0$ \'e
 \begin{equation}
 \Sigma=(2-\gamma)\frac{M_d}{2\pi R_c^2}(\frac{r}{R_c})\expy{-\gamma}\Exp{-(\frac{r}{R_c})\expy{2-\gamma}}
 \end{equation}
-	\cite{andrews2010protoplanetary} hanno osservato lo spettro emesso da oggetti nella regione di formazione stellare Ophiuchus determinando massa, dimensioni caratteristiche e viscosit\'a: $M_d=0.004-0.143\msun{}$, $\gamma=0.4-1.1$, $R_c=\SIrange{14}{198}{\astronomicalunit}$.
-	
-	\begin{wrapfigure}[6]{l}{0.5\textwidth}
-		\centering
-		\includegraphics[trim={0cm 13cm 0 0},clip, width=0.49\textwidth,keepaspectratio]{clusterage-fstar}
-		\caption{Frazione di stelle con disco protoplanetario in funzione dell'et\'a del cluster. Da \cite{mamajek2009initial}. }\label{fig:clusterage-fstar}
-	\end{wrapfigure}
-	
-	In figura (\ref{fig:clusterage-fstar}) \'e riportata la frazione di stelle con dischi protoplanetari in funzione dell'et\'a del cluster. \'E possibile stimare tempo di vita caratteristico del disco considerando andamento esponenziale per frazione di dischi: secondo (\cite{mamajek2009initial}) $\tau_c\approx\SI{2.5}{\mega\year}$, mentre (\cite{haisch2001disk}) hanno determinato $\tau_c\approx\SI{6}{\mega\year}$.
-	
-	\vspace{0.2\textheight}
+\cite{andrews2010protoplanetary} hanno osservato lo spettro emesso da oggetti nella regione di formazione stellare Ophiuchus determinando massa, dimensioni caratteristiche e viscosit\'a: $M_d=0.004-0.143\msun{}$, $\gamma=0.4-1.1$, $R_c=\SIrange{14}{198}{\astronomicalunit}$.
 
+\begin{wrapfigure}[6]{l}{0.5\textwidth}
+	\centering
+	\includegraphics[trim={0cm 13cm 0 0},clip, width=0.49\textwidth,keepaspectratio]{clusterage-fstar}
+	\caption{Frazione di stelle con disco protoplanetario in funzione dell'et\'a del cluster. Da \cite{mamajek2009initial}. }\label{fig:clusterage-fstar}
+\end{wrapfigure}
 
-\section{Condizioni iniziali}
-%Refs: Sec4 mordasini09
-%\cleardoublepage
+In figura (\ref{fig:clusterage-fstar}) \'e riportata la frazione di stelle con dischi protoplanetari in funzione dell'et\'a del cluster. \'E possibile stimare tempo di vita caratteristico del disco considerando andamento esponenziale per frazione di dischi: secondo (\cite{mamajek2009initial}) $\tau_c\approx\SI{2.5}{\mega\year}$, mentre (\cite{haisch2001disk}) hanno determinato $\tau_c\approx\SI{6}{\mega\year}$.
 
 \begin{workout}[planet luminosity]
 	\begin{align}
@@ -185,20 +184,6 @@ Il modello pi\'u semplice di disco di accrescimento usa distribuzione esponenzia
 \end{itemize}
 \end{errata}
 
-\begin{reworking}[condizioni iniziali: soluzione equazione viscosa]
-Modelli pi\'u recenti  risolvono l'equazione per l'evoluzione viscosa:
-\begin{align}
-&\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_{embryo}(r)\label{eq:diskaccrphev-m18}\\
-&\dot{\Sigma}_w(a)=\left\{\begin{array}{c}0\quad a<R_g\\\frac{\dot{M}_w}{2\pi(a_{max}-R_g)a}\quad \text{altrimenti}\\\end{array}\right.
-\end{align}
-con $\dot{\Sigma}_w$ contributo della foto-evaporazione (\cite{veras2004outward}), $R_g=\SI{5}{\astronomicalunit}$ e $a_{max}$ estremo del disco,  $\dot{\Sigma}_{embryo}$ contributo di accrescimento di gas e componente solida dei pianeti.
-La densit\'a superficiale iniziale \'e assunta essere:
-\begin{equation}
-\Sigma(a,t=0)=\Sigma_0(\frac{r}{1AU})\expy{p_g}\Exp{[-(\frac{r}{R_o})\expy{2+p_g}]}(1-\sqrt{\frac{r}{R_i}})
-\end{equation}
-dove i parametri possono essere scelti casualmente secondo una distribuzione di probabilit\'a ricavata dalle osservazioni.
-\end{reworking}
-
 La distribuzione di massa e la frazione di dischi protoplanetari per ammassi stellari di et\'a diversa \'e mostrata in figura (\ref{fig:initdistro}). La massa \'e determinata misurando il flusso di emissione termica della polvere: la distribuzione di $\log{M_{disk}}$  \'e gaussiana e per il cluster Ophiuchus la distribuzione \'e fittata da gaussiana corrispondente a massa media $M_{disk}=0.042\msun{}$.
 
 Il tempo caratteristico del disco \'e determinato dalla viscosit\'a $\alpha$: fissata $\alpha$ compatibile con tempo caratteristico osservato $\tau_{disk}^{obs}\approx\SI{3}{\mega\year}$ e assumendo la distribuzione uniforme nel logaritmo di $\dot{M}_w$, si calcola  $t_{disk}(\alpha,\Sigma_0,\dot{M}_w)$ determinando gli estremi dello fotoevaporazione per riprodurre tempi di vita osservati.
@@ -209,7 +194,9 @@ Nelle popolazione planetaria considerata $\alpha$ \'e fissato compatibilmente co
 
 \begin{figure}[!ht]
 	\includegraphics[trim={0cm 10cm 0 0},clip, keepaspectratio,width=0.7\textwidth]{initdistro}
-	\caption{Distribuzione caretteristiche dischi di accrescimento. Da \cite{mordasini2018planetary}.}\label{fig:initdistro}\end{figure}
+	\caption{Distribuzione caretteristiche dischi di accrescimento. Da \cite{mordasini2018planetary}.}\label{fig:initdistro}
+\end{figure}
+
 
 \begin{workout}[viscosit\'a disco]
 	Nella popolazione planetaria simulata $\alpha$ \'e fissato sulla base delle osservazioni  ed \'e omogeneo e costante.
@@ -230,14 +217,15 @@ Nelle popolazione planetaria considerata $\alpha$ \'e fissato compatibilmente co
 \end{workout}
 
 
-	
 \chapter{Accrescimento planetesimi: formazione proto-pianeti.}
 	
 	\begin{reworking}[R\'evolutionne planetesimi e accrescimento solidi]
 		
 		\section{Sedimentazione polvere e formazione planetesimi}
 		
-		La polvere presente nel materiale interstellare ha dimensioni di \SI{0.1}{\micro\meter}: l'evoluzione del disco di polvere \'e determinata da attrazione della stella centrale e drag del gas.
+		\begin{workout}[Polvere ISM]
+			La polvere presente nel materiale interstellare ha dimensioni di \SI{0.1}{\micro\meter}: l'evoluzione del disco di polvere \'e determinata da attrazione della stella centrale e drag del gas.
+		\end{workout}
 		
 		L'equazione del moto per particella di polvere \'e
 		\begin{equation}\label{eq:motiondust}

@@ -7,15 +7,19 @@
 \usepackage[utf8]{inputenc}    % utf8 support
 %% csquote serve a
 \usepackage{csquotes}
-%%%
+%%%authoryear
 \usepackage[backend=biber,style=authoryear,maxcitenames=1,natbib=true]{biblatex}
 %%%
-\DeclareBibliographyDriver{book}{%
-	\printnames{author}%
-	\newunit\newblock\printfield{title}%
-	\newunit\printfield{year}%
-	\newunit\printfield{addendum}
-	\finentry}
+\ifx \versione\consegna%% bibliography senza addendum
+\DeclareSourcemap{
+	\maps[datatype=bibtex]{
+		\map{
+			\step[fieldset=addendum, null]
+			\step[fieldset=note, null]
+		} 
+	}
+}
+\fi
 
 \usepackage[]{adjustbox}
 %export: Exports most keys of \adjustbox to \includegraphics so that they can be used with this macro as well.

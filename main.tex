@@ -131,12 +131,17 @@ I modelli di formazione planetaria fino alla scoperta del primo esopianeta (Quel
 La comprensione dei meccanismi di formazione dei sistemi planetari \'e stata determinata sulla base dell'architettura orbitale del sistema solare e della composizione chimica solare, dei pianeti e dei corpi minori.
 \end{errata}
 
-\begin{workout}[Intro alla formazione planetaria e oggetto seminario: intro formazione sistema solare, esosistemi verso simulazioni formazione]
-% (\cite{lissauer1993planet}).
-L'ipotesi di formazione del sistema solare passando dallo stadio di nebulosa planetaria ha radici storiche che risalgono a prima dell'osservazione di stelle giovani e dell'interpretazione dello spettro di luce che da loro proviene.
+\begin{workout}[frammentazione di nube molecolare e form azione di disco di accrescimento attorno a stella giovane]
+	L'ipotesi di formazione del sistema solare passando dallo stadio di nebulosa planetaria ha radici storiche che risalgono a prima dell'osservazione di stelle giovani e dell'interpretazione dello spettro di luce che da loro proviene.
+	Le teorie attuali prevedono che i sistemi planetarii si formino nella fas efinale di formazione stellare: il materiale presente nella regione instabile di una nube molecolare \'e dotato di momento angolare quindi accresce sulla massa della protostella centrale formando un disco ortogonale al momento totale della nube che trascurando l'effetto della pressione del gas, ruota con velocit\'a angolare kepleriana.
+\end{workout}
 
-Il materiale presente nella regione instabile di una nube molecolare \'e dotato di momento angolare quindi accresce sulla massa della protostella centrale formando un disco ortogonale al momento totale della nube che trascurando l'effetto della pressione del gas, ruota con velocit\'a angolare kepleriana.
-A partire dalla scoperta del primo esopianeta attorno a stella di sequenza principale singola (\cite{mayor1995jupiter}), numerose campagne osservative hanno individuato una cospicua popolazione di esopianeti. Parallelamente per valutare le teorie di formazione alla luce delle osservazione sono stata sviluppate tecniche per simulare una popolazione planetaria a partire dalle condizioni iniziali osservate nei dischi protoplanetari: \'e possibile una verifica dei meccanismi di formazione che prescinda dalle condizioni particolari di un singolo sistema.
+\begin{workout}[Oggetto seminario: intro formazione sistema solare, esosistemi verso simulazioni formazione.]
+% (\cite{lissauer1993planet}).
+A partire dalla scoperta del primo esopianeta attorno a stella di sequenza principale singola (\cite{mayor1995jupiter}), numerose campagne osservative hanno individuato una cospicua popolazione di esopianeti. Parallelamente per valutare le teorie di formazione alla luce delle osservazione sono state sviluppate tecniche per simulare una popolazione planetaria a partire dalle condizioni iniziali osservate nei dischi protoplanetari: \'e possibile una verifica dei meccanismi di formazione che prescinda dalle condizioni particolari di un singolo sistema.
+-----
+In questo seminario considero le caratteristiche della popolazione planetaria sintetica basata sul modello di Berna (\cite{mordasini2018planetary}): in particolare il confronto tra distribuzione in massa, raggio planetarii e frequenza planetaria in funzione metallicit\'a stellare con quelli osservati tramite velocit\'a radiale e transiti e confronto le sottopolazioni di pianeti giganti, pianeti con periodo minore di \SI{100}{\day} e pianeti abitabili.
+---Confronto con planetary traps branch
 \end{workout}
 
 {\let\clearpage\relax\let\cleardoublepage\relax
@@ -147,9 +152,9 @@ Descrivo le tecniche osservative, le osservabili e effetti di selezione, quindi 
 \end{errata}
 
 \begin{workout}[Safronov citation: justification of CA]
-Lo schema di core accretion (CA) prevede la coagulazione della componente polverosa in embrioni planetari che, se abbastanza massicci, sono in grado di accrescere il gas presente nel disco protoplanetario, mentre lo schema di formazione alternativo considera l'instabilit\'a gravitazionale del disco protoplanetario.
+Lo schema di core accretion (CA) prevede la coagulazione della componente polverosa in embrioni planetari che, se abbastanza massicci, sono in grado di accrescere il gas presente nel disco protoplanetario, mentre lo schema di formazione alternativo considera la frammentazione del disco protoplanetario per instabilit\'a gravitazionale e la condensazione della componente solida all'interno dei frammenti.
 
-Alcuni dati osservativi riguardo al sistema solare lasciano ipotizzare che il primo modello sia il canale di formazione preponderante (\begin{workout}[cit osservazioni pro CA: lissauer 93]\end{workout}) per sistemi planetari attorno a stella singola di sequenza principale:
+Alcuni dati osservativi riguardo al sistema solare lasciano ipotizzare che il primo modello sia il canale di formazione preponderante (\begin{workout}[cit osservazioni pro CA: lissauer 93 vs nayaskin16+ vs safronov 72]\end{workout}) per sistemi planetari attorno a stella singola di sequenza principale:
 \begin{workout}{Stella singola sequenza principale: limiti massa}
 	rapporto massa stella/pianeti (osservazioni gravitational lensing)
 \end{workout}
@@ -166,13 +171,14 @@ Alcuni dati osservativi riguardo al sistema solare lasciano ipotizzare che il pr
 \cleartorecto
 
 {\let\clearpage\relax\let\cleardoublepage\relax
-\part{Formazione sistemi planetari: descrizione modello core accretion}\label{part:CAdesc}
+\part{Formazione sistemi planetari: descrizione(implementazione?) modello core accretion(nella PPS?)}\label{part:CAdesc}
 }
 \begin{figure}[!ht]
 \includegraphics[width=0.9\textwidth]{accretiontimeline}\caption{Rappresentazione schematica del processo di formazione protopianeti dalla polvere. Da \cite{perryman2011exoplanet}.}\label{fig:accretiontimeline}
 \end{figure}
 Il collasso di una nube molecolare produce strutture appiattite la cui evoluzione \'e determinata dal trasporto di momento angolare verso l'esterno, l'interazione con l'oggetto centrale (campi magnetici vento stellare) e con l'ambiente circostante.
 L'ipotesi su cui si basano le simulazioni considerate \'e che la componente polverosa formi corpi pi\'u massicci fino a masse di frazioni di masse terrestri  ed eventualmente, per corpi sufficientemente massicci, accresca gas: lo scenario di core accretion (CA).
+
 \input{CAdesc}
 \cleartorecto
 

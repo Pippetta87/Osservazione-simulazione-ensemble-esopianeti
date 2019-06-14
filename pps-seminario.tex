@@ -98,9 +98,12 @@
 \begin{workout}[Mordasini18 MAIN RESULTS]
 \begin{itemize}
 \item Cosa ho messo nel modello e2e? (Montecarlo variables) Disk metallicity $[M/H]$ (Santos 05) and $f_{dg}$ (Lodders 03). Initial disk mass: stability (SHu 90), observation (andrws 10, manara 16) MMSN; Disk lifetime (Haisch 01, mamajek 09); starting embryos position
-planetesimal size is 300m, $\alpha=0.002$, planetesimal distro $\propto r\expy{-1.5}$ and outer exponential radius half that of gas to account inward drift (kornet 01; birnstiel andrews 14) and more concentrated distro resulting from planetesimal formation (drazkowska 16).
-\item Distribuzione massa pianeti: distribuzione bimodale con discrimine a $30\mearth{}$.
+planetesimal size is 300m, planetesimal distro $\propto r\expy{-1.5}$ and outer exponential radius half that of gas to account inward drift (kornet 01; birnstiel andrews 14) and more concentrated distro resulting from planetesimal formation (drazkowska 16) - ''The TW Hya Disk at \SI{870}{\micro\meter}:  Comparison of CO and Dust Radial Structures'' 2011; planetesimal size 300m: what's influenced?
+Struttura disco accrescimento: calibrazione tempo di vita, evoluzione viscosa ed evaporazione - $\alpha=0.002$.
+Evoluzione embrioni: accrescimento, evoluzione orbitale (N-body+migration timescale+e,i damping)
 
+\item Distribuzione massa pianeti: distribuzione bimodale con discrimine a $30\mearth{}$.
+\begin{figure}[!ht]\includegraphics[trim={0cm 17cm 0 0},clip, keepaspectratio,width=0.9\textwidth]{MR-freq-obssynth}\caption{Distribuzioni di massa e raggio per popolazione planetaria sintetica (linea nera) e distribuzioni osservate tramite RV e transiti (linea blu) corrette per i bias. Da \cite{mordasini2018planetary}.}\label{fig:MR-freq-obssynth}\end{figure}
 Massa critica per accrescimento di gas: tempo scala accrescimento planetesimi vs tempo scala disco.
 Tempi scala migrazione
 \item distribuzione in semiassi che dipende da posizione iniziale embrione: necessity to include earlier planetary formation; montecarlo variable: initial starting position embryos- kokubo ida 00: uniform distro in log(a) (vedi anche ida lin 10) (dov'era scritto del comportamento caotico??+); hasegawa pudritz 11, cridland 16: embryos rapidly moves into traps.
@@ -196,23 +199,13 @@ Volu d'uccello sulla fisica in gioco: interazioni N-body gravitazionali, evoluzi
 \end{workout}
 
 \input{CAdesc}
-\cleartorecto
-
-{\let\clearpage\relax\let\cleardoublepage\relax
-\part{Popolazioni planetarie sintetiche e confronto con osservazioni}
-}
-
-
-\begin{errata}[planetary system diversity]
-Il variare delle caratteristiche dei sistemi planetari osservati \'e determinato dal variare delle condizioni iniziali: distribuzione di massa dei dischi protoplanetarii e di metallicit\'a, tempo di vita, condizioni del cluster di cui fa parte il disco.
-\end{errata}
-
-Le popolazioni planetarie sintetiche sono costruite partendo dalla fase finale di accrescimento di massa sulla stella centrale. In questo modo \'e possibile determinare in maniera statistica l'accuratezza delle ipotesi su cui si basano i modelli di formazione planetaria tramite confronto con la distribuzione delle propriet\'a dei pianeti osservati, tenuto conto dei bias osservativi.
-
-A questo scopo  \'e necessario introdurre una descrizione semplificata dei processi fisici che portano alla formazione di un pianeta; quindi generare una popolazione planetaria a partire da un gran numero di combinazioni di condizioni iniziali determinate casualmente con distribuzione in accordo alle osservazioni.
-
 \input{GFMresult}
 \cleartorecto
+
+%{\let\clearpage\relax\let\cleardoublepage\relax
+%\part{Popolazioni planetarie sintetiche e confronto con osservazioni}
+%}
+%\cleartorecto
 
 
 

@@ -3,9 +3,16 @@
 \item SISTEMA SOLARE
 \item[-] Datazione: tempi scala formazione
 \item[-] struttura orbitale e composizione sistema solare: MMSN
-\item[-] intro CA vs GI
+\item[-] composizione pianeti
+\item[-] modelli sistema solare: walsh 11 (grand tack) (with comparison with exoplanets??)
 \item ESOPIANETI
-\item[-] diversity: distribuzione di massa-distribuzione bimodale per piccole/grandi masse con minimo a $30\mearth$, crescita esponenziale a basse masse, secondo picco a masse gioviane, distribuzione raggio/densit\'a: eos, evaporazione, composizione
+\item[-] Survey osservativi e completezza
+\item[-] diversity: distribuzione di massa-distribuzione bimodale per piccole/grandi masse con minimo a $30\mearth$, crescita esponenziale a basse masse, secondo picco a masse gioviane
+\item[-] distribuzione  raggio/densit\'a: eos, evaporazione, composizione
+\item[-] Propriet\'a statistiche esopianeti: ??
+\item Dischi protopalnetarii
+\item[-] Osservazioni: distribuzione di massa, tempo di vita e condizioni iniziali e metallicit\'a stellare.
+\item[-] Modello di disco di accrescimento
 \end{itemize}
 \end{workout}
 % trim={5cm 0 0 0},clip
@@ -18,16 +25,20 @@
 Struttura e composizione pianeti: orbite su un piano quindi disco accrescimento, chiarire et\'a del sistema solare/Sole e tempi scala CA/GI; tempi scala formazione e migrazione giove saturno: late haevy bombardament. Massa minima disco protoplanetario. Modello pianeti gassosi per determinare profilo densit\'a e quindi composizione.
 \end{workout}
 
-Il sistema solare \'e il punto di partenza delle teorie di formazione planetaria. Infatti si hanno informazioni accurate sui pianeti e loro orbite e sulla popolazione di corpi minori, si hanno anche riferimenti temporali tramite analisi chimica di campioni di roccia.
+Il sistema solare \'e il punto di partenza delle teorie di formazione planetaria; inoltre si hanno informazioni accurate sui pianeti e loro orbite, sulla popolazione di corpi minori e, tramite datazione radiochimica, si hanno riferimenti temporali sui tempi di solidificazione.
 
-L'et\'a del Sole \'e definita come tempo in sequenza principale; tecniche eliosismologiche determinano un'et\'a di \SI{4.57+-0.11}{\giga\year} mentre l'analisi chimica dei meteoriti \SI{4.57+-0.07}{\giga\year}.
-La Terra si \'e formata completamente circa \SI{100}{\mega\year} dopo i meteoriti.
+L'et\'a del Sole \'e definita come tempo in sequenza principale: tecniche eliosismologiche determinano un'et\'a di \SI{4.57+-0.11}{\giga\year} (\cite{bonanno2002age}) mentre l'analisi chimica dei meteoriti \SI{4.57+-0.07}{\giga\year} (\cite{bahcall1995solar}).
+La core terrestre si \'e formato completamente circa \SIrange{10}{29}{\mega\year} dopo i meteoriti.
 
-\begin{figure}[!ht]
-\includegraphics[trim={0cm 5cm 0 0cm},clip, width=0.9\textwidth]{Snebuladensity}\caption{Andamento minimum mass solar nebula (MMSN). Da \cite{weidenschilling1977distribution}.}\label{fig:Snebuladensity}
-\end{figure}
+\begin{workout}[rivedere ''core terrestre quando si \'e formato]
+''A short timescale for terrestrial planet formation from Hf-W chronometry of meteorites''
+\end{workout}
 
-Per stimare la massa del disco protoplanetario \cite{weidenschilling1977distribution} ha considerato la massa presente nei pianeti e nella fascia asteroidale arricchita di H/He per avere composizione solare: distribuendo questa massa in un anello di spessore proporzionale al raggio di Hill e centrato sulle orbite si ha l'andamento della densit\'a superficiale mostrato in figura \ref{fig:Snebuladensity}. \cite{hayashi1981structure} ha determinato l'andamento della densit\'a di gas, ghiaccio e rocce:
+\begin{wrapfigure}[6]{r}{0.5\textwidth}
+\includegraphics[trim={0cm 5cm 0 0cm},clip, width=0.5\textwidth]{Snebuladensity}\caption{Andamento minimum mass solar nebula (MMSN). Da \cite{weidenschilling1977distribution}.}\label{fig:Snebuladensity}
+\end{wrapfigure}
+
+Un limite inferiore alla massa del disco protoplanetario si ottiene  considerando la massa presente nei pianeti e nella fascia asteroidale arricchita di H/He per avere composizione solare e distribuendo questa massa in un anello di spessore proporzionale al raggio di Hill e centrato sulle orbite (\cite{weidenschilling1977distribution}): si ha l'andamento della densit\'a superficiale, proporzionale a $e\expy{-3/2}$, mostrato in figura \ref{fig:Snebuladensity}; \cite{hayashi1981structure} ha determinato l'andamento della densit\'a di gas, ghiaccio e rocce:
 %$\Sigma\propto r\expy{-3/2}$.
 \begin{align}
 &\Sigma_{rock}=7.1(\frac{a}{\si{\astronomicalunit}})\expy{-3/2}\si{\gram\per\square\cm}:\ \frac{a}{\si{\astronomicalunit}}=0.35-2.7\\
@@ -35,12 +46,16 @@ Per stimare la massa del disco protoplanetario \cite{weidenschilling1977distribu
 &\Sigma_{gas}=\num{e3}(\frac{a}{\si{\astronomicalunit}})\expy{-3/2}\si{\gram\per\square\cm}:\ \frac{a}{\si{\astronomicalunit}}=0.35-36
 \end{align}
 
+\begin{workout}[Massa disco proto solare: weidenschilling/Hayashi]
+W: $M\approx0.01-0.1\msun$, H: $M\approx0.013\msun$
+\end{workout}
+
 \begin{workout}[accrescimento di gas su nucleo solido prevede arricchimento di metalli ]
 
 \end{workout}
 
 %La formazione per accrescimento di gas su nucleo solido prevede arricchimento di metalli rispetto alla composizione di partenza.
-Vincoli alla distribuzione di massa interna sono imposti dalla misura dei momenti di multipolo del potenziale gravitazionale: risolvendo un modello di pianeta che rientri nei vincoli osservativi si determinano la massa del core e la metallicit\'a dell'inviluppo gassoso dei 4 pianeti gassosi (vedi  tabella \ref{tab:JSUNcomp}).
+La composizione dei pianeti giganti \'e determinata grazie a modelli di struttura planetaria. Vincoli alla distribuzione di massa interna sono imposti dalla misura dei momenti di multipolo del potenziale gravitazionale: risolvendo un modello di pianeta che rientri nei vincoli osservativi si determinano la massa del core e la metallicit\'a dell'inviluppo gassoso dei 4 pianeti gassosi (vedi  tabella \ref{tab:JSUNcomp}).
 
 \begin{table}[!htb]
     \begin{minipage}{.5\linewidth}
@@ -75,7 +90,14 @@ $M_{H/He}$&$1.5\mearth{}$&$2.2\mearth{}$\\
     \caption{Composizione Giove, Saturno, Urano e Nettuno. Da \cite{baraffe2009physical}.}\label{tab:JSUNcomp}
 \end{table}
 
-Modelli pi\'u sofisticati impongono vincoli maggiori sulle condizioni iniziali: il modello di Nizza del sistema solare (\cite{tsiganis2005origin}) riproduce caratteristiche orbitali dei pianeti giganti considerando la loro migrazione in una distribuzione di planentesimi di $30-50\mearth{}$; la presenza di numerosa popolazione di planetesimi \'e corroborata dalla craterizzazionedei pianeti terrestri e corpi minori come dall'esistenza di numerosi oggetti di piccole dimensioni superstiti.
+Per riprodurre alcune importanti caratteristiche del sistema solare \'e stato necesaario considerare fenomeni di migrazione:
+\begin{itemize}
+\item  il modello di Nizza del sistema solare (\cite{tsiganis2005origin}) riproduce l'eccentricit\'a e l'inclinazione dei pianeti giganti considerando l'attraversamento della risonanza $2:1$ tra Giove e Saturno dovuta a migrazione in disco di planetesimi (\cite{hahn1999orbital})
+\item considerando la migrazione prodotta da interazione gravitazionale tra pianeti giganti e gas del disco protoplanetario (\cite{lin1986tidal}) lo scenario del grande Tack (vedi \cite{walsh2011low}) considera la formazione di Giove e sua migrazione verso l'interno finch\'e a \SI{1.5}{\astronomicalunit} la cattura di Saturno in risonanze $2:3$ non causa inversione della migrazione; la distanza di inversione della migrazione di Giove \'e determinata da simulazioni numeriche che mostrano che una distribuzione di planetesimi troncata a 1 AU (\cite{hansen2009formation}) riproduce la struttura orbitale dei pianeti terrestri.
+\end{itemize}
+
+%riproduce caratteristiche orbitali dei pianeti giganti considerando la loro migrazione in una distribuzione di planentesimi di $30-50\mearth{}$ ; 
+%la presenza di numerosa popolazione di planetesimi \'e corroborata dalla craterizzazionedei pianeti terrestri e corpi minori come dall'esistenza di numerosi oggetti di piccole dimensioni superstiti.
 
 \begin{workout}[Cosa dire dei modelli planetarii: core giganti gassosi: modelli planetari e raffronto isolation mass in MMSN]
 parte relativa ai momenti multipolo gravitazionale. 
@@ -85,47 +107,20 @@ In hydrostatic equilibrium the external gravitational potential is
 &J_{2n}=-\frac{1}{M_pR_+^{2n}}\int\rho(r) r\expy{2n}P_{2n}(\theta)\,d^3r
 \end{align}
 zharkov trubitsyn 74
-\end{workout}
-
-\begin{workout}[Earth age]
-pg 297; allegre 95
+Noble gas enrichment: ''FORMATION OF GIANT PLANETS ? AN ATTEMPT IN MATCHING OBSERVATIONAL CONSTRAINTS''
+Degree of super-adiabaticity: Struttura interna (assimption for pre-runaway accretion)
+See: characterization of exoplanets from their formation (pg4)
+Degree of super-adiabaticity: baraffe 02, Rafikof 07
 \end{workout}
 
 \begin{workout}[Planetesimal and late heavy bombardament]
-pg 302
-Introdurre planetesimi: migrazione.
-debris disk: pg 222
-Si ipotizza che i planetesimi superstiti popolino la fascia di Kuiper e la nube di Oort
-
+??
 \end{workout}
 
-\begin{workout}[Stellar age: isochrone fitting]
-Jorgensen Lindegren 05
-\end{workout}
-
-\begin{workout}[et\'a corpi sistema solare (age and chronology)]
-age of the sun: $4.57Gyr$ (Bahcall95)
-CAI: $4567Gyr$ +3Myr chondrule
-\end{workout}
-
-\begin{workout}[Sistema solare - andamento densit\'a e composizione]
-asteroid mercury mars mass depletion pg 298
-farinella pg513,weidenschilling 77,
-
-\end{workout}
-
-\begin{workout}[atmospher composition and photoevaporation]
-pg 256: interior and atmosphere, 293 solar system, 143 properties of transit
-\end{workout}
-
-
-\begin{workout}[Noble gas enrichment]
-FORMATION OF GIANT PLANETS ? AN ATTEMPT IN MATCHING OBSERVATIONAL CONSTRAINTS
-\end{workout}
-
-\begin{workout}[Degree of super-adiabaticity: Struttura interna (assimption for pre-runaway accretion)]
-See: characterization of exoplanets from their formation (pg4)
-Degree of super-adiabaticity: baraffe 02, Rafikof 07
+\begin{workout}[Ages]
+Stellar age: isochrone fitting: Jorgensen Lindegren 05.
+Earth age pg 297; allegre 95.
+et\'a corpi sistema solare (age and chronology): age of the sun  $4.57Gyr$ (Bahcall95); CAI: $4567Myr$ +3Myr chondrule
 \end{workout}
 
 \begin{workout}[few well separeted homogeneous region: Struttura interna (assimption for pre-runaway accretion)]
@@ -133,24 +128,15 @@ See: characterization of exoplanets from their formation (pg4)
 Baraffe 07: composition gradients, core dissolution: Wilson, Militzer 12, planetesimal deconstruction: mordasini 05, multiconvective layers: Leconte chabrier 12.
 \end{workout}
 
-\begin{workout}[Full packing/spacing]
+\begin{workout}[Solar system orbital properties]
+Full packing/spacing
 
-\end{workout}
+Planetesima migration: pluto eccentricity, large population of Kuiper belt object
 
-\begin{workout}[Orbit of terrestrial planets]
+Orbit of terrestrial planets]
 Constrain for core accretion model ofgiant planets: dynamical shakeup Nagasawa 05 Thommes08c
-\end{workout}
 
-\begin{workout}[Earth post-oligarchic growth]
-perryman pg229
-\end{workout}
-
-
-\begin{workout}[Planetesima migration: pluto eccentricity, large population of Kuiper belt object]
-
-\end{workout}
-
-\begin{workout}[Planet obliquity:]
+Planet obliquity:
 Schlichting sari 07: The effect of Semi-Collisional Accretion on Planetary Spins
 Inconsistent with isotropic distro (Tremaine 1991). Randomly directed component of spin angular momentum (Kokubo Ida 07) cause large then observed i,e (Harris Ward 82).
 Planetesimal/protoplanet collision would imply stachastic rather than smooth accretion.

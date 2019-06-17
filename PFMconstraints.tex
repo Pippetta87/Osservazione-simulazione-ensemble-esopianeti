@@ -151,11 +151,16 @@ Effects of inhomogenous infall on obliquity (tremaine 91, bate 10)
 \chapter{Caratteristiche della popolazione di esopianeti osservati}
 }
 
-\vspace{5cm}
+\begin{wrapfigure}[10]{l}{0.65\textwidth}
+	\includegraphics[trim={0cm 0 0 0},clip, width=0.65\textwidth]{obsMa}
+	\caption{Diagramma massa-distanza degli esopianeti in ''The extrasolar planet encyclopedia''. Rosso, celeste, magenta e verde sono pianeti rivelati tramite RV, T, osservazione diretta e microlensing. Da \cite{mordasini2018planetary}.}\label{fig:Maplot}
+\end{wrapfigure}
+
+Il miglioramento delle capacit\'a osservative ha permesso l'osservazione di centinaia di esopianeti (vedi \cite{schneider2011defining} per una lista aggiornata): la distribuzione dei pianeti nel diagramma $a-M_p$ rappresenta la variet\'a della popolazione planetaria osservata. Per un confronto con modello di formazione planetaria \'e necessario correggere, in maniera statistica, i bias osservativi dovuti alla tecnica usata per rivelare il pianeta, alle caratteristiche dello strumento e della stella che lo ospita. Adesso considero le caratteristiche dei pianeti come risultano da survey che usano le tecniche di velocit\'a radiale e transito.
 
 \section{Popolazione esopianeti rilevati tramite RV}
 
-Considero il moto stellare attorno al centro di massa del sistem stella pianeta:
+Considero il moto stellare attorno al centro di massa del sistema stella pianeta:
 se l'asse z \'e lungo la linea di vista la posizione della stella \'e $z=r(t)\sin{i}\sin{(\omega+\nu)}$ e per la velocit\'a radiale:
 \begin{equation}
 v_r=\dot{z}=K[\cos{(\omega+\nu)}+e\cos{\omega}]\label{eq:vrsignal}
@@ -164,16 +169,17 @@ v_r=\dot{z}=K[\cos{(\omega+\nu)}+e\cos{\omega}]\label{eq:vrsignal}
 K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/2}}
 \end{equation}
 dove $K$ \'e la semi-ampiezza.
-Numero misure della velocit\'a radiale permettono di determinare alcuni parametri orbitali ($e$, $P$, $t_p$, $\omega$) e la massa minima $M_p\sin{i}$.
+Un numero di misure della velocit\'a radiale permettono di determinare alcuni parametri orbitali ($e$, $P$, $t_p$, $\omega$) e la massa minima $M_p\sin{i}$.
 
-\begin{errata}[Detection probability]
+\begin{workout}[Detection probability]
 Per probabilit\'a di rivelamento del $50\%$ la minima massa planetaria \'e
 \begin{equation}
 M_{p,min}\approx4\mearth{}(\frac{N}{20})\expy{-1/2}(\frac{\sigma}{\SI{1}{\meter\per\second}})(\frac{P}{\SI{1}{\day}})\expy{1/3}(\frac{M_*}{\msun{}})\expy{2/3}
 \end{equation}
 dove $\sigma$ tiene conto errori strumentali e rumore stellare.
-\end{errata}
-Per sistemi multipli consideriamo la sovrapposizione lineare di $n_p$ termini \eqref{eq:vrsignal}: viene sottratto il segnale Kepleriano dominante fino a che resta solo rumore.
+
+\end{workout}
+Per sistemi multipli si considera la sovrapposizione lineare di $n_p$ termini \eqref{eq:vrsignal}: viene sottratto il segnale Kepleriano dominante fino a che resta solo rumore.
 
 %Detection probability cumming 2004
 La probabilit\'a di rivelamento \'e determinata dall'ampiezza del moto radiale della stella attorno al centro di massa K, il rumore strumentale e stellare, la durata dell'osservazione e la forma dell'orbita.
@@ -399,11 +405,6 @@ Are planetary systems filled to capacity? (Fang Nargot 13)
 \end{workout}
 
 \section{Propriet\'a generali esopianeti}
-
-\begin{wrapfigure}[10]{l}{0.65\textwidth}
-	\includegraphics[trim={0cm 0 0 0},clip, width=0.65\textwidth]{obsMa}
-	\caption{Diagramma massa-distanza degli esopianeti in ''The extrasolar planet encyclopedia''. Rosso, celeste, magenta e verde sono pianeti rivelati tramite RV, T, osservazione diretta e microlensing. Da \cite{mordasini2018planetary}.}\label{fig:Maplot}
-\end{wrapfigure}
 
 \begin{workout}[bias osservativi tecnica/strumento]
 	La popolazione degli esopianeti osservata riflette quella reale tramite gli effetti di selezione dovuti alla probabilit\'a di rivelamento della tecnica/strumento particolari.

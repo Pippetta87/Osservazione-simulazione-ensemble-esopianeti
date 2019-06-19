@@ -1,4 +1,57 @@
+{\let\clearpage\relax\let\cleardoublepage\relax
+\chapter{Giustificazione euristica viscosit\'a aumentata}
+}
+\section{Turbulent disks}
+Giustifico euristicamente la parametrizzazione della viscosit\'a del disco di accrescimento in analogia alla viscosit\'a molecolare (\cite{bouvier2002theory})
+L'equazione del moto per un elemento di fluido \'e
+\begin{align}
+	&\PDof{t}(\rho v_i)+\PDof{x_i}(\rho v_iv_j+T_{ij})=F_i\label{eq:fluidmotion}\\
+	&T_{ij}=P\delta_{ij}-\sigma_{ij}\\
+	&\sigma_{ij}=\eta(\partial_jv_i+\partial_iv_j-\frac{2}{3}\delta_{ij}\partial_kv_k)+\zeta\delta_{ij}\partial_kv_k
+\end{align}
+dove $\eta$, $\zeta$ sono le shear e bulk viscosity, quest'ultima legata ai gradi di libert\'a interni della molecola \'e trascurabile se i tempi di equipartizione interni sono molto minori del tempo fra due collisioni.
+%-$\sigma_{ij}$ \'e flusso di componente i di momento in direzione j
+Considero la velocit\'a istantanea di una molecola nel piano xy $(v_x+u_x,u_y)$, dove u \'e la componente casuale e $\exv{}$ rappresenta media temporale (agitazione termica: $\exv{u}=0$) quindi
+\begin{equation}
+\sigma_{xy}=-\rho\exv{u_xu_y}
+\end{equation}
+
+D'altra parte la forza viscosa agente sulla molecola \'e
+\begin{equation}
+F_{visc,x}=\TDy{y}{\sigma_{xy}}\approx\TDof{y}(\eta\TDy{y}{v_x})
+\end{equation}
+%PRIM'ORDINE IN \lambda/L
+Dalle equazioni precedenti si ha che
+\begin{equation}
+\exv{u_iu_j}=-\nu\TDy{x_j}{v_i}\label{eq:molvisccorr}
+\end{equation}
+%con $\eta=\rho\nu$.
+
+Per un disco di densit\'a superficiale $\Sigma(r,t)$, dotato del campo di velocit\'a $(v_r,v_{\phi})=(u_r,r\Omega+u_{\phi})$, scrivo le equazioni di conservazione di massa e la componente azimutale dell'equazione del moto
+\begin{align}
+	&\PDy{t}{\Sigma}+\frac{1}{r}\PDof{r}(r\Sigma v_r)=0\label{eq:massconservation}\\
+	&\Sigma(\PDy{t}{v_{\phi}}+v_r\PDy{r}{v_{\phi}}+\frac{v_rv_{\phi}}{r})=0
+\end{align}
+
+Dalle equazioni precedenti segue l'equazione del momento angolare:
+\begin{equation}
+\PDof{t}[r\Sigma(r\Omega+u_{\phi})]+\frac{1}{r}\PDof{r}[r^2\Sigma(r\Omega+u_{\phi})u_r]=0
+\end{equation}
+Trascuro la fluttuazione azimutale nel termine di derivata temporale e considero media spaziale su scala opportuna:
+\begin{equation}
+\PDof{t}r^2\Sigma\Omega+\frac{1}{r}\PDof{r}[r^3\Sigma\Omega\exv{u_r}+\Sigma r^2\exv{u_ru_{\phi}}]=0\label{eq:smoothedangularmomentumequation}
+\end{equation}
+%\vec{v}=(u_r,\Omega r)
+In analogia all'equazione \eqref{eq:molvisccorr} si definisce
+\begin{equation}
+\sigma_{r\phi}=-\Sigma\exv{u_ru_{\phi}}=\Sigma\nu r \TDy{r}{\Omega}
+\end{equation}
+
+\cite{bibid}
+
+{\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Interazione disco-pianeta}
+}
 
 \begin{wrapfigure}[26]{l}{0.4\textwidth}
 \includegraphics[trim={0cm 11cm 0 0},clip, keepaspectratio, width=0.39\textwidth]{corotation}

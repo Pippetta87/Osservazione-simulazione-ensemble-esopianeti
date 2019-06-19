@@ -158,7 +158,7 @@ Effects of inhomogenous infall on obliquity (tremaine 91, bate 10)
 
 Il miglioramento delle capacit\'a osservative ha permesso l'osservazione di centinaia di esopianeti (vedi \cite{schneider2011defining} per una lista aggiornata): la distribuzione dei pianeti nel diagramma $a-M_p$ rappresenta la variet\'a della popolazione planetaria osservata. Per un confronto con modello di formazione planetaria \'e necessario correggere, in maniera statistica, i bias osservativi dovuti alla tecnica usata per rivelare il pianeta, alle caratteristiche dello strumento e della stella che lo ospita. Adesso considero le caratteristiche dei pianeti come risultano da survey che usano le tecniche di velocit\'a radiale e transito.
 
-\section{Popolazione esopianeti rilevati tramite RV}
+\section{Popolazione esopianeti rilevati tramite velocit\'a radiale}
 
 Considero il moto stellare attorno al centro di massa del sistema stella pianeta:
 se l'asse z \'e lungo la linea di vista la posizione della stella \'e $z=r(t)\sin{i}\sin{(\omega+\nu)}$ e per la velocit\'a radiale:
@@ -166,23 +166,32 @@ se l'asse z \'e lungo la linea di vista la posizione della stella \'e $z=r(t)\si
 v_r=\dot{z}=K[\cos{(\omega+\nu)}+e\cos{\omega}]\label{eq:vrsignal}
 \end{equation}
 \begin{equation}
-K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/2}}
+K=\frac{2\pi}{P}\frac{a_*\sin{i}}{(1-e^2)\expy{1/2}}=\frac{\SI{28.4}{\meter\per\second}}{\sqrt{1-e^2}}(\frac{M_p\sin{i}}{M_J})(\frac{P}{\si{\year}})\expy{-1/3}(\frac{M_*}{\msun})\expy{-2/3}
 \end{equation}
+%K=(\frac{2\pi G}{P})\expy{1/3}\frac{M_p\sin{i}}{(M_p+M_*)\expy{2/3}}\frac{1}{(1-e^2)\expy{1/2}}
 dove $K$ \'e la semi-ampiezza.
 Un numero di misure della velocit\'a radiale permettono di determinare alcuni parametri orbitali ($e$, $P$, $t_p$, $\omega$) e la massa minima $M_p\sin{i}$.
 
-\begin{workout}[Detection probability]
+\begin{workout}[Detection probability - Global efficiency]
 Per probabilit\'a di rivelamento del $50\%$ la minima massa planetaria \'e
 \begin{equation}
 M_{p,min}\approx4\mearth{}(\frac{N}{20})\expy{-1/2}(\frac{\sigma}{\SI{1}{\meter\per\second}})(\frac{P}{\SI{1}{\day}})\expy{1/3}(\frac{M_*}{\msun{}})\expy{2/3}
 \end{equation}
 dove $\sigma$ tiene conto errori strumentali e rumore stellare.
-
+Global efficiency of doppler measurement in given survey
+This efficiency include precision of spectrograph, sample star characteristics and observing strategy (measurement frequency, exposure time long enough to diminish intrinsic stellar noise and photon noise).
+cumming 2004/08
+precisione strumentale:
+rapporto segnale rumore $K/s$ per avere probabilit\'a di rivelazione $50/99\%$.
 \end{workout}
 Per sistemi multipli si considera la sovrapposizione lineare di $n_p$ termini \eqref{eq:vrsignal}: viene sottratto il segnale Kepleriano dominante fino a che resta solo rumore.
 
-%Detection probability cumming 2004
-La probabilit\'a di rivelamento \'e determinata dall'ampiezza del moto radiale della stella attorno al centro di massa K, il rumore strumentale e stellare, la durata dell'osservazione e la forma dell'orbita.
+La probabilit\'a di rivelamento di un pianeta che orbita attorno a stella con date caratteristiche \'e determinata dall'ampiezza del moto radiale della stella attorno al centro di massa K, il rumore strumentale e stellare, la durata dell'osservazione e la forma dell'orbita del pianeta.
+Riporto i risultati del survey HARPS+CORALIE (\cite{mayor2011harps}), capace di rivelare giganti gassosi entro $P<\SI{12}{\year}$ e super Terre/pianeti nettuniani con $P<\SI{100}{\day}$.
+
+\begin{workout}[ricopiare risultati mayor11]
+	?
+\end{workout}
 
 \begin{figure}[!ht]
 \centering
@@ -197,18 +206,19 @@ La probabilit\'a di rivelamento \'e determinata dall'ampiezza del moto radiale d
 \begin{subfigure}[b]{0.4\textwidth}
 \includegraphics[trim={0cm 8cm 0 0},clip, width=0.99\textwidth]{PMfreq-short}\label{fig:PMfreq-short}
 \end{subfigure}
-\caption{Diagramma massa-periodo: frazione di stelle che ospitano pianeta con caratteristiche nella regione evidenziata. Da sinistra a destra: $P<10\si{\year}$ e $M>50\mearth{}$, $P<1\si{\year}$ e $M>3-100\mearth{}$, $P<50\si{\day}$ e $M=1-3/3-10/10-30/30-100/100-300/300-1000$. Da \cite{mayor2011harps}.}\label{fig:PMfreqs}
+\caption{Diagramma massa-periodo: frazione di stelle che ospitano pianeta con caratteristiche nella regione evidenziata corretta per bias osservativi. Da sinistra a destra: $P<10\si{\year}$ e $M>50\mearth{}$, $P<1\si{\year}$ e $M>3-100\mearth{}$, $P<50\si{\day}$ e $M=1-3/3-10/10-30/30-100/100-300/300-1000$. Da \cite{mayor2011harps}.}\label{fig:PMfreqs}
 \end{figure}
 
-\begin{workout}[HARPS low activity stars sample]
-mayor 11 fig 1
+\begin{workout}[rileggere l'articolo mayor 11: harps neptunian etc]
+risultati e pianeti abitabili
 \end{workout}
 
-I tre diagrammi (\ref{fig:PMfreqs}) mostrano la frequenza dei pianeti in delimitate regioni del diagramma periodo-massa ($P-M$)  ricavate da \cite{mayor2011harps} determinata utilizzando un sottocampione di stelle per cui la probabilit\'a di rivelazione relativa alla regione del diagramma $(P-M)$ \'e $99\%$: accanto alle linee continue nei diagrammi $(P,M)$ sono indkicate le percentuali di stelle per cui \'e possibile ottenere una probabilit\'a di rivelamento del $99\%$ nella parta inferiore del diagramma.
+I tre diagrammi (\ref{fig:PMfreqs}) mostrano la frequenza dei pianeti in delimitate regioni del diagramma periodo-massa ($P-M$) determinata utilizzando un sottocampione di stelle per cui la probabilit\'a di rivelazione relativa alla regione del diagramma $(P-M)$ \'e $99\%$: accanto alle linee continue nei diagrammi $(P,M)$ \'e indicata la percentuale di stelle per cui \'e possibile ottenere una probabilit\'a di rivelamento del $99\%$.
 
 \begin{figure}[!ht]
 \begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 5cm 0 0},clip, width=0.94\textwidth]{freqvsM}
-\caption{Distribuzione di massa di massa dei pianeti: in rosso distribuzione corretta per bias osservativi. Da \cite{mayor2011harps}.}\label{fig:freqvsM} \end{subfigure}
+\caption{Distribuzione di massa di massa dei pianeti: in rosso distribuzione corretta per bias osservativi. Da \cite{mayor2011harps}.}\label{fig:freqvsM}
+\end{subfigure}
 ~
 \begin{subfigure}[b]{0.49\textwidth} \centering \includegraphics[trim={0cm 8cm 0 0},clip, width=0.94\textwidth]{freqvsMcomb}
 \caption{Distribuzione di massa dei pianeti osservata. Da \cite{mayor2011harps}.}\label{fig:freqvsMcomb}
@@ -299,32 +309,26 @@ Le osservabili sono la differenza di luminosit\'a durante il transito, la durata
 
 La probabilit\'a che l'orbita di un pianeta sia allineata con l'osservatore in maniera da avere un transito \'e:
 \begin{equation}
-p=(\frac{R_*\pm R_p}{a})(\frac{1}{1-e^2})
+p=(\frac{R_*\pm R_p}{a})(\frac{1}{1-e^2})=0.005(\frac{R_*}{\rsun{}})(\frac{a}{1AU})\expy{-1}(\frac{1}{1-e^2})
 \end{equation}
 dove $\pm$ indica inclusione/esclusione di transiti a raso.
-La maggiore probabilit\'a di transito per orbite eccentriche \'e compensata approssimativamente dalla minore probabilit\'a di rilevamento per la minor durata del transito.
-In forma adimensionale l'equazione precedente si riscrive:
-\begin{equation}
-p=0.005(\frac{R_*}{\rsun{}})(\frac{a}{1AU})\expy{-1}(\frac{1}{1-e^2})
-\end{equation}
+
+\begin{workout}[Probabilit\'a rivelazione pianeti con orbite eccentriche e durata transito]
+	La maggiore probabilit\'a di transito per orbite eccentriche \'e compensata approssimativamente dalla minore probabilit\'a di rilevamento per la minor durata del transito.
+\end{workout}
 
 Considerando un numero totale di osservazioni $N_o$ durante il transito si hanno $N_t\approx N_o\frac{R_*}{\pi a}$; il rapport segnale rumore \'e $S/N=\sqrt{N_t}\frac{\delta}{\sigma}$, $\sigma$ precisione fotometrica e $\delta=(\frac{R_p}{R_*})^2$. Per osservazione limitata da statistica fotoni $\sigma\propto\frac{1}{\sqrt{N_{ph}}}\propto d$: fissato S/N (e tipo stellare) il numero di pianeti rivelati varia come volume a cui \'e estesa la ricerca per probabilit\'a di transito:
 \begin{equation}
 V_p*P\propto d^3*\frac{R_*}{a}\propto R_p^6/P\expy{\frac{5}{3}}
 \end{equation}
 
-\begin{figure}[!ht]
-\begin{subfigure}[b]{0.47\textwidth}
-\centering
-\includegraphics[trim={0cm 22cm 0 0},clip, width=0.95\textwidth]{freqvsRpl50d}
-\caption{Distribuzione raggi planetari: crescita esponenziale verso piccoli raggi. La regione barrata indica misure incomplete. Da \cite{howard2012planet}.}\label{fig:howard2012planet}
-\end{subfigure}
-~
-\begin{subfigure}[b]{0.5\textwidth} \centering\includegraphics[trim={0cm 0.5cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{Rfreq}\caption{Distribuzione radiale pianeti rivelati tramite T. Da \cite{exoplanet.eu} (luglio 2018): la frequenza ha andamento crescente verso pianeti di raggio terrestre, andamento piatto tra $4-10\rearth{}$ e picco a $R\approx\rjupiter{}$.}\label{fig:probvsR-T}
-\end{subfigure}
-\end{figure}
+Il grafico (\ref{fig:H12yield}) mostra i risultati del survey di ricerca di transiti attorno a stelle di tipo solare realizzato con satellite kepler: si nota un picco di densit\'a che da $P\approx\SI{3}{\day}$, $R\approx2\rearth$ a $P\approx\SI{50}{\day}$, $R\approx4\rearth$
 
-La figura (\subref{fig:howard2012planet}) mostra distribuzione radiale corretta per probabilit\'a di transito; a fianco la distribuzione dei raggi planetarii aggiornata a Luglio 2018. 
+
+\begin{workout}[ricopiare risultati howard12]
+?
+tab 4 pg 13
+\end{workout}
 %\begin{align*}
 %&\TDy{\log{R}}{f}=k_RR\expy{\alpha}\\
 %&k_R=2.9_{-0.4}^{+0.5},\ \alpha=-1.92\pm0.11
@@ -332,16 +336,47 @@ La figura (\subref{fig:howard2012planet}) mostra distribuzione radiale corretta 
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[trim={0cm 19cm 0 0},clip,width=0.95\textwidth]{freqperstarvsPanfit}
-	\caption{Distribuzione dei periodi orbitali raggruppate per diversi raggi planetari: indicato il diverso periodo critico a cui si ha drastica diminuzione nella distribuzione planetaria. Da \cite{howard2012planet}.}\label{fig:freqperstarvsPanfit}
-
+	\includegraphics[trim={0cm 3.5cm 0 0},clip,width=0.95\textwidth,keepaspectratio]{H12yield}
+	\caption{Frequenza pianeti osservati in funzione del raggio $R_p$ e del periodo $P$. In bianco per ogni cella \'e indicato: a sinistra in alto il numero di pianeti rivelati con SNR maggiore di una certa soglia scelta dagli autori del survey, in parentesi il valore corretto tenendo conto della probabilit\'a di transito, e a destra in basso il numero di stelle del survey per cui \'e possibile rivelazione del pianeta con caratteristiche medie della cella e con SNR superiore a soglia scelta, in basso a destra la frequenza di pianeti corretta per probabilit\'a di transito e bias incompletezza del survey. Da \cite{howard2012planet}.}\label{fig:H12yield}
 \end{figure}
 
-La distribuzione dei periodi \'e mostrata in figura (\ref{fig:freqperstarvsPanfit}): i pianeti sono raggruppati per intervalli di raggio. La frequenza dei pianeti in funzione del periodo segue andamento
+%Il grafico (\subref{fig:howard2012planet}) mostra distribuzione radiale corretta per probabilit\'a di transito, la distribuzione dei periodi \'e mostrata in figura (\subref{fig:freqperstarvsPanfit}): i pianeti sono raggruppati per intervalli di raggio.
+La frequenza dei pianeti in funzione del raggio decresce all'aumentare del raggio con andamento
 \begin{equation}
-\TDy{\log{P}}{f}=K_PP\expy{\beta}[1-\exp{-(\frac{P}{P_0})\expy{\gamma}}]
+\begin{aligned}
+&\TDy{\log{R_p}}{f}=k_RR\expy{\alpha}\\
+&\alpha=\num{-1.92+-0.11},\ K_R=2.9_{-0.4}^{+0.5}
+\end{aligned}
 \end{equation}
-Si ipotizza che il diverso valore del raggio critico $P_0$ (riportato in figura) sia dovuto alla dipendenza dal raggio planetario del meccanismo di frenamento della migrazione.
+La frequenza in funzione del periodo (vedi figura \ref{fig:howard2012planet}) cresce rapidamente a partire da periodo $P_0$ per poi avere un andamento meno ripido:
+\begin{equation}
+\begin{aligned}
+&\TDy{\log{P}}{f}=K_PP\expy{\beta}[1-\exp{-(\frac{P}{P_0})\expy{\gamma}}]\\
+&k_P=\num{0.035+-0.023},\ \beta=\num{0.52+-0.25},\ P_0(\si{\day})=\num{4.8+-1.6},\ \gamma=\num{2.4+-0.3}
+\end{aligned}
+\end{equation}
+Inoltre le costanti dipendo dal raggio planetario come mostrato in figura (\subref{fig:freqperstarvsPanfit}): si ipotizza che il diverso valore del raggio critico $P_0$ sia dovuto alla dipendenza dal raggio planetario del meccanismo di frenamento della migrazione.
+
+\begin{figure}[!ht]
+	\begin{subfigure}[b]{0.47\textwidth}
+		\centering
+		\includegraphics[trim={0cm 22cm 0 0},clip, width=0.95\textwidth,keepaspectratio]{freqvsRpl50d}
+		\caption{Distribuzione raggi planetari: crescita esponenziale verso piccoli raggi. La regione barrata indica misure incomplete. Da \cite{howard2012planet}.}\label{fig:howard2012planet}
+	\end{subfigure}
+	~
+	\begin{subfigure}[b]{0.5\textwidth} \centering
+		\includegraphics[trim={0cm 19cm 0 0},clip,width=0.95\textwidth,keepaspectratio]{freqperstarvsPanfit}
+		\caption{Distribuzione dei periodi orbitali raggruppate per diversi raggi planetari: indicato il diverso periodo critico a cui si ha drastica diminuzione nella distribuzione planetaria. Da \cite{howard2012planet}.}\label{fig:freqperstarvsPanfit}
+	\end{subfigure}
+\end{figure}
+
+\begin{workout}[Transit duration]
+\[T=(\frac{R_*P}{\pi a}\sqrt{1-b^2})\frac{\sqrt{1-e^2}}{1+e\sin{\omega}}\]
+\end{workout}
+
+\begin{workout}[Transity/Doppler discrepancy]
+Howard12 pg 20
+\end{workout}
 
 \begin{workout}[transit distro observed refs]
 Refs:Mthods of detecting exoplanets (radius distro: pg 136)
@@ -365,7 +400,7 @@ MR diagram chabrier 09 (perryman 143)
 
 \begin{workout}[KEPLER MULTI-PLANET SYSTEM]
 THE CALIFORNIA-KEPLER SURVEY. V. PEAS IN A POD: PLANETS IN A KEPLER MULTI-PLANET SYSTEM ARE SIMILAR IN SIZE AND REGULARLY SPACED
-						 III - A gap in radius distribution of small planets
+III - A gap in radius distribution of small planets
 \end{workout}
 
 \begin{workout}[transiti refs: osservabilie probabilit\'a di rilevamento]
@@ -404,31 +439,19 @@ Spacing Kepler planets (Wu Pu 15)
 Are planetary systems filled to capacity? (Fang Nargot 13)
 \end{workout}
 
-\section{Propriet\'a generali esopianeti}
-
-\begin{workout}[bias osservativi tecnica/strumento]
-	La popolazione degli esopianeti osservata riflette quella reale tramite gli effetti di selezione dovuti alla probabilit\'a di rivelamento della tecnica/strumento particolari.
-\end{workout}
-
-\begin{workout}[planet diversity]
-\'E evidente da \ref{fig:Maplot} che i pianeti extra-solari osservati riempono una vasta regione del diagramma $(a,M)$.
-\end{workout}
 \begin{workout}[bimodal radius distro is observed by transit?]
 	Characterization of exoplanets from their formation II. The planetary mass-radius relationship pg 21: bimodal radius distribution
 \end{workout}
 
-\begin{workout}[frequenza sistemi planetarii:doppler + transito]
-	tab.1 mayor11(RV)
-	tab.1: occurrence and architecture exoplanetary system 
-\end{workout}
-
 \begin{workout}[Occurence rate]
 	\begin{itemize}
-		\item Coralie hot jupiter: giant planets $M\sin{i}>0.2\mjupiter$ and $a<0.1au$; $5.6\%$ giant out to 4au
-		\item Lick/Keck/AAT ($M\sin{i}>0.5\mjupiter$): $1.2\%$ stars have hot jupiter and $6.6\%$ giant within 5 au
-		\item ...
-	\end{itemize}
+	\item Coralie hot jupiter: giant planets $M\sin{i}>0.2\mjupiter$ and $a<0.1au$; $5.6\%$ giant out to 4au
+	\item Lick/Keck/AAT ($M\sin{i}>0.5\mjupiter$): $1.2\%$ stars have hot jupiter and $6.6\%$ giant within 5 au
+	\item ...
+\end{itemize}
 \end{workout}
+
+\section{Propriet\'a generali esopianeti}
 
 \begin{workout}[Mass-Metallicity relation for giant planet: ''Mass-metallicity relation for giant planets'' (Thorngren 16)]
 Solve equation for planetary structure to infer $M_c+M_e$ assuming $M_c\approx10\mearth{}$; search correlations between $M_p$, $M_z$ and $[Fe/H]$, $Z_p$ and $Z_p/Z*$.
@@ -445,7 +468,9 @@ latter expression fall off more rapidly with planet mass  than $Z_p/Z_*\approx10
 	\caption{Relazione massa-raggio determinata sulla base di modello planetario dopo \SI{5}{\giga\year}. Per gli esopianeti sono indicate le curve per temperature di equilibrio di \SI{1000}{\kelvin} e \SI{2000}{\kelvin}. Da \cite{guillot2014giant}.}\label{fig:MR-model-obs}
 \end{wrapfigure}
 
-Nel caso un pianeta osservato tramite transito abbia massa nota \'e possibile determinarne la struttura interna tramite un modello planetario: La posizione di un pianeta nel diagramma massa-raggio \'e determinata dalla storia di accrescimento del pianeta (pianeta roccioso, pianeta costituito in parte da ghiacci, pianeta con massa consistente di gas), dal bilancio termico, e propriet\'a di H/He e metalli a alte densit\'a (rottura H molecolare, ionizzazione da pressione, degenerazione elettronica, transizioni di fase). La figura \ref{fig:MR-model-obs} mostra la relazione massa-raggio per pianeti nettuniani fino a regimi stellari. Considerando l'equazione di stato
+Se si conoscono raggio e massa di un pianeta \'e possibile determinarne la struttura interna e la composizione tramite un modello planetario: la posizione di un pianeta nel diagramma massa-raggio \'e determinata dalla storia di accrescimento del pianeta (pianeta roccioso, pianeta costituito in parte da ghiacci, pianeta con massa consistente di gas), dal bilancio termico.
+%e propriet\'a di H/He e metalli a alte densit\'a (rottura H molecolare, ionizzazione da pressione, degenerazione elettronica, transizioni di fase).
+La figura \ref{fig:MR-model-obs} mostra la relazione massa-raggio per pianeti nettuniani fino a regimi stellari. Considerando l'equazione di stato
 \begin{equation}
 P\propto\rho\expy{\gamma},\ \gamma=\frac{1}{n}+1
 \end{equation}
@@ -476,104 +501,38 @@ La figura (\subref{fig:RfreqPl100ub}) mostra due picchi nella distribuzione radi
 %\includegraphics[trim={0cm 0 0 0},clip, keepaspectratio,width=0.9\textwidth]{freqvsRpl50d}\label{fig:freqvsRpl50d}\caption{Da \cite{}.}
 
 \begin{figure}[!ht]
+\begin{subfigure}[b]{0.49\textwidth}
 	\centering \includegraphics[trim={0 12cm 0 0},clip, width=0.95\textwidth]{RfreqPl100ub} 
 	\caption{Distribuzione per i pianeti osservati tramite transito con $P<\SI{100}{\day}$: la valle a $1.7\mearth{}$ si ipotizza causato dall'evaporazione. Da \cite{fulton2017california}.}\label{fig:RfreqPl100ub}
+\end{subfigure}
+~
+\begin{subfigure}[b]{0.39\textwidth}
+	\centering\includegraphics[trim={0cm 0.5cm 0 0},clip, keepaspectratio,width=0.99\textwidth]{Rfreq}\caption{Distribuzione radiale pianeti rivelati tramite T. Da \cite{exoplanet.eu} (luglio 2018): la frequenza ha andamento crescente verso pianeti di raggio terrestre, andamento piatto tra $4-10\rearth{}$ e picco a $R\approx\rjupiter{}$.}\label{fig:probvsR-T}
+\end{subfigure}
 \end{figure}
 
+\begin{workout}[sottosezione propriet\'a orbitali]
+
+\end{workout}
+
+
 {\let\clearpage\relax\let\cleardoublepage\relax
-	\chapter{Ambiente formazione sistemi planetari: dischi protoplanetarii}
+	\chapter{Dischi protoplanetari: struttura e condizioni iniziali per simulazione formazione pianeti}
 }
 
-\section{''Condizioni iniziali'': disco di accrescimento}
+%\section{Modello disco di accrescimento }
+Per riprodurre le propriet\'a statistiche della popolazione planetaria osservata \'e fondamentale determinare la distribuzione delle caratteristiche dei dischi di accrescimento che, combinate usando metodi di Montecarlo, vanno a costituire le condizioni iniziali dei modelli di formazione.
 
-\begin{workout}[Composizione disco accrescimento]
-	(composizione polvere tab 11.2 perry pg 585 e nomenclatura refrattari-volatili;)
-\end{workout}
-
-\begin{workout}[Cos'\'e un disco di accrescimento?]
-	Equazioni fondamentali disco accrescimento, 
-\end{workout}
-
-\begin{workout}[Disco di accrescimento: calibrazione massa, tempo di vita, evaporazione con osservazioni]
-	
-\end{workout}
-
-%{\let\clearpage\relax\let\cleardoublepage\relax
-%\chapter{Dischi protoplanetarii}
-%}
-
-Nei modelli unidimensionali per disco di accrescimento si descrive il trasporto di momento angolare verso l'esterno introducendo la viscosit\'a aumentata $\nu=\frac{\eta}{\rho}\to\alpha c_s H$: giustifico euristicamente la parametrizzazione della viscosit\'a del disco di accrescimento in analogia alla viscosit\'a molecolare (\cite{bouvier2002theory}).
-
-\begin{workout}[Strees tensor]
-	appendix a pg 66 planet formation and migration vs crida PHD torque calculation pg 24
-\end{workout}
-\begin{workout}[Stress tensor in keplerian disk: crida PHD]
-	pg 26
-	\begin{align}
-		&\sigma_{ij}=d_{ij}-PI{ij}\\
-		&d_{ij}=2\Sigma\nu(D_{ij}-\frac{1}{3}(\div{\vec{v}}I_{ij})+\Sigma\zeta(\div{\vec{v}})I_{ij}\\
-		&D_{ij}=\frac{1}{2}(\partial_iv_k+\partial_kv_i)
-	\end{align}
-\end{workout}
-
-L'equazione del moto per un elemento di fluido \'e
-\begin{align}
-	&\PDof{t}(\rho v_i)+\PDof{x_i}(\rho v_iv_j+T_{ij})=F_i\label{eq:fluidmotion}\\
-	&T_{ij}=P\delta_{ij}-\sigma_{ij}\\
-	&\sigma_{ij}=\eta(\partial_jv_i+\partial_iv_j-\frac{2}{3}\delta_{ij}\partial_kv_k)+\zeta\delta_{ij}\partial_kv_k
-\end{align}
-dove $\eta$, $\zeta$ sono le shear e bulk viscosity, quest'ultima legata ai gradi di libert\'a interni della molecola \'e trascurabile se i tempi di equipartizione interni sono molto minori del tempo fra due collisioni.
-%-$\sigma_{ij}$ \'e flusso di componente i di momento in direzione j
-Considero la velocit\'a istantanea di una molecola nel piano xy $(v_x+u_x,u_y)$, dove u \'e la componente casuale e $\exv{}$ rappresenta media temporale (agitazione termica: $\exv{u}=0$) quindi
-\begin{equation}
-\sigma_{xy}=-\rho\exv{u_xu_y}
-\end{equation}
-
-D'altra parte la forza viscosa agente sulla molecola \'e
-\begin{equation}
-F_{visc,x}=\TDy{y}{\sigma_{xy}}\approx\TDof{y}(\eta\TDy{y}{v_x})
-\end{equation}
-%PRIM'ORDINE IN \lambda/L
-Dalle equazioni precedenti si ha che
-\begin{equation}
-\exv{u_iu_j}=-\nu\TDy{x_j}{v_i}\label{eq:molvisccorr}
-\end{equation}
-%con $\eta=\rho\nu$.
-
-Per un disco di densit\'a superficiale $\Sigma(r,t)$, dotato del campo di velocit\'a $(v_r,v_{\phi})=(u_r,r\Omega+u_{\phi})$, scrivo le equazioni di conservazione di massa e la componente azimutale dell'equazi\section{Modello disco di accrescimento}
-one del moto
-\begin{align}
-	&\PDy{t}{\Sigma}+\frac{1}{r}\PDof{r}(r\Sigma v_r)=0\label{eq:massconservation}\\
-	&\Sigma(\PDy{t}{v_{\phi}}+v_r\PDy{r}{v_{\phi}}+\frac{v_rv_{\phi}}{r})=0
-\end{align}
-
-Dalle equazioni precedenti segue l'equazione del momento angolare:
-\begin{equation}
-\PDof{t}[r\Sigma(r\Omega+u_{\phi})]+\frac{1}{r}\PDof{r}[r^2\Sigma(r\Omega+u_{\phi})u_r]=0
-\end{equation}
-Trascuro la fluttuazione azimutale nel termine di derivata temporale e considero media spaziale su scala opportuna:
-\begin{equation}
-\PDof{t}r^2\Sigma\Omega+\frac{1}{r}\PDof{r}[r^3\Sigma\Omega\exv{u_r}+\Sigma r^2\exv{u_ru_{\phi}}]=0\label{eq:smoothedangularmomentumequation}
-\end{equation}
-%\vec{v}=(u_r,\Omega r)
-In analogia all'equazione \eqref{eq:molvisccorr} si definisce
-\begin{equation}
-\sigma_{r\phi}=-\Sigma\exv{u_ru_{\phi}}=\Sigma\nu r \TDy{r}{\Omega}
-\end{equation}
-
-\begin{wrapfigure}[17]{l}{0.5\textwidth}
-	\includegraphics[trim={0cm 19cm 0 0},clip, keepaspectratio,width=0.48\textwidth]{selfsimilaralphadisk}
-	\caption{Soluzione equazione \eqref{eq:sigmaevol} per $\nu\propto r\expy{\gamma}$ con $\gamma=1$. Da \cite{armitage2007lecture}.}\label{fig:selfsimilaralphadisk}
-\end{wrapfigure}
-
-Nei modelli di disco di accrescimento unidimensionali si parametrizza il trasporto di momento angolare ponendo
+Nei modelli di disco di accrescimento $1+1D$ si parametrizza il trasporto di momento angolare ponendo:
 \begin{equation}
 \nu=\alpha c_s H
 \end{equation}
-dove $\alpha$ \'e parametro da fissare, $c_s$ la velocit\'a del suono e H lo spessore del disco. Utilizzo l'equazione di conservazione della massa per riscrivere \eqref{eq:smoothedangularmomentumequation}:
+dove $\alpha$ \'e parametro da fissare, $c_s$ la velocit\'a del suono e H lo spessore del disco. L'evoluzione della densit\'a superficiale del disco \'e determinata dall'equazione:
 \begin{equation}
 \PDy{t}{\Sigma}=3\frac{1}{r}\PDof{r}[r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]\label{eq:sigmaevol}
 \end{equation}
+
+
 
 La struttura verticale \'e determinata dalla componente lungo z dell'attrazione del corpo centrale
 %profilo termico determinato da equilibrio termico
@@ -585,6 +544,7 @@ mentre la struttura radiale del disco di gas \'e determinata dall'equilibrio idr
 \frac{v_g^2}{r}=\frac{GM_*}{r^2}+\frac{1}{\rho}\TDy{r}{P}
 \end{equation}
 dove ho introdotto $v_g$ velocit\'a a cui il gas orbita attorno alla stella centrale.
+
 
 \begin{figure}[!ht]
 	\begin{subfigure}[b]{0.39\textwidth}
@@ -599,13 +559,90 @@ dove ho introdotto $v_g$ velocit\'a a cui il gas orbita attorno alla stella cent
 	\end{subfigure}
 \end{figure}
 
+\begin{errata}[Strutture attorno a stelle giovani]
 Attorno alle stelle giovani sovente si trovano strutture opache nel visibile ma otticamente sottili nelle onde infrarosse: risolvendo il modello di disco protoplanetario, avente come input la distribuzione della dimensione della polvere e rapporto gas/polvere, per riprodurre le caratteristiche spettrali e flusso termico osservati, note anche le caratteristiche della stella centrale, si determinano i parametri caratteristici del disco.
+\end{errata}
 
 La figura (\subref{fig:SED-contours}) mostra le strutture attorno a stelle giovani del cluster Ophiuchus secondo profili di intensit\'a a \SI{880}{\micro\meter}. Se $\nu\propto r\expy{\gamma}$ una soluzione di \eqref{eq:sigmaevol} per $t=0$ \'e
 \begin{equation}
 \Sigma=(2-\gamma)\frac{M_d}{2\pi R_c^2}(\frac{r}{R_c})\expy{-\gamma}\Exp{-(\frac{r}{R_c})\expy{2-\gamma}}
 \end{equation}
 \cite{andrews2010protoplanetary} hanno osservato lo spettro emesso da oggetti nella regione di formazione stellare Ophiuchus determinando massa, dimensioni caratteristiche e viscosit\'a: $M_d=0.004-0.143\msun{}$, $\gamma=0.4-1.1$, $R_c=\SIrange{14}{198}{\astronomicalunit}$.
+
+\begin{wrapfigure}[17]{l}{0.5\textwidth}
+	\includegraphics[trim={0cm 19cm 0 0},clip, keepaspectratio,width=0.48\textwidth]{selfsimilaralphadisk}
+	\caption{Soluzione equazione \eqref{eq:sigmaevol} per $\nu\propto r\expy{\gamma}$ con $\gamma=1$. Da \cite{armitage2007lecture}.}\label{fig:selfsimilaralphadisk}
+\end{wrapfigure}
+
+Tramite metodi di montecarlo si determinano numerose combinazioni delle condizioni iniziali del disco e dei parametri scelti per descrivere la sua struttura.
+Le variabili di montecarlo hanno distribuzione determinata dalle osservazioni.
+
+\begin{workout}[modello globale: evoluzione dal semplice al complesso]
+	Global model of planets formation and evolution: more detailed submodels
+\end{workout}
+
+Il modello pi\'u semplice di disco di accrescimento usa distribuzione esponenziale per andamento densit\'a superficiale e temperature, assumendo disco otticamente sottile, e relazione $L_*\propto M_*^4$ di sequenza principale. Le lacune di questo modello sono
+\begin{itemize}
+	\item i dischi sono otticamente spessi con transizioni nell'opacit\'a
+	\item non \'e presente evoluzione temporale consistente
+\end{itemize}
+
+Modelli pi\'u recenti  risolvono l'equazione per l'evoluzione viscosa:
+\begin{align}
+	&\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_{embryo}(r)\label{eq:diskaccrphev-m18}\\
+	&\dot{\Sigma}_w(a)=\left\{\begin{array}{c}0\quad a<R_g\\\frac{\dot{M}_w}{2\pi(a_{max}-R_g)a}\quad \text{altrimenti}\\\end{array}\right.
+\end{align}
+con $\dot{\Sigma}_w$ contributo della foto-evaporazione (\cite{veras2004outward}), $R_g=\SI{5}{\astronomicalunit}$ e $a_{max}$ estremo del disco,  $\dot{\Sigma}_{embryo}$ contributo di accrescimento di gas e componente solida dei pianeti.
+La densit\'a superficiale iniziale \'e assunta essere:
+\begin{equation}
+\Sigma(a,t=0)=\Sigma_0(\frac{r}{1AU})\expy{p_g}\Exp{[-(\frac{r}{R_o})\expy{2+p_g}]}(1-\sqrt{\frac{r}{R_i}})
+\end{equation}
+dove i parametri possono essere scelti casualmente secondo una distribuzione di probabilit\'a ricavata dalle osservazioni.
+
+La distribuzione di massa e la frazione di dischi protoplanetari per ammassi stellari di et\'a diversa \'e mostrata in figura (\ref{fig:initdistro}). La massa \'e determinata misurando il flusso di emissione termica della polvere: la distribuzione di $\log{M_{disk}}$  \'e gaussiana e per il cluster Ophiuchus la distribuzione \'e fittata da gaussiana corrispondente a massa media $M_{disk}=0.042\msun{}$.
+
+Il tempo caratteristico del disco \'e determinato dalla viscosit\'a $\alpha$: fissata $\alpha$ compatibile con tempo caratteristico osservato $\tau_{disk}^{obs}\approx\SI{3}{\mega\year}$ e assumendo la distribuzione uniforme nel logaritmo di $\dot{M}_w$, si calcola  $t_{disk}(\alpha,\Sigma_0,\dot{M}_w)$ determinando gli estremi dello fotoevaporazione per riprodurre tempi di vita osservati.
+
+Valori tipici sono $\dot{M}_w=\SIrange{5e-10}{3e-8}\msun{}/\si{\year}$ per $\alpha=\num{7e-3}$.
+
+Nelle popolazione planetaria considerata $\alpha$ \'e fissato compatibilmente con le osservazioni  ed \'e omogeneo e costante.
+
+\begin{figure}[!ht]
+	\includegraphics[trim={0cm 10cm 0 0},clip, keepaspectratio,width=0.7\textwidth]{initdistro}
+	\caption{Distribuzione caretteristiche dischi di accrescimento. Da \cite{mordasini2018planetary}.}\label{fig:initdistro}\end{figure}
+
+\begin{workout}[viscosit\'a disco]
+	Nella popolazione planetaria simulata $\alpha$ \'e fissato sulla base delle osservazioni  ed \'e omogeneo e costante.
+\end{workout}
+
+\begin{workout}[Modello di disco di accrescimento - (Mordasini18: 4) - Introduzione descrizione fenomeni grazie a PPS]
+	Refs: garaud lin 07, chiang goldreich 97
+	Un modello di disco  di accrescimento usato nelle simulazioni considera l'evoluzione della densit\'a superficiale tramite l'equazione \eqref{eq:diskaccrphev-m18}
+	\begin{align}
+		&\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_p(r)\label{eq:diskaccrphev-m18}\\
+		&\dot{\Sigma}_w(a)=\left\{\begin{array}{c}0\\\frac{\dot{M}_w}{2\pi(a_{max}-R_g)a}\\\end{array}\right.
+	\end{align}
+	Densit\'a superficiale iniziale:
+	\begin{equation}
+	\Sigma(a,t=0)=\Sigma_0(\frac{r}{1AU})\expy{p_g}\Exp{[-(\frac{r}{R_o})\expy{2+p_g}]}(1-\sqrt{\frac{r}{R_i}})
+	\end{equation}
+	4-Mordasini18 (Hayashi81). $p_g\approx1$ (Andrews10).
+\end{workout}
+
+\begin{workout}[Some refs]
+	\begin{itemize}
+		\item Lamb 32: amount of energy converted in turbulent motion
+	\end{itemize}
+\end{workout}
+
+%Jansky=10-23erg/(s*cm2*Hz)
+\begin{workout}[Refs dischi protoplanetari]
+	Chronology of  early stages: apai lauretta 10 (book)
+\end{workout}
+
+\begin{workout}[Condizioni iniziali: formazione planetesimi, caratteristiche dischi protoplanetari]
+	Chronology of  early stages: apai lauretta 10 (book)
+\end{workout}
 
 \begin{wrapfigure}[6]{l}{0.5\textwidth}
 	\centering
@@ -617,23 +654,10 @@ In figura (\ref{fig:clusterage-fstar}) \'e riportata la frazione di stelle con d
 
 \vspace{0.2\textheight}
 
-\begin{workout}[''The TW Hya Disk at \SI{870}{\micro\meter}:  Comparison of CO and Dust Radial Structures'': introduzione profilo pi\'u ripido per componente solida]
-peeble drift: peeble drift inward from peeble formation line 
-\end{workout}
-
-\begin{workout}[Caratteristiche fittate proto-dischi]
-	\begin{table}[!ht]
-		\begin{tabular}{|cccccc|}
-			Nome&$M_d$&$\gamma$&$R_c$&$H_{100}$&\\
-			AS 205&0.029&0.9&46&19.6&0.11\\
-		\end{tabular}
-	\end{table}
-\end{workout}
-
 \begin{workout}[Profilo densit\'a verticale disco isotermo]
 	Thin vertically isothermal disk
 	\begin{align}
-		&\rho(z)=\frac{\Sigma}{h\sqrt{2\pi}}\exp{-\frac{z^2}{2h^2}}
+		&\rho(z)=\frac{\Sigma}{h\sqrt{2\pi}}\exp{-\frac{z^2}{2h^2}}\\
 		&
 	\end{align}
 \end{workout}
@@ -657,13 +681,9 @@ peeble drift: peeble drift inward from peeble formation line
 	\end{equation}
 \end{workout}
 
-\begin{workout}[Passive disks]
-	(Refs: Ref: spectral energy distribution of T-Tauri star with passive circumstellar disk)
-	Dust passively reirradiate star light
-\end{workout}
-
 \begin{workout}[Struttura verticale del disco, profilo termico]
 	Pressione gas determinata da equilibrio idrostatico
+	Passive disk (Refs: Ref: spectral energy distribution of T-Tauri star with passive circumstellar disk)	Dust passively reirradiate star light
 \end{workout}
 
 \begin{workout}[Viscous/turbulent disk]
@@ -686,9 +706,6 @@ peeble drift: peeble drift inward from peeble formation line
 	the alpha disk pg 18: theory of turbulent accretion disk
 \end{workout}
 
-\begin{workout}[Isothermal cloud collapse!]
-	
-\end{workout}
 
 \begin{workout}[Descrizione trasporto momento angolare tramite parametrizzazione viscosit\'a]
 	Mass conservation + momentum conservation in viscous flow: angular momentum evolution. Phenomena: Shear viscosity - turbulence - MRI.
@@ -712,10 +729,6 @@ peeble drift: peeble drift inward from peeble formation line
 
 \begin{workout}[Photoievaporation: X-EUV-FUV (Alexander13: The Dispersal of Protoplanetary Disks)]
 	Protoplanetary disc evolution and dispersal: the implications of X-ray photoevaporation.
-\end{workout}
-
-
-\begin{workout}[Foto-evaporazione]
 	(Photoevaporation: veras armitage 2003, Alexander13, Mordasini12. Internal/External).
 	EUV($E\approx13.6eV$): ionization, FUV($E\approx6-13.6eV$): dissociation, X-ray
 \end{workout}
@@ -746,10 +759,6 @@ peeble drift: peeble drift inward from peeble formation line
 
 \begin{workout}[Initial conditionfor protostellar collapse]
 	Andre 2000 - 
-\end{workout}
-
-\begin{workout}[T Tauri SED more flattish]
-	Ref: spectral energy distribution of T-Tauri star with passive circumstellar disk
 \end{workout}
 
 \begin{workout}[physical processes in protoplanetary disk: IRexcess, accretion rate and lifetime,]
@@ -833,7 +842,47 @@ peeble drift: peeble drift inward from peeble formation line
 	infrared excess: gail hoppe10
 \end{workout}
 
-\section{Modello disco di accrescimento e distribuzione condizioni iniziali}
+%\section{''Condizioni iniziali'': disco di accrescimento}
+
+\begin{workout}[Composizione disco accrescimento]
+	(composizione polvere tab 11.2 perry pg 585 e nomenclatura refrattari-volatili;)
+\end{workout}
+
+\begin{workout}[Disco di accrescimento: calibrazione massa, tempo di vita, evaporazione con osservazioni]
+	
+\end{workout}
+
+%Nei modelli unidimensionali per disco di accrescimento si descrive il trasporto di momento angolare verso l'esterno introducendo la viscosit\'a aumentata $\nu=\frac{\eta}{\rho}\to\alpha c_s H$.
+
+\begin{workout}[Strees tensor]
+	appendix a pg 66 planet formation and migration vs crida PHD torque calculation pg 24
+	stress tensor in keplerian disk: crida PHD
+	pg 26
+	\begin{align}
+		&\sigma_{ij}=d_{ij}-PI{ij}\\
+		&d_{ij}=2\Sigma\nu(D_{ij}-\frac{1}{3}(\div{\vec{v}}I_{ij})+\Sigma\zeta(\div{\vec{v}})I_{ij}\\
+		&D_{ij}=\frac{1}{2}(\partial_iv_k+\partial_kv_i)
+	\end{align}
+\end{workout}
+
+\begin{workout}[Dust settling toward midplane]
+	chiang 01; Dullemond Dominik 04; D'Alessio 06
+\end{workout}
+
+\begin{workout}[''The TW Hya Disk at \SI{870}{\micro\meter}:  Comparison of CO and Dust Radial Structures'': introduzione profilo pi\'u ripido per componente solida]
+peeble drift: peeble drift inward from peeble formation line 
+\end{workout}
+
+\begin{workout}[Caratteristiche fittate proto-dischi]
+	\begin{table}[!ht]
+		\begin{tabular}{|cccccc|}
+			Nome&$M_d$&$\gamma$&$R_c$&$H_{100}$&\\
+			AS 205&0.029&0.9&46&19.6&0.11\\
+		\end{tabular}
+	\end{table}
+\end{workout}
+
+%\section{Modello disco di accrescimento e distribuzione condizioni iniziali}
 %Refs: Sec4 mordasini09
 %\cleardoublepage
 
@@ -844,74 +893,4 @@ peeble drift: peeble drift inward from peeble formation line
 		&E_{gas,acc}=dt\,\dot{M}_{gas}u_{int}\\
 		&L_{acc}=G\frac{\dot{M}_{core}M_{core}}{R_{core}}
 	\end{align}
-\end{workout}
-
-Tramite metodi di montecarlo si determinano numerose combinazioni delle condizioni iniziali del disco e dei parametri scelti per descrivere la sua struttura.
-Le variabili di montecarlo hanno distribuzione determinata dalle osservazioni.
-
-\begin{workout}[modello globale: evoluzione dal semplice al complesso]
-	Global model of planets formation and evolution: more detailed submodels
-\end{workout}
-
-Il modello pi\'u semplice di disco di accrescimento usa distribuzione esponenziale per andamento densit\'a superficiale e temperature, assumendo disco otticamente sottile, e relazione $L_*\propto M_*^4$ di sequenza principale. Le lacune di questo modello sono
-\begin{itemize}
-	\item i dischi sono otticamente spessi con transizioni nell'opacit\'a
-	\item non \'e presente evoluzione temporale consistente
-\end{itemize}
-
-Modelli pi\'u recenti  risolvono l'equazione per l'evoluzione viscosa:
-\begin{align}
-	&\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_{embryo}(r)\label{eq:diskaccrphev-m18}\\
-	&\dot{\Sigma}_w(a)=\left\{\begin{array}{c}0\quad a<R_g\\\frac{\dot{M}_w}{2\pi(a_{max}-R_g)a}\quad \text{altrimenti}\\\end{array}\right.
-\end{align}
-con $\dot{\Sigma}_w$ contributo della foto-evaporazione (\cite{veras2004outward}), $R_g=\SI{5}{\astronomicalunit}$ e $a_{max}$ estremo del disco,  $\dot{\Sigma}_{embryo}$ contributo di accrescimento di gas e componente solida dei pianeti.
-La densit\'a superficiale iniziale \'e assunta essere:
-\begin{equation}
-\Sigma(a,t=0)=\Sigma_0(\frac{r}{1AU})\expy{p_g}\Exp{[-(\frac{r}{R_o})\expy{2+p_g}]}(1-\sqrt{\frac{r}{R_i}})
-\end{equation}
-dove i parametri possono essere scelti casualmente secondo una distribuzione di probabilit\'a ricavata dalle osservazioni.
-
-La distribuzione di massa e la frazione di dischi protoplanetari per ammassi stellari di et\'a diversa \'e mostrata in figura (\ref{fig:initdistro}). La massa \'e determinata misurando il flusso di emissione termica della polvere: la distribuzione di $\log{M_{disk}}$  \'e gaussiana e per il cluster Ophiuchus la distribuzione \'e fittata da gaussiana corrispondente a massa media $M_{disk}=0.042\msun{}$.
-
-Il tempo caratteristico del disco \'e determinato dalla viscosit\'a $\alpha$: fissata $\alpha$ compatibile con tempo caratteristico osservato $\tau_{disk}^{obs}\approx\SI{3}{\mega\year}$ e assumendo la distribuzione uniforme nel logaritmo di $\dot{M}_w$, si calcola  $t_{disk}(\alpha,\Sigma_0,\dot{M}_w)$ determinando gli estremi dello fotoevaporazione per riprodurre tempi di vita osservati.
-
-Valori tipici sono $\dot{M}_w=\SIrange{5e-10}{3e-8}\msun{}/\si{\year}$ per $\alpha=\num{7e-3}$.
-
-Nelle popolazione planetaria considerata $\alpha$ \'e fissato compatibilmente con le osservazioni  ed \'e omogeneo e costante.
-
-\begin{figure}[!ht]
-	\includegraphics[trim={0cm 10cm 0 0},clip, keepaspectratio,width=0.7\textwidth]{initdistro}
-	\caption{Distribuzione caretteristiche dischi di accrescimento. Da \cite{mordasini2018planetary}.}\label{fig:initdistro}\end{figure}
-
-\begin{workout}[viscosit\'a disco]
-	Nella popolazione planetaria simulata $\alpha$ \'e fissato sulla base delle osservazioni  ed \'e omogeneo e costante.
-\end{workout}
-
-\begin{workout}[Modello di disco di accrescimento - (Mordasini18: 4) - Introduzione descrizione fenomeni grazie a PPS]
-	Refs: garaud lin 07, chiang goldreich 97
-	Un modello di disco  di accrescimento usato nelle simulazioni considera l'evoluzione della densit\'a superficiale tramite l'equazione \eqref{eq:diskaccrphev-m18}
-	\begin{align}
-		&\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_p(r)\label{eq:diskaccrphev-m18}\\
-		&\dot{\Sigma}_w(a)=\left\{\begin{array}{c}0\\\frac{\dot{M}_w}{2\pi(a_{max}-R_g)a}\\\end{array}\right.
-	\end{align}
-	Densit\'a superficiale iniziale:
-	\begin{equation}
-	\Sigma(a,t=0)=\Sigma_0(\frac{r}{1AU})\expy{p_g}\Exp{[-(\frac{r}{R_o})\expy{2+p_g}]}(1-\sqrt{\frac{r}{R_i}})
-	\end{equation}
-	4-Mordasini18 (Hayashi81). $p_g\approx1$ (Andrews10).
-\end{workout}
-
-\begin{workout}[Some refs]
-	\begin{itemize}
-		\item Lamb 32: amount of energy converted in turbulent motion
-	\end{itemize}
-\end{workout}
-
-%Jansky=10-23erg/(s*cm2*Hz)
-\begin{workout}[Refs dischi protoplanetari]
-	Chronology of  early stages: apai lauretta 10 (book)
-\end{workout}
-
-\begin{workout}[Condizioni iniziali: formazione planetesimi, caratteristiche dischi protoplanetari]
-	Chronology of  early stages: apai lauretta 10 (book)
 \end{workout}

@@ -521,18 +521,19 @@ La figura (\subref{fig:RfreqPl100ub}) mostra due picchi nella distribuzione radi
 }
 
 %\section{Modello disco di accrescimento }
-Per riprodurre le propriet\'a statistiche della popolazione planetaria osservata \'e fondamentale determinare la distribuzione delle caratteristiche dei dischi di accrescimento che, combinate usando metodi di Montecarlo, vanno a costituire le condizioni iniziali dei modelli di formazione.
+Per riprodurre le propriet\'a statistiche della popolazione planetaria osservata \'e fondamentale determinare la distribuzione delle caratteristiche dei dischi di accrescimento che, combinate usando metodi di Montecarlo, vanno a costituire le condizioni iniziali dei modelli di formazione. Osservando cluster di stelle in in formazione \'e possibile ricavare la distribuzione di massa e raggio carateristico dei dischi protoplanetari e del tempo di vita.
+
+%Tramite metodi di montecarlo si determinano numerose combinazioni delle condizioni iniziali del disco e dei parametri scelti per descrivere la sua struttura.
+%Le variabili di montecarlo hanno distribuzione determinata dalle osservazioni.
 
 Nei modelli di disco di accrescimento $1+1D$ si parametrizza il trasporto di momento angolare ponendo:
 \begin{equation}
 \nu=\alpha c_s H
 \end{equation}
-dove $\alpha$ \'e parametro da fissare, $c_s$ la velocit\'a del suono e H lo spessore del disco. L'evoluzione della densit\'a superficiale del disco \'e determinata dall'equazione:
+dove $\alpha$ \'e parametro da fissare, $c_s$ la velocit\'a del suono e H lo spessore del disco; si ipotizza che la turbolenza sia responsabile per la viscosit\'a aumentata quindi che la velocit\'a relativa dei moti turbolenti sia circa la velocit\'a del suono $c_s$ e la dimensione caratteristica lo spessore del disco $H$. L'evoluzione della densit\'a superficiale del disco \'e determinata dall'equazione:
 \begin{equation}
 \PDy{t}{\Sigma}=3\frac{1}{r}\PDof{r}[r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]\label{eq:sigmaevol}
 \end{equation}
-
-
 
 La struttura verticale \'e determinata dalla componente lungo z dell'attrazione del corpo centrale
 %profilo termico determinato da equilibrio termico
@@ -545,7 +546,40 @@ mentre la struttura radiale del disco di gas \'e determinata dall'equilibrio idr
 \end{equation}
 dove ho introdotto $v_g$ velocit\'a a cui il gas orbita attorno alla stella centrale.
 
+\begin{wrapfigure}[10]{l}{0.4\textwidth}
+	\includegraphics[trim={0cm 4cm 0 0},clip, keepaspectratio,width=0.4\textwidth]{selfsimilaralphadisk-mod}
+	\caption{I grafici rappresentano densit\'a superficiale \eqref{eq:selsimdiskevol} per $\nu\propto r\expy{\gamma}$ con $\gamma=1$: $T=2,4,8$. Da \cite{armitage2007lecture}.}\label{fig:selfsimilaralphadisk}
+\end{wrapfigure}
 
+La soluzione auto-similare di \ref{eq:sigmaevol} con raggio caratteristico $R_c$, assumendo $\nu\propto r\expy{\gamma}$, \'e
+\begin{equation}
+\Sigma(\mathcal{R},\mathcal{T})\propto\mathcal{R}\expy{-\gamma}\mathcal{T}\expy{-\frac{5/2-\gamma}{2-\gamma}}\exp{-\frac{\mathcal{R}\expy{2-\gamma}}{\mathcal{T}}}\label{eq:selsimdiskevol}
+\end{equation}
+con
+\begin{align*}
+&\mathcal{R}=\frac{r}{R_c}
+&\mathcal{T}=\frac{t}{t_c}\ t_c=\frac{1}{3(2-\gamma)^2}\frac{R_c^2}{\nu(R_c)}
+\end{align*}
+
+%\begin{tikzpicture}	
+%\begin{loglogaxis}[
+	%xmode=log,
+	%log ticks with fixed point,
+%	xmin=0.1, xmax=10
+%	]
+	%\addplot gnuplot[] {10^3*1/x*(2^(-2.5+1))*exp(-x^(2-1)/1)};
+%\end{loglogaxis}
+%\end{tikzpicture}
+
+\begin{workout}[Steady state solution: far from boundaries]
+	Armitage lecture notes pg 19: steady state $\PDof{t}=0$
+	\begin{align*}
+&\Sigma r^3\Omega v_r=\nu\Sigma r^3\TDy{r}{\Omega}+\const{}\\
+&\dot{M}=-2\pi r\Sigma v_r\\
+&-r^2\Omega\frac{\dot{M}}{2\pi}=\nu\Sigma r^3\TDy{r}{\Omega}+\const{}
+	\end{align*}
+Usually determined at inner boundary: $\TDy{r}{\Omega}=0$ la costante \'e proporzionale al flusso di momento angolare $\dot{M}r^2\Omega$ (supposing disk estends to equator of slowly rotating star $\nu\Sigma=\frac{\dot{M}}{3\pi}(1-\sqrt{\frac{r_*}{r}})$)
+\end{workout}
 \begin{figure}[!ht]
 	\begin{subfigure}[b]{0.39\textwidth}
 		\centering
@@ -555,7 +589,7 @@ dove ho introdotto $v_g$ velocit\'a a cui il gas orbita attorno alla stella cent
 	~
 	\begin{subfigure}[b]{0.55\textwidth}
 		\includegraphics[trim={0cm 15cm 0 0},clip, keepaspectratio,width=0.98\textwidth]{diskdensity}
-		\caption{Densit\'a superficiale dischi protoplanetari osservati nella regione di Ophiuchus ricavata risolvendo modello disco di accrescimento che riproduca densit\'a spettrale di energia osservata. I rettangoli grigi indicano densit\'a superficiale per la MMSN nella regione di Saturno, Urano e Nettuno. Da \cite{andrews2010protoplanetary}.}\label{fig:diskdensity}
+		\caption{Densit\'a superficiale dischi protoplanetari osservati nella regione di Ophiuchus ricavata risolvendo modello disco di accrescimento che riproduca densit\'a spettrale di energia osservata e il flusso a \SI{880}{\micro\meter}. I rettangoli grigi indicano densit\'a superficiale per la MMSN nella regione di Saturno, Urano e Nettuno. Da \cite{andrews2010protoplanetary}.}\label{fig:diskdensity}
 	\end{subfigure}
 \end{figure}
 
@@ -563,53 +597,20 @@ dove ho introdotto $v_g$ velocit\'a a cui il gas orbita attorno alla stella cent
 Attorno alle stelle giovani sovente si trovano strutture opache nel visibile ma otticamente sottili nelle onde infrarosse: risolvendo il modello di disco protoplanetario, avente come input la distribuzione della dimensione della polvere e rapporto gas/polvere, per riprodurre le caratteristiche spettrali e flusso termico osservati, note anche le caratteristiche della stella centrale, si determinano i parametri caratteristici del disco.
 \end{errata}
 
-La figura (\subref{fig:SED-contours}) mostra le strutture attorno a stelle giovani del cluster Ophiuchus secondo profili di intensit\'a a \SI{880}{\micro\meter}. Se $\nu\propto r\expy{\gamma}$ una soluzione di \eqref{eq:sigmaevol} per $t=0$ \'e
+La figura (\subref{fig:SED-contours}) mostra le strutture attorno a stelle giovani del cluster Ophiuchus (et\'a $\tau\approx\SI{1}{\mega\year}$) secondo profili di intensit\'a a \SI{880}{\micro\meter}. Se $\nu\propto r\expy{\gamma}$ una soluzione di \eqref{eq:sigmaevol} per $t=0$ \'e
 \begin{equation}
 \Sigma=(2-\gamma)\frac{M_d}{2\pi R_c^2}(\frac{r}{R_c})\expy{-\gamma}\Exp{-(\frac{r}{R_c})\expy{2-\gamma}}
 \end{equation}
 \cite{andrews2010protoplanetary} hanno osservato lo spettro emesso da oggetti nella regione di formazione stellare Ophiuchus determinando massa, dimensioni caratteristiche e viscosit\'a: $M_d=0.004-0.143\msun{}$, $\gamma=0.4-1.1$, $R_c=\SIrange{14}{198}{\astronomicalunit}$.
 
-\begin{wrapfigure}[17]{l}{0.5\textwidth}
-	\includegraphics[trim={0cm 19cm 0 0},clip, keepaspectratio,width=0.48\textwidth]{selfsimilaralphadisk}
-	\caption{Soluzione equazione \eqref{eq:sigmaevol} per $\nu\propto r\expy{\gamma}$ con $\gamma=1$. Da \cite{armitage2007lecture}.}\label{fig:selfsimilaralphadisk}
+\begin{wrapfigure}[6]{l}{0.5\textwidth}
+	\centering
+	\includegraphics[trim={0cm 13cm 0 0},clip, width=0.49\textwidth,keepaspectratio]{clusterage-fstar}
+	\caption{Frazione di stelle con disco protoplanetario in funzione dell'et\'a del cluster. Da \cite{mamajek2009initial}. }\label{fig:clusterage-fstar}
 \end{wrapfigure}
 
-Tramite metodi di montecarlo si determinano numerose combinazioni delle condizioni iniziali del disco e dei parametri scelti per descrivere la sua struttura.
-Le variabili di montecarlo hanno distribuzione determinata dalle osservazioni.
-
-\begin{workout}[modello globale: evoluzione dal semplice al complesso]
-	Global model of planets formation and evolution: more detailed submodels
-\end{workout}
-
-Il modello pi\'u semplice di disco di accrescimento usa distribuzione esponenziale per andamento densit\'a superficiale e temperature, assumendo disco otticamente sottile, e relazione $L_*\propto M_*^4$ di sequenza principale. Le lacune di questo modello sono
-\begin{itemize}
-	\item i dischi sono otticamente spessi con transizioni nell'opacit\'a
-	\item non \'e presente evoluzione temporale consistente
-\end{itemize}
-
-Modelli pi\'u recenti  risolvono l'equazione per l'evoluzione viscosa:
-\begin{align}
-	&\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_{embryo}(r)\label{eq:diskaccrphev-m18}\\
-	&\dot{\Sigma}_w(a)=\left\{\begin{array}{c}0\quad a<R_g\\\frac{\dot{M}_w}{2\pi(a_{max}-R_g)a}\quad \text{altrimenti}\\\end{array}\right.
-\end{align}
-con $\dot{\Sigma}_w$ contributo della foto-evaporazione (\cite{veras2004outward}), $R_g=\SI{5}{\astronomicalunit}$ e $a_{max}$ estremo del disco,  $\dot{\Sigma}_{embryo}$ contributo di accrescimento di gas e componente solida dei pianeti.
-La densit\'a superficiale iniziale \'e assunta essere:
-\begin{equation}
-\Sigma(a,t=0)=\Sigma_0(\frac{r}{1AU})\expy{p_g}\Exp{[-(\frac{r}{R_o})\expy{2+p_g}]}(1-\sqrt{\frac{r}{R_i}})
-\end{equation}
-dove i parametri possono essere scelti casualmente secondo una distribuzione di probabilit\'a ricavata dalle osservazioni.
-
-La distribuzione di massa e la frazione di dischi protoplanetari per ammassi stellari di et\'a diversa \'e mostrata in figura (\ref{fig:initdistro}). La massa \'e determinata misurando il flusso di emissione termica della polvere: la distribuzione di $\log{M_{disk}}$  \'e gaussiana e per il cluster Ophiuchus la distribuzione \'e fittata da gaussiana corrispondente a massa media $M_{disk}=0.042\msun{}$.
-
-Il tempo caratteristico del disco \'e determinato dalla viscosit\'a $\alpha$: fissata $\alpha$ compatibile con tempo caratteristico osservato $\tau_{disk}^{obs}\approx\SI{3}{\mega\year}$ e assumendo la distribuzione uniforme nel logaritmo di $\dot{M}_w$, si calcola  $t_{disk}(\alpha,\Sigma_0,\dot{M}_w)$ determinando gli estremi dello fotoevaporazione per riprodurre tempi di vita osservati.
-
-Valori tipici sono $\dot{M}_w=\SIrange{5e-10}{3e-8}\msun{}/\si{\year}$ per $\alpha=\num{7e-3}$.
-
-Nelle popolazione planetaria considerata $\alpha$ \'e fissato compatibilmente con le osservazioni  ed \'e omogeneo e costante.
-
-\begin{figure}[!ht]
-	\includegraphics[trim={0cm 10cm 0 0},clip, keepaspectratio,width=0.7\textwidth]{initdistro}
-	\caption{Distribuzione caretteristiche dischi di accrescimento. Da \cite{mordasini2018planetary}.}\label{fig:initdistro}\end{figure}
+In figura (\ref{fig:clusterage-fstar}) \'e riportata la frazione di stelle con dischi protoplanetari in funzione dell'et\'a del cluster: l'andamento \'e esponenzialmente decrescente con $\tau_c\approx\SI{2.5}{\mega\year}$.
+%(\cite{haisch2001disk}) hanno determinato $\tau_c\approx\SI{6}{\mega\year}$.
 
 \begin{workout}[viscosit\'a disco]
 	Nella popolazione planetaria simulata $\alpha$ \'e fissato sulla base delle osservazioni  ed \'e omogeneo e costante.
@@ -643,16 +644,6 @@ Nelle popolazione planetaria considerata $\alpha$ \'e fissato compatibilmente co
 \begin{workout}[Condizioni iniziali: formazione planetesimi, caratteristiche dischi protoplanetari]
 	Chronology of  early stages: apai lauretta 10 (book)
 \end{workout}
-
-\begin{wrapfigure}[6]{l}{0.5\textwidth}
-	\centering
-	\includegraphics[trim={0cm 13cm 0 0},clip, width=0.49\textwidth,keepaspectratio]{clusterage-fstar}
-	\caption{Frazione di stelle con disco protoplanetario in funzione dell'et\'a del cluster. Da \cite{mamajek2009initial}. }\label{fig:clusterage-fstar}
-\end{wrapfigure}
-
-In figura (\ref{fig:clusterage-fstar}) \'e riportata la frazione di stelle con dischi protoplanetari in funzione dell'et\'a del cluster. \'E possibile stimare tempo di vita caratteristico del disco considerando andamento esponenziale per frazione di dischi: secondo (\cite{mamajek2009initial}) $\tau_c\approx\SI{2.5}{\mega\year}$, mentre (\cite{haisch2001disk}) hanno determinato $\tau_c\approx\SI{6}{\mega\year}$.
-
-\vspace{0.2\textheight}
 
 \begin{workout}[Profilo densit\'a verticale disco isotermo]
 	Thin vertically isothermal disk
@@ -894,3 +885,5 @@ peeble drift: peeble drift inward from peeble formation line
 		&L_{acc}=G\frac{\dot{M}_{core}M_{core}}{R_{core}}
 	\end{align}
 \end{workout}
+
+\vspace{0.2\textheight}

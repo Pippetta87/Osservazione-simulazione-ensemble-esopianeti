@@ -1,5 +1,6 @@
 {\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Modelli di formazione globali e semplificazioni introdotte}
+%\chapter{Modelli di formazione globali e semplificazioni introdotte}
+\chapter{Popolazioni planetarie sintetiche e confronto con osservazioni}
 }
 
 \begin{errata}[planetary system diversity]
@@ -12,6 +13,10 @@ A questo scopo  \'e necessario introdurre una descrizione semplificata dei proce
 
 \section{Modello di Berna}
 (Da \cite{mordasini2009extrasolar}, \cite{mordasini2018planetary})
+
+\begin{figure}[!ht]
+	\includegraphics[trim={0cm 10cm 0 0},clip, keepaspectratio,width=0.7\textwidth]{initdistro}
+	\caption{Distribuzione caretteristiche dischi di accrescimento. Da \cite{mordasini2018planetary}.}\label{fig:initdistro}\end{figure}
 
 \begin{wrapfigure}[22]{l}{0.7\textwidth}
 \includegraphics[trim={8cm 5cm 8cm 0},clip, keepaspectratio, width=0.7\textwidth]{GFM}
@@ -40,77 +45,6 @@ Global model of planet formation and evolution
 Planetary population synthesis
 planet population synthesis					
 \end{workout}
-
-\section{Distribuzione iniziale planetesimi ed evoluzione}
-
-Assumendo conversione completa di polvere in planetesimi, la densit\'a superficiale di planetesimi \'e
-\begin{equation}
-\Sigma_p(t=0,r)=f_{dg}\eta_{ice}\Sigma_g(t=0,r)
-\end{equation}
-con $f_{dg}$ rapporto gas/polvere (circa metallicit\'a) \'e una parametro casuale con distribuzione che riflette distribuzione di metallicit\'a stellari, $\eta_{ice}$ tiene conto della discontinuit\'a nella distribuzione superficiale di solidi all'iceline.
-
-Sulla scorta della piccola differenza tra composizione solare e composizione meteoritica e assumendo inoltre che il ferro sia un buon indicatore della componente solida  si usa la formula
-\begin{equation}
-\frac{f_{D/G}}{f_{D/G\odot}}=10\expy{[\cel{Fe}{}{}{}/\cel{H}{}{}{}]}
-\end{equation}
-con $f_{D/G\odot}\approx\numrange{0.01}{0.02}$ (\cite{lodders2003solar}).
-
-\begin{workout}[Planet host stars are enriched in nikel and silicon]
-Robinson06
-\end{workout}
-
-Si introduce un fattore correttivo per il drift della polvere entro i \SI{20}{\astronomicalunit} compreso tra $2-4$ (\cite{kornet2004alternative}) e infine si sfrutta la distribuzione della metallicit\'a per stelle di massa solare nelle vicinanze del Sole:
-\begin{equation}
-p([Fe/H])=\frac{1}{\sigma\sqrt{2\pi}}\exp{-\frac{([Fe/H]-\mu)^2}{2\sigma^2}}
-\end{equation}
-Per le stelle campionate da CORALIE (\cite{udry2000coralie}, 1650 stelle nane entro \SI{50}{\parsec}) si ha $\mu=-0.02$ e $\sigma=0.22$.
-
-L'evoluzione della distribuzione dei planetesimi tiene conto dell'acrescimento sugli embrioni planetari
-\begin{equation}\dot{\Sigma}_p=-\frac{(3M_*)\expy{1/3}}{6\pi a_p^2B_LM_p\expy{1/3}}\dot{M}_c\end{equation}
-e generalmente si assume che eccentricit\'a e inclinazione seguono distribuzione di Rayleigh.
-
-Il drift dei planetesimi dovuto all'interazione col gas e la formaziane gap nella distribuzione dei planetesimi sono di solito trascurati.
-
-\begin{workout}[Initial planetesimal distro]
-Dust converted early everywhere fully-efficient (mordasini18: pg 12),Thommes pg8)
-\begin{align*}
-&\Sigma_p(t=0,r)=f_{dg}\eta_{ice}\Sigma_g(t=0,r)\\
-&\dot{\Sigma}_p(r)=-\frac{1}{2\pi aB_LR_H}\dot{M}_c
-\end{align*}
-Icelines Mordasini 1141: inside where T exceeds sublimation
-{Embryo starting position}
-Usually a distro uniform in log(a): relative spacing of few Hill spheres (Kokubo Ida 10)
-Ida, lin10: asymptotical isolation mass ''Toward a Deterministic Model of Planetary Formation VI'',
-Trapped evolution model: Hasegawa pudritz 11, Cridland 16
-\end{workout}
-
-\section{Caratteristiche iniziali degli embrioni planetarii e accrescimento}
-
-La massa iniziale dei core deve essere molto minore della massa di isolamento: si usano 20-50 embrioni di frazioni di massa terrestre ($0.01-0.1\mearth{}$); la distanza dalla stella varia seguendo distribuzione di probabilit\'a $p(a)$ inversamente proporzionale alla distanza orbitale $p(a)\,da\propto\frac{da}{\Delta}\propto\,d\log{a}$. Il momento di comparsa \'e determinato dal rate di accrescimento dei planetesimi \eqref{eq:Gaccretionpl}.
-
-La massa dei core varia per l'accrescimento dei planetesimi secondo
-\begin{align}
-&\dot{M}_c=\Omega\Sigma_pR^2_{capt}F_G
-%&\dot{\Sigma}_p(r)=-\frac{1}{2\pi aB_LR_H}\dot{M}_c
-\end{align}
-
-Per determinare l'accrescimento di gas \'e necessario calcolare la struttura planetaria in alternativa si pu\'o averne una stima da
-\begin{align}
-&\dot{M}_{e,KH}=\frac{M_p}{\tau_{KH}}\\
-&\tau_{KH}=10\expy{p}(\frac{M_p}{\mearth{}})^q(\frac{\kappa}{\si{\gram\per\square\cm}})\si{\year}
-\end{align}
-dove p,q sono ottenuti tramite modelli di struttura planetaria; \cite{mordasini2014grain} hanno determinato $\kappa=\SI{e-2}{\gram\per\square\cm}$, $p=10.4$ e $q=-1.5$.
-
-\begin{workout}[Grain opacity and the bulk composition of extrasolar planets (Alibert mordasini klahr)]
-$b=10.4+\log{f}$
-\end{workout}
-
-\begin{workout}[Higher mass gap formation reduces accretion rate]
-\begin{equation}
-f_{va04}=1.668(\frac{M_p}{\mjupiter{}})\expy{1/3}\exp{-\frac{M_p}{1.5\mjupiter{}}}+0.04
-\end{equation}
-\end{workout}
-
 
 \section{Popolazioni planetarie sintetiche}
 %Considero i risulati di alcuni modelli di formazione planetari (\cite{mordasini2018planetary}).
@@ -185,9 +119,9 @@ La distribuzione del raggio dei pianeti mostra picco a $1\rjupiter$ e crescita p
 
 La distribuzione dei semi-assi cresce rapidamente tra $0.01-0.1\si{\astronomicalunit}$, resta uniforme in log tra $0.1-10\si{\astronomicalunit}$ nonostante molti pianeti migrino all'interno,mentre i pianeti giganti sono ristretti in \SIrange{0.1}{6}{\astronomicalunit}. La distribuzioni del semiasse non mostra deviazioni dalla distribuzione iniziale.
 
-{\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Confronto semi-quantitativo tra caratteristiche popolazioni sintetiche e osservate}
-}
+%{\let\clearpage\relax\let\cleardoublepage\relax
+%\chapter{Confronto semi-quantitativo tra caratteristiche popolazioni sintetiche e osservate}
+%}
 
 Per confrontare una popolazione planetaria simulata con le osservazioni \'e opportuno, oltre a tenere conto dei bias osservativi, valutare per quali sottoinsiemi dell'ensamble di pianeti ossevati le approssimazioni fatte nel modello sono valide.
 

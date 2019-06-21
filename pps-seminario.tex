@@ -193,11 +193,14 @@ Lo schema di core accretion (CA) (vedi \cite{safronov1972evolution}) prevede la 
 \cleartorecto
 
 {\let\clearpage\relax\let\cleardoublepage\relax
-\part{Formazione sistemi planetari: descrizione(implementazione?) modello core accretion(nella PPS?)}\label{part:CAdesc}
+\part{Formazione planetaria nello schema di core accretion: simulazione di una popolazione palnetaria sintetica secondo il modello di Berna }\label{part:CApps}
 }
 \begin{figure}[!ht]
 \includegraphics[width=0.9\textwidth]{accretiontimeline}\caption{Rappresentazione schematica del processo di formazione protopianeti dalla polvere. Da \cite{perryman2011exoplanet}.}\label{fig:accretiontimeline}
 \end{figure}
+
+La figura \ref{fig:accretiontimeline} riassume le fasi della formazione planetaria nello schema core accretion (CA): nella prima fase la componente solida costituita da particelle di dimensione dell'ordine di qualche \si{\micro\meter} \'e accoppiata al flusso del gas e accresce tramite collisioni ed interazione elettromagnetica, al crescere delle dimensioni del corpo l'accoppiamento al flusso del gas diminuisce quindi l'evoluzione della componente solida \'e determinata da interazione gravitazionale e drag aerodinamico, che raggiunge massimo per dimensioni attorno al metro e decresce fino a diventare trascurabile quando il corpo raggiunge dimensioni chilometriche. Simulazioni numeriche (\cite{kokubo2012dynamics}) mostrano che un ensamble di corpi di dimensione \SIrange{1}{100}{\kilo\meter} forma in tempo scala di \SI{e5}{\year} una distribuzione di embrioni planetari di dimensione di \SI{1000}{\kilo\meter} separati da circa $10R_H$. Utilizzo il modello di Berna (\cite{bibid}) per simulare evoluzione di $50$ embrioni planetari di massa $0.1\mearth{}$ a partire condizioni iniziali scelte con metodo di Montecarlo.
+
 \begin{errata}[evoluzione polvere nei dischi di accrescimento: lo scenario CA]
 Il collasso di una nube molecolare produce strutture appiattite la cui evoluzione \'e determinata dal trasporto di momento angolare verso l'esterno, l'interazione con l'oggetto centrale (campi magnetici vento stellare) e con l'ambiente circostante.
 L'ipotesi su cui si basano le simulazioni considerate \'e che la componente polverosa formi corpi pi\'u massicci fino a masse di frazioni di masse terrestri  ed eventualmente, per corpi sufficientemente massicci, accresca gas: lo scenario di core accretion (CA).

@@ -2,8 +2,8 @@
 	\chapter{Simulazione accrescimento su embrioni protoplanetarii}
 }
 
-\begin{workout}[Generic intro to CA (chapter intro)]
-La formaziane di planetaria bottom-up ipotizza la coagulazione  
+\begin{workout}[Regimi accrescimento planetesimi]
+Once the mass of runaway body is isolated from continuus powe-law mass distribution of planetesimal we can approximate the system by a two component system: protoplanet and small planetesimal.
 \end{workout}
 
 \begin{workout}[modello globale: evoluzione dal semplice al complesso]
@@ -30,7 +30,7 @@ Sulla scorta della piccola differenza tra composizione solare e composizione met
 \end{equation}
 con $f_{D/G\odot}\approx\numrange{0.01}{0.02}$ (\cite{lodders2003solar}).
 
-Si introduce un fattore correttivo per il drift della polvere entro i \SI{20}{\astronomicalunit} compreso tra $2-4$ (\cite{kornet2004alternative}) e infine si sfrutta la distribuzione della metallicit\'a per stelle di massa solare nelle vicinanze del Sole:
+Si introduce un fattore correttivo in $f_{D/G}$ poich\'e la distribuzione di planetesimi \'e pi\'u concentrata entro i \SI{20}{\astronomicalunit} di un fattore compreso tra $2-4$ (\cite{kornet2004alternative}) rispetto alla polvere, dovuto alla dinamica della coagulazione della componente solida e interazioni con disco di gas (\cite{kornet2001diversity}); infine si sfrutta la distribuzione della metallicit\'a per stelle di massa solare nelle vicinanze del Sole:
 \begin{equation}
 p([Fe/H])=\frac{1}{\sigma\sqrt{2\pi}}\exp{-\frac{([Fe/H]-\mu)^2}{2\sigma^2}}
 \end{equation}
@@ -41,23 +41,6 @@ L'evoluzione della distribuzione dei planetesimi tiene conto dell'acrescimento s
 e generalmente si assume che eccentricit\'a e inclinazione seguono distribuzione di Rayleigh.
 
 Il drift dei planetesimi dovuto all'interazione col gas e la formaziane gap nella distribuzione dei planetesimi sono di solito trascurati.
-
-\begin{workout}[Initial planetesimal distro]
-	Dust converted early everywhere fully-efficient (mordasini18: pg 12),Thommes pg8)
-	\begin{align*}
-		&\Sigma_p(t=0,r)=f_{dg}\eta_{ice}\Sigma_g(t=0,r)\\
-		&\dot{\Sigma}_p(r)=-\frac{1}{2\pi aB_LR_H}\dot{M}_c
-	\end{align*}
-	Icelines Mordasini 1141: inside where T exceeds sublimation
-	{Embryo starting position}
-	Usually a distro uniform in log(a): relative spacing of few Hill spheres (Kokubo Ida 10)
-	Ida, lin10: asymptotical isolation mass ''Toward a Deterministic Model of Planetary Formation VI'',
-	Trapped evolution model: Hasegawa pudritz 11, Cridland 16
-\end{workout}
-
-\begin{workout}[Planet host stars are enriched in nikel and silicon]
-	Robinson06
-\end{workout}
 
 %\section{Caratteristiche iniziali degli embrioni planetarii e accrescimento}
 
@@ -76,131 +59,13 @@ Per determinare l'accrescimento di gas \'e necessario calcolare la struttura pla
 \end{align}
 dove p,q sono ottenuti tramite modelli di struttura planetaria; \cite{mordasini2014grain} hanno determinato $\kappa=\SI{e-2}{\gram\per\square\cm}$, $p=10.4$ e $q=-1.5$.
 
-\begin{workout}[Grain opacity and the bulk composition of extrasolar planets (Alibert mordasini klahr)]
-	$b=10.4+\log{f}$
-\end{workout}
-
-\begin{workout}[Higher mass gap formation reduces accretion rate]
-	\begin{equation}
-	f_{va04}=1.668(\frac{M_p}{\mjupiter{}})\expy{1/3}\exp{-\frac{M_p}{1.5\mjupiter{}}}+0.04
-	\end{equation}
-\end{workout}
-
-
 %{\let\clearpage\relax\let\cleardoublepage\relax
 %\chapter{Schema di accrescimento componente solida: formazione planetesimi - da riassumere nel capitolo ''schema CA a volo d'uccello''}
 %}
 
-\begin{workout}[Some refs]
-	\begin{itemize}
-		\item ida, guillot, morbidelli 08: accretion and destruction of planetesimal in turbulent disks.
-		\item rafikov 04: Fast accretion of planetesimal by protoplanet cores. Drag regimes; mass spectrum of solid body
-		\item rafikov 02: growth of planetary embryos: orderly, runaway, or oligarchic?
-		\item kokubo ida 12: Dynamics and accretion of planetesimal. Tempi caratteristici.
-		\item hasegawa pudritz 14: planet traps and planet cores: origin of planet metallicity correlation.
-	\end{itemize}
-\end{workout}
-
-\begin{workout}[allargamento schema accrescimento parte solida]
-	\begin{itemize}
-		\item peebles: observations show that mm and smaller particles are retained in PPD (Cleeves16). Peebles remain coupled to gad -> areodynamic assisted or peeble accretion (Ormel klahr 10, Lambrechts jOhansen 12)
-		
-	\end{itemize}
-\end{workout}
-
-\begin{workout}[Refs GI vs CA]
-planetesimal hypothesis: chamberlin 05, Safronov 69, Hayashi 77. Formation on dynamical scale via GI: Kuiper 51, Cameron 62.
-Core accretion o instabilit\'a gravitazionale?
-La correlazione tra metallicit\'a del disco protoplanetario e il numero di pianeti (giganti) \'e in accordocon osservazioni?
-The runt of the litter: why planets formed through gravitational instability can only be failed binary stars (2010).
-Planetary formation scenario revisited: CA vs GI (2007)
-\end{workout}
-
-\begin{workout}[Succo beamer formazione]
-
-\end{workout}
-
 %\section{Sedimentazione polvere e formazione planetesimi}
 
-\begin{errata}[Massa, dimensioni polvere nei dischi protoplanetarii]
-La polvere presente nel materiale interstellare ha dimensioni di \SI{0.1}{\micro\meter}: l'evoluzione del disco di polvere \'e determinata da attrazione della stella centrale e drag del gas.
-\end{errata}
-
-%Assumo  sedimenta verso il centro del disco e forma aggregati di dimensioni maggiori: 
-\begin{workout}[Succo beamer formazione]
-Per piccole deviazioni dalla velocit\'a kepleriana si ha
-\begin{equation}
-v_k-v_g\approx -v_k\frac{1}{\rho}\TDy{r}{P}/(2g)\label{eq:velocitykg}
-\end{equation}
-con $g=GM_*/r^2$.
-\end{workout}
-
-\begin{workout}[Dust dynamics]
-L'equazione del moto per particella di polvere \'e
-\begin{equation}\label{eq:motiondust}
-m_p\TDy{t}{\vec{v}}=\vec{F}_D-m_p\Omega^2z\hat{z}
-\end{equation}
-$\vec{F}_D$ \'e la forza esercitata dal gas sulla particella di polvere che si oppone al moto relativo con velocit\'a $v$
-\begin{equation}
-F_D=\frac{1}{2}C_D\pi s^2\rho_gv^2
-\end{equation}
-nel caso cammino libero medio delle molecole di gas sia maggiore delle dimensioni della particella $C_D=\frac{8}{3}\frac{v_{th}}{v_z}$ (Epstein drag) per particelle pi\'u grandi \'e funzione del numero di Reynold.
-%La pressione non supporta i grani: troppo pesanti
-\end{workout}
-
-\begin{workout}[Velocit\'a stazionaria settling verticale]
-Dall'equazione \eqref{eq:motiondust} si che in condizioni stazionarie:
-\begin{equation}
-v_{set}=\frac{\Omega^2}{v_{th}}\frac{\rho_d}{\rho_g(z)}sz
-\end{equation}
-Per particelle di \SI{1}{\micro\meter} tempo di sedimentazione \'e $\SI{2e5}{\year}$, inoltre turbolenza e coagulazione delle particelle hanno un ruolo non banale.
-%t=mv/F
-\end{workout}
-
-\begin{workout}[Planetesimal formation mechanisms]
-La velocit\'a relativa tra gas e polvere causa un drift verso la stella di quest'ultima massimo per particelle di \SIrange{0.01}{10}{\meter}  a \SI{1}{\astronomicalunit} con tempo caratteristico di \SI{100}{\year} (\cite{lissauer1993planet}).
-
-Per passare a corpi di dimensioni kilometriche si ipotizzano 2 scenarii:
-\begin{itemize}
-	\item La componente solida del disco di accrescimento sedimenta rapidamente in disco sottile: secondo il modello di Goldreich-Ward il disco di polvere \'e instabile e le condensazioni generano i planetesimi.
-	\item In assenza di sedimentazione la formazione procede tramite urti a 2 corpi e la turbolenza creando addensamenti, pu\'o accelerare la formazione di planetesimi.
-\end{itemize}
-\end{workout}
-
-\begin{workout}[refs planetesimal formation]
-Armitage 07: lecture notes on formation and early evolution
- \end{workout}
-
-\begin{workout}[Velocit\'a sedimentazione stazionaria]	
-Grani piccoli raggiungono rapidamente la velocit\'a stazionaria di regime
-\begin{equation}
-v_{set}=\frac{\Omega^2}{v_{th}}\frac{\rho_d}{\rho_g(z)}sz
-\end{equation}
- \end{workout}
- 
-\begin{workout}[Dust settling model]
-weidenschilling 89: dust settling time
-Dullemond dominique 04, johansen klahr 05, carballido 05, fromand papaloizou 06, turner 06,07
-Furlan 06: Effects of dust growth and settling in T Tauri disks
-Nomura 06: Dust Size Growth and Settling in a Protoplanetary Disk
-\cite{lissauer1993planet}
- \end{workout}
-
-\begin{workout}[Dust dynamics refs]
-Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
-Protoplanetary disk and their evolution pg 29
-Protoplanetary dust: Apai Lauretta - particles dynamics pg 100
-\end{workout}
-
-\begin{workout}[Particle-gas dynamics. dust midplane sedimantation]
-Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
-Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
-\end{workout}
-
-\begin{workout}[Formazione planetesimi: meccanismo Goldreich-Ward]
-Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
-Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
-\end{workout}
+%Assumo  sedimenta verso il centro del disco e forma aggregati di dimensioni maggiori:
 
 %\section{Accrescimento planetesimi: formazione proto-pianeti.}
 
@@ -254,13 +119,13 @@ Quando la massa degli embrioni domina su quella dei planetesimi si ha transizion
 &M_{iso}=\frac{(4\pi Br^2\Sigma_p)\expy{3/2}}{(3M_*)\expy{1/2}}=\num{2.10e-3}(\frac{Br^2\Sigma_p}{2\sqrt{3}})\expy{3/2}(\frac{\msun{}}{M_*})\expy{1/2}\mearth{}
 \end{align}
 
-\begin{errata}[Isolation mass:]
+\begin{workout}[Isolation mass:]
 kokubo ida 12:
 \[M_{iso}\approx2\pi ab\Sigma_d=0.16f_d\expy{3/2}\epsilon_{ice}\expy{3/2}(\frac{b}{10r_h})\expy{3/2}(a(\si{\astronomicalunit}))\expy{3/4}(\frac{M_*}{\msun{}})\expy{-1/2}\mearth{}\]
 \begin{equation}
 M_{iso}\propto M_*\expy{-1/2}\Sigma_p\expy{3/2}r^3
 \end{equation}
-\end{errata}
+\end{workout}
 
 La fase finale di crescita caotica evolve il sistema verso una configurazione dinamica stabile ed ha tempi tipici di \SIrange{10}{100}{\mega\year}.
 
@@ -363,6 +228,137 @@ Accrescimento ordinato: $\frac{1}{M_e}\TDy{t}{M_e}\propto M_e\expy{-1/3}$. Accre
 
 \end{workout}
 
+\begin{workout}[Some refs]
+	\begin{itemize}
+		\item ida, guillot, morbidelli 08: accretion and destruction of planetesimal in turbulent disks.
+		\item rafikov 04: Fast accretion of planetesimal by protoplanet cores. Drag regimes; mass spectrum of solid body
+		\item rafikov 02: growth of planetary embryos: orderly, runaway, or oligarchic?
+		\item kokubo ida 12: Dynamics and accretion of planetesimal. Tempi caratteristici.
+		\item hasegawa pudritz 14: planet traps and planet cores: origin of planet metallicity correlation.
+	\end{itemize}
+\end{workout}
+
+\begin{workout}[Initial planetesimal distro]
+	Dust converted early everywhere fully-efficient (mordasini18: pg 12),Thommes pg8)
+	\begin{align*}
+		&\Sigma_p(t=0,r)=f_{dg}\eta_{ice}\Sigma_g(t=0,r)\\
+		&\dot{\Sigma}_p(r)=-\frac{1}{2\pi aB_LR_H}\dot{M}_c
+	\end{align*}
+	Icelines Mordasini 1141: inside where T exceeds sublimation
+	{Embryo starting position}
+	Usually a distro uniform in log(a): relative spacing of few Hill spheres (Kokubo Ida 10)
+	Ida, lin10: asymptotical isolation mass ''Toward a Deterministic Model of Planetary Formation VI'',
+	Trapped evolution model: Hasegawa pudritz 11, Cridland 16
+\end{workout}
+
+\begin{workout}[Planet host stars are enriched in nikel and silicon]
+	Robinson06
+\end{workout}
+
+\begin{workout}[Grain opacity and the bulk composition of extrasolar planets (Alibert mordasini klahr)]
+	$b=10.4+\log{f}$
+\end{workout}
+
+\begin{workout}[Higher mass gap formation reduces accretion rate]
+	\begin{equation}
+	f_{va04}=1.668(\frac{M_p}{\mjupiter{}})\expy{1/3}\exp{-\frac{M_p}{1.5\mjupiter{}}}+0.04
+	\end{equation}
+\end{workout}
+
+
+\begin{workout}[allargamento schema accrescimento parte solida]
+	\begin{itemize}
+		\item peebles: observations show that mm and smaller particles are retained in PPD (Cleeves16). Peebles remain coupled to gad -> areodynamic assisted or peeble accretion (Ormel klahr 10, Lambrechts jOhansen 12)
+		
+	\end{itemize}
+\end{workout}
+
+\begin{workout}[Refs GI vs CA]
+	planetesimal hypothesis: chamberlin 05, Safronov 69, Hayashi 77. Formation on dynamical scale via GI: Kuiper 51, Cameron 62.
+	Core accretion o instabilit\'a gravitazionale?
+	La correlazione tra metallicit\'a del disco protoplanetario e il numero di pianeti (giganti) \'e in accordocon osservazioni?
+	The runt of the litter: why planets formed through gravitational instability can only be failed binary stars (2010).
+	Planetary formation scenario revisited: CA vs GI (2007)
+\end{workout}
+
+\begin{workout}[Succo beamer formazione]
+	
+\end{workout}
+
+\begin{workout}[Succo beamer formazione]
+	Per piccole deviazioni dalla velocit\'a kepleriana si ha
+	\begin{equation}
+	v_k-v_g\approx -v_k\frac{1}{\rho}\TDy{r}{P}/(2g)\label{eq:velocitykg}
+	\end{equation}
+	con $g=GM_*/r^2$.
+\end{workout}
+
+\begin{workout}[Dust dynamics]
+	L'equazione del moto per particella di polvere \'e
+	\begin{equation}\label{eq:motiondust}
+	m_p\TDy{t}{\vec{v}}=\vec{F}_D-m_p\Omega^2z\hat{z}
+	\end{equation}
+	$\vec{F}_D$ \'e la forza esercitata dal gas sulla particella di polvere che si oppone al moto relativo con velocit\'a $v$
+	\begin{equation}
+	F_D=\frac{1}{2}C_D\pi s^2\rho_gv^2
+	\end{equation}
+	nel caso cammino libero medio delle molecole di gas sia maggiore delle dimensioni della particella $C_D=\frac{8}{3}\frac{v_{th}}{v_z}$ (Epstein drag) per particelle pi\'u grandi \'e funzione del numero di Reynold.
+	%La pressione non supporta i grani: troppo pesanti
+\end{workout}
+
+\begin{workout}[Velocit\'a stazionaria settling verticale]
+	Dall'equazione \eqref{eq:motiondust} si che in condizioni stazionarie:
+	\begin{equation}
+	v_{set}=\frac{\Omega^2}{v_{th}}\frac{\rho_d}{\rho_g(z)}sz
+	\end{equation}
+	Per particelle di \SI{1}{\micro\meter} tempo di sedimentazione \'e $\SI{2e5}{\year}$, inoltre turbolenza e coagulazione delle particelle hanno un ruolo non banale.
+	%t=mv/F
+\end{workout}
+
+\begin{workout}[Planetesimal formation mechanisms]
+	La velocit\'a relativa tra gas e polvere causa un drift verso la stella di quest'ultima massimo per particelle di \SIrange{0.01}{10}{\meter}  a \SI{1}{\astronomicalunit} con tempo caratteristico di \SI{100}{\year} (\cite{lissauer1993planet}).
+	
+	Per passare a corpi di dimensioni kilometriche si ipotizzano 2 scenarii:
+	\begin{itemize}
+		\item La componente solida del disco di accrescimento sedimenta rapidamente in disco sottile: secondo il modello di Goldreich-Ward il disco di polvere \'e instabile e le condensazioni generano i planetesimi.
+		\item In assenza di sedimentazione la formazione procede tramite urti a 2 corpi e la turbolenza creando addensamenti, pu\'o accelerare la formazione di planetesimi.
+	\end{itemize}
+\end{workout}
+
+\begin{workout}[refs planetesimal formation]
+	Armitage 07: lecture notes on formation and early evolution
+\end{workout}
+
+\begin{workout}[Velocit\'a sedimentazione stazionaria]	
+	Grani piccoli raggiungono rapidamente la velocit\'a stazionaria di regime
+	\begin{equation}
+	v_{set}=\frac{\Omega^2}{v_{th}}\frac{\rho_d}{\rho_g(z)}sz
+	\end{equation}
+\end{workout}
+
+\begin{workout}[Dust settling model]
+	weidenschilling 89: dust settling time
+	Dullemond dominique 04, johansen klahr 05, carballido 05, fromand papaloizou 06, turner 06,07
+	Furlan 06: Effects of dust growth and settling in T Tauri disks
+	Nomura 06: Dust Size Growth and Settling in a Protoplanetary Disk
+	\cite{lissauer1993planet}
+\end{workout}
+
+\begin{workout}[Dust dynamics refs]
+	Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
+	Protoplanetary disk and their evolution pg 29
+	Protoplanetary dust: Apai Lauretta - particles dynamics pg 100
+\end{workout}
+
+\begin{workout}[Particle-gas dynamics. dust midplane sedimantation]
+	Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
+	Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
+\end{workout}
+
+\begin{workout}[Formazione planetesimi: meccanismo Goldreich-Ward]
+	Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
+	Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
+\end{workout}
 
 {\let\clearpage\relax\let\cleardoublepage\relax
 \chapter{Evoluzione struttura planetaria: accrescimento di gas. Evoluzione disco di accrescimento}\label{chap:gasaccretion}

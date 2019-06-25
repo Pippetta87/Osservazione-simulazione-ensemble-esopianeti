@@ -561,6 +561,26 @@ con
 &\mathcal{T}=\frac{t}{t_c}\ t_c=\frac{1}{3(2-\gamma)^2}\frac{R_c^2}{\nu(R_c)}
 \end{align}
 
+\begin{workout}[Disk structure: exists also temperature profile]
+Local hydrostatic equilibrium (vertical structure)
+\begin{equation}
+\frac{1}{\rho}\PDy{z}{P}=-\Omega^2z
+\end{equation}
+energy equation (energy produced by viscosity is removed by radiative flux)(ruden lin 86), optically thick medium radiative flux
+\begin{equation}
+F=-\frac{16\pi\sigma T^3}{3\kappa\rho}\PDy{z}{T}
+\end{equation}
+set of 3 ode and boundary conditions (Papa terquem 99)
+\begin{align}
+&P_s=\frac{\Omega^2H\tau_{ab}}{\kappa_s}\\
+&F_s=\frac{3}{8\pi}\dot{M}_*\Omega^2\\
+&2\sigma(T_s^4-T_b^4)-\frac{\alpha kT_s\Omega}{8\mu m_H\kappa_s}-\frac{3}{8\pi}\dot{M}_*\Omega^2=0\\
+&F(z=0)=0
+\end{align}
+s refers to $z=H$ $\tau_{ab}$ optical depth between surface and infinity, $T_b$ background T, $\mu$ mean molecular mass, $\dot{M}_*=3\pi\nu_{eff}\Sigma$.
+effect of irradiation of central star $T_s^4=T_{s,noirr}^4+T_{s,irr}^4$
+\end{workout}
+
 %\begin{tikzpicture}	
 %\begin{loglogaxis}[
 	%xmode=log,

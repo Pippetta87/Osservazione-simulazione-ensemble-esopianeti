@@ -119,6 +119,7 @@ L'evoluzione della distribuzione dei planetesimi tiene conto dell'acrescimento s
 \begin{equation}
 \dot{\Sigma}_p=-\frac{(3M_*)\expy{1/3}}{6\pi a_p^2B_LM_p\expy{1/3}}\dot{M}_c\label{eq:surfaceplanetesimal}
 \end{equation}
+e dell'evoluzione di $\exv{e^2}\expy{1/2}$, $\exv{i^2}\expy{1/2}$ (\cite{fortier2013planet}).
 Il tempo di comparsa dell'embrione planetario, tempo per accrescere massa iniziale fissata, \'e determinato risolvendo (\ref{eq:surfaceplanetesimal}) e (\ref{eq:Gaccretionpl}).
 La simulazione termina dopo \SI{10}{\mega\year}; la fase finale di crescita caotica evolve il sistema verso una configurazione dinamica stabile ed ha tempi tipici di \SIrange{10}{100}{\mega\year}.
 
@@ -399,9 +400,11 @@ Greenzweig Lissauer 92
 \end{workout}
 
 {\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Accrescimento di gas ed evoluzione disco di accrescimento}\label{chap:gasaccretion}
+\chapter{Accrescimento di gas ed evoluzione disco di accrescimento.  (Accrescimento e dinamica del gas)}\label{chap:gasaccretion}
 }% e fase isolata
-
+\begin{workout}[Notazione omogenea: disco accrescimento]
+$T_{neb}$, $T_b$, $T_i$; $k_l$, $B_L$; ...
+\end{workout}
 \begin{workout}[Grain opacity and the bulk composition of extrasolar planets (Alibert mordasini klahr)]
 	$b=10.4+\log{f}$
 \end{workout}
@@ -467,7 +470,7 @@ dove $\nrad{}$ e $\nad{}$ indicano il gradiente radiativo e adiabatico.
 
 La luminosit\'a del pianeta \'e determinata tramite
 \begin{equation}
-E_t=E_g+E_i=\int_0^M\frac{Gm}{r}\,dm+\int_{M_z}^Mu\,dm=-\xi\frac{GM^2}{2R}
+E_t=E_g+E_i=-\int_0^M\frac{Gm}{r}\,dm+\int_{M_z}^Mu\,dm=-\xi\frac{GM^2}{2R}
 \end{equation}
 che sostituita nell'equazione di conservazione dell'energia da:
 \begin{equation}
@@ -479,7 +482,7 @@ Ho indicato la massa di gas legata al core con
 \begin{equation}
 M_{XY}=4\pi\int_{R_c}^R\rho(r')r'^2\,dr'
 \end{equation}
-con $R_C$ \'e il raggio del core.
+$R_C$ \'e il raggio del core.
 
 Condizioni al bordo:
 \begin{align}
@@ -489,9 +492,14 @@ Condizioni al bordo:
 \end{align}
 $k_{liss}=3-4$, quindi $R_p\approx \min{(R_B,k_{liss}R_H)}$ e introduco il raggio di Bondi
 \begin{equation}
-R_B=G\frac{M_c}{c_0^2}\approx\SI{4e10}{\cm}a(AU)\expy{1/2}\frac{M_c}{\mearth{}}
+R_B=G\frac{M_c}{c_0^2}%\approx\SI{4e10}{\cm}a(AU)\expy{1/2}\frac{M_c}{\mearth{}
 \end{equation}
+con $c_s=\sqrt{\frac{kT}{\mu m_h}}$
 definito come raggio in cui energia termica e potenziale gravitazionale si equivalgono.%il core perturba la pressione del gas del disco.
+
+\begin{workout}[opacit\'a e rapporto $M_Z/M_{env}$]
+\cite{mordasini2014grain}
+\end{workout}
 
 \begin{workout}[envelope mass as function of core mass]
 Armitage 17 eq 232 (`'lecture nite on formation and early evolution of PS)
@@ -533,7 +541,7 @@ M_c^{crit}=10\mearth{}(\frac{\dot{M}_c}{\num{e-7}\mearth{}\si{\per\year}})\expy{
 \end{equation}
 con $q,s\approx0.2-0.3$ (\cite{ikoma2000formation}).
 
-Se $H\approx R$ il pianeta perturba in maniera non trascurabile il disco (il rate di accrescimento di gas \'e maggiore di quello fornito dal disco). Il raggio del pianeta \'e determinato dalle condizioni al bordo per materia accresciuta tramite free-fall da $R_H$ a $R$:
+Se $H\approx R_p$ il pianeta perturba in maniera non trascurabile il disco (il rate di accrescimento di gas \'e maggiore di quello fornito dal disco). Il raggio del pianeta \'e determinato dalle condizioni al bordo per materia accresciuta tramite free-fall da $R_H$ a $R_p$:
 \begin{align}
 &\dot{M}_{XY}=\dot{M}_{XY,max},\ v_{ff}^2=2GM(\frac{1}{R}-\frac{1}{R_H})\\
 &P=P_{neb}+\frac{\dot{M}_{XY}}{4\pi r^2}v_{ff}+\frac{2g}{3\kappa},\ \tau=\max{(\rho_{neb}\kappa_{neb}R,2/3)}\\
@@ -603,22 +611,6 @@ L'osservazione di una sottopopolazione di esopianeti giganti su orbite strette, 
 Fenomeni che possono dar luogo a migrazione planetaria:
 \begin{itemize}
 \item Interazione con disco proto-planetario. Considerando le perturbazioni lineari nella densit\'a del disco prodotte dal potenziale del pianeta si determina la risultante dei momenti torcenti $\Gamma$ dovuti alle risonanze di Lindblad e alla regione di corotazione. Velocit\'a edirezione della migrazione dipendono dalle caratteristiche del disco, massa del pianeta e moto relativo pianeta-gas.
-
-
-\begin{errata}[Elenco schematicamente alcuni risultati da \cite{armitage2007lecture} e \cite{crida2006planetary}]
- La migrazione di tipo I ha tempi caratteristici
-\begin{equation}
-\tau_I\propto\frac{M_p}{\Gamma}\propto M_p\expy{-1}
-\end{equation}
-per pianeta $5\mearth{}$ a \SI{5}{\astronomicalunit} si ha $\tau_I=\SI{0.5}{\mega\year}$.
-
-La migrazione di tipo II \'e caratterizzata da formazione di un gap attorno all'orbita del pianeta: la transizione tra migrazione I e II avviene se $R_H>H$ e momento torcente dovuto alla viscosit\'a del disco \'e minore del momento esercitato dal pianeta sul disco. La velocit\'a di migrazione di tipo II \'e determinata dall'evoluzione viscosa del disco:
-\begin{equation}
-\dot{a}_p=-\frac{3}{2}\frac{\nu}{r}
-\end{equation}
-Il momento esercitato sul pianeta dalla regione di corotazione pu\'o dar luogo a feedback positivo su pianeta di massa intermedia con velocit\'a radiale $\dot{a}_p$.
-\end{errata}
-
 \item Interazione con disco residuo di planetesimi
 
 \item Interazione tra due o pi\'u pianeti giganti
@@ -629,6 +621,30 @@ Il momento esercitato sul pianeta dalla regione di corotazione pu\'o dar luogo a
 
 \end{itemize}
 
+\begin{errata}[Elenco schematicamente alcuni risultati da \cite{armitage2007lecture} e \cite{crida2006planetary}]
+ La migrazione di tipo I ha tempi caratteristici
+\begin{equation}
+\tau_I\propto\frac{M_p}{\Gamma}\propto M_p\expy{-1}
+\end{equation}
+per pianeta $5\mearth{}$ a \SI{5}{\astronomicalunit} si ha $\tau_I=\SI{0.5}{\mega\year}$.
+La migrazione di tipo II \'e caratterizzata da formazione di un gap attorno all'orbita del pianeta: la transizione tra migrazione I e II avviene se $R_H>H$ e momento torcente dovuto alla viscosit\'a del disco \'e minore del momento esercitato dal pianeta sul disco. La velocit\'a di migrazione di tipo II \'e determinata dall'evoluzione viscosa del disco:
+\begin{equation}
+\dot{a}_p=-\frac{3}{2}\frac{\nu}{r}
+\end{equation}
+Il momento esercitato sul pianeta dalla regione di corotazione pu\'o dar luogo a feedback positivo su pianeta di massa intermedia con velocit\'a radiale $\dot{a}_p$.
+\end{errata}
+
+Nel modello di Berna si determina l'evoluzione orbitale degli embrioni planetari risolvendo numericamente il problema a N corpi
+\begin{align}
+&\ddvec{r}_i=-G(M_*+m_i)\frac{\vec{r}_i}{r_i^3}-G\sum_{j\neq i}m_j[\frac{\vec{r}_i-\vec{r}_j}{|\vec{r}_i-\vec{r}_j|^3}+\frac{\vec{r}_j}{r_j^3}]&\intertext{con l'aggiunta di termini che descrivono l'interazione del pianeta col disco di gas (\cite{tanaka2002three},\cite{tanaka2004three})}\\
+&\ddvec{r}_i^{\,m}=-\frac{\dvec{x}_i}{t_m}\\
+&\ddvec{r}_i^{\,e}=-2\frac{(\dvec{r}_i\cdot\vec{r}_i)\vec{r}_i}{r_i^2t_e}\\
+&\ddvec{r}_i^{\,i}=-\frac{(\dvec{x}_i\cdot\hat{z})}{t_i}\hat{z}
+\end{align}
+
+\begin{workout}[Magnitude torque type I/II and corotation]
+Lubow, ida: ''Planet migration'' eq 18-25 pg 6-7
+\end{workout}
 %{\let\clearpage\relax\let\cleardoublepage\relax
 %\chapter{N-body interactions inside proto disk}
 %}

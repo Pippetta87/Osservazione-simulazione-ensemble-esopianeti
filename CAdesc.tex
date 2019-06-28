@@ -606,11 +606,13 @@ fonti energia: tidal heating radiogeninc heat, star flux
 
 L'osservazione di una sottopopolazione di esopianeti giganti su orbite strette, per cui sembra improbabile una formazione in loco, e la presenza di sistemi multipli in risonanza sono indicatori di evoluzione orbitale, d'altra parte nel Sistema solare fenomeni di migrazione fornisco una spiegazione all'orbita di plutone, alla presenza di numerosi oggetti della fascia di Kuiper in risonanza $3:2$ con Nettuno e al periodo di collisioni intense testimoniato da craterizzazione (Late heavy bombardment).
 
-\vspace{1.5cm}
+%\vspace{1.5cm}
 
 Fenomeni che possono dar luogo a migrazione planetaria:
 \begin{itemize}
-\item Interazione con disco proto-planetario. Considerando le perturbazioni lineari nella densit\'a del disco prodotte dal potenziale del pianeta si determina la risultante dei momenti torcenti $\Gamma$ dovuti alle risonanze di Lindblad e alla regione di corotazione. Velocit\'a edirezione della migrazione dipendono dalle caratteristiche del disco, massa del pianeta e moto relativo pianeta-gas.
+\item Interazione con disco proto-planetario. Il potenziale periodico del pianeta perturba la densit\'a del gas: si ha scambio di momento angolare alle risonanze di Lindblad e alle orbite a ferro di cavallo.
+%Considerando le perturbazioni lineari nella densit\'a del disco prodotte dal potenziale del pianeta si determina la risultante dei momenti torcenti $\Gamma$ dovuti alle risonanze di Lindblad e alla regione di corotazione.
+Velocit\'a e direzione della migrazione dipendono dalle caratteristiche del disco, massa del pianeta e moto relativo pianeta-gas.
 \item Interazione con disco residuo di planetesimi
 
 \item Interazione tra due o pi\'u pianeti giganti
@@ -641,7 +643,35 @@ Nel modello di Berna si determina l'evoluzione orbitale degli embrioni planetari
 &\ddvec{r}_i^{\,e}=-2\frac{(\dvec{r}_i\cdot\vec{r}_i)\vec{r}_i}{r_i^2t_e}\\
 &\ddvec{r}_i^{\,i}=-\frac{(\dvec{x}_i\cdot\hat{z})}{t_i}\hat{z}
 \end{align}
-
+Per piccole e,i e pianeta non abbastanza massiccio da aprire un gap attrono alla propria orbita il tempo di smorzamento di e,i \'e molto minore del tempo di migrazione radiale. 
+Per il tempo caratteristico di migrazione radiale si ha:
+\begin{equation}
+\tau_m=\frac{r_p}{|\dot{r}_p|}=\frac{1}{2}\frac{J_p}{\Gamma}
+\end{equation}
+\cite{lubow2010planet} usando l'approssimazione impulsiva, valida per $\tau_{int}\ll\tau_{orb}$, hanno determinato l'ordine di grandezza del momento torcente subito dal pianeta. Per pianeti di piccola massa e distanza di interazione $H$
+\begin{equation}
+|\Gamma|\propto\Sigma_p\Omega_p^2a^4(\frac{M_p}{M_*})^2(\frac{a}{H})^2
+\end{equation}
+tipico del regime di migrazione detto di tipo I; per piccole distanze dall'orbita del pianeta il flusso di gas presente all'interno/esterno dell'orbita del pianeta, indicato con $\dot{M}_i$ e $\dot{M}_o$, durante deflessione a U incontrando il pianeta cambia momento angolare per l'azione del pianeta che quindi subisce momento torcente uguale e contrario
+\begin{equation}
+T_{co}\propto\dot{M}_o(1-\frac{\dot{M}_i}{\dot{M}_o})a\Omega_pw\approx\Sigma_g\Omega_p^2w^4\TDly{r}{(\Sigma_g/B)}
+\end{equation}
+dove $w\approx$ \'e larghezza di regione di corotazione, B \'e la costante di Oort tale
+\begin{equation}
+2Br=\TDy{r}{(r^2\Omega)}
+\end{equation}
+e
+\begin{equation}
+w\propto a_p\sqrt{\frac{q}{h}}, \ h=\frac{H}{a},\ q=\frac{m_p}{M_*}
+\end{equation}
+Nel caso il pianeta sia abbastanza massiccio si apre un gap attorno all'orbita del pianeta, la condizione perch\'e ci\'o avvenga \'e:
+\begin{equation}
+\frac{M_p}{M_*}\geq C\sqrt{\frac{\nu}{a^2\Omega_p}}(\frac{H}{a})\expy{3/2},\quad C\approx1
+\end{equation}
+e la migrazione in questa condizione \'e detta di tipo II. Il rate di migrazione \'e determinato da evoluzione viscosa del disco con
+\begin{equation}
+t_{vis}\propto\frac{a^2}{\nu}\approx\frac{a^2}{\alpha cH}\approx(\frac{a}{H})^2\frac{1}{\alpha\Omega_p}
+\end{equation}
 
 \begin{workout}[Magnitude torque type I/II and corotation]
 \cite{lubow2010planet}

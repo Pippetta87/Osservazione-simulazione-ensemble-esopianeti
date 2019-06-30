@@ -53,7 +53,7 @@ Le popolazioni planetarie sintetiche sono costruite partendo dalla fase finale d
 	\caption{Distribuzione di stelle che ospitano pianeti giganti ($M\geq300\mearth{}$) in funzione della metallicit\'a. Nero: popolazione sintetica. Blu: fit da osservazioni (\cite{mortier2013functional}). Da \cite{mordasini2018planetary}. }\label{fig:giant-Zsynth}
 \end{wrapfigure}
 
-Le caratteristiche del disco protoplanetario determina la rapidit\'a di accrescimento degli embrioni planetari  principalmente tramite la densit\'a di planetesimi: posizione dell'iceline ($H_2O$) fissa \'e coerente con approssimazione di trasformazione totalit\'a componente solida in planetesimi. La figura (\subref{fig:initdistro}) mostra la distribuzioni delle principali condizioni iniziali per la simulazione.
+Le caratteristiche del disco protoplanetario determina la rapidit\'a di accrescimento degli embrioni planetari  principalmente tramite la densit\'a di planetesimi: posizione dell'iceline ($H_2O$) fissa \'e coerente con approssimazione di trasformazione totalit\'a componente solida in planetesimi. La figura (\subref{fig:initdistro}) mostra la distribuzioni delle principali condizioni iniziali per la simulazione. La probabilit\'a di formare pianeti giganti aumenta con la metallicit\'a: la figura (\ref{fig:giant-Zsynth}) mostra che l'incremento relativo \'e in accordo con le osservazioni.
 \'E possibile tenere traccia della frazione di rocce o ghiacci accresciuti: la figura (\ref{fig:MR5Gyrppsobs}) mostra la posizione nel diagramma massa-raggio di una popolazione sintetica sovrapposta a quella di pianeti reali. La fase di contrazione post-formazione \'e determinata considerando l'evoluzione dell'irraggiamento stellare e l'evaporazione dovuta a componente energetica della radiazione stellare.
 
 %LBRT
@@ -141,6 +141,7 @@ La figura (\subref{fig:ma-synth}) mostra la distribuzione della popolazione sint
 \caption{Simulazione popolazione planetaria di 504 sistemi Punti rossi: pianeti giganti con $M_e/M_c>1$; simboli blu/verdi: pianeti che hanno accresciuto core con ghiacci/rocce; punti aperti: $0.1\leq M_{env}/M_{core}\leq1$; croci blu e punti pieni verdi: pianeti con $M_{env}/M_{core}\leq0.1$. Da \cite{mordasini2018planetary}.}\label{fig:ma-synth}
 \end{subfigure}
 \end{figure}
+La posizione di Nettuno e Saturno nella figura (\subref{fig:ma-synth}) suggerisce che la posizione iniziale fosse probabilmente pi\'u interna (Grand-tack scenario).
 
 Alcune caratteristiche dell'ensemble sintetico: %(\cite{mordasini2018planetary}):
 \begin{itemize}
@@ -156,16 +157,16 @@ Alcune caratteristiche dell'ensemble sintetico: %(\cite{mordasini2018planetary})
 	\caption{Distribuzione della popolazione sintetica planetaria nel diagramma semiasse maggiore vs raggio. Da \cite{mordasini2018planetary}.}\label{fig:Ra-synth}
 \end{figure}
 
-In figura (\subref{fig:ma-synth}) e (\cite{fig:Ra-synth}) \'e evidente l'effetto della migrazione: popolazione pianeti in origine nettuniani (frazione giaccio nel core $50\%$) che migrano all'interno accumulando materiale roccioso (frazione ghiaccio nel core $10-20\%$). Inoltre nel diagramma semiasse maggiore vs raggio si confronta fit sperimentale della ''valle dell'evaporazione'' (\cite{van2018asteroseismic}) con la fascia depopolata decrescente fino a \SI{1}{\astronomicalunit} che viste le semplificazioni del modello di evaporazione risulta pi\'u ripida.
+In figura (\subref{fig:ma-synth}) e (\ref{fig:Ra-synth}) \'e evidente l'effetto della migrazione: popolazione pianeti in origine nettuniani (frazione giaccio nel core $50\%$) che migrano all'interno accumulando materiale roccioso (frazione ghiaccio nel core $10-20\%$). Inoltre nel diagramma semiasse maggiore vs raggio si confronta fit sperimentale della ''valle dell'evaporazione'' (\cite{van2018asteroseismic}) con la fascia depopolata decrescente fino a \SI{1}{\astronomicalunit} che viste le semplificazioni del modello di evaporazione risulta pi\'u ripida.
 
 \clearpage
 
 \section{Caratteristiche delle distribuzioni delle propriet\'a fisiche dei pianeti e significativit\'a}
 
-\begin{figure}[!ht]
-	\includegraphics[trim={0cm 10cm 0 0},clip, width=0.9\textwidth,keepaspectratio]{MaLR-freq-synth}
-	\caption{Distribuzione di massa, semiasse, luminosit\'a, raggio. Da \cite{mordasini2018planetary}. }\label{fig:MaLR-freq-synth}
-\end{figure}
+%\begin{figure}[!ht]
+%	\includegraphics[trim={0cm 10cm 0 0},clip, width=0.9\textwidth,keepaspectratio]{MaLR-freq-synth}
+%	\caption{Distribuzione di massa, semiasse, luminosit\'a, raggio. Da \cite{mordasini2018planetary}. }\label{fig:MaLR-freq-synth}
+%\end{figure}
 
 %La figura (\ref{fig:MaLR-freq-synth}) mostra la distribuzione di massa di 509 pianeti della popolazione sintetica di \cite{mordasini2018planetary}.
 La distribuzione della massa dei pianeti ha andamento diverso per pianeti fino a $30\mearth{}$ formati principalmente da solidi e pianeti che hanno raggiunto la massa critica per l'accrescimento di gas runaway.
@@ -174,14 +175,12 @@ Si ha un minimo locale attorno alla massa critica dopo di che l'aumento di massa
 
 La distribuzione del raggio dei pianeti mostra picco a $1\rjupiter$ e crescita per piccoli raggi dovuta alla prevalenza di pianeti di piccola massa, al loro lungo $\tkh{}$ e quindi scarso accrescimento di H/He.
 
-La distribuzione dei semi-assi cresce rapidamente tra $0.01-0.1\si{\astronomicalunit}$, resta uniforme in log tra $0.1-10\si{\astronomicalunit}$ nonostante molti pianeti migrino all'interno,mentre i pianeti giganti sono ristretti in \SIrange{0.1}{6}{\astronomicalunit}. La distribuzioni del semiasse \'e approssimativamente uniforme in $\log{a}$ per pianeti con $1\mearth{}<M_p<30\mearth{}$: la non comparsa di strutture significative suggerisce che il risultato della simulazione in questo caso sia influenza dalla distribuzione iniziale. Altre distribuzioni iniziali iniziali proposte sono:
-m18 pg 35
+La distribuzione dei semi-assi cresce rapidamente tra $0.01-0.1\si{\astronomicalunit}$, resta uniforme in log tra $0.1-10\si{\astronomicalunit}$ nonostante molti pianeti migrino all'interno,mentre i pianeti giganti sono ristretti in \SIrange{0.1}{6}{\astronomicalunit}. La distribuzioni del semiasse \'e approssimativamente uniforme in $\log{a}$ per pianeti con $1\mearth{}<M_p<30\mearth{}$: la non comparsa di strutture significative suggerisce che il risultato della simulazione in questo caso sia influenza dalla distribuzione iniziale. Altre distribuzioni iniziali iniziali proposte sono: formazione preferenziale di planetesimi in regioni del disco di accrescimento (\cite{drkazkowska2016close}), accumulo di solidi all'esterno di orbite di pianeti esistenti (\cite{pinilla2015sequential}), ''trappole'' planetarie (\cite{hasegawa2012evolutionary}).
 
 %{\let\clearpage\relax\let\cleardoublepage\relax
 %\chapter{Confronto semi-quantitativo tra caratteristiche popolazioni sintetiche e osservate}
 %}
-
-Per confrontare una popolazione planetaria simulata con le osservazioni \'e opportuno, oltre a tenere conto dei bias osservativi, valutare per quali sottoinsiemi dell'ensamble di pianeti ossevati le approssimazioni fatte nel modello sono valide.
+%Per confrontare una popolazione planetaria simulata con le osservazioni \'e opportuno, oltre a tenere conto dei bias osservativi, valutare per quali sottoinsiemi dell'ensamble di pianeti ossevati le approssimazioni fatte nel modello sono valide.
 
 %\section{Struttura orbitale e tipo di pianeta}
 
@@ -202,16 +201,14 @@ O&10-20&50-60\\
 \caption{Percentuale di stelle con N pianeti del dato tipo nella popolazione sintetica di \cite{mordasini2018planetary} e confronto con osservazioni.}\label{tab:planetfreq}
 \end{table}
 
-La posizione di Nettuno e Saturno nella figura (\ref{fig:ma-synth}) suggerisce che la posizione iniziale fosse probabilmente pi\'u interna (Grand-tack scenario).
-
 La tabella (\ref{tab:planetfreq}) mostra un buon accordo tra teoria e osservazione per frequenza di pianeti giganti e sistemi compatti.
 
-Il confronto della distribuzione di massa tra teorica e osservata mostra il buon accordo della pendenza nei due regimi di accrescimento e della posizione della massa critica. Per quanto riguarda la distribuzione dei raggi planetarii il picco a $1\rjupiter{}$ \'e meno pronunciato perch\'e sono inclusi solo pianeti giganti vicini e la distribuzione sintetica cresce meno rapidamente a piccoli raggi. Infine il gran numero di pianeti terrestri della popolazione sintetica pu\'o collidere dando luogo a pianeti pi\'u massicci tuttavia le interazioni dinamiche sono simulate solo per il tempo di vita del disco.
+In \cite{fig:MR-freq-obssynth} sono sovrapposte la distribuzione dei pianeti sintetici e osservati di massa e raggio. Si ha un discreto accordo della pendenza nei due regimi di accrescimento e della posizione della massa critica mentre per quanto riguarda la distribuzione dei raggi planetarii il picco a $1\rjupiter{}$ \'e meno pronunciato perch\'e sono inclusi solo pianeti giganti vicini.
+%e la distribuzione sintetica cresce meno rapidamente a piccoli raggi.
+Infine il gran numero di pianeti terrestri della popolazione sintetica pu\'o collidere dando luogo a pianeti pi\'u massicci tuttavia le interazioni dinamiche sono simulate solo per il tempo di vita del disco.
 
 \begin{figure}[!ht]\includegraphics[trim={0cm 17cm 0 0},clip, keepaspectratio,width=0.9\textwidth]{MR-freq-obssynth}\caption{Distribuzioni di massa e raggio per popolazione planetaria sintetica (linea nera) e distribuzioni osservate tramite RV e transiti (linea blu) corrette per i bias. Da \cite{mordasini2018planetary}.}\label{fig:MR-freq-obssynth}
 \end{figure}
-
-La probabilit\'a di osservare pianeti giganti aumenta con la metallicit\'a: la figura (\ref{fig:giant-Zsynth}) mostra che l'incremento relativo \'e in accordo con le osservazioni.
 
 \begin{workout}[Distro luminosit\'a: relazione M-L]
 	La distribuzione di luminosit\'a segue andamento $L\propto M^2$ con terzo picco per innesco deuterio a $\log{\frac{L}{\lsun}}\approx-3.5$

@@ -28,23 +28,7 @@ Struttura e composizione pianeti: orbite su un piano quindi disco accrescimento,
 Il sistema solare \'e il punto di partenza delle teorie di formazione planetaria; inoltre si hanno informazioni accurate sui pianeti e loro orbite, sulla popolazione di corpi minori e, tramite datazione radiochimica, si hanno riferimenti temporali sui tempi di solidificazione.
 
 L'et\'a del Sole \'e definita come tempo in sequenza principale: tecniche eliosismologiche determinano un'et\'a di \SI{4.57+-0.11}{\giga\year} (\cite{bonanno2002age}) mentre l'analisi chimica dei meteoriti \SI{4.57+-0.07}{\giga\year} (\cite{bahcall1995solar}).
-La core terrestre si \'e formato completamente circa \SIrange{10}{29}{\mega\year} dopo i meteoriti.
-
-\begin{workout}[rivedere ''core terrestre quando si \'e formato]
-''A short timescale for terrestrial planet formation from Hf-W chronometry of meteorites''
-\end{workout}
-
-\begin{wrapfigure}[6]{r}{0.5\textwidth}
-\includegraphics[trim={0cm 5cm 0 0cm},clip, width=0.5\textwidth]{Snebuladensity}\caption{Andamento minimum mass solar nebula (MMSN). Da \cite{weidenschilling1977distribution}.}\label{fig:Snebuladensity}
-\end{wrapfigure}
-
-Un limite inferiore alla massa del disco protoplanetario si ottiene  considerando la massa presente nei pianeti e nella fascia asteroidale arricchita di H/He per avere composizione solare e distribuendo questa massa in un anello di spessore proporzionale al raggio di Hill e centrato sulle orbite (\cite{weidenschilling1977distribution}): si ha l'andamento della densit\'a superficiale, proporzionale a $e\expy{-3/2}$, mostrato in figura \ref{fig:Snebuladensity}; \cite{hayashi1981structure} ha determinato l'andamento della densit\'a di gas, ghiaccio e rocce:
-%$\Sigma\propto r\expy{-3/2}$.
-\begin{align}
-&\Sigma_{rock}=7.1(\frac{a}{\si{\astronomicalunit}})\expy{-3/2}\si{\gram\per\square\cm}:\ \frac{a}{\si{\astronomicalunit}}=0.35-2.7\\
-&\Sigma_{rock+ice}=30(\frac{a}{\si{\astronomicalunit}})\expy{-3/2}\si{\gram\per\square\cm}:\ \frac{a}{\si{\astronomicalunit}}=2.7-36\\
-&\Sigma_{gas}=\num{e3}(\frac{a}{\si{\astronomicalunit}})\expy{-3/2}\si{\gram\per\square\cm}:\ \frac{a}{\si{\astronomicalunit}}=0.35-36
-\end{align}
+Il core terrestre si \'e formato completamente circa \SIrange{10}{29}{\mega\year} dopo i meteoriti (\cite{yin2002short}).
 
 \begin{workout}[Massa disco proto solare: weidenschilling/Hayashi]
 W: $M\approx0.01-0.1\msun$, H: $M\approx0.013\msun$
@@ -52,6 +36,38 @@ W: $M\approx0.01-0.1\msun$, H: $M\approx0.013\msun$
 
 \begin{workout}[accrescimento di gas su nucleo solido prevede arricchimento di metalli ]
 
+\end{workout}
+
+\begin{workout}[caratteristiche orbitali sistema solare]
+	\begin{table}[!ht]
+		\pgfplotstabletypeset[%skip rows between index={4}{8},
+		every head row/.style={
+			before row={\midrule},
+			%every last row/.style={after row=\bottomrule},
+			after row={\midrule}
+		},
+		every 2 row/.style={after row=\midrule},
+		every last row/.style={after row=\bottomrule},
+		every first column/.style={column type/.add={|}{}},
+		every last column/.style={column type/.add={}{|}},
+		%columns/0/.style = {column type/.add={|}{}},
+		%columns/5/.style = {column type/.add={|}{}},
+		%columns/0/.style={string type},
+		create on use/majoraxis/.style={
+			create col/expr={\thisrow{a}/1.5}},
+		display columns/1/.style={fixed,column name={$a(AU)$},clear infinite},
+		display columns/2/.style={column name={e},clear infinite},
+		display columns/3/.style={column name={i},clear infinite},
+		display columns/4/.style={column name={$\tau_{sid}$},clear infinite},
+		display columns/5/.style={column name={obliquity},clear infinite},
+		display columns/planets/.style={column name={pianeta},string type},
+		create on use/planet/.style={create col/set list={Mercury, Venus, Earth, Mars,Jupiter,Saturn,Uranus,Neptune}},
+		columns/planet/.style={string type},
+		columns={planet, majoraxis, e, i, Ps, obl},
+		/pgf/number format/precision=3
+		]{solarsystemmain-orbit.txt} %%%
+		\captionof{table}{Caratteristiche pianeti del Sistema solare.}\label{tab:terrestrial planets}
+	\end{table}
 \end{workout}
 
 %La formazione per accrescimento di gas su nucleo solido prevede arricchimento di metalli rispetto alla composizione di partenza.
@@ -87,13 +103,25 @@ $M_{H/He}$&$1.5\mearth{}$&$2.2\mearth{}$\\
 \hline
         \end{tabular}
     \end{minipage} 
-    \caption{Composizione Giove, Saturno, Urano e Nettuno. Da \cite{baraffe2009physical}.}\label{tab:JSUNcomp}
+    \caption{Composizione Giove, Saturno: $M_c$ \'e la massa del core, $M_Z$ la massa di metalli nell'inviluppo gassoso, $M_Z^{tot}$ la massa totale di metalli; composizione di Urano e Nettuno. Da \cite{baraffe2009physical}.}\label{tab:JSUNcomp}
 \end{table}
 
-Per riprodurre alcune importanti caratteristiche del sistema solare \'e stato necesaario considerare fenomeni di migrazione:
+\begin{wrapfigure}[6]{r}{0.5\textwidth}
+	\includegraphics[trim={0cm 5cm 0 0cm},clip, width=0.5\textwidth]{Snebuladensity}\caption{Andamento minimum mass solar nebula (MMSN). Da \cite{weidenschilling1977distribution}.}\label{fig:Snebuladensity}
+\end{wrapfigure}
+
+Un limite inferiore alla massa del disco protoplanetario si ottiene  considerando la massa presente nei pianeti e nella fascia asteroidale arricchita di H/He per avere composizione solare e distribuendo questa massa in un anello di spessore proporzionale al raggio di Hill e centrato sulle orbite (\cite{weidenschilling1977distribution}): si ha l'andamento della densit\'a superficiale, proporzionale a $r\expy{-3/2}$, mostrato in figura (\ref{fig:Snebuladensity}); (\cite{hayashi1981structure}) ha determinato l'andamento della densit\'a di gas, ghiaccio e rocce:
+%$\Sigma\propto r\expy{-3/2}$.
+\begin{align}
+&\Sigma_{rock}=7.1(\frac{a}{\si{\astronomicalunit}})\expy{-3/2}\si{\gram\per\square\cm}:\ \frac{a}{\si{\astronomicalunit}}=0.35-2.7\\
+&\Sigma_{rock+ice}=30(\frac{a}{\si{\astronomicalunit}})\expy{-3/2}\si{\gram\per\square\cm}:\ \frac{a}{\si{\astronomicalunit}}=2.7-36\\
+&\Sigma_{gas}=\num{e3}(\frac{a}{\si{\astronomicalunit}})\expy{-3/2}\si{\gram\per\square\cm}:\ \frac{a}{\si{\astronomicalunit}}=0.35-36
+\end{align}
+
+Per riprodurre alcune importanti caratteristiche del sistema solare \'e stato necesaario considerare fenomeni di migrazione dovuti a scambio di momento angolare con gas e planetesimi:
 \begin{itemize}
-\item  il modello di Nizza del sistema solare (\cite{tsiganis2005origin}) riproduce l'eccentricit\'a e l'inclinazione dei pianeti giganti considerando l'attraversamento della risonanza $2:1$ tra Giove e Saturno dovuta a migrazione in disco di planetesimi (\cite{hahn1999orbital})
-\item considerando la migrazione prodotta da interazione gravitazionale tra pianeti giganti e gas del disco protoplanetario (\cite{lin1986tidal}) lo scenario del grande Tack (vedi \cite{walsh2011low}) considera la formazione di Giove e sua migrazione verso l'interno finch\'e a \SI{1.5}{\astronomicalunit} la cattura di Saturno in risonanze $2:3$ non causa inversione della migrazione; la distanza di inversione della migrazione di Giove \'e determinata da simulazioni numeriche che mostrano che una distribuzione di planetesimi troncata a 1 AU (\cite{hansen2009formation}) riproduce la struttura orbitale dei pianeti terrestri.
+	\item  il modello di Nizza del sistema solare (\cite{tsiganis2005origin}) riproduce l'eccentricit\'a e l'inclinazione dei pianeti giganti considerando l'attraversamento della risonanza $2:1$ tra Giove e Saturno dovuta a migrazione in disco di planetesimi (\cite{hahn1999orbital})
+	\item considerando la migrazione prodotta da interazione gravitazionale tra pianeti giganti e gas del disco protoplanetario (\cite{lin1986tidal}) lo scenario del grande Tack (vedi \cite{walsh2011low}) considera la formazione di Giove e sua migrazione verso l'interno finch\'e a \SI{1.5}{\astronomicalunit} la cattura di Saturno in risonanze $2:3$ causa inversione della migrazione; la distanza di inversione della migrazione di Giove \'e determinata da simulazioni numeriche che mostrano che una distribuzione di planetesimi troncata a 1 AU (\cite{hansen2009formation}) riproduce la struttura orbitale dei pianeti terrestri. In questo scenario si riproduce la distribuzione della composizione degli oggetti nella fascia degli asteroidi.
 \end{itemize}
 
 %riproduce caratteristiche orbitali dei pianeti giganti considerando la loro migrazione in una distribuzione di planentesimi di $30-50\mearth{}$ ; 
@@ -337,7 +365,7 @@ tab 4 pg 13
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[trim={0cm 3.5cm 0 0},clip,width=0.95\textwidth,keepaspectratio]{H12yield}
-	\caption{Frequenza pianeti osservati in funzione del raggio $R_p$ e del periodo $P$. In bianco per ogni cella \'e indicato: a sinistra in alto il numero di pianeti rivelati con SNR maggiore di una certa soglia scelta dagli autori del survey, in parentesi il valore corretto tenendo conto della probabilit\'a di transito, e a destra in basso il numero di stelle del survey per cui \'e possibile rivelazione del pianeta con caratteristiche medie della cella e con SNR superiore a soglia scelta, in basso a destra la frequenza di pianeti corretta per probabilit\'a di transito e bias incompletezza del survey. Da \cite{howard2012planet}.}\label{fig:H12yield}
+	\caption{Frequenza pianeti osservati in funzione del raggio $R_p$ e del periodo $P$. In bianco per ogni cella \'e indicato: a sinistra in alto il numero di pianeti rivelati con SNR maggiore di una certa soglia scelta dagli autori del survey, in parentesi il valore corretto tenendo conto della probabilit\'a di transito, e a destra in basso il numero di stelle del survey per cui \'e possibile rivelazione del pianeta con caratteristiche medie della cella e con SNR superiore a soglia scelta, in basso a destra la frequenza di pianeti corretta per probabilit\'a di transito e bias incompletezza del survey. Le misure nella regione tratteggiata per $R<2\rearth{}$ sono incomplete ed afflitte da errori sistematici. Da \cite{howard2012planet}.}\label{fig:H12yield}
 \end{figure}
 
 %Il grafico (\subref{fig:howard2012planet}) mostra distribuzione radiale corretta per probabilit\'a di transito, la distribuzione dei periodi \'e mostrata in figura (\subref{fig:freqperstarvsPanfit}): i pianeti sono raggruppati per intervalli di raggio.

@@ -106,17 +106,18 @@ $M_{H/He}$&$1.5\mearth{}$&$2.2\mearth{}$\\
     \caption{Composizione Giove, Saturno: $M_c$ \'e la massa del core, $M_Z$ la massa di metalli nell'inviluppo gassoso, $M_Z^{tot}$ la massa totale di metalli; composizione di Urano e Nettuno. Da \cite{baraffe2009physical}.}\label{tab:JSUNcomp}
 \end{table}
 
-\begin{wrapfigure}[6]{r}{0.5\textwidth}
-	\includegraphics[trim={0cm 5cm 0 0cm},clip, width=0.5\textwidth]{Snebuladensity}\caption{Andamento minimum mass solar nebula (MMSN). Da \cite{weidenschilling1977distribution}.}\label{fig:Snebuladensity}
-\end{wrapfigure}
-
 Un limite inferiore alla massa del disco protoplanetario si ottiene  considerando la massa presente nei pianeti e nella fascia asteroidale arricchita di H/He per avere composizione solare e distribuendo questa massa in un anello di spessore proporzionale al raggio di Hill e centrato sulle orbite (\cite{weidenschilling1977distribution}): si ha l'andamento della densit\'a superficiale, proporzionale a $r\expy{-3/2}$, mostrato in figura (\ref{fig:Snebuladensity}); (\cite{hayashi1981structure}) ha determinato l'andamento della densit\'a di gas, ghiaccio e rocce:
 %$\Sigma\propto r\expy{-3/2}$.
+
 \begin{align}
 &\Sigma_{rock}=7.1(\frac{a}{\si{\astronomicalunit}})\expy{-3/2}\si{\gram\per\square\cm}:\ \frac{a}{\si{\astronomicalunit}}=0.35-2.7\\
 &\Sigma_{rock+ice}=30(\frac{a}{\si{\astronomicalunit}})\expy{-3/2}\si{\gram\per\square\cm}:\ \frac{a}{\si{\astronomicalunit}}=2.7-36\\
 &\Sigma_{gas}=\num{e3}(\frac{a}{\si{\astronomicalunit}})\expy{-3/2}\si{\gram\per\square\cm}:\ \frac{a}{\si{\astronomicalunit}}=0.35-36
 \end{align}
+
+\begin{wrapfigure}[22]{r}{0.45\textwidth}
+	\includegraphics[trim={6.4cm 5cm 6.5cm 0cm},clip, width=0.5\textwidth]{Snebuladensity}\caption{Andamento minimum mass solar nebula (MMSN). Da \cite{weidenschilling1977distribution}.}\label{fig:Snebuladensity}
+\end{wrapfigure}
 
 Per riprodurre alcune importanti caratteristiche del sistema solare \'e stato necessario considerare fenomeni di migrazione dovuti a scambio di momento angolare con gas e planetesimi:
 \begin{itemize}
@@ -205,12 +206,12 @@ mentre la struttura radiale del disco di gas \'e determinata dall'equilibrio idr
 dove ho introdotto $v_g$ velocit\'a a cui il gas orbita attorno alla stella centrale.
 L'andamento della densit\'a lungo z ha la forma
 \begin{align}
-\rho(r,z)=\rho(r,z=0)\exp{-\frac{z}{2H}}\\
+&\rho(r,z)=\rho(r,z=0)\exp{-\frac{z}{2H}}\\
 &H=\frac{c_0}{\Omega_k}
 \end{align}
 
-\begin{wrapfigure}[10]{l}{0.4\textwidth}
-	\includegraphics[trim={0cm 4cm 0 0},clip, keepaspectratio,width=0.4\textwidth]{selfsimilaralphadisk-mod}
+\begin{wrapfigure}[16]{l}{0.45\textwidth}
+	\includegraphics[trim={0.1cm 4.5cm 0.7cm 0cm},clip, keepaspectratio,width=0.4\textwidth]{selfsimilaralphadisk-mod}
 	\caption{I grafici rappresentano densit\'a superficiale \eqref{eq:selsimdiskevol} per $\nu\propto r\expy{\gamma}$ con $\gamma=1$: $T=2,4,8$. Da \cite{armitage2007lecture}.}\label{fig:selfsimilaralphadisk}
 \end{wrapfigure}
 
@@ -268,12 +269,12 @@ La figura (\subref{fig:SED-contours}) mostra le strutture attorno a stelle giova
 %\Sigma=(2-\gamma)\frac{M_d}{2\pi R_c^2}(\frac{r}{R_c})\expy{-\gamma}\Exp{-(\frac{r}{R_c})\expy{2-\gamma}}
 %\end{equation}
 
-
-\begin{wrapfigure}[6]{l}{0.5\textwidth}
+%\begin{figure}[9]{l}{0.7\textwidth}
+\begin{figure}[!ht]
 	\centering
-	\includegraphics[trim={0cm 13cm 0 0},clip, width=0.49\textwidth,keepaspectratio]{clusterage-fstar}
+	\includegraphics[trim={9.5cm 13cm 8cm 0.2cm},clip, width=0.69\textwidth,keepaspectratio]{clusterage-fstar}
 	\caption{Frazione di stelle con disco protoplanetario in funzione dell'et\'a del cluster. Da \cite{mamajek2009initial}. }\label{fig:clusterage-fstar}
-\end{wrapfigure}
+\end{figure}
 
 In figura (\ref{fig:clusterage-fstar}) \'e riportata la frazione di stelle con dischi protoplanetari in funzione dell'et\'a del cluster: l'andamento \'e esponenzialmente decrescente con $\tau_c\approx\SI{2.5}{\mega\year}$.
 %(\cite{haisch2001disk}) hanno determinato $\tau_c\approx\SI{6}{\mega\year}$.
@@ -346,12 +347,16 @@ In figura (\ref{fig:clusterage-fstar}) \'e riportata la frazione di stelle con d
 \chapter{Caratteristiche della popolazione di esopianeti osservati}
 }
 
-\begin{wrapfigure}[10]{l}{0.65\textwidth}
-	\includegraphics[trim={0cm 0 0 0},clip, width=0.65\textwidth]{obsMa}
+
+\begin{figure}[!ht]
+	\includegraphics[trim={0.1cm 0 0 0.1cm},clip, width=0.7\textwidth]{obsMa}
 	\caption{Diagramma massa-distanza degli esopianeti in ''The extrasolar planet encyclopedia''. Rosso, celeste, magenta e verde sono pianeti rivelati tramite RV, T, osservazione diretta e microlensing. Da \cite{mordasini2018planetary}.}\label{fig:Maplot}
-\end{wrapfigure}
+\end{figure}
+
 
 Il miglioramento delle capacit\'a osservative ha permesso l'osservazione di migliaia di esopianeti (vedi \cite{schneider2011defining} per una lista aggiornata): la distribuzione dei pianeti nel diagramma $a-M_p$ rappresenta la variet\'a della popolazione planetaria osservata. Per un confronto con modello di formazione planetaria \'e necessario correggere, in maniera statistica, i bias osservativi dovuti alla tecnica usata per rivelare il pianeta, alle caratteristiche dello strumento e della stella che lo ospita. Adesso considero le caratteristiche dei pianeti come risultano da survey che usano le tecniche di velocit\'a radiale e transito.
+
+
 
 \section{Popolazione esopianeti rilevati tramite velocit\'a radiale}
 
@@ -700,6 +705,8 @@ L'equazione di stato della componente pi\'u pesante di idrogeno ed elio \'e appr
 \begin{equation}
 \rho(P)=\rho_0+cP^n
 \end{equation}
+
+\clearpage
 
 Oltre ad aumentare la temperatura di equilibrio nei pianeti vicini la radiazione solare causa perdita di massa dagli strati superiori dell'atmosfera. Il flusso $F_{XUV}$ di fotoni a \SIrange{1}{1200}{\angstrom} (\cite{ribas2005evolution}) riscalda gli strati esterni dell'atmosfera e si genera un flusso uscente di componente volatile (\cite{lopez2013role}):
 \begin{align}

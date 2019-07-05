@@ -27,7 +27,7 @@ Assumendo conversione completa di polvere in planetesimi, la densit\'a superfici
 \begin{equation}
 \Sigma_p(t=0,r)=f_{dg}\eta_{ice}\Sigma_g(t=0,r)
 \end{equation}
-con $f_{dg}$ rapporto gas/polvere (circa metallicit\'a) \'e una parametro casuale con distribuzione che riflette distribuzione di metallicit\'a stellari, $\eta_{ice}$ tiene conto della discontinuit\'a nella distribuzione superficiale di solidi all'iceline.
+con $f_{dg}$ rapporto gas/polvere ($\approx Z$) \'e una parametro casuale con distribuzione che riflette distribuzione di metallicit\'a stellari, $\eta_{ice}$ tiene conto della discontinuit\'a nella distribuzione superficiale di solidi all'iceline.
 
 Sulla scorta della piccola differenza tra composizione solare e composizione meteoritica e assumendo inoltre che il ferro sia un buon indicatore della componente solida  si usa la formula
 \begin{equation}
@@ -35,7 +35,7 @@ Sulla scorta della piccola differenza tra composizione solare e composizione met
 \end{equation}
 con $f_{D/G\odot}\approx\numrange{0.01}{0.02}$ (\cite{lodders2003solar}).
 
-Si introduce un fattore correttivo in $f_{D/G}$ poich\'e la distribuzione di planetesimi \'e pi\'u concentrata entro i \SI{20}{\astronomicalunit} di un fattore compreso tra $2-4$ (\cite{kornet2004alternative}) rispetto alla polvere, dovuto alla dinamica della coagulazione della componente solida e interazioni con disco di gas (\cite{kornet2001diversity}); infine si sfrutta la distribuzione della metallicit\'a per stelle di massa solare nelle vicinanze del Sole:
+Si introduce un fattore correttivo in $f_{D/G}$ poich\'e la distribuzione di planetesimi \'e pi\'u concentrata entro i \SI{20}{\astronomicalunit} di un fattore compreso tra $2-4$ (\cite{kornet2004alternative}) rispetto alla distribuzione iniziale omogenea della polvere, dovuto alla dinamica della coagulazione della componente solida e interazioni con disco di gas (\cite{kornet2001diversity}); infine si sfrutta la distribuzione della metallicit\'a per stelle di massa solare nelle vicinanze del Sole:
 \begin{equation}
 p([Fe/H])=\frac{1}{\sigma\sqrt{2\pi}}\exp{-\frac{([Fe/H]-\mu)^2}{2\sigma^2}}
 \end{equation}
@@ -49,6 +49,7 @@ Per le stelle campionate da CORALIE (\cite{udry2000coralie}, 1650 stelle nane en
 
 \section{Accrescimento planetesimi su embrioni planetari}
 (Vedi \cite{kokubo2012dynamics})
+
 \begin{workout}[Some refs about planetesimal accretion]
 	\begin{itemize}
 		\item ida, guillot, morbidelli 08: accretion and destruction of planetesimal in turbulent disks.
@@ -385,12 +386,12 @@ Greenzweig Lissauer 92
 
 \begin{workout}[Particle-gas dynamics. dust midplane sedimantation]
 	Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
-	Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
+	Stopping time $t_s=\frac{\rho_sa}{\rho c_0}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
 \end{workout}
 
 \begin{workout}[Formazione planetesimi: meccanismo Goldreich-Ward]
 	Weidenschilling cuzzi 06: Particle-gas dynamics and primary accretion, Apai Lauretta Protoplanetary Dust pg 100
-	Stopping time $t_s=\frac{\rho_sa}{\rho c_s}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
+	Stopping time $t_s=\frac{\rho_sa}{\rho c_0}$ ($a<\lambda_g$). L'evoluzione dinamica delle particelle solide \'e determinata flussi macroscopici dovuti all'evoluzione del disco, gas-drag, settling
 \end{workout}
 
 \begin{workout}[allargamento schema accrescimento parte solida]
@@ -400,8 +401,11 @@ Greenzweig Lissauer 92
 \end{workout}
 
 {\let\clearpage\relax\let\cleardoublepage\relax
-\chapter{Accrescimento di gas ed evoluzione disco di accrescimento.  (Accrescimento e dinamica del gas)}\label{chap:gasaccretion}
+\chapter{Accrescimento di gas ed evoluzione disco di accrescimento.}\label{chap:gasaccretion}
 }% e fase isolata
+
+La simulazione calcola l'accrescimento di gas e l'evoluzione orbitale degli embrioni fino alla scomparsa del disco di accrescimento, circa \SI{10}{\mega\year}, mentre l'evoluzione termodinamica del pianeta, che ne determina massa e raggio, per \SI{10}{\giga\year} tenendo conto dell'evoluzione stellare (\cite{dell2012pisa}).
+
 \begin{workout}[Notazione omogenea: disco accrescimento]
 $T_{neb}$, $T_b$, $T_i$; $k_l$, $B_L$; ...
 \end{workout}
@@ -429,9 +433,9 @@ $T_{neb}$, $T_b$, $T_i$; $k_l$, $B_L$; ...
 	\end{itemize}
 \end{workout}
 
-\section{Evoluzione disco di accrescimento (spostare nella parte struttura disco di accrescimento)}
+\section{Calibrazione efficienza viscosit\'a e fotoevaporazione}
 
-Il tempo caratteristico del disco \'e determinato dalla viscosit\'a $\alpha$: fissata $\alpha$ compatibile con tempo caratteristico osservato $\tau_{disk}^{obs}\approx\SI{3}{\mega\year}$ e assumendo la distribuzione uniforme nel logaritmo di $\dot{M}_w$, si calcola  $t_{disk}(\alpha,\Sigma_0,\dot{M}_w)$ determinando gli estremi dello fotoevaporazione per riprodurre tempi di vita osservati.
+Il tempo caratteristico del disco di accrescimento \'e determinato dalla viscosit\'a $\alpha$: fissata $\alpha$ compatibile con tempo caratteristico osservato $\tau_{disk}^{obs}\approx\SI{3}{\mega\year}$ e assumendo la distribuzione uniforme nel logaritmo di $\dot{M}_w$, si calcola  $t_{disk}(\alpha,\Sigma_0,\dot{M}_w)$ determinando gli estremi della foto-evaporazione per riprodurre tempi di vita osservati.
 
 Valori tipici sono $\dot{M}_w=\SIrange{5e-10}{3e-8}\msun{}/\si{\year}$ per $\alpha=\num{7e-3}$.
 
@@ -440,7 +444,7 @@ Nelle popolazione planetaria considerata $\alpha$ \'e fissato compatibilmente co
 	&\TDy{t}{\Sigma}=\frac{1}{r}\PDof{r}[3r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]+\dot{\Sigma}_w(r)+\dot{\Sigma}_{embryo}(r)\label{eq:diskaccrphev-m18}\\
 	&\dot{\Sigma}_w(a)=\left\{\begin{array}{c}0\quad a<R_g\\\frac{\dot{M}_w}{2\pi(a_{max}-R_g)a}\quad \text{altrimenti}\\\end{array}\right.
 \end{align}
-con $\dot{\Sigma}_w$ contributo della foto-evaporazione, $R_g=\SI{5}{\astronomicalunit}$ e $a_{max}$ estremo del disco,  $\dot{\Sigma}_{embryo}$ contributo di accrescimento di gas.
+con $\dot{\Sigma}_w$ contributo della foto-evaporazione, $R_g=\SI{5}{\astronomicalunit}$ e $a_{max}$ estremo del disco,  $\dot{\Sigma}_{embryo}$ termine di accrescimento di gas sugli embrioni planetari.
 %La densit\'a superficiale iniziale \'e assunta essere:
 %\begin{equation}
 %\Sigma(a,t=0)=\Sigma_0(\frac{r}{1AU})\expy{p_g}\Exp{[-(\frac{r}{R_o})\expy{2+p_g}]}(1-\sqrt{\frac{r}{R_i}})
@@ -453,6 +457,35 @@ con $\dot{\Sigma}_w$ contributo della foto-evaporazione, $R_g=\SI{5}{\astronomic
 thermal equilibrium: T of optically thin X-ray heated gas approx monotonic function of ionization parameter $\xi=\frac{L_X}{nr^2}$. The flow start subsonically at base of streamline and is accelerated by $g_{eff}$ and pressure gradient. Viscous effects are negligible: specific angular momentum of each element fluid is conserved being at keplerian value at launch from radius $R_b$ with value $h^2=GM_*R_b$:
 \[\vec{g}_{eff}=-\frac{GM_*}{r^2}\hat{r}+\frac{GM_*R_b}{R^3}\hat{R}\]
 where $\hat{r}$ and $\hat{R}$ are radial unit vector in spherical and cylindrical coordinate
+\end{workout}
+
+\begin{workout}[opacit\'a e rapporto $M_Z/M_{env}$]
+	\cite{mordasini2014grain}
+\end{workout}
+
+\begin{workout}[envelope mass as function of core mass]
+	Armitage 17 eq 232 (`'lecture nite on formation and early evolution of PS)
+	\begin{equation}
+	M_{env}\approx\int_{R_c}^{R_o}4\pi r^2\rho\,dr\propto\frac{\sigma}{\kappa_RL}(\frac{\mu m_pGM_t}{4k_b})^4\ln{\frac{R_o}{R_c}}
+	\end{equation}
+\end{workout}
+
+\begin{workout}[Rfes per espressione raggio bondi]
+	
+\end{workout}
+
+
+\begin{workout}[Hydrostatic equilibrium hypothesis]
+	Characterization of exoplanets from their formation I (eq 10)
+\end{workout}
+
+
+\begin{workout}[Rfes espressione accrescimento gas]
+	Rate di accrescimento limitato dalla velocit\'a di raffreddamento:
+	\begin{equation}
+	\dot{M}_{XY}\propto\ \frac{M_p}{M_*}<(H_P/R_p)^3/\sqrt{3}
+	\end{equation}
+	quindi la massa di gas aumenta esponenzialmente a partire da $M_c\approx10\mearth{}$.
 \end{workout}
 
 \section{Accrescimento limitato da velocit\'a di raffreddamento}
@@ -474,9 +507,26 @@ E_t=E_g+E_i=-\int_0^M\frac{Gm}{r}\,dm+\int_{M_z}^Mu\,dm=-\xi\frac{GM^2}{2R}
 \end{equation}
 che sostituita nell'equazione di conservazione dell'energia da:
 \begin{equation}
--\TDof{t}E_t=L=L_M+L_R+L_{\xi}=\xi\frac{GM}{R}\dot{M}-\xi\frac{GM^2}{2R^2}\dot{R}+\frac{GM^2}{2R}\dot{\xi}
+-\TDof{t}E_t=L=L_M+L_R+L_{\xi}=\xi\frac{GM}{R}\dot{M}-\xi\frac{GM^2}{2R^2}\dot{R}+\frac{GM^2}{2R}\dot{\xi}\label{eq:planetL}
 \end{equation}
-con $\dot{M}=\dot{M}_Z+\dot{M}_{XY}$.
+con $\dot{M}=\dot{M}_Z+\dot{M}_{XY}$ e $u$ energia interna per unit\'a di massa.
+Per determinare $L_{\xi}$ si risolve la struttura utilizzando i primi due termini in (\ref{eq:planetL}) e si calcola $L$ imponendo la conservazione dell'energia.
+
+\begin{workout}[Chiarire luminosit\'a]
+Luminosit\'a totale $L=L_{cont}+L_{acc}$ is the sum of energy gained by contraction and by accretion of planetesimal:
+\begin{align}
+&L_{contr}=-\frac{E_t(t+dt)-E_t(t)-E_{gas,acc}}{dt}\\
+&E_{gas,acc}=dt\dot{M}_{gas}u_{int}
+\end{align}
+is the energy gained by accretion of nebular gas with specific energy $u_{int}$ at rate $\dot{M}_{gas}$; accetion due to planetesimal is assumed to deposit energy to the core
+\begin{equation}
+L_{acc}=G\frac{\dot{M}_{core}M_{core}}{R_{core}}
+\end{equation}
+Energy equation
+\begin{equation}
+\TDy{m_r}{L}=\epsilon_{pla}-T\TDy{t}{S}
+\end{equation}
+\end{workout}
 
 Ho indicato la massa di gas legata al core con
 \begin{equation}
@@ -490,50 +540,22 @@ Condizioni al bordo:
 &\tau=\max{(\rho_{neb}\kappa_{neb}R),2/3)},\ T_i^4=\frac{3\tau L_{int}}{8\pi\sigma R^2}\\
 &T^4=T_{neb}^4+T_{int}^4,\ L(R)=L_{int}
 \end{align}
-$k_{liss}=3-4$, quindi $R_p\approx \min{(R_B,k_{liss}R_H)}$ e introduco il raggio di Bondi
+$k_l\approx3-4$, quindi $R_p\approx \min{(R_B,k_lR_H)}$ e introduco il raggio di Bondi
 \begin{equation}
 R_B=G\frac{M_c}{c_0^2}%\approx\SI{4e10}{\cm}a(AU)\expy{1/2}\frac{M_c}{\mearth{}
 \end{equation}
-con $c_s=\sqrt{\frac{kT}{\mu m_h}}$
-definito come raggio in cui energia termica e potenziale gravitazionale si equivalgono.%il core perturba la pressione del gas del disco.
-
-\begin{workout}[opacit\'a e rapporto $M_Z/M_{env}$]
-\cite{mordasini2014grain}
-\end{workout}
-
-\begin{workout}[envelope mass as function of core mass]
-Armitage 17 eq 232 (`'lecture nite on formation and early evolution of PS)
-\begin{equation}
-M_{env}\approx\int_{R_c}^{R_o}4\pi r^2\rho\,dr\propto\frac{\sigma}{\kappa_RL}(\frac{\mu m_pGM_t}{4k_b})^4\ln{\frac{R_o}{R_c}}
-\end{equation}
-\end{workout}
-
-\begin{workout}[Rfes per espressione raggio bondi]
-
-\end{workout}
-
-
-\begin{workout}[Hydrostatic equilibrium hypothesis]
-Characterization of exoplanets from their formation I (eq 10)
-\end{workout}
-
-
-\begin{workout}[Rfes espressione accrescimento gas]
-Rate di accrescimento limitato dalla velocit\'a di raffreddamento:
-\begin{equation}
-\dot{M}_{XY}\propto\ \frac{M_p}{M_*}<(H_P/R_p)^3/\sqrt{3}
-\end{equation}
-quindi la massa di gas aumenta esponenzialmente a partire da $M_c\approx10\mearth{}$.
-\end{workout}
+con $c_0=\sqrt{\frac{kT}{\mu m_h}}$,
+definito come raggio in cui energia termica e potenziale gravitazionale si equivalgono. %il core perturba la pressione del gas del disco.
+La velocit\'a di accrescimento \'e determinata dalla velocit\'a di contrazione della struttura planetaria in equilibrio idrostatico.
 
 \section{Accrescimento limitato dalla disponibilit\'a di gas del disco}
 
 \begin{wrapfigure}[15]{l}{0.5\textwidth}
 	\includegraphics[trim={0cm 2cm 0 0},clip, keepaspectratio,width=0.48\textwidth]{massenvvscore}
-	\caption{Massa planetaria in funzione della massa del core. Da \cite{alibert2005models}.}\label{fig:massenvvscore}
+	\caption{Accrescimento di gas in funzione del tempo: raggiunta massa critica del core solido si ha fase di accrescimento molto rapido (tratto quasi verticale in figura). Da \cite{alibert2005models}.}\label{fig:massenvvscore}
 \end{wrapfigure}
 
-Se il protopianeta raggiunge un valore critico di massa, dipendente debolmente da luminosit\'a generata da accrescimento dei pianetesimi e opacit\'a, per mantenere equilibrio idrostatico l'inviluppo gassoso del pianeta si contrae su tempi scala di Kelvin-Helmholtz. In questa seconda fase l'accresscimento di massa diviene cos\'i rapido da esaurire il gas disponibile nella regione: curva verticale di figura (\ref{fig:massenvvscore}). L'accrescimento di gas has come limite superiore il flusso di gas dovuto a evoluzione viscosa del disco.
+Se il protopianeta raggiunge un valore critico di massa, dipendente debolmente da luminosit\'a generata da accrescimento dei pianetesimi e opacit\'a non si ha pi\'u una soluzione idrostatica. In questa seconda fase l'accresscimento di massa diviene cos\'i rapido (curva verticale di figura (\ref{fig:massenvvscore})) da esaurire il gas disponibile nella regione. L'accrescimento di gas ha come limite superiore il flusso di gas dovuto a evoluzione viscosa del disco.
 
 Da modelli numerici risulta
 \begin{equation}
@@ -541,7 +563,7 @@ M_c^{crit}=10\mearth{}(\frac{\dot{M}_c}{\num{e-7}\mearth{}\si{\per\year}})\expy{
 \end{equation}
 con $q,s\approx0.2-0.3$ (\cite{ikoma2000formation}).
 
-Se $H\approx R_p$ il pianeta perturba in maniera non trascurabile il disco (il rate di accrescimento di gas \'e maggiore di quello fornito dal disco). Il raggio del pianeta \'e determinato dalle condizioni al bordo per materia accresciuta tramite free-fall da $R_H$ a $R_p$:
+Se $H\approx R_H$ il pianeta perturba in maniera non trascurabile il disco (il rate di accrescimento di gas \'e maggiore di quello fornito dal disco). Il raggio del pianeta \'e determinato dalle condizioni al bordo per materia accresciuta tramite free-fall da $R_H$ a $R_p$:
 \begin{align}
 &\dot{M}_{XY}=\dot{M}_{XY,max},\ v_{ff}^2=2GM(\frac{1}{R}-\frac{1}{R_H})\\
 &P=P_{neb}+\frac{\dot{M}_{XY}}{4\pi r^2}v_{ff}+\frac{2g}{3\kappa},\ \tau=\max{(\rho_{neb}\kappa_{neb}R,2/3)}\\
@@ -610,7 +632,7 @@ L'osservazione di una sottopopolazione di esopianeti giganti su orbite strette, 
 
 Fenomeni che possono dar luogo a migrazione planetaria:
 \begin{itemize}
-\item Interazione con disco proto-planetario. Il potenziale periodico del pianeta perturba la densit\'a del gas: si ha scambio di momento angolare alle risonanze di Lindblad e alle orbite a ferro di cavallo.
+\item Interazione con disco proto-planetario. Il potenziale periodico del pianeta perturba la densit\'a del gas: si ha scambio di momento angolare alle risonanze di Lindblad e alle orbite nella regione di corotazione.
 %Considerando le perturbazioni lineari nella densit\'a del disco prodotte dal potenziale del pianeta si determina la risultante dei momenti torcenti $\Gamma$ dovuti alle risonanze di Lindblad e alla regione di corotazione.
 Velocit\'a e direzione della migrazione dipendono dalle caratteristiche del disco, massa del pianeta e moto relativo pianeta-gas.
 \item Interazione con disco residuo di planetesimi
@@ -638,17 +660,17 @@ Il momento esercitato sul pianeta dalla regione di corotazione pu\'o dar luogo a
 
 Nel modello di Berna si determina l'evoluzione orbitale degli embrioni planetari risolvendo numericamente il problema a N corpi
 \begin{align}
-&\ddvec{r}_i=-G(M_*+m_i)\frac{\vec{r}_i}{r_i^3}-G\sum_{j\neq i}m_j[\frac{\vec{r}_i-\vec{r}_j}{|\vec{r}_i-\vec{r}_j|^3}+\frac{\vec{r}_j}{r_j^3}]&\intertext{con l'aggiunta di termini che descrivono l'interazione del pianeta col disco di gas (\cite{tanaka2002three},\cite{tanaka2004three})}\\
+&\ddvec{r}_i=-G(M_*+m_i)\frac{\vec{r}_i}{r_i^3}-G\sum_{j\neq i}m_j\left[\frac{\vec{r}_i-\vec{r}_j}{|\vec{r}_i-\vec{r}_j|^3}+\frac{\vec{r}_j}{r_j^3}\right]&\intertext{con l'aggiunta di termini che descrivono l'interazione del pianeta col disco di gas (\cite{tanaka2002three},\cite{tanaka2004three})}\\
 &\ddvec{r}_i^{\,m}=-\frac{\dvec{x}_i}{t_m}\\
 &\ddvec{r}_i^{\,e}=-2\frac{(\dvec{r}_i\cdot\vec{r}_i)\vec{r}_i}{r_i^2t_e}\\
 &\ddvec{r}_i^{\,i}=-\frac{(\dvec{x}_i\cdot\hat{z})}{t_i}\hat{z}
 \end{align}
-Per piccole e,i e pianeta non abbastanza massiccio da aprire un gap attrono alla propria orbita il tempo di smorzamento di e,i \'e molto minore del tempo di migrazione radiale. 
+Per piccole $e$, $i$ e pianeta non abbastanza massiccio da aprire un gap attorno alla propria orbita il tempo di smorzamento di $e$, $i$ \'e molto minore del tempo di migrazione radiale. 
 Per il tempo caratteristico di migrazione radiale si ha:
 \begin{equation}
 \tau_m=\frac{r_p}{|\dot{r}_p|}=\frac{1}{2}\frac{J_p}{\Gamma}
 \end{equation}
-\cite{lubow2010planet} usando l'approssimazione impulsiva, valida per $\tau_{int}\ll\tau_{orb}$, hanno determinato l'ordine di grandezza del momento torcente subito dal pianeta. Per pianeti di piccola massa e distanza di interazione $H$
+\cite{lubow2010planet} usando l'approssimazione impulsiva, valida per $\tau_{int}\ll\tau_{orb}$, hanno determinato l'ordine di grandezza del momento torcente subito dal pianeta. Per pianeti di piccola massa e distanza di interazione $\Delta r\approx H$
 \begin{equation}
 |\Gamma|\propto\Sigma_p\Omega_p^2a^4(\frac{M_p}{M_*})^2(\frac{a}{H})^2
 \end{equation}
@@ -664,7 +686,7 @@ e
 \begin{equation}
 w\propto a_p\sqrt{\frac{q}{h}}, \ h=\frac{H}{a},\ q=\frac{m_p}{M_*}
 \end{equation}
-Nel caso il pianeta sia abbastanza massiccio si apre un gap attorno all'orbita del pianeta, la condizione perch\'e ci\'o avvenga \'e:
+Nel caso il pianeta sia abbastanza massiccio si apre un gap attorno all'orbita del pianeta; la condizione perch\'e ci\'o avvenga \'e:
 \begin{equation}
 \frac{M_p}{M_*}\geq C\sqrt{\frac{\nu}{a^2\Omega_p}}(\frac{H}{a})\expy{3/2},\quad C\approx1
 \end{equation}

@@ -186,9 +186,9 @@ Per riprodurre le propriet\'a statistiche della popolazione planetaria osservata
 
 Nei modelli di disco di accrescimento $1+1D$ si parametrizza il trasporto di momento angolare ponendo:
 \begin{equation}
-\nu=\alpha c_s H
+\nu=\alpha c_0 H
 \end{equation}
-dove $\alpha$ \'e parametro da fissare, $c_s$ la velocit\'a del suono e H lo spessore del disco; si ipotizza che la turbolenza sia responsabile per la viscosit\'a aumentata quindi che la velocit\'a relativa dei moti turbolenti sia circa la velocit\'a del suono $c_s$ e la dimensione caratteristica lo spessore del disco $H$. L'evoluzione della densit\'a superficiale del disco \'e quindi determinata dall'equazione:
+dove $\alpha$ \'e parametro da fissare, $c_0$ la velocit\'a del suono e H altezza scala del disco di accrescimento: si ipotizza che la turbolenza sia responsabile per la viscosit\'a aumentata quindi che la velocit\'a relativa dei moti turbolenti sia circa la velocit\'a del suono $c_0$ e la dimensione caratteristica lo spessore del disco $H$. L'evoluzione della densit\'a superficiale del disco \'e quindi determinata dall'equazione:
 \begin{equation}
 \PDy{t}{\Sigma}=3\frac{1}{r}\PDof{r}[r\expy{1/2}\PDof{r}(\nu\Sigma r\expy{1/2})]\label{eq:sigmaevol}
 \end{equation}
@@ -196,13 +196,18 @@ dove $\alpha$ \'e parametro da fissare, $c_s$ la velocit\'a del suono e H lo spe
 La struttura verticale \'e determinata dalla componente lungo z dell'attrazione del corpo centrale
 %profilo termico determinato da equilibrio termico
 \begin{equation}
-\TDy{z}{P}=-\rho g_z=-\frac{GM_*}{r^2+z^2}\frac{z}{r}\rho=-\Omega^2\rho z\label{eq:hydroz}
+\TDy{z}{P}=-\rho g_z=-\frac{GM_*}{r^2+z^2}\frac{z}{r}\rho=-\Omega_k^2\rho z\label{eq:hydroz}
 \end{equation}
 mentre la struttura radiale del disco di gas \'e determinata dall'equilibrio idrostatico
 \begin{equation}
 \frac{v_g^2}{r}=\frac{GM_*}{r^2}+\frac{1}{\rho}\TDy{r}{P}
 \end{equation}
 dove ho introdotto $v_g$ velocit\'a a cui il gas orbita attorno alla stella centrale.
+L'andamento della densit\'a lungo z ha la forma
+\begin{align}
+\rho(r,z)=\rho(r,z=0)\exp{-\frac{z}{2H}}\\
+&H=\frac{c_0}{\Omega_k}
+\end{align}
 
 \begin{wrapfigure}[10]{l}{0.4\textwidth}
 	\includegraphics[trim={0cm 4cm 0 0},clip, keepaspectratio,width=0.4\textwidth]{selfsimilaralphadisk-mod}
@@ -808,7 +813,7 @@ La figura (\subref{fig:RfreqPl100ub}) mostra due picchi nella distribuzione radi
 
 \begin{workout}[alpha prescription]
 	$\vec{v}=(u_r,r\Omega)$, stress tensor $\sigma_{r\phi}=-\Sigma\exv{u_ru_{\phi}}$.
-	Enhanced turbulent viscosity: $-\Sigma\exv{u_ru_{\phi}}=\Sigma\nu r\TDy{r}{\Omega}$, $\nu=v_TH$, $\alpha=v_T/c_s$
+	Enhanced turbulent viscosity: $-\Sigma\exv{u_ru_{\phi}}=\Sigma\nu r\TDy{r}{\Omega}$, $\nu=v_TH$, $\alpha=v_T/c_0$
 \end{workout}
 
 \begin{workout}[Accretion disk sources]
@@ -820,7 +825,7 @@ La figura (\subref{fig:RfreqPl100ub}) mostra due picchi nella distribuzione radi
 
 \begin{workout}[Descrizione trasporto momento angolare tramite parametrizzazione viscosit\'a]
 	Mass conservation + momentum conservation in viscous flow: angular momentum evolution. Phenomena: Shear viscosity - turbulence - MRI.
-	Nei modelli 1D per disco di accrescimento si parametrizza viscosit\'a tramite $\nu=\frac{\eta}{\rho}\to\alpha c_s H$: la viscosit\'a molecolare \'e troppo bassa  per trasportare all'esterno il momento angolare sui tempi-scala osservati.
+	Nei modelli 1D per disco di accrescimento si parametrizza viscosit\'a tramite $\nu=\frac{\eta}{\rho}\to\alpha c_0 H$: la viscosit\'a molecolare \'e troppo bassa  per trasportare all'esterno il momento angolare sui tempi-scala osservati.
 	Theory of turbulent accretion disk: pg 18, 8.
 	Flusso di x-momentum lungo y $\rho\exv{u_xu_y}$, dove considero la velocit\'a dell'elemento di fluido $(v_x+u_x,u_y)$ dove le $u$ rappresentano fluttuazioni della velocit\'a: $\sigma_{xy}=-\rho\exv{u_xu_y}$.
 	Ricordando la definizione di tensore degli stress e con $\vec{v}=v_x(y)\hat{x}$

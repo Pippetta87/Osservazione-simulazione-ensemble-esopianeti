@@ -5,9 +5,10 @@
 %openany
 
 %% rimuove workout errata dalla versione da consegnare
-\def\versione{bozza}%%VERSIONE
+\def\versione{consegna}%%VERSIONE
 \def\bozza{bozza}
 \def\consegna{consegna}
+\def\showappendix{0}
 %%%PENALITIES
 %\widowpenalty=10000
 %\clubpenalty=10000
@@ -231,10 +232,12 @@ Volu d'uccello sulla fisica in gioco: interazioni N-body gravitazionali, evoluzi
 }
 %\newgeometry{margin=60px,tmargin=20px}%
 
+\ifx\showappendix
 %APPENDICE
 \appendix
 \part{Appendice}
 \input{appendice}
+\fi
 %\restoregeometry
 \printbibliography
 %\listoffigures
